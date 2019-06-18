@@ -1,0 +1,3 @@
+# Video Playback Gem<a name="gems-system-gem-videoplayback"></a>
+
+With the Video Playback gem, you can play a video file on an object in your Lumberyard level\. When you enable the video playback gem, the video playback component is enabled\. For instructions on how to prepare Lumberyard for video playback, and how to set up video playback in your level, see [Video Playback](component-videoplayback.md)\.
