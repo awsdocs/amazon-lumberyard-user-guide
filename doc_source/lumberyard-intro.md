@@ -105,6 +105,6 @@ For more information, see [Twitch JoinIn](chatplay-joinin.md)\.
 
 ## Free with Source<a name="lumberyard-aws-source"></a>
 
-Lumberyard is free, including source code\. You can customize Lumberyard for your team and vision for your project today, and for future projects\. There are no seat fees, subscription fees, or requirements to share revenue\. Only pay for the AWS services that you choose to use\.
+
 
 For more information, see the [Lumberyard Licensing FAQ](https://aws.amazon.com/lumberyard/faq/#licensing)\.
