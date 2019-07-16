@@ -14,7 +14,7 @@ Lumberyard helps you build rich, engaging, world\-class games through its compre
 
 ### Beautiful Worlds<a name="lumberyard-aaa-engine-worlds"></a>
 
-The visuals technology of Lumberyard can bring to life any virtual environment\. Your artists get a powerful toolbox to create high quality visual elements, such as physically based shaders, dynamic global illumination, particle effects, lifelike vegetation, real\-time dynamic water caustics, and volumetric fog\. They can also produce cinematic features like color grading, motion blur, depth of field, and integrated HDR lens flares\.
+The visuals technology of Lumberyard can bring to life any virtual environment. Your artists get a powerful toolbox to create high quality visual elements, such as physically based shaders, dynamic global illumination, particle effects, lifelike vegetation, real\-time dynamic water caustics, and volumetric fog\. They can also produce cinematic features like color grading, motion blur, depth of field, and integrated HDR lens flares\.
 
 For more information, see the following topics: 
 + [Creating Levels and Adding Environment Effects](level-intro.md)
