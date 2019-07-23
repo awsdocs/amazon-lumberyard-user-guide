@@ -207,7 +207,8 @@ To create the script file, copy and paste the code into a text file\. Rename the
 ![\[Lua Script component with all probes selected.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/level-environment-probe-daynight-3.png)<a name="probe-blending-example-script"></a>
 
 **Example**  
-See the following `ProbeBlending.lua` script\.  
+See the following `ProbeBlending.lua` script\. 
+This script requires StarterGame Gem enabled. 
 
 ```
 -- This script connects a set of probes to the time-of-day cycle and blends between them as time progresses.
@@ -340,7 +341,7 @@ function ProbeBlending:OnTick(deltaTime, timePoint)
      
     -- Updates currentTime
     if(self.Properties.UseToD) then
-        currentTime = TimeOfDay.GetTime();
+        currentTime = StarterGameTimeOfDayUtility.GetTimeOfDay();
     else
         local rate = 1.0 / self.Properties.CycleTime;
         self.time = self.time + deltaTime * rate;
