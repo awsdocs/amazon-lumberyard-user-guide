@@ -20,4 +20,4 @@ After you make changes to your game project, such as enabling gems with code and
 
    For more information about other build commands or variables, see [Build Configuration](waf-commands.md#build-configuration) and [Creating Game Builds](game-build-intro.md)\.
 
-1. After the previous command was successful, start Lumberyard Editor\.
+1. After the previous command was successful, start Lumberyard Editor\
