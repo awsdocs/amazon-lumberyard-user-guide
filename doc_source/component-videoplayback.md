@@ -17,25 +17,46 @@ Audio is not currently supported with the video playback component\. You can, ho
 
 ## Setting up Video Playback<a name="component-videoplayback-setup"></a>
 
-To set up video playback in Lumberyard, you must install either FFmpeg or LibAV\. If both are installed, Lumberyard uses FFmpeg\.
-+ To use FFmpeg, follow the instructions in the Lumberyard Setup Assistant on the **Install software** page, under **Optional software**\.
-+ To use LibAV, remove FFmpeg, download LibAV, and then do the following\.
+To set up video playback in Lumberyard, you must install either FFmpeg or LibAV\. 
++ If both LibAV and FFmpeg are installed, Lumberyard uses FFmpeg\.
++ To use LibAV, remove FFmpeg, and follow the instructions for installing LibAV\.
 
 **Note**  
 Certain third\-party software may require a license\. Please consult the terms of service before installing the software\.
+
+**To install FFmpeg**
+
+1. Download the DEV and SHARED versions of FFmpeg from [https://ffmpeg\.zeranoe\.com/builds/](https://ffmpeg.zeranoe.com/builds/)\.
+
+1. Open the Lumberyard 3rdParty folder and create a new folder called FFmpeg.
+
+1. Create a folder inside the FFmpeg folder called 3.2 (it must be called exactly "3.2" regardless of the FFmpeg version you are using).
+
+1. Copy the "include" and "lib" folders from the DEV version of FFmpeg to the 3rdParty/FFmpeg/3.2 directory.
+
+1. Copy the "bin" folder from the SHARED version of FFmpeg to the 3rdParty/FFmpeg/3.2 directory.
+
+1. Within the `3.2` directory, you should now have the following:
+   + Directory named `bin`
+   + Directory named `include`
+   + Directory named `lib`
+
+1. Run Lumberyard Setup Assistant and view the **Install optional SDKs** page to verify that Lumberyard detects FFmpeg\.
 
 **To install LibAV**
 
 1. Download LibAV from [http://builds\.libav\.org/windows/](http://builds.libav.org/windows/)\. Select the release\-lgpl build\. As of this writing, version 11\.7 is the latest build\.
 
-1. Extract the `.7z` file to a directory called `libav`\. To open and extract `.7z` files, you must use a 7z application, such as 7\-Zip\.
+1. Open the Lumberyard 3rdParty folder and create a new folder called libav.
 
-   Within the `libav` directory, you should have the following:
+1. Create a folder inside the libav folder called 11.7 (it must be called exactly "11.7" regardless of the LibAV version you are using).
+
+1. Extract the `.7z` file to the directory called `11.7`\. To open and extract `.7z` files, you must use a 7z application, such as 7\-Zip\.
+
+   Within the `11.7` directory, you should have the following:
    + Directory named `usr`
    + `config.log`
    + `md5sum`
-
-1. Move the `libav` directory to Lumberyard's `3rdParty` directory\.
 
 1. Run Lumberyard Setup Assistant and view the **Install optional SDKs** page to verify that Lumberyard detects LibAV\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-setup.png)
