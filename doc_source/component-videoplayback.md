@@ -7,67 +7,96 @@
 | --- |
 | Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
-You can use the **Video Playback** component to play a video file on an object in your Lumberyard level\. For example, you can use a flat or plane object to simulate a movie screen\. You then add the video playback component to it and specify a video file you want to display\. You can use flow graphs or Lua scripting to trigger the video to play, pause, or stop, depending on player actions\.
+You can use the **Video Playback** component to play a video file on an entity in your Lumberyard level\. For example, you can use a flat or plane entity to simulate a movie screen\. You add the **Video Playback** component to it and specify a video file to display\. You can use Script Canvas or Lua scripting to trigger the video to play, pause, or stop, depending on player actions\.
 
-To use the video playback component, you must perform an initial setup\. This involves installing software \(either FFmpeg or LibAV\), adding the video playback gem to your project, and then rebuilding your project to enable the gem\.
+## Prerequisites<a name="prerequisites-video-playback-component"></a>
+
+To use the **Video Playback** component, you must do the following:
++ Install either FFmpeg or LibAV\.
++ Enable the Video Playback gem for your game project\. See [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
++ Rebuild your game project\.
 
 You can also set your video to play in visual stereo \(not audio stereo\)\. To test this feature, you must use a virtual reality head mounted display \(HMD\)\.
 
-Audio is not currently supported with the video playback component\. You can, however, trigger audio playback separately if you want to play audio along with your video\.
+**Note**  
+Audio isn't currently supported with the **Video Playback** component, but you can trigger audio playback separately if you want to play audio with your video\.
 
-## Setting up Video Playback<a name="component-videoplayback-setup"></a>
+**Topics**
++ [Prerequisites](#prerequisites-video-playback-component)
++ [Setting Up Video Playback](#component-videoplayback-setup)
++ [Using the Video Playback Component](#component-videoplayback-instructions)
++ [Setting Up Stereo Video Playback](#component-videoplayback-stereo)
++ [Lua Bindings for Video Playback](#component-videoplayback-lua)
++ [Setting Up Video Playback with Flow Graph](#component-videoplayback-flowgraph)
+
+## Setting Up Video Playback<a name="component-videoplayback-setup"></a>
 
 To set up video playback in Lumberyard, you must install either FFmpeg or LibAV\. 
-+ If both LibAV and FFmpeg are installed, Lumberyard uses FFmpeg\.
-+ To use LibAV, remove FFmpeg, and follow the instructions for installing LibAV\.
++ If both are installed, Lumberyard uses FFmpeg\. 
++ To use LibAV, remove FFmpeg and see [Installing LibAV](#install-libav)\.
 
 **Note**  
-Certain third\-party software may require a license\. Please consult the terms of service before installing the software\.
+Certain third\-party software might require a license\. Consult the terms of service before installing the software\.
+
+### Installing FFmpeg<a name="install-ffmpeg"></a>
+
+To install FFmpeg for Lumberyard, follow these steps\.
 
 **To install FFmpeg**
 
-1. Download the DEV and SHARED versions of FFmpeg from [https://ffmpeg\.zeranoe\.com/builds/](https://ffmpeg.zeranoe.com/builds/)\.
+1. Go to [FFmpeg Builds](https://ffmpeg.zeranoe.com/builds/)\.
 
-1. Open the Lumberyard 3rdParty folder and create a new folder called FFmpeg.
+1. Download the **Shared** and **Dev** versions of FFmpeg and unzip the files\.
 
-1. Create a folder inside the FFmpeg folder called 3.2 (it must be called exactly "3.2" regardless of the FFmpeg version you are using).
+1. Navigate to `lumberyard_version/3rdParty` and create a directory named `FFmpeg`\.
 
-1. Copy the "include" and "lib" folders from the DEV version of FFmpeg to the 3rdParty/FFmpeg/3.2 directory.
+1. In **FFmpeg**, create a directory named `3.2`\. 
+**Note**  
+You must name the directory `3.2`, regardless of the FFmpeg version that you're using\.
 
-1. Copy the "bin" folder from the SHARED version of FFmpeg to the 3rdParty/FFmpeg/3.2 directory.
+1. From the **Dev** version of FFmpeg, copy the `include` and `lib` folders to the `lumberyard_version/3rdParty/FFmpeg/3.2` directory\.
 
-1. Within the `3.2` directory, you should now have the following:
-   + Directory named `bin`
-   + Directory named `include`
-   + Directory named `lib`
+1. From the **Shared** version of FFmpeg, copy the `bin` folder to the `lumberyard_version/3rdParty/FFmpeg/3.2` directory\.
 
-1. Run Lumberyard Setup Assistant and view the **Install optional SDKs** page to verify that Lumberyard detects FFmpeg\.
+1. In the `3.2` directory, verify that you have the following folders:
+   + `bin`
+   + `include`
+   + `lib`
+
+1. Run Lumberyard Setup Assistant and, on the **Install optional SDKs** page, verify that Lumberyard detects FFmpeg\.  
+![\[Install FFmpeg for Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-setup-2.png)
+
+### Installing LibAV<a name="install-libav"></a>
+
+To install LibAV for Lumberyard, follow these steps\.
 
 **To install LibAV**
 
-1. Download LibAV from [http://builds\.libav\.org/windows/](http://builds.libav.org/windows/)\. Select the release\-lgpl build\. As of this writing, version 11\.7 is the latest build\.
+1. Go to [http://builds\.libav\.org/windows/](http://builds.libav.org/windows/)\.
 
-1. Open the Lumberyard 3rdParty folder and create a new folder called libav.
+1. Select the **release\-lgpl** build and download LibAV\. As of this writing, version 11\.7 is the latest build\.
 
-1. Create a folder inside the libav folder called 11.7 (it must be called exactly "11.7" regardless of the LibAV version you are using).
+1. Navigate to `lumberyard_version/3rdParty` and create a directory named `libav`\.
 
-1. Extract the `.7z` file to the directory called `11.7`\. To open and extract `.7z` files, you must use a 7z application, such as 7\-Zip\.
+1. In the `libav` directory, create a directory named `11.7`\. 
+**Note**  
+You must name the directory `11.7`, regardless of the LibAV version that you're using\.
 
-   Within the `11.7` directory, you should have the following:
-   + Directory named `usr`
+1. Extract the `.7z` file to the `11.7` directory\. 
+**Note**  
+To open and extract `.7z` files, you must use a 7z application, such as 7\-Zip\.
+
+   In the `11.7` directory, you should have the following:
+   + A directory named `usr`
    + `config.log`
    + `md5sum`
 
-1. Run Lumberyard Setup Assistant and view the **Install optional SDKs** page to verify that Lumberyard detects LibAV\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-setup.png)
-
-To use the video playback component, you must also install the **Video Playback** gem\. Follow the [Using Gems to Add Modular Features and Assets](gems-system-gems.md) instructions to install the **Video Playback** gem and build your project\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-gem.png)
+1. Run Lumberyard Setup Assistant and on the **Install optional SDKs** page, verify that Lumberyard detects LibAV\.  
+![\[Install LibAV for Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-setup.png)
 
 ## Using the Video Playback Component<a name="component-videoplayback-instructions"></a>
 
-The video playback component is available to use in Lumberyard after you have installed the required software, added the **Video Playback** gem to your project, and then rebuilt your project\.
+ After you complete the [Prerequisites](#prerequisites-video-playback-component), you can use the **Video Playback** component\.
 
 Video playback supports the following container formats:
 + `.mp4`
@@ -80,42 +109,47 @@ Video playback supports the following codecs:
 + `VP8` \(recommended\)
 + `VP9` \(recommended\)
 
-The basic setup for the video playback component involves placing a camera, adding a static mesh and video playback component, and configuring material\.
+The basic setup for the **Video Playback** component includes the following:
++ Add a **Camera** component
++ Add a **Mesh** and **Video Playback** component
++ Configure your material
 
-**To use the video playback component**
+**To use the Video Playback component**
 
-1. If you do not yet have a camera in your scene, place a [camera component](component-camera.md) near where your video playback is to be placed\. 
+1. If you don't yet have a camera in your scene, place a **[Camera](component-camera.md)** component where your video playback is to be placed\. 
 
    You can use the camera to view your video playback\. Ensure that the camera is facing the direction where you place your video playback component\.
 
-1. Create a new component entity by right\-clicking in your scene and clicking **Create new component entity**\.
+1. Create an entity\. For more information, see [Creating an Entity](creating-entity.md)\.
 
-1. Use the [**Entity Inspector**](component-entity-inspector.md) to add a [static mesh component](component-static-mesh.md) to your new component entity\.
+1. Use the [Entity Inspector](component-entity-inspector.md) to add a **[Mesh](component-static-mesh.md)** component to your entity\.
 
-1. Select a **Static asset** for your static mesh component\. This is the object that your video renders onto\. A cube or plane is a good test mesh\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-staticmesh.png)
+1. For the **Mesh** component, select a **Mesh asset**\. This is the asset that your video renders on\. A cube or plane is a good test mesh\.  
+![\[Mesh component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-mesh-component-properties.png)
 
-1. Add the **Video Playback** component to the same entity\. To do this, click **Add Component**, **Rendering**, **Video Playback**\.
+1. Add the **Video Playback** component to the same entity\. 
 
-1.  In the video playback component's **Video** setting, select the video that you want to display\. 
+1.  In the **Video Playback** component, for **Video**, select the video to display\. 
 
-1. For **Texture name**, enter a name for your texture, preceded by a dollar sign \($\)\. This is a user\-defined field, so it can be anything you want, but it must begin with a $ character to indicate that it is a render target\. For example, **$videotest** is a valid name but **videotest** is not\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-videoname.png)
+1. For **Texture name**, enter dollar sign \($\) and a name for your texture\. You can enter any name, but it must begin with a $ character to indicate that it's a render target\. For example, **$videotest** is a valid name, but **videotest** isn't\.   
+![\[Video Playback component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-videoname.png)
 
-1. Use the **Frame queue ahead count** setting to set the number of frames to buffer\. Leave this value at **1**, an acceptable value\. A value of **2** or **3** is typically safe as well\.
+1. For **Frame queue ahead count**, set the number of frames to buffer\.
+
+   We recommend that you use a value from `1` to `3`\.
 
    Queueing too many frames to buffer \(for example, a value of **100** frames\) can use too much memory and cause performance issues\.
 
-1. Open the [Material Editor](mat-intro.md) \(use the keyboard shortcut **M** to open it quickly\)\.
+1. Open the [Material Editor](mat-intro.md)\.
 
-1. Create a new material by clicking **Add New Item**, as shown in the following picture\. Give the material a descriptive name, such as **myvideomaterial**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-material.png)
+1. To create a material\. click the**Add New Item** icon\. Enter a descriptive name, such as **myvideomaterial**\.  
+![\[Video Playback component material.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-material.png)
 
-1. Under **Texture Maps**, on the **Diffuse** line, enter the name of your video component's **Texture name** field\. Be sure to include the $ character\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-diffuse.png)
+1. Under **Texture Maps**, on the **Diffuse** line, enter the name of your video component's **Texture name** field\. You must include the $ character\.  
+![\[Diffuse property for the texture name.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-diffuse.png)
 
-1. Close the **Material Editor** and return to the [**Entity Inspector**](component-entity-inspector.md)\. In the static mesh component, for the **Material override** setting, select the material you just created\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-override.png)
+1. Close the **Material Editor** and return to the [Entity Inspector](component-entity-inspector.md)\. In the **Mesh** component, for the **Material override** property, select the material that you created\.  
+![\[Select the material override in the Mesh component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-override.png)
 
  You can trigger the video to play at the start of your game using either flow graphs or Lua scripting\. The following procedure shows you how to create a simple flow graph to start playing the video when your game starts\. 
 
@@ -141,7 +175,7 @@ Audio playback is not supported with this component\. You can trigger audio play
 
 ## Setting Up Stereo Video Playback<a name="component-videoplayback-stereo"></a>
 
-Before setting up stereo video playback, ensure that you have completed the setup instructions in [Setting up Video Playback](#component-videoplayback-setup)\.
+Before setting up stereo video playback, ensure that you have completed the setup instructions in [Setting Up Video Playback](#component-videoplayback-setup)\.
 
 Stereo video playback means that the video presents a slightly different image for each eye, creating a 3D feel\. *Stereo* in this case refers to visual stereo only; audio is not supported in the video playback component\. While audio is not supported and must be synced externally, it is possible to play back spatialized audio\. To do so, you must use the full, commercial version of Wwise and a 3D spatializer plugin such as Oculus Spatializer or RealSpace 3D\.
 

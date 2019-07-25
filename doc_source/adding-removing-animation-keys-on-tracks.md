@@ -10,7 +10,7 @@ In the **Keys** toolbar, click the **Add Keys** icon ![\[Add Keys button\]](http
 
 **Record Mode**  
 In the **Play** toolbar, click the **Record Mode** icon ![\[Record button\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-record-icon-track-view-editor.png) and then makes changes directly to your components\.   
-When you enter record mode, you can update the component entities that are part of the sequence in the viewport\. Animation keys will be added automatically to the appropriate node tracks in the timeline, based on the current location of the timeline playhead\.   
+When you enter record mode, you can update the component entities that are part of the sequence in the viewport\. Animation keys are added automatically to the appropriate node tracks in the timeline, based on the current location of the timeline playhead\.   
 For example, if you specify a different value for the **Transform** component at three seconds, the key for this update appears in the timeline\.  
 To specify an animation to play over time, move the playhead to different places along the timeline\. Otherwise, you will overwrite the keys at the same location of the timeline as you update the component entities in the level\.  
 To stop recording, click the **Record Mode** icon again\.  

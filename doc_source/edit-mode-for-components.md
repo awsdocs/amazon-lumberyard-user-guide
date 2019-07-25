@@ -1,5 +1,12 @@
 # Editing Components in the Viewport<a name="edit-mode-for-components"></a>
 
+
+****  
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+
 When you're working with components, you can lock a single component for editing\. You can't edit any other components that are attached to the entity\. This feature prevents you from accidentally editing other components that are attached to the entity\. For example, if you have an entity with attached **Spline** and **Mesh** components, you can lock the **Spline** component, make your changes to the spline, and stop editing\.
 
 This feature supports the following components: <a name="supported-components-viewport-interaction-model"></a>

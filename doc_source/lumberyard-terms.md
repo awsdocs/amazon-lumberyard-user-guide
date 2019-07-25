@@ -59,7 +59,7 @@ Amazon GameLift is an AWS service that you can use to host server\-based games, 
 For more information, see [ Using Amazon GameLift](network-gamelift-using.md) and [GameLift Gem](gems-system-gem-gamelift.md)\.
 
 **Gem**  
-Gems are reusable packages of code and/or assets that can be added, modified, or removed from a Lumberyard game\. A gem is a module based on the [AZ Module system](az-modules-intro.md)\. You can enable gems for your game for additional assets and code\. For example, you can enable the Rain gem so that you can add the **Rain** and **Snow** components to your entities\. Gems can be enabled in other game projects or distributed to other game developers\. Lumberyard builds gems with the Waf build system\. Some gems are required for Lumberyard\.  
+Gems are reusable packages of code and assets that can be added, modified, or removed from a Lumberyard game\. A gem is a module based on the [AZ Module system](az-modules-intro.md)\. You can enable gems for your game for additional assets and code\. For example, you can enable the Rain gem so that you can add the **Rain** and **Snow** components to your entities\. Gems can be enabled in other game projects or distributed to other game developers\. Lumberyard builds gems with the Waf build system\. Some gems are required for Lumberyard\.  
 Cloud gems are Lumberyard gems that provide AWS cloud\-connected functionality for a game\. For more information, see [Cloud Gems](cloud-canvas-cloud-gems-intro.md)\.  
 For more information, see [Creating a Gem](gems-system-gems.md)\.  
 

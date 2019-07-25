@@ -1,31 +1,33 @@
 # Using the Track View Editor<a name="cinematics-track-view-editor"></a>
 
-The **Track View** editor is the primary tool to create and manage cinematic sequences or animation keyed events\. Whether you want to generate cutscenes for games or create a script to trigger an animation, you can use the **Track View** editor to control cameras, component entities, global variables within a level, and so on\. 
+The **Track View** editor is the primary tool to create and manage cinematic sequences\. A *[sequence](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#sequence)* is the content generated from the **Track View** editor for cutscenes or other canned animation triggers\. When you create a sequence, this creates a component entity in the level\. The component entity stores all of the animation key data that you specified in the **Track View** editor\.
 
-**To open the **Track View** editor**
-+ Do one of the following:
-  + In Lumberyard Editor, choose **Tools**, **Track View**\.
-  + Press the shortcut **T**\.
+If you want to generate cutscenes for games or create a script to trigger an animation, you can use the **Track View** editor to control cameras, component entities, global variables in a level, and so on\. 
 
-A *[sequence](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#sequence)* is a term that refers to the content generated from the **Track View** editor for cutscenes or other canned animation triggers\. When you create a sequence, this creates a component entity within the level that stores all of the animation key data that you specified in the **Track View** editor\.
+**To create a sequence in the **Track View** editor**
 
-**To create a sequence**
+1. Do one of the following:
+   + In Lumberyard Editor, choose **Tools**, **Track View**\.
+   + Press **T**\.
 
-1. In the **Track View** editor, do one of the following: 
+1. To create a sequence, do one of the following: 
+   + Choose **Sequences**, **New Sequence**\.
+   + Click the **Add Sequence** icon ![\[Add track view sequence icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-2.png)\.
 
-   1. Choose **Sequences**, **New Sequence**\.
+1. Enter a sequence name, such as *Example Sequence* and click **OK**\.
 
-   1. Click the **Add Sequence** icon ![\[Add track view sequence icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-2.png)\.
+1. In the **Entity Outliner**, a component entity appears with the same name as your sequence\. This component entity has a **Sequence** component that stores your sequence data from the **Track View** editor\.  
+![\[Sequence component entity in the Entity Outliner.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/track-view-editor-sequence-entity.png)
 
-1. Enter a sequence name and click **OK**\.
+After you create a sequence, you can add properties to it\. Any part of the sequence is considered a *node*\. Nodes can be a reference to existing component entities or added to a sequence\. For example, if you want to include an active camera for your sequence, you can add the **Director** node\. Each node can have one or more tracks, depending your animation sequence\. A *track* displays animation keys on a timeline in relation to the property that is animated on a node\.
 
-1. In the **Entity Outliner**, a component entity appears with the same name as your created sequence\. This component entity has a **Sequence** component, which stores your sequence data from the **Track View** editor\.
+**To add a node to a sequence**
 
-Anything part of the sequence is considered a *node*\. Nodes can be a reference to existing component entities or added to a sequence such as a **Director** node\. 
+1. In the **Track View** editor, right\-click the sequence or the node browser and select **Add *Name* Node**\. 
 
-Each node can have one or more tracks, depending on what you want to animate\. A *track* is what displays animation keys on a timeline in relation to the property that is animated on a node\.
+1. Select the node to update its properties\.
 
-For more information, see [Track View Editor Nodes](cinematics-trackview-nodes.md)\.
+   For more information, see [Track View Editor Nodes](cinematics-trackview-nodes.md)\.
 
 **Topics**
 + [Track View Editor Toolbars](cinematics-track-view-editor-toolbars.md)

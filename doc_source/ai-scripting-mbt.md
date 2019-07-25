@@ -13,7 +13,7 @@ Nodes follow several common patterns, such as action, composite, and decorator n
 Game developers can create the nodes needed for their game\. In addition, Lumberyard provides a set of standard nodes for general use\. These include nodes for tasks related to AI, animation, flying, and common game activities, as well as generic nodes useful when building behaviors, such as for timeouts and looping tasks\. These provided nodes are documented in the [Modular Behavior Tree Node Reference](ai-scripting-mbt-nodes.md)\.
 
 **Tree**  
-Behaviors are constructed by building trees of nodes, collections of individual tasks that, when positioned as a root with branches that extend out into leaves define how an AI agent will behave in response to input\. 
+Behaviors are constructed by building trees of nodes\. These are a collection of individual tasks that when positioned as a root with branches that extend out into leaves define how an AI agent behaves in response to input\. 
 
 ## Common Node Patterns<a name="ai-scripting-mbt-common-node-patterns"></a>
 

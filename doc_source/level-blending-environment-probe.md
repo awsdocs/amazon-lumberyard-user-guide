@@ -207,8 +207,7 @@ To create the script file, copy and paste the code into a text file\. Rename the
 ![\[Lua Script component with all probes selected.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/level-environment-probe-daynight-3.png)<a name="probe-blending-example-script"></a>
 
 **Example**  
-See the following `ProbeBlending.lua` script\. 
-This script requires StarterGame Gem enabled. 
+See the following `ProbeBlending.lua` script\. To use this script, you must be in the StarterGame project\.  
 
 ```
 -- This script connects a set of probes to the time-of-day cycle and blends between them as time progresses.

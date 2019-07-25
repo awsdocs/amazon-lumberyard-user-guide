@@ -52,7 +52,7 @@ In Lumberyard's [Event Bus \(EBus\) system](ebus-intro.md), events can be sent o
 
 Event senders send events directly to a specific entity or broadcast events to all entities that are listening for and interested in handling the event\. Most events are addressable, which means they can be sent to a specific entity\. Because events are usually sent to entities, the most common address type is `Entity Id`, although other address types can be used\.
 
-The following example uses Light events to to create a sender node\.
+The following example uses Light events to create a sender node\.
 
 **To create a sender node**
 
@@ -89,7 +89,7 @@ The following example creates a receiver node for a Light event\.
 
 1. Click **Add/Remove Events**\.
 
-   Because receiver nodes are usually containers for multiple events, you can click **Add/Remove Events** to view and add any of the available event receivers for a given component\. In this case, the the Light component exposes two events: **Turned Off** and **Turned On**\.  
+   Because receiver nodes are usually containers for multiple events, you can click **Add/Remove Events** to view and add any of the available event receivers for a given component\. In this case, the Light component exposes two events: **Turned Off** and **Turned On**\.  
 ![\[Adding an event to a receiver node in Script Canvas.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-nodes-understanding-11.png)
 
 1. Select the **Turned Off** check box to add the **Turned Off** event to the receiver node\.

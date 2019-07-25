@@ -66,11 +66,12 @@ For more information, see [Using Gems to Add Modular Features and Assets](gems-s
 
 ## PhysX<a name="component-entity-physx"></a>
 
-The following components support the PhysX system, which is not compatible with the legacy physics system\. You cannot use components interchangeably between each system\.
+The following components support the PhysX system, which is not compatible with the legacy physics system\. You can't use components interchangeably between each system\.
 
 For more information, see [Simulating Physics Behavior with the PhysX System](physx-intro.md)\.
 + [PhysX Character Controller](component-physx-character-controller.md)
 + [PhysX Collider](component-physx-collider.md)
++ [PhysX Force Region](component-physx-force-region.md)
 + [PhysX Ragdoll](component-physx-ragdoll.md)
 + [PhysX Rigid Body Physics](component-physx-rigid-body-physics.md)
 + [PhysX Terrain](component-physx-terrain.md)

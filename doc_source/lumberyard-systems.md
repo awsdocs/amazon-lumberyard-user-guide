@@ -33,7 +33,7 @@ Lumberyard consists of the following major systems that help you develop levels 
    
 + [Using Gems to Add Modular Features and Assets](gems-system-gems.md)
 
-  Gems are packages that contain code and/or assets to augment your game projects, such as the ChatPlay and Woodland Asset Collection gems\. You can select gems to include in your project through the Lumberyard [Project Configurator](configurator-intro.md) and from the command line\.
+  Gems are packages that contain code and assets to augment your game projects, such as the ChatPlay and Woodland Asset Collection gems\. You can select gems to include in your project through the Lumberyard [Project Configurator](configurator-intro.md) and from the command line\.
 
    
 + [Creating Levels and Adding Environment Effects](level-intro.md)

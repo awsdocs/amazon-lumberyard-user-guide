@@ -276,13 +276,13 @@ Manages the tags for a deployment\. Deployment tags specify resource group overr
 In addition to the [Common Arguments](#cloud-canvas-command-line-common-arguments), the `deployment tags` command accepts the following arguments:
 + `--add` *\{tag\}* \[*\{tag\}* \.\.\.\]
 
-  Optional\. Specfies the tags to add to a deployment\. The tags are saved in the `lumberyard_version\dev\project_name\AWS\local-project-settings.json` file\.
+  Optional\. Specifies the tags to add to a deployment\. The tags are saved in the `lumberyard_version\dev\project_name\AWS\local-project-settings.json` file\.
 + `--clear`
 
   Optional\. Clears all tags for a deployment\.
 + `--delete` *\{tag\}* \[*\{tag\}* \.\.\.\]
 
-  Optional\. Specfies the tags to delete from a deployment\.
+  Optional\. Specifies the tags to delete from a deployment\.
 + `--deployment {deployment-name}` or `-d {deployment-name}`
 
   Optional\. The name of the deployment\.

@@ -227,7 +227,7 @@ Yes
 
 ## EBus Notification Bus Interface<a name="component-spawner-notification-bus"></a>
 
-Use the following Ebus notification functions with the **Spawner** component to communicate with other components of your game\.
+Use the following EBus notification functions with the **Spawner** component to communicate with other components of your game\.
 
 For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
 

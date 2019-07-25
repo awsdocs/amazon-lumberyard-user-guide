@@ -19,7 +19,7 @@ Use Project Configurator to create a new, empty gem\.
 
       **<a href="http://www\.amazon\.com">Amazon</a>**
 
-      If you are editing the `Summary` parameter in the `gem.json` file, however, use the following syntax:
+      If you are editing the `Summary` parameter in the `gem.json` file, use the following syntax:
 
       ```
       "Summary": "<a href=\"http:\/\/www.amazon.com\">Amazon<\/a>",

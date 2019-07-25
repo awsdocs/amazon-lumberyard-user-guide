@@ -4,7 +4,7 @@ By default, the Viewport Interaction Model isn't enabled for the editor\. You ca
 
 **To enable the Viewport Interaction Model**
 
-1. In Lumberyard Editor, choose **File**, **Editor Settings**, **Global Preferences** to open the **Preferences** window\.
+1. In Lumberyard Editor, choose **Edit**, **Editor Settings**, **Global Preferences** to open the **Preferences** window\.
 
 1. Select **Enable New Viewport Interaction Model \(EXPERIMENTAL\)**\.
 

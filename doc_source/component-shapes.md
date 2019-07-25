@@ -33,7 +33,7 @@ The **Shape** component includes the following shapes and properties:
 
 ## Scaling Shapes<a name="component-shape-scaling"></a>
 
-As a best practice, when you scale a shape, adjust the shape component's properties, such as its **Dimensions**, **Height**, and **Radius**\.\.
+As a best practice, when you scale a shape, adjust the shape component's properties, such as its **Dimensions**, **Height**, and **Radius**\.
 
 ![\[Scale a Box Shape by adjusting its Dimensions values. Scale a Cylinder Shape by adjusting its Height and Radius values.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-shape-scaling-2.png)
 

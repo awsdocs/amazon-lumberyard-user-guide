@@ -2,27 +2,22 @@
 
 Asset Processor's **Faster Scanning Mode** speeds up Lumberyard's startup scan by disabling checking for cache changes that occurred while Asset Processor was not running\. This can save you time when processing many assets in your project\.
 
-By default, **Faster Scanning Mode** is disabled\. You can enable or disable this mode any time without restarting the Asset Processor, including during the scan\. Asset Processor saves your preference between sessions\.
+By default, **Faster Scanning Mode** is enabled\. You can enable or disable this mode any time without restarting the Asset Processor, including during the scan\. Asset Processor saves your preference between sessions\.
 
-**To enable Faster Scanning Mode**
+**To disable Faster Scanning Mode**
 
-1. Open Asset Processor
+1. Open [Asset Processor](asset-pipeline-processor.md)\.
 
-1. Choose **Tools** and select **Faster Scanning Mode**\.   
-![\[Enable Faster Scanning Mode in Asset Processor to process game assets quickly.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared-asset-processor-faster-scanning.png)
+1. Select **Tools** and clear **Faster Scanning Mode**\.   
+![\[Disable Faster Scanning Mode in Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared-asset-processor-zero-analysis.png)
 
 **To perform a full scan**
-
-1. Clear **Faster Scanning Mode**\.
-
-1. Do one of the following: 
-   + Choose **Start Scan**\. This starts a full scan immediately, which checks for files missing from the cache and rebuilds the appropriate source files\.
-   + Restart Lumberyard Editor\. Asset Processor runs a full scan automatically\.
++ Click **Start Scan**\. This starts a full scan immediately, which checks for files missing from the cache and rebuilds the appropriate source files\.
 
 Asset Processor's batch version also supports a command line parameter for **Faster Scanning Mode**\.
 
 ```
-AssetProcessorBatch.exe --fastAnalysisMode
+AssetProcessorBatch.exe --zeroAnalysisMode
 ```
 
 When you enable the feature you can also use console mode `stdout` as well as open GUI log windows that indicate the effectiveness of **Faster Scanning Mode**\. The output message displays the number of files that required full analysis and the total number of files\.

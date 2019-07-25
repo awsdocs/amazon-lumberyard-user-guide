@@ -90,7 +90,7 @@ These parameters appear in the **FBX Settings** tool when the **Export Mesh As C
 
 | Parameter | Description | 
 | --- | --- | 
-| Weld Vertices |  If set, mesh welding is performed\. A clean mesh is required\. The **Disable Clean Mesh** paramer must not be selected\.  | 
+| Weld Vertices |  If set, mesh welding is performed\. A clean mesh is required\. The **Disable Clean Mesh** parameter must not be selected\.  | 
 | Disable Clean Mesh | If set, mesh cleaning is disabled\. This makes [cooking](ly-glos-chap.md#cooking) faster\. When clean mesh is not performed, mesh welding is also not performed\.  | 
 | Force 32\-Bit Indices |  If set, 32\-bit indices are always created regardless of triangle count\.  | 
 | Suppress Triangle Mesh Remap Table |  If set, the face remap table is not created\. This saves a significant amount of memory, but the PhysX SDK can't provide the remap information for internal mesh triangles returned by collisions, sweeps, or raycasts hits\.  | 

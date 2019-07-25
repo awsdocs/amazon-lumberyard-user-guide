@@ -1,5 +1,12 @@
 # Programmer's Guide to Component Mode<a name="working-with-component-mode-programmatically"></a>
 
+
+****  
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+
 If you're a programmer, you can edit your components to add support for Component Mode\. This can help designers on your team work more easily with components\. You can use this feature to do the following:
 + Use manipulators to edit a component directly in the viewport
 + Create editing modes and tools without needing to create custom standalone editors

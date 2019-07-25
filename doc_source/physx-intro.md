@@ -40,7 +40,8 @@ The PhysX system uses the following gems, which you can [enable](gems-system-usi
 
 The **PhysX** gem has the following components, which you can [add](component-working-adding.md) to entities by using the [**Entity Inspector**](component-entity-inspector.md):
 + **[PhysX Collider](component-physx-collider.md)** – Enables physics objects to collide with other physics objects\. An entity that does not have a **PhysX Rigid Body Physics** component is a **static** collider, while an entity with the component is a **dynamic** collider\.
-+ **[PhysX Rigid Body Physics](component-physx-rigid-body-physics.md)** – Allows an entity to be simulated by physics\. Rigid body mode can be **kinematic** or **dynamic**\. Dynamic rigid bodies respond to collision events with other rigid bodies\. Kinematic rigid bodies are not affected by outside forces and gravity; their motion is driven by scripting\.
++ **[PhysX Force Region](component-physx-force-region.md)** – Enables an entity to specify a region that applies physical force to entities\. For each physics simulation frame, the component applies force to entities that are in the bounds of the region\.
++ **[PhysX Rigid Body Physics](component-physx-rigid-body-physics.md)** – Enables an entity to be simulated by physics\. Rigid body mode can be **kinematic** or **dynamic**\. Dynamic rigid bodies respond to collision events with other rigid bodies\. Kinematic rigid bodies are not affected by outside forces and gravity; their motion is driven by scripting\.
 + **[PhysX Terrain](component-physx-terrain.md)** – Implements physical interaction with the terrain\. It exports terrain and saves it as an asset that loads at runtime\. 
 
 The **PhysX Characters** gem has the following components:

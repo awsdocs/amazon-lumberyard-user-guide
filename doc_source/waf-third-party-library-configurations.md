@@ -20,7 +20,7 @@ Encapsulating the build details within a single file helps centralize the manage
 
 ### Abstraction<a name="waf-third-party-library-configurations-abstraction"></a>
 
-The third\-party identifiers provide an abstraction layer between the the third\-party library details and the consuming project or module\. This layer makes it unnecessary to explicitly inject the paths for the library and include headers for each project or module that uses the library\. Instead, the `uselib` mechanism with the third\-party identifier provides the necessary injection of paths, libraries, and custom rules\.
+The third\-party identifiers provide an abstraction layer between the third\-party library details and the consuming project or module\. This layer makes it unnecessary to explicitly inject the paths for the library and include headers for each project or module that uses the library\. Instead, the `uselib` mechanism with the third\-party identifier provides the necessary injection of paths, libraries, and custom rules\.
 
 For example, assume you have two third\-party libraries, `StaticLibA` and `DynamicLibB`, that you want to link into test project `ProjectOne`\. Without the `uselib` system, the `wscript` file for `ProjectOne` would look like the following:
 

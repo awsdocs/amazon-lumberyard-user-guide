@@ -20,7 +20,7 @@ Enter the name of the audio trigger that this component runs when **'play'** is 
 Enter the name of the audio trigger that this component runs when **'stop'** is called\. You can specify any trigger here; you do not need to specify a **'stop'** trigger in order to stop audio, but it is a best practice to pair the two triggers\. If you leave this setting blank, the **'stop'** trigger simply stops the audio trigger specified for **'play'**\.
 
 **Obstruction Type**  
-Select an option for the raycasts used in calculation of obstruction and occlision\.  
+Select an option for the raycasts used in calculation of obstruction and occlusion\.  
 + **Ignore**
 + **SingleRay**
 + **MultiRay**

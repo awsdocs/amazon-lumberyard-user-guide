@@ -6,26 +6,30 @@ If you add a **Code & Assets** gem, you must [build your project](building-your-
 
 **To create a gem with the command line**
 
-1. Open a command line and navigate to the `lumberyard_version\dev\Bin64vc140\` directory (if using Visual Studio 2015), or the `lumberyard_version\dev\Bin64vc141\` directory (if using Visual Studio 2017)\.
+1. Open a command\-line prompt and navigate to the `lumberyard_version\dev\Bin64vc140_or_Bin64vc141` directory\.
 
-1. Type one of the following to create:
-   + **Code & Asset** gem: lmbr gems create *MyNewGem*
+1. Enter one of the following commands:
+   + Create a **Code & Asset** gem if your gem contains assets as well as code that performs certain functions upon the assets\.
 
-     Create a **Code & Asset** gem if your gem contains assets as well as code that performs certain functions upon the assets\.
-   + **Asset Only** gem: lmbr gems create *MyNewGem* \-asset\-only
+     ```
+     lmbr gems create MyNewGem
+     ```
+   + Create an **Assets Only** gem if your gem contains only assets and no code\.
 
-     Create an **Assets Only** gem if your gem contains only assets and no code\.
+     ```
+     lmbr gems create MyNewGem -asset-only
+     ```
 
 1. Close the command line\.
 
-   The following directories and files are created in `\dev\gems\gem_name\` for 'Assets Only' and 'Code & Assets' gems::
+   The following directories and files are created in `\dev\gems\gem_name\` for 'Assets Only' and 'Code & Assets' gems:
    + `Assets` – Directory of assets for your gem, such as materials, models, textures, and audio files\. The AZ::IO system automatically includes this directory so that you can reference assets provided by your gem\. For example, if you have a material file, `\Assets\materials\MyMaterial.mtl`, you can reference it in your code with the path `materials\MyMaterial.mtl`\.
 **Note**  
-If this directory is not present, you can manually add it\. If you don’t have any assets in your gem, you can remove this folder\.
-   + `Gem.json` – Metadata for this gem\. Do not modify the `Uuid` or `Name` fields\. You can specify the following gem metadata fields:
+If this directory isn't present, you can manually add it\. If you don’t have any assets in your gem, you can remove this folder\.
+   + `Gem.json` – Metadata for this gem\. Don't modify the `Uuid` or `Name` fields\. You can specify the following gem metadata fields:
      + `Version` – `n.n.n` \(numerical values only\)\.
 
-       Gem revision is not supported, so you should not plan to increment the revision after shipping the gem\.
+       Gem revision isn't supported, so you shouldn't plan to increment the revision after shipping the gem\.
      + `DisplayName` – Friendly display name\. Can contain spaces\.
      + `Tags` – Searchable tags that are displayed in Project Configurator under the gem's summary\. Enter this as a comma\-separated list of strings\.
      + `IconPath` – Path to the gem's display icon\.
@@ -60,6 +64,6 @@ If this directory is not present, you can manually add it\. If you don’t have 
    + `Code\Source\StdAfx.cpp` – `Code\Source\StdAfx.h`
    + `Code\Tests\gem_nameTest.cpp`
 
-1. If your gem is labled **Assets Only**, you do not need to build your project\.
+1. If your gem is labeled **Assets Only**, you don't need to build your project\.
 
-   If your gem is labeld **Code & Assets** gem, you must [build your project](building-your-lumberyard-game-project.md)\.
+   If your gem is labeled **Code & Assets** gem, you must [build your project](building-your-lumberyard-game-project.md)\.
