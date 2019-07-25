@@ -6,7 +6,7 @@ If you add a **Code & Assets** gem, you must [build your project](building-your-
 
 **To create a gem with the command line**
 
-1. Open a command line and navigate to the `lumberyard_version\dev\Tools\LmbrSetup\Win\` directory\.
+1. Open a command line and navigate to the `lumberyard_version\dev\Bin64vc140\` directory (if using Visual Studio 2015), or the `lumberyard_version\dev\Bin64vc141\` directory (if using Visual Studio 2017)\.
 
 1. Type one of the following to create:
    + **Code & Asset** gem: lmbr gems create *MyNewGem*
