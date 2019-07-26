@@ -40,6 +40,7 @@ After you download and extract Lumberyard on your Mac, you must run Lumberyard S
 1. Verify that the engine root path is correct\.
 
 1. On the **Get started** page, select the following and then click **Next**: 
+   + **Run your game project**
    + **Compile the game code**
    + **Compile the engine and asset pipeline**
    + **Compile the Lumberyard Editor and tools**
