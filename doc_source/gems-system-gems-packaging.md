@@ -2,6 +2,12 @@
 
 Before you can include your assets in your new gem, you must place them within your Lumberyard's game project root directory\. This way, they will be imported by Lumberyard Asset Pipeline and converted into assets that Lumberyard can use\. After you move and import your assets, you must test them in Lumberyard to ensure that they still work as intended\. You then move the verified assets into the gem directory structure that was created when you created a new gem\.
 
+**Note**  
+To avoid conflicts with similarly named assets, we recommend that you use a namespace workflow or acronyms when you create directories that contain assets in gems. 
+
+For example, you can add a directory between `Assets` and `Textures` so that the directory doesn't conflict with other gems that might have identically named textures. Your structure might look like the following: 
+`lumberyard_version\dev\Gems\gem_name\Assets\example_name\Textures\CommonTextureName.tif`
+
 **To package your assets**
 
 1. Prepare your asset directory\.
