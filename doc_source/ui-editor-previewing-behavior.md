@@ -34,4 +34,4 @@ For example, in the picture below, **EnablerChanged** is displayed whenever the 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-previewing-action-log.png)
 
-During **Preview**, flow graphs and Lua scripts are not active; actions taken in UI canvas **Preview** have no effect on anything outside of the canvas\.
+During **Preview**, Script Canvas scripts and Lua scripts are not active; actions taken in UI canvas **Preview** have no effect on anything outside of the canvas\.
