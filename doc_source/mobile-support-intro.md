@@ -23,4 +23,5 @@ Lumberyard supports the following minimum specifications for Android and iOS:
 + [Updating Graphics Settings for Android and iOS](ios-android-updating-graphics-settings.md)
 + [Adding IP Addresses to Allow Access to the Asset Processor and Remote Console](ios-android-adding-ip-addresses.md)
 + [Running the Shader Compiler on Amazon EC2](ios-android-running-shader-compiler-amazon-EC2.md)
++ [Using AWS Device Farm in Lumberyard Editor](ios-android-deployment-tool-device-farm-integration.md)
 + [Using AppDetective to Test Your Game Build on the AWS Device Farm](ios-android-appdetective.md)

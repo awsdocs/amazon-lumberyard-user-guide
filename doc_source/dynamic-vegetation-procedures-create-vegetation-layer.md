@@ -14,13 +14,19 @@ Creating a vegetation layer is the first and most basic step in creating your dy
 
    The **Vegetation Layer Spawner** component is the core component that initializes the engine that spawns vegetation\.
 
-1. Click **Add Required Component** and choose a [shape component](component-shapes.md)\.  
-![\[Choose a shape for your Vegetation Layer Spawner.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-vegetation-layer-add-shape.png)
+1. Click **Add Required Component** and choose **Vegetation Reference Shape**\.  
+![\[Choose the Vegetation Reference Shape for your Vegetation Layer Spawner.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-vegetation-layer-add-shape.png)
 
-   The shape component defines the shape and size of the area that contains the vegetation\.
+   The **Vegetation Reference Shape** has no shape on its own\. You must next create a child entity and add a **Shape **component, which you will reference in the **Vegetation Reference Shape**\.
+
+1. Right\-click **BasicCoverage**, select **Create Child Entity**, and name it **TestBox**\.
+
+1. Select **TextBox**, click **Add Component**, and select the **Box Shape** component\.
 
 1. Adjust the size and position of the shape so that it's large enough for your purposes and intersects with the ground\.  
 ![\[Adjust your shape to cover a sufficient area and intersect with the ground.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-vegetation-layer-adjust-shape.png)
+
+1. Select **BasicCoverage** and, in the **Vegetation Reference Shape** component, click the target symbol and select the **TestBox** entity\.
 
 1. Click **Add Required Component** and choose **Vegetation Asset List**\.
 
@@ -30,7 +36,7 @@ Creating a vegetation layer is the first and most basic step in creating your dy
 1. In the **Vegetation Asset List** component, next to **Mesh Asset**, click **Browse \(\.\.\.\)**\.  
 ![\[Click Browse (…) to select a Mesh Asset.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-vegetation-layer-browse.png)
 
-1. In the **Search** bar, enter **grass** and select one of the grass assets that appear in the results\.  
+1. In the **Search** bar, enter **grass** and select one of the grass assets in the results\.  
 ![\[Click Browse (…) to select a Mesh Asset.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-vegetation-layer-asset-grass.png)
 
    You should have a uniform grassy field with the grass in a grid formation\.  

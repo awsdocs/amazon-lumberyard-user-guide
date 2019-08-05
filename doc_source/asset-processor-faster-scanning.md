@@ -25,12 +25,8 @@ When you enable the feature you can also use console mode `stdout` as well as op
 **Example**  
 
 ```
-AssetProcessor: Builder optimization: 0 / 17589 files required full analysis, 542 sources found but not processed by anyone
+~~Debug~~5303 files reported from scanner.  2903 unchanged files skipped, 2400 files processed
 ```
-
-In addition, Asset Processor indicates the number of files in your assets folders that are not recognized by any builder, such as `.p4ignore` or PSD files and other files not involved in asset processing\. Because these files barely impact performance \(several hundred files may take milliseconds in total\) this number is usually unimportant\. 
-
-However, if this number is particularly large, consider examining your assets directories and adding exclusions to the `AssetProcessorPlatformConfig.ini` file\. You can exclude entire directories, which can be faster than analyzing whether or not they are being built\.
 
 For more information, see [Configuring the Asset Pipeline](asset-pipeline-configuring.md)\.
 
@@ -54,10 +50,10 @@ If all of the following are true for a given source file found during the scan, 
 + There are no builders that have changed the set of source files\.
 
 Asset Processor performs a check at the beginning of the scan and does the following actions\. These actions are low cost\.
-+ \(Very low\) Performs a narrow query into the database to determine when the fingerprint data for this file was previously processed\.
-+ \(Very low\) Checks whether the source file in question had any version or analysis fingerprint changes by the builder\. Asset Processor compares the data to the previous processed time\.
-+ \(Very low\) Gathers the modification times of the source file and any declared files on which it depended during the previous processing time\.
++ \(Very low\) Collects modtime information for every file scanned as part of Asset Processor startup\.
++ \(Very low\) Checks whether the source file in question had any builders version change or analysis fingerprint by comparing the data from the previous time\.
 + \(Very low\) Compares the modtime with the previously recorded time in the database\.
-+ \(Low\) Gets the declared list of files on which the source file depended during the previous processing time\.
++ \(Low\) Queries the database files table to get a list of every file and its modtime from previous runs\.
++ \(Low\) Queries the database sources table to get a list of every source asset and its builder\-fingerprint signature\.
 
 If any of these checks fail, the source goes through the normal, unchanged analysis pipeline\. This means that **Faster Scanning Mode** makes no changes to the actual analysis\.

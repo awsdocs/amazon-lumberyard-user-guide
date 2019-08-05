@@ -15,7 +15,7 @@ Use the following procedure to run a script that aids you in upgrading your lega
 
 1. Create a backup of the project\(s\) for which you intend to run this script\. Once you run this script, you cannot back out of the changes it performs\. To protect against the loss of data, be sure to perform this step\.
 
-1. Download the [script](https://gamedev.amazon.com/forums/storage/attachments/3218-fixdecalspy27v2.zip)\. Extract it to Lumberyard's `\dev` directory\.
+1. Download the [script](https://forums.awsgametech.com/uploads/short-url/wMjFT26YHbn698fSQ1CYXKhG9kl.zip)\. Extract it to Lumberyard's `\dev` directory\.
 
 1. Open a command prompt\. Navigate to Lumberyard's `dev` directory\.
 

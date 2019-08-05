@@ -113,4 +113,4 @@ Removing a ban from an account is similar to adding one\.
 
 ## Next Steps<a name="cloud-canvas-cloud-gem-player-account-next-steps"></a>
 
-After you have added player accounts to your Cloud Gem Portal, you can start using them in your game\. The Lumberyard team is always looking for feedback on cloud gems and suggestions for improvements\. Feel free to reach out to us on our [forums](https://gamedev.amazon.com/forums/index.html) or send email to lumberyard\-feedback@amazon\.com\.
+After you have added player accounts to your Cloud Gem Portal, you can start using them in your game\. The Lumberyard team is always looking for feedback on cloud gems and suggestions for improvements\. Feel free to reach out to us on our [forums](https://forums.awsgametech.com/) or send email to lumberyard\-feedback@amazon\.com\.

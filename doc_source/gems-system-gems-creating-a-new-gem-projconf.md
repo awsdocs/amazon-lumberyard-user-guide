@@ -2,7 +2,7 @@
 
 Use Project Configurator to create a new, empty gem\.
 
-1. Navigate to the `lumberyard_version\dev\Tools\LmbrSetup\Win\` directory and then start `ProjectConfigurator`\. 
+1. Navigate to the `lumberyard_version\dev\Tools\LmbrSetup\Win\` directory and start `ProjectConfigurator`\. 
 
 1. Select the project and click **Enable Gems**\.
 
