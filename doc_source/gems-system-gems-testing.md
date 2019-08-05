@@ -6,7 +6,7 @@ After you move your assets into the gem's directory structure, you can enable yo
 
 1. Open the Project Configurator by doing one of the following:
    + Open Lumberyard Setup Assistant\. On the **Summary** page, click **Configure project**\.
-   + Navigate to the `lumberyard_version\dev\Bin64vc140\` directory (if using Visual Studio 2015), or the `lumberyard_version\dev\Bin64vc141\` directory (if using Visual Studio 2017) directory and then start `ProjectConfigurator`\.
+   + Navigate to the `lumberyard_version\dev\Bin64vc140\` directory (if using Visual Studio 2015), or the `lumberyard_version\dev\Bin64vc141\` directory (if using Visual Studio 2017) and then start `ProjectConfigurator`\.
 
 1. [Enable](gems-system-using-project-configurator.md) your new Gem\.
 
