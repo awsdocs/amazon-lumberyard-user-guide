@@ -107,6 +107,7 @@ You must save these files with the correct line endings\. If you are not using t
 + [Prerequisites](#android-prerequisites)
 + [Setting Up Your PC](#android-setting-up-pc)
 + [Setting Up Your Mac](#android-setting-up-mac)
++ [Quick Start: Running the Samples Project on Android Devices](android-quick-start.md)
 + [Configuring Your Game Project for Android](android-game-configuring.md)
 + [Building Android Games](android-game-building.md)
 + [Building Game Assets for Android Games](android-assets-building.md)

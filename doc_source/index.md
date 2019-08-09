@@ -1389,6 +1389,7 @@ Amazon's trademarks and trade dress may not be used in
    + [VR Lua Functions](lua-scripting-ref-vr.md)
 + [Creating Android and iOS Games](mobile-support-intro.md)
    + [Android Support](android-intro.md)
+      + [Quick Start: Running the Samples Project on Android Devices](android-quick-start.md)
       + [Configuring Your Game Project for Android](android-game-configuring.md)
       + [Building Android Games](android-game-building.md)
       + [Building Game Assets for Android Games](android-assets-building.md)
