@@ -187,6 +187,11 @@ Disables sparse voxel octree global illumination \(SVOGI gem\)\.
 e_GI=0
 ```
 
+Flickering, black or blurry textures may appear if the streaming system is thrashing while render to texture is active in a scene that uses a large amount of texture memory.   You can try increasing the r_TexturesStreamPoolSize, or set your Max FPS render to texture component property to 0 so it updates every frame, which may help the streaming system with balancing texture priorities.  
+
+**Tip**  
+A useful way to see if graphics artifacts are a result of streaming thrashing is to enable r_TexturesStreamingDebug 2 to show textures being streamed in and memory usage.
+
 **Tip**  
 For more information about setting console variables, see [Using the Console Window](console-intro.md)\.
 
