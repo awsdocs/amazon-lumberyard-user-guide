@@ -92,8 +92,10 @@ Next, you must run Lumberyard Editor and the **Deployment Tool** so that the Sam
 1. Choose **File**, **Project Settings**, and choose **Deploy to device**\.
 
 1. In the **Deployment Tool** window, select the following\.
+   + For **Target platform**, select **Android ARMv8**
    + For **Build Options**, select **Build Game**\.
    + Click **Advanced Options** and select **Install the Executable**\.
+  
 
 1. Click **Deploy to local device**\. Text appears while the code builds and deploys to your device\.  
 **Example**    
