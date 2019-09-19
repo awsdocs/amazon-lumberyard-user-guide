@@ -442,7 +442,8 @@ The following attributes are used in third\-party library definition files\.
 | description | string | Description for the third\-party definition\. | 
 | header\_only | boolean | Flag that indicates that the file specifies a header\-only library definition\. | 
 | includes | \[string\] | List of include paths to apply to any dependent project or module\. | 
-| defines | \[string\] | List of additional defines to apply to any dependent project or module\. | 
+| defines | \[string\] | List of additional defines to apply to any dependent project or module\. |
+| engine_configs | boolean | Flag that indicates the library configuration matches the engine configuration, or has different rules that must be applied per engine configuration instead of just for debug and release.  For example, if you wanted to use specific libraries for profile builds you could specify libpath_profile and lib_profile.  You could also copy specific binaries per configuration by using copy_extra_debug, copy_extra_profile, copy_extra_performance etc.  |
 | lib\_required | boolean | Flag that instructs the third\-party configuration file parser whether to verify the existence of the declared static library files on disk\. | 
 | shared\_required | boolean | Flag that instructs the third\-party configuration file parser whether to verify the existence of the declared shared library files on disk\. | 
 | suppress\_warning | boolean | Flag that disables warnings related to invalid third\-party configurations\. It is recommended that this flag be set to true for libraries that are optional\. | 
