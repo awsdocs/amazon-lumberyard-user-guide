@@ -19,7 +19,7 @@ Legacy animation format
 [Image files](asset-pipeline-configuring-image-processing.md)
 
 **FBX**  
-Geometry \(static mesh\) only\. Doesn't convert new EMotionFX characters or animations\.
+Geometry \(static mesh\) only\. Doesn't convert new EMotion FX characters or animations\.
 
 **Note**  
  All other types, such as characters and animation, are converted by the BuilderSDK system\. For more information, see [Creating a Custom Asset Builder](asset-builder-custom.md)\.

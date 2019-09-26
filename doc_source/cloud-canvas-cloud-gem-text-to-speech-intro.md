@@ -14,5 +14,5 @@ In the first approach, you prepare voices and dialogues that players require and
 + [Creating a Wwise Project for Runtime Text\-to\-Speech](cloud-canvas-cloud-gem-text-to-speech-wwise.md)
 + [Configuring Runtime Capabilities and Caching](cloud-canvas-cloud-gem-text-to-speech-runtime.md)
 + [Text\-to\-Speech Gem Implementation Details](cloud-canvas-cloud-gem-text-to-speech-details.md)
-+ [Lip Synchronization with EMotionFX](cloud-canvas-cloud-gem-text-to-speech-emotionfx.md)
++ [Lip Synchronization with EMotion FX](cloud-canvas-cloud-gem-text-to-speech-emotionfx.md)
 + [Text\-to\-Speech Cloud Gem Service API Reference](cloud-canvas-cloud-gem-text-to-speech-service-api.md)

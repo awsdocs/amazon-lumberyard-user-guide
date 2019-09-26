@@ -1,39 +1,38 @@
 # Using Asset Processor<a name="asset-pipeline-processor"></a>
 
-Asset Processor is a utility that runs in the background to detect changes to your asset files\. When Asset Processor detects new or updated asset files, it launches the Resource Compiler \(`Rc.exe`\), and then processes the assets and places them in the cache\. Asset Processor then notifies all running game or tool instances that the assets are updated\. The game can then reload the updated assets\.
+Asset Processor is a utility that runs in the background to detect changes to your asset files\. When Asset Processor detects new or updated asset files, it launches the Resource Compiler \(`Rc.exe` for FBX and ABC files, `AssetBuilder.exe` for all other types\), processes the assets, and then places them in the cache\. Asset Processor then notifies all running game or tool instances that the assets are updated\. The game can then reload the updated assets\.
 
 **Topics**
 + [Modifying the Asset Processor Configuration File](#asset-pipeline-processor-config)
-+ [Using the Asset Processor Batch File](#asset-pipeline-processor-batch-processing)
-+ [Debugging Asset Processor](#asset-pipeline-debugging)
++ [Using the Asset Processor Batch Program](#asset-pipeline-processor-batch-processing)
++ [Asset Processor Interface](asset-pipeline-processor-ui.md)
 + [Enabling Asset Processor's Faster Scanning Mode](asset-processor-faster-scanning.md)
 + [Importing Assets into Lumberyard](asset-pipeline-importing.md)
 + [Working with the FBX Settings Tool](char-fbx-importer.md)
 + [Using Resource Compiler](asset-pipeline-rc.md)
-
-![\[Use Asset Processor to manage new and updated asset files in Amazon Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-processor.png)
++ [Debugging Asset Processor](asset-processor-debugging.md)
 
 Asset Processor enables games to run on other platforms without deploying assets to that platform\. Instead, the assets are accessed from the asset cache on a connected Windows or macOS system\. With Asset Processor, you can also run games that use someone else's assets\.
 
 By proxying requests through itself, Asset Processor communicates with an iOS or Android shader compiler server through a USB cable on iOS and Android\.
 
-On Windows, Asset Processor starts automatically if you run Lumberyard Editor with automatically maintained connections\. Asset Processor also restarts automatically if you modify any of the data files that it needs to operate or if you retrieve a new version\.
+In Windows, Asset Processor starts automatically if you run Lumberyard Editor with automatically maintained connections\. Asset Processor also restarts automatically if you modify any of the data files that it needs to operate or if you retrieve a new version\.
 
-On macOS, you must manually start Asset Processor \(located in the `lumberyard_version/dev/BinMac64` directory\) from a command line window\.
+In macOS, you must manually start Asset Processor from a command line window\. Asset Processor is located in the `lumberyard_version/dev/BinMac64` directory\.
 
 **Note**  
-Symbolic links are not supported when using Asset Processor on macOS\. To ensure that Asset Processor works properly on macOS, follow these guidelines:  
+Symbolic links are not supported when using Asset Processor in macOS\. To ensure that Asset Processor works properly in macOS, follow these guidelines:  
 Do not use a symbolic link for your cache directory when you store compiled assets in a central location\.
 Do not store your source project assets in a symbolic link directory\.
 Use a unique cache directory\. Do not share the cache directory with a Windows system that is also running Asset Processor\.
 
  You can open the Asset Processor options from the notification area on the taskbar\.
 
-![\[Right-click the Asset Processor icon in your notification area on the taskbar and then choose Show.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-processor-options.png)
+![\[Right-click the Asset Processor icon in your notification area on the taskbar, and then choose Show.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-processor-options.png)
 
 You don't need to close Asset Processor when you get the latest updates from source control\. You can start Lumberyard Editor while Asset Processor is still processing your assets\.
 
-However, if you aren't using the game or Lumberyard Editor, you can exit Asset Processor by right\-clicking its icon in the notification area on the taskbar \(Windows\) or menu bar \(macOS\)\.
+However, if you aren't using the game or Lumberyard Editor, you can exit Asset Processor by right\-clicking its icon in the notification area on the Windows taskbar or the macOS menu bar\.
 
 Asset Processor can also serve files directly to running console games so that the assets aren't required to be present on the game device\. This is called virtual file system \(VFS\) and is required for live reloading to work on those platforms\. For more information, see [Live Reloading and VFS](asset-pipeline-live-reloading.md)\.
 
@@ -50,9 +49,9 @@ To add game\-specific overrides, you can add a file named `AssetProcessorGamePla
 
 For more information about these configuration files, see [Configuring the Asset Pipeline](asset-pipeline-configuring.md)\.
 
-## Using the Asset Processor Batch File<a name="asset-pipeline-processor-batch-processing"></a>
+## Using the Asset Processor Batch Program<a name="asset-pipeline-processor-batch-processing"></a>
 
-The `AssetProcessorBatch.exe` file compiles all assets for the current project and enabled platforms\. If the file succeeds without errors, it exits with a `0` code\. You can use the file as part of your build system for automation\.
+The `AssetProcessorBatch.exe` application compiles all assets for the current project and enabled platforms\. If the process succeeds without errors, it exits with a `0` code\. You can use the Asset Processor Batch program as part of your build system for automation\.
 
 The `AssetProcessorBatch.exe` file accepts the following command line parameters for overriding the default behavior:
 + `/platforms=comma separated list`
@@ -61,9 +60,3 @@ The `AssetProcessorBatch.exe` file accepts the following command line parameters
 Example:
 
 `AssetProcessorBatch.exe /platforms=pc,ios /gamefolder=SamplesProject`
-
-## Debugging Asset Processor<a name="asset-pipeline-debugging"></a>
-
-To debug Asset Processor issues, do the following:
-+ Exit Asset Processor and then restart it from the project or branch that you're currently working in\. You may need to quit Asset Processor in the notification area on the Windows taskbar\.
-+ Clear the asset cache by deleting the `Cache` folder located in the `lumberyard_version/dev/` directory when Asset Processor is not running\. Restart Asset Processor to rebuild all assets\.

@@ -86,13 +86,6 @@ Consider the following when deciding to make functions public or private\.
 + Make your bus functions `public` if they constitute the public interface for your class\. While it's discouraged, Lumberyard does not prevent users from getting direct pointers to components and calling functions directly\. To avoid this, make sure that your useful functions are public\. For example, `MyComponent` should probably implement functions from `MyComponentRequestBus` publicly\.
 + Make your bus functions `protected` if they contain the private workings of your class\. For example, your component's reaction to the `TransformNotificationBus::OnTransformChanged` event would likely be a private implementation detail\.
 
-## Avoid Using the const Type Qualifier in EBus Event Group Functions<a name="component-entity-system-pg-components-ebuses-best-practices-const-avoidance"></a>
-
-In general, all EBus methods are meant to be implemented by external code\. As the author of an EBus interface, you do not want to force the use of `const` declarations upon any particular implementation of a method\. Because end programmers will write these for their own data, it is best to avoid `const` in EBus event group functions\.
-
-**Note**  
-This is true for request buses but is particularly important with regard to notification buses\.
-
 ## Additional Resources<a name="component-entity-system-pg-components-ebuses-best-practices-additional-resources"></a>
 
 For more information on components and EBuses, consult the following resources\.

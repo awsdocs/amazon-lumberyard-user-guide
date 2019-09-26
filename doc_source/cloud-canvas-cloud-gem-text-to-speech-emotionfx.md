@@ -1,4 +1,4 @@
-# Lip Synchronization with EMotionFX<a name="cloud-canvas-cloud-gem-text-to-speech-emotionfx"></a>
+# Lip Synchronization with EMotion FX<a name="cloud-canvas-cloud-gem-text-to-speech-emotionfx"></a>
 
 Starting in version 1\.12, Lumberyard uses [Animation Editor](char-intro.md) to implement lip synchronization\.
 

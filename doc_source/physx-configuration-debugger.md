@@ -8,7 +8,7 @@ For more information, see the NVIDIA [PhysX Visual Debugger \(PVD\)](https://doc
 
 1. To get started, [download](https://developer.nvidia.com/physx-visual-debugger) the PVD\. 
 **Note**  
-You must have a NIVIDIA account to download the PVD\. If you don't already have an account, follow the steps to create and then sign in your account\. 
+You must have a NVIDIA account to download the PVD\. If you don't already have an account, follow the steps to create and then sign in your account\. 
 
 1. Follow the installation steps\.
 

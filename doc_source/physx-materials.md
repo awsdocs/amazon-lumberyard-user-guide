@@ -40,6 +40,12 @@ In this topic, the example creates a material library file in the **Starter Game
 ![\[Specifying option values for the material.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-3.png)  
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/physx-materials.html)
+**Note**  
+When materials collide, the **Friction combine** and **Restitution combine** define the value of applied friction and restitution using the following order\.  
+**Average**
+**Minimum**
+**Multiply**
+**Maximum**
 
 1. Save your changes to the asset\.
 

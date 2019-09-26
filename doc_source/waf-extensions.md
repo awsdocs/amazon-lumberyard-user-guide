@@ -1,6 +1,6 @@
 # Waf Extensions<a name="waf-extensions"></a>
 
-## Compiling with Incredibuild<a name="waf-extensions-incredibuild"></a>
+## Compiling with IncrediBuild<a name="waf-extensions-incredibuild"></a>
 
 Waf supports IncrediBuild 8\.0\.1 or later, and allows for distributed network builds for compiling larger projects\.
 

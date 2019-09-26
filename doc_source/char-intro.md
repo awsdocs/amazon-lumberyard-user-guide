@@ -2,7 +2,7 @@
 
 Most game projects require an animated character to move around in the environment\. This may be a character that the player controls, or an AI\-driven entity that interacts with the level\.
 
-Use the **EMotionFX Animation Editor** to animate characters in Amazon Lumberyard\. To build a character, you associate one or more skinned models with an animation skeleton \(built in a digital content creation tool like Maya\)\. You then import the character into the **Animation Editor** and specify the animations that you want your character to have\.
+Use the **EMotion FX Animation Editor** to animate characters in Amazon Lumberyard\. To build a character, you associate one or more skinned models with an animation skeleton \(built in a digital content creation tool like Maya\)\. You then import the character into the **Animation Editor** and specify the animations that you want your character to have\.
 
 You can then blend animations, so that your character transitions from one animation to another, and specify the conditions when an animation occurs for a character\. For example, you can specify that your character starts in an idle position\. After several seconds, the character starts to walk, run, and then slow down again until the character returns to an idle position\.
 
@@ -25,9 +25,10 @@ If you are using Lumberyard 1\.10 or earlier, you can use the legacy animation s
 + [Customizing State Machine Routing with Sparse Motion Sets](animation-editor-customizing-state-machines-with-sparse-motion-sets.md)
 + [Animation Editor Nodes](animation-editor-node.md)
 + [Using Tags with Animation Graphs](animation-editor-using-tags.md)
-+ [Customizing EMotionFX Objects](animation-editor-customizing-emotionfx-objects.md)
++ [Customizing EMotion FX Objects](animation-editor-customizing-emotionfx-objects.md)
 + [Creating Custom Motion Events and Parameters Using C\+\+](char-animation-editor-custom-events-parameters.md)
 + [Creating and Simulating a PhysX Ragdoll](animation-editor-creating-and-simulating-physx-ragdoll.md)
 + [Creating Additive Animations](char-fbx-importer-motion-additive.md)
 + [Retargeting Motions](animation-editor-retargeting-animations.md)
++ [Creating Simulated Objects](animation-editor-creating-simulated-objects.md)
 + [Best Practices for Working with Skinned Meshes for Animation](best-practices-for-working-with-meshes-for-animations.md)

@@ -4,6 +4,7 @@
 + [The Light Component and Script Canvas](#script-canvas-behavior-context-light-component)
 + [Objects: The PhysicsComponent Example](#script-canvas-behavior-context-physicscomponent)
 + [Displaying EBus Event Parameter Names in Script Canvas Nodes](#script-canvas-behavior-context-parameter-names)
++ [Common Programming Problems](#script-canvas-behavior-context-common-programming-problems)
 
 You can use Script Canvas to expose runtime code in a visual authoring environment using the behavior context\. In addition to this topic, it is recommended that you also read the [Programmer's Guide to Entities and Components](component-entity-system-pg-intro.md) and [Behavior Context](component-entity-system-reflection-behavior-context.md)\.
 
@@ -181,3 +182,71 @@ if (auto behaviorContext = azrtti_cast<AZ::BehaviorContext*>(reflectContext))
         ->Event("SomeEvent", &MyBus::Events::SomeEvent, { {someEventParam1, someEventParam2} });
 }
 ```
+
+## Common Programming Problems<a name="script-canvas-behavior-context-common-programming-problems"></a>
+
+The following are some common problems that occur when programming with Script Canvas and the behavior context\.
+
+**I reflected my class to the behavior context, but it doesn't appear in Script Canvas\.**  
+Both the serialization context and the behavior context use the same `Reflect` function:
+
+```
+Reflect(AZ::ReflectContext*)
+```
+
+A common mistake is to not keep the reflection scopes separate\. For example, you might mistakenly place the `BehaviorContext` reflection within the `SerializationContext` scope\. The following code examples show the problem and the solution\.
+
+**Problem**
+
+```
+void Example::Reflect(AZ::ReflectContext* context)
+{
+    if (AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
+    {
+        serializeContext->Class<Example>()
+            ->Version(1)
+            ;
+ 
+        // Problem! BehaviorContext is inside the SerializeContext scope and will not get reflected.
+        if (AZ::BehaviorContext* behaviorContext = azrtti_cast<AZ::BehaviorContext*>(context))
+        {
+            behaviorContext->Class<Example>()
+                ->Method("IsValid", &Example::IsValid)
+                ;
+        }
+    }
+}
+```
+
+**Solution**
+
+```
+void Example::Reflect(AZ::ReflectContext* context)
+{
+    if (AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(context))
+    {
+        serializeContext->Class<Example>()
+            ->Version(1)
+            ;
+    }
+ 
+    // Correct! Each context requires its own scope as this function is called multiple times (once per context)
+    if (AZ::BehaviorContext* behaviorContext = azrtti_cast<AZ::BehaviorContext*>(context))
+    {
+        behaviorContext->Class<Example>()
+            ->Method("IsValid", &Example::IsValid)
+            ;
+     }
+}
+```
+
+**I exposed a new EBus to the Behavior Context, but my handler is not getting called\.**  
+For example, you created an EBus handler and properly exposed it script\. Yet, when you try to receive the event in Script Canvas, it does not get triggered\.
+
+This is caused by an oversight that is easy to make: newly implemented EBus handlers must be connected before they can receive events\. The solution is to ensure that your component connects to the bus, as in the following example:
+
+```
+MyBus::BusConnect()
+```
+
+Depending on the type of bus, you might have to specify an ID to connect to\. For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.

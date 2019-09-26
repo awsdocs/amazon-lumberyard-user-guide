@@ -20,6 +20,11 @@ The files for this procedure are located in the following directory:
 
 `lumberyard_version\dev\SamplesProject\AnimationSamples\Simple_JackLocomotion`
 
+**Topics**
++ [Step 1: Creating a Motion Set](#creating-a-motion-set-with-animation-editor)
++ [Step 2: Creating an Animation Graph](#creating-motion-set-with-animation-editor)
++ [Step 3: Blending the Animations](#creating-a-blend-tree-with-animation-editor)
+
 ## Step 1: Creating a Motion Set<a name="creating-a-motion-set-with-animation-editor"></a>
 
 In the following procedure, you import your character, Jack the robot, select the motions that you want, and then add those motions to a motion set\. 

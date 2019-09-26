@@ -17,4 +17,5 @@ For more information, see [Behavior Context](component-entity-system-reflection-
 **Topics**
 + [Creating Gameplay with Script Canvas](script-canvas-intro.md)
 + [Writing Lua Scripts](lua-scripting-intro.md)
++ [Using Script Events](script-events.md)
 + [Scripting in Amazon Lumberyard: Questions and Answers](scripting-questions-and-answers.md)

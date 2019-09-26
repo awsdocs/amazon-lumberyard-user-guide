@@ -4,7 +4,7 @@ UI components define the properties of a UI element\. For example, every element
 
 **Topics**
 + [Working with UI Components](ui-editor-working.md)
-+ [Transform2D – Managing UI Anchors and Offsets](ui-editor-anchors.md)
++ [Transform2D Component](ui-editor-components-transform.md)
 + [Visual Components](ui-editor-components-visual.md)
 + [Interactive Components](ui-editor-components-interactive.md)
 + [Layout Components](ui-editor-components-layout.md)

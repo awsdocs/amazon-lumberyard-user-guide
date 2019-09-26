@@ -15,6 +15,10 @@ Lumberyard provides the following built\-in debugging and profiling tools that y
 + [Particle debugging](particle-debugging.md) – Debug particles\.
 + [Vegetation debugging](vegetation-debugging.md) – Debug vegetation objects\.
 
+**Topics**
++ [Using Console Debug Views](#debugging-debug-views)
++ [Using the `sys_asserts` Console Variable \(CVAR\)](debugging-using-asserts.md)
+
 ## Using Console Debug Views<a name="debugging-debug-views"></a>
 
 The viewport window displays debugging information by default when you are in gameplay mode \(**Ctrl\+G**\)\. You can toggle this information on or off by pressing the tilde \(**\~**\) key\. Use the following console variables and values to generate viewing modes in the viewport that are useful for debugging\.

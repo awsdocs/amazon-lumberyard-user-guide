@@ -25,7 +25,7 @@ Before you run Lumberyard Setup Assistant, verify the following:
    + **Compile for Android devices\***
    + **Setup for Linux Dedicated Server\***
 **Note**  
-\*If you select any of these options, additional dependencies might appear in the **Install software** and **Required SDKs** pages\. Follow the instructions in Lumberyard Setup Assistant to obtain the software and third\-party SDKs that aren't installed\.
+\*If you select any of these options, additional dependencies might appear in the **Install software** and **Required SDKs** pages, including a requirement to install Microsoft Visual Studio\. Follow the instructions in Lumberyard Setup Assistant to obtain the software and third\-party SDKs that aren't installed\.
 
    You can also create, enable, and disable these capabilities from the command line\. For more information, see [Using Lumberyard Setup Assistant Batch](lumberyard-launcher-batch-using.md) and [Lmbr\.exe](lmbr-exe.md)\.
 
@@ -70,3 +70,6 @@ We recommend that only advanced users configure both versions of Visual Studio\.
    This generates the Visual Studio solution and build for the version that you specified in the `user_settings.options` file\. The solution file is in the `lumberyard_version\dev\Solutions` directory\.
 
 1. Repeat these steps for Visual Studio 2017\. For step 3, set `msvs_version` to **15**\.
+
+**Note**  
+After you configure Visual Studio to work with Lumberyard, modify or replace the desktop shortcut to Lumberyard Editor to point to the `lumberyard_installation\dev\Bin64vcxxx\Editor.exe` file for the version of Visual Studio that you chose in Lumberyard Setup Assistant\. If you later change the version of Visual Studio that you use with Lumberyard, update the shortcut\. If you configure Lumberyard to use more than one version of Visual Studio, create separate shortcuts to the `Editor.exe` files\.

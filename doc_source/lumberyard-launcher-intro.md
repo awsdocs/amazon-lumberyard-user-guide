@@ -15,7 +15,7 @@ Certain third\-party software may require a license\. Please consult the terms o
 
 **Prerequisites**
 + Lumberyard Setup Assistant is supported on the Windows operating system\.
-+ To use Lumberyard Setup Assistant, you need Visual Studio 2015 or Visual Studio 2017\. For more information, see [System Requirements](setting-up-system-requirements.md)\.
++ Certain options require an installation of Microsoft Visual Studio\. For more information, see [System Requirements](setting-up-system-requirements.md)\.
 
 **Topics**
 + [Running Lumberyard Setup Assistant](lumberyard-launcher-using.md)

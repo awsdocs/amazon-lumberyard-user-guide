@@ -49,7 +49,11 @@ Successfully executed
 [WAF] Executing 'msvs' in 'd:\ws\lyengine\dev\BinTemp'
 ```
 
-The configure command uses the settings defined in the `user_settings.options` file that is located in the `_WAF_` subfolder\. You can edit this file in a text editor or use the built\-in settings editor: lmbr\_waf show\_option\_dialog
+The configure command uses the settings defined in the `user_settings.options` file that is located in the `lumberyard_version\dev\_WAF_` subfolder\. You can edit this file in a text editor or enter the following command to use the Lumberyard Waf settings tool:
+
+```
+lmbr_waf show_option_dialog
+```
 
 If you set the option to generate a Visual Studio solution to **true**, a solution file is created in the directory specified in the `user_settings.option` file\. If you do not modify the `user_settings.option` file, the Visual Studio solution is in `lumberyard_version/Solutions/LumberyardSDK.sln` by default\.
 
@@ -66,6 +70,8 @@ lmbr_waf build_platform_configuration -p spec
 The following commands and options are available:
 + configure – Must be run before any clean or build command\. Loads all modules, configs, and project specs; validates and sets up the working cached build Python file\.
 + build\_\* – Builds the specified project spec for the specified platform and configuration\.
++ package\_\* – Creates a runnable package of the specified project spec for the specified platform and configuration for supported platforms\. Supported operating systems and devices include Android, iOS, and macOS\.
++ deploy\_\* – Deploys the specified project spec for the specified platform and configuration to a remote device for supported platforms\. Supported operating systems and devices include Android\.
 + clean\_\* – Cleans out intermediate and target files that were generated for the particular platform and configuration\.
 
 The following example shows how to build release for Windows x64 with Visual Studio 2015: 
@@ -79,20 +85,9 @@ Combining the clean\_\* and build\_\* commands is the equivalent of performing a
 
 
 **Configure command options**  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/waf-commands.html)
 
-| Command | Command Option | Description | 
-| --- | --- | --- | 
-| build\_\*, clean\_\* | \-p spec name \-\-project\-spec=spec name  | The spec name to use to build or clean a project\. | 
-|  | \-\-targets=target1,target2,\.\.\. | Optional flag to filter on which targets to build\. The targets must be included in the project spec above in order for this to work\. | 
-| build\_\*, clean\_\*, configure | \-\-profile\-execution=\(True\|False\) | The option to run the build process through the Python execution profiler\. As this will produce a large output to the console, we recommend that you redirect the output of this command to a log file\. | 
-| build\_\* | \-\-execsolution=VS\_solution\_path | This internally\-generated command line is a Visual Studio solution that provides a way to build Waf commands invoked from the VS IDE to apply additional overrides that can be defined in the \.vcxproj files themselves\. | 
-| build\_\* | \-\-file\-filter=source\_files | An option to pass in a comma\-separated list of absolute paths to source files to filter the build on\. This option is useful to build specific files\. | 
-| build\_\* | \-\-show\-includes=\(True\|False\) | Option to show the \#include tree that a file uses during compilation\. This option is only valid when \-\-file\-filter is specified\. | 
-| build\_\* | \-\-show\-preprocessed\-file=\(True\|False\) | Option to generate a preprocessor output for a source file \(but not actually build the file\)\. The generated file is saved in the variant folder under \\bintemp based on the location of the source file\. This option is only valid when \-\-file\-filter is specified\. | 
-| build\_\* | \-\-show\-disassembly=\(True\|False\) | Option to generate an Assembler output for a source file \(but not actually build the file\)\. The generated file is saved in the variant folder under \\bintemp based on the location of the source file\. This option is only valid when \-\-file\-filter is specified\. | 
-| configure | \-\-update\-settings=\(True\|False\) | Option to update the user\_settings\.options file with any values that are modified from the command line\. For instance, if you want to modify the value of use\_uber\_files in user\_settings\.options, set \-\-use\-uber\-files=True in the command line for configure and add \-\-update\-settings=True to apply the changes to user\_settings\.options\. | 
-
-You can set the command options at build time\. These options override the values set in the `user_settings.option` file\. For more information, see [Project Configurator](waf-files-user-settings.md)\.
+You can set the command options at build time\. These options override the values set in the `user_settings.option` file\. For more information, see [Project Configurator](waf-user-options-and-settings.md#waf-files-user-settings)\.
 
 Only modules that support each project configuration are built from the project spec\. If a module is defined in the spec that only can be built in debug or profile, building in performance mode excludes that project from compilation\.<a name="build-parameters"></a>
 
@@ -125,6 +120,14 @@ Only modules that support each project configuration are built from the project 
 | \-\-project\-spec | Specifies the project spec to use when cleaning or building the project\. | 
 | \-\-show\-includes | Shows the includes for each compiled file\. | 
 | \-\-target | Specifies the target to build and its dependencies\. The target must exist in the specified project spec; otherwise, all targets in the project spec are built\. | 
+
+
+**Command Chaining Options**  
+
+| Command | Option | Description | 
+| --- | --- | --- | 
+| build\_\* | ‑‑package‑projects‑automatically=\(True\|False\) |  Automatically runs the package command after each successful build command, where available\. The default is `True`\. Supported platforms include Android, iOS, and macOS\. The following example runs only the build command: lmbr\_waf \-p all build\_android\_armv7\_clang\_profile \-\-package\-projects\-automatically=True  | 
+|  build\_\* package\_\*  | \-\-deploy\-platform\_root=\(True\|False\) | Automatically sends a deploy command to remove devices after each successful package generated, where available\. Can be combined with \-\-package\-projects\-automatically=True in a build command to chain all three commands\. The default is `True`\.Supported platforms include Android\.*platform\_root* example:android\_armv7\_clang, android\_armv8\_clang => android \(\-\-deploy\-android\)The following example runs only the package command: lmbr\_waf package\_android\_armv7\_clang\_profile \-\-deploy\-android=False The following command ensures that all three commands \(build, package, and deploy\) run:lmbr\_waf \-p all build\_android\_armv8\_clang\_profile \-\-package\-projects\-automatically=True \-\-deploy\-android=True | 
 
 ## Multiplayer Configuration<a name="waf-multiplayer-configuration"></a>
 

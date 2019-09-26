@@ -440,13 +440,13 @@ The following attributes are used in third\-party library definition files\.
 | name | string/\[string\] | Name of the third\-party identifier\. The value for the identifier set here is represented in Lumberyard in all caps\. If the definition file defines multiple third\-party identifiers, the name attribute contains a list of names\. | 
 | source | string \(aliasable\) | Base directory upon which all library paths defined in the configuration file are based\. | 
 | description | string | Description for the third\-party definition\. | 
-| header\_only | boolean | Flag that indicates that the file specifies a header\-only library definition\. | 
+| header\_only | Boolean | Flag that indicates that the file specifies a header\-only library definition\. | 
 | includes | \[string\] | List of include paths to apply to any dependent project or module\. | 
-| defines | \[string\] | List of additional defines to apply to any dependent project or module\. |
-| engine_configs | boolean | By default this flag is false and the library's 'debug' configuration maps to the engine debug configuration and 'release' maps to profile, performance and release.  When true, you can specify rules for each engine configuration.  For example, if you wanted to use specific libraries for profile builds you could specify libpath_profile and lib_profile.  You could also copy specific binaries per configuration by using copy_extra_debug, copy_extra_profile, copy_extra_performance etc.  |
-| lib\_required | boolean | Flag that instructs the third\-party configuration file parser whether to verify the existence of the declared static library files on disk\. | 
-| shared\_required | boolean | Flag that instructs the third\-party configuration file parser whether to verify the existence of the declared shared library files on disk\. | 
-| suppress\_warning | boolean | Flag that disables warnings related to invalid third\-party configurations\. It is recommended that this flag be set to true for libraries that are optional\. | 
+| defines | \[string\] | List of additional defines to apply to any dependent project or module\. | 
+| engine\_configs | Boolean |  When `false`, specifies that the library's `debug` configuration maps to the `engine debug` configuration and that `release` maps to `profile`, `performance` and `release`\. The default is `false`\. When `true`, accepts custom rules for each engine configuration\. For example, if you want to use specific libraries for profile builds, you can specify values for `libpath_profile` and `lib_profile`\. To copy specific binaries per configuration, you can also use attributes like `copy_extra_debug`, `copy_extra_profile`, and `copy_extra_performance`\.  | 
+| lib\_required | Boolean | Flag that instructs the third\-party configuration file parser whether to verify the existence of the declared static library files on disk\. | 
+| shared\_required | Boolean | Flag that instructs the third\-party configuration file parser whether to verify the existence of the declared shared library files on disk\. | 
+| suppress\_warning | Boolean | Flag that disables warnings related to invalid third\-party configurations\. It is recommended that this flag be set to true for libraries that are optional\. | 
 | platform | \{ platform\_def \} | Dictionary of platform\-specific settings \(platform\_def\) that is keyed by the target platform name\. | 
 | linkflags | \[ string \] | List of linker flags to pass to the linker\. | 
 | libpath | \[ string \] | List of static library search paths to add to the consumers of this library\. The paths are relative to the location specified by the source attribute\. | 

@@ -43,7 +43,7 @@ The `SpeechComponent` \(`SpeechComponent.h`\) implements the `TextToSpeechPlayba
 The `CloudGemTextToSpeechClientComponent` \(`CloudGemTextToSpeechClientComponent.h`\) enables the client to communicate with the AWS infrastructure and services\.
 
 **Note**  
-Starting in version 1\.12, Lumberyard uses [Animation Editor](char-intro.md) to implement lip synchronization\. For details, see [Lip Synchronization with EMotionFX](cloud-canvas-cloud-gem-text-to-speech-emotionfx.md)\.
+Starting in version 1\.12, Lumberyard uses [Animation Editor](char-intro.md) to implement lip synchronization\. For details, see [Lip Synchronization with EMotion FX](cloud-canvas-cloud-gem-text-to-speech-emotionfx.md)\.
 
 ## Text\-to\-Speech Troubleshooting Features<a name="cloud-canvas-cloud-gem-text-to-speech-details-troubleshooting"></a>
 

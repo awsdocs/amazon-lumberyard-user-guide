@@ -1,6 +1,6 @@
 # Using Dynamic Content Manager<a name="cloud-canvas-cloud-gem-dc-manager"></a>
 
-You can use the Dynamic Content Cloud Gem and its Dynamic Content Manger to manage dynamic content updates for your game through AWS\. You can use Dynamic Content Manger to create manifests and packages, add files to the packages, and upload the manifest and packages to the AWS Cloud\. This ensures that your clients have the latest content for your game\.
+You can use the Dynamic Content Cloud Gem and its Dynamic Content Manager to manage dynamic content updates for your game through AWS\. You can use Dynamic Content Manager to create manifests and packages, add files to the packages, and upload the manifest and packages to the AWS Cloud\. This ensures that your clients have the latest content for your game\.
 
 **Topics**
 + [Managing Dynamic Content Packages](cloud-canvas-cloud-gem-dc-managing-packages.md)

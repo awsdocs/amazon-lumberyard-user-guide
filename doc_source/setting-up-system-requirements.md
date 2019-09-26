@@ -29,7 +29,7 @@ Lumberyard requires the following hardware to compile builds:
 **Note**  
 Specify the `--max-cores` parameter in Waf to set the maximum number of compilation jobs\. The default value is `0`, which automatically determines the appropriate number of compilation jobs\.  
 Specify the `--max-parallel-link` parameter in Waf to set the number of linker processes that simultaneously generate executable files\.  
-For more information, see [Waf User Settings \(user\_settings\.options\)](waf-files-user-settings.md)\.
+For more information, see [Waf User Settings \(user\_settings\.options\)](waf-user-options-and-settings.md#waf-files-user-settings)\.
 
 ## Developer Tools<a name="required-developer-tools-for-lumberyard"></a>
 
@@ -37,7 +37,7 @@ Lumberyard requires the following developer tools:
 
 ### Visual Studio<a name="lumberyard-visual-studio-requirement"></a>
 
-You must have one or both of the following versions of Visual Studio to compile Lumberyard Editor and tools:
+You must have one or both of the following versions of Visual Studio to compile the game code, compile the engine and asset pipeline, or compile the Lumberyard Editor and tools:
 + Visual Studio 2017 version 15\.9\.2
 + Visual Studio 2015 Update 3 or later
 

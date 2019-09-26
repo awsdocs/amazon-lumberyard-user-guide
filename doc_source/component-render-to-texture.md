@@ -153,6 +153,8 @@ The **Render to Texture** component supports DirectX 11 for Windows\.
 
 Forces the object LOD to update at the beginning of the frame instead of the end of the previous frame\. If you don't set this console variable, you may see LOD flickering\.
 
+For more information about setting console variables, see [Using the Console Window](console-intro.md)\.
+
 ```
 e_LodForceUpdate=1
 ```
@@ -187,13 +189,12 @@ Disables sparse voxel octree global illumination \(SVOGI gem\)\.
 e_GI=0
 ```
 
-Flickering, black or blurry textures may appear if the streaming system is thrashing while render to texture is active in a scene that uses a large amount of texture memory.   You can try increasing the r_TexturesStreamPoolSize, or set your Max FPS render to texture component property to 0 so it updates every frame, which may help the streaming system with balancing texture priorities.  
+You might see flickering, black or blurry textures if the streaming system thrashes while the **Render to Texture** component is active\. This can occur in a scene that uses a large amount of texture memory\. 
+
+To fix this, increase the value for `r_TexturesStreamPoolSize`, or set the **Max FPS** property to `0` so that the component updates each frame\. This might help the streaming system balance texture priorities\. 
 
 **Tip**  
-A useful way to see if graphics artifacts are a result of streaming thrashing is to enable r_TexturesStreamingDebug 2 to show textures being streamed in and memory usage.
-
-**Tip**  
-For more information about setting console variables, see [Using the Console Window](console-intro.md)\.
+To verify if the graphics artifacts are a result of streaming thrashing, set `r_TexturesStreamingDebug` to `2`\. This console variable shows the textures that are streamed in and the memory usage\.
 
 ### Unsupported Features in the Render Target<a name="unsupported-for-render-to-texture"></a>
 

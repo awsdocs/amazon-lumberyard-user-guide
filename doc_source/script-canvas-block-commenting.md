@@ -1,4 +1,4 @@
-# Adding Comments for Script Canvas<a name="script-canvas-block-commenting"></a>
+# Commenting Nodes<a name="script-canvas-block-commenting"></a>
 
 You can add comments to your script to describe how it works\. 
 

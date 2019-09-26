@@ -17,3 +17,17 @@ The following table describes the `AZ_Tracing` macros and their uses\.
 | AZ\_TracePrintf |  Use for informational purposes only\. `AZ_TracePrintf` macros print a message but take no other action\.  | 
 
  For source code, see `lumberyard_version\dev\Code\Framework\AzCore\AzCore\Debug\Trace.*`\.
+
+## Suppressing AZ Trace Messages in Unit Tests<a name="cpp-best-practices-lumberyard-tracing-unit-tests"></a>
+
+You can use macros to suppress AZ trace messages\. Starting in Lumberyard version 1\.21, the following macros for suppressing AZ Trace messages in the AZ Unit Test framework have equivalent macros with new names\. The old macros will be removed in a future release\.
+
+
+| Old Macro Name | New Macro Name | 
+| --- | --- | 
+| AZ\_TEST\_START\_ASSERTTEST | AZ\_TEST\_START\_TRACE\_SUPPRESSION | 
+| AZ\_TEST\_STOP\_ASSERTTEST | AZ\_TEST\_STOP\_TRACE\_SUPPRESSION | 
+
+The old macros only suppressed the *AZ\_Error* and *AZ\_Assert* trace messages, but their names implied application termination\. The new macros are equivalent in functionality to the old macros but have names that more accurately reflect their functionality\.
+
+For source code, see `lumberyard_version\dev\Code\Framework\AzCore\AzCore\UnitTest\UnitTest.h`\.

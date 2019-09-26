@@ -23,13 +23,14 @@ On a Mac, the remote shader compiler can generate shaders for Lumberyard running
 + iOS mobile device with `r_ShadersUseLLVMDirectXCompiler=1`
 
 **Important**  
-Ensure the server or computer that is running the remote shader compiler is in a controlled environment that restricts incoming network requests to only authorized and trusted users or devices\. Do not run the remote shader compiler with escalated root, admin, or super\-user privileges\.
+Ensure the server or computer that is running the remote shader compiler is in a controlled environment that restricts incoming network requests to only authorized and trusted users or devices\. Don't run the remote shader compiler with escalated root, admin, or super\-user privileges\.
 
 **Topics**
 + [Running the Remote Shader Compiler](#mat-shaders-custom-dev-remote-compiler-launch)
 + [Location of Specific Shader Compilers](#mat-shaders-custom-dev-remote-compiler-platform)
 + [Shader Cache Lists](#mat-shaders-custom-dev-remote-compiler-lists)
 + [Game Development Configuration](#mat-shaders-custom-dev-remote-compiler-game)
++ [Creating Paks for Server Assets](#create-paks-for-server-assets)
 
 ## Running the Remote Shader Compiler<a name="mat-shaders-custom-dev-remote-compiler-launch"></a>
 
@@ -51,7 +52,7 @@ You configure the remote shader compiler by creating or editing the `config.ini`
 + PC: `lumberyard_version\dev\Tools\CrySCompileServer\x64\profile`
 + Mac: `lumberyard_version\dev\Tools\CrySCompileServer\osx\profile`
 
-To configure the remote shader compiler, edit the following parameters:
+To configure the remote shader compiler, edit the following parameters\.
 
 
 ****  
@@ -155,3 +156,64 @@ You can set the following parameters in the `system_platform_shader_version.cfg`
 | r\_AssetProcessorShaderCompiler=1 | You can use Asset Processor to proxy remote requests to the shader compiler server if a device cannot connect to the shader compiler server\. In this case, set r\_AssetProcessorShaderCompiler=1\. Now, whenever the game would have made a request directly to the shader compiler server, it instead submits the request to Asset Processor \(this can also be over a USB connection\), which then forwards it to the shader compiler server\. | 
 | r\_shadersAsyncCompiling=3 |  Allows shaders to stream asynchronously and prevents the game from freezing while waiting for the shaders to compile\.  | 
 | r\_ShadersAsyncActivation=1 |  Allows shaders to stream asynchronously\. Set to `0` to prevent the shaders from streaming asynchronously\.  | 
+
+## Creating Paks for Server Assets<a name="create-paks-for-server-assets"></a>
+
+Specify `RC.exe` to build a pak file that contains server assets only\. You generate these assets by using the following command:
+
+```
+AssetProcessorBatch.exe /gamefolder=my_game /platforms=server /server)
+```
+
+You can update `RC.exe` to look for assets in the `lumberyard_version\dev\cache\MyGame\server` directory, instead of using the PC client assets\.
+
+**Example**  
+
+![\[Specify the server directory instead of the PC directory.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-paks-server-assets.png)
+
+**To create paks for server assets**
+
+1. Navigate to the `lumberyard_version\dev\Bin64vc140_or_141\rc` directory\.
+
+1. In a text editor, open the `RCJob_Generic_MakePaks.xml` file\.
+
+1. Make a copy of the file and name it `RCJob_Generic_MakePaks_Server.xml`\.
+
+1. Edit the file so that the `src` points to your server assets, instead of the PC client assets\.
+
+------
+#### [ Before ]
+
+   ```
+    # <DefaultProperties
+   
+       p="pc"
+       game="samplesproject"
+       src="cache\${game}\${p}"
+       trg="${game}_${p}_paks"
+       />
+   ```
+
+------
+#### [ After ]
+
+   ```
+    # <DefaultProperties
+   
+       p="pc"
+       game="samplesproject"
+       src="cache\${game}\server"
+       trg="${game}_server_paks"
+       />
+   ```
+
+------
+
+1. Save the file\. 
+
+1. Now when you run `RC.exe`, you can assign the job to the new `xml` file\.  
+**Example**  
+
+   ```
+   rc.exe /job=path\to\RCJob_Generic_MakePaks_Server.xml /p=pc /game=my_game /trg=BinTemp\server_paks
+   ```

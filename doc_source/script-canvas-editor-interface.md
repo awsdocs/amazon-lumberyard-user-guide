@@ -42,4 +42,4 @@ View and search for nodes in the script\. You can select a node in the outliner,
 View and modify your saved bookmarks\. You can use bookmarks to save locations on your script and then use keyboard shortcuts to move to that location\. For more information, see [Adding Bookmarks for Script Canvas](script-canvas-bookmarks.md)\.
 
 **Comments**  
-You can create floating blocks of text on the Script Canvas editor canvas\. For more information, see [Adding Comments for Script Canvas](script-canvas-block-commenting.md)\.
+You can create floating blocks of text on the Script Canvas editor canvas\. For more information, see [Commenting Nodes](script-canvas-block-commenting.md)\.

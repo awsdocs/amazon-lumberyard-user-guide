@@ -38,7 +38,7 @@ Lumberyard 1\.15 introduces the following changes for animation graph objects:
   For example, an animation graph node may have a string stored for a joint\. If the string changes and you don't want to store the string at runtime, an integer is stored that holds the joint index\. You can then access the joint directly, rather than searching for it by name\. Whenever the joint is selected, the joint index integer must be updated\. This is where the `ChangeNotify` callback is useful\.
 + When you register your custom node with `EmotionFXAnimation::EMotionFXRequestBus::Events::RegisterAnimGraphObjectType`, the custom node is added to a list that is used to show custom nodes in the UI\.
 
-As a result of these changes, you must migrate any custom EMotionFX objects or nodes that you created in Lumberyard 1\.14 or earlier, if you want to use them for game projects in Lumberyard 1\.15\.
+As a result of these changes, you must migrate any custom EMotion FX objects or nodes that you created in Lumberyard 1\.14 or earlier, if you want to use them for game projects in Lumberyard 1\.15\.
 
 **To migrate custom nodes**
 

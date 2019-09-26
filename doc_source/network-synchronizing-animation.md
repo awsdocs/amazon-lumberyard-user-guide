@@ -1,6 +1,6 @@
 # Synchronizing Animations Across a Network<a name="network-synchronizing-animation"></a>
 
-You can use the **[AnimGraph](component-animgraph.md)** component to add an animation graph and motion set to a character\. To synchronize the **AnimGraph** component's parameters \(its EMotionFX animation state\) across the network, use these two components:
+You can use the **[AnimGraph](component-animgraph.md)** component to add an animation graph and motion set to a character\. To synchronize the **AnimGraph** component's parameters \(its EMotion FX animation state\) across the network, use these two components:
 + **[Network Binding](component-network-binding.md)**
 + **[Anim Graph Net Sync](component-animgraph-netsync.md)**
 

@@ -21,5 +21,5 @@ Amazon Lumberyard offers the following guides:
 
    1. Choose the guide name to go back to the home page\.
 
-1. You can also use the menu icon to see the documentation for other AWS services\.  
+1. You can use the Documentation drop\-down from the left menu to explore documentation for other AWS services, or the Search box to find specific topics\.  
 ![\[Learn how to navigate the AWS documentation with the menu icon.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lumberyard-documentation-menu.png)

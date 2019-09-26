@@ -4,6 +4,11 @@ Amazon Lumberyard is a free, cross\-platform, 3D game engine that allows you to 
 
 Lumberyard offers everything a professional game developer can expect, such as a full\-featured editor, native code performance, and stunning visuals\. It also includes hundreds of other ready\-to\-use features like networking, cinematics, the **Script Canvas** editor, the **Animation Editor**, audio tools, and more\. 
 
+Interested? Want to get started?
++ [Download the latest version of the Lumberyard beta](https://aws.amazon.com/lumberyard/downloads/)
++ [ Kickstart your learning by watching tutorial videos](https://aws.amazon.com/lumberyard/gettingstarted/)
++ [Sign up for and participate in the Amazon Lumberyard forums](https://forums.awsgametech.com/)
+
 ![\[Learn more about Lumberyard's systems and features in the Amazon Lumberyard User Guide.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/starter-game-introduction.png)
 
 Image from Starter Game\. For more sample projects and levels, see [Using Lumberyard Sample Projects and Levels](sample-projects-levels-intro.md)\.

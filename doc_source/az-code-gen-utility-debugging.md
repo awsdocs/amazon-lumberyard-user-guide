@@ -53,20 +53,6 @@ To debug the AZ Code Generator Utility from the Waf build, you must find the arg
 
 Waf generates an arguments file that is passed to AZ Code Generator as a command line parameter\. All command line parameters from Waf for AZ Code Generator are contained inside the arguments file\. This file is useful for debugging specific Waf AZ Code Generator invocations\. To make the arguments file that you use available to Waf, add the `--zones=az_code_gen` option to the Waf command line\. 
 
- When you use the `--zones=az_code_gen` option, the output looks like the following\. 
-
-```
-lmbr_waf build_win_x64_vs_2015_release -p all --zones=az_code_gen
-[   1/3150] az_code_gen (win_x64|release): BinTemp\win_x64_release\Code\Launcher\WindowsLauncher\GameSDKWindowsLauncherStaticModules.json
-14:24:17 az_code_gen Invoking code generator with command: g:\lyengine\Systems\dev\Bin64\azcg\AzCodeGenerator.exe  @g:\lyengine\Systems\dev\BinTemp\win_x64_release\CodeGenArguments\arguments_file_ee625f9186107e30ab3126cc30cc9b49.args
-```
-
- In this example Waf output, the following is the arguments file\. 
-
-```
-@g:\lyengine\Systems\dev\BinTemp\win_x64_release\CodeGenArguments\arguments_file_ee625f9186107e30ab3126cc30cc9b49.args
-```
-
 ## Setting Visual Studio Debug Arguments<a name="az-code-gen-utility-debugging-visual-studio-arguments"></a>
 
 To set up debugging of AZ Code Generator from Visual Studio, perform the following steps\.

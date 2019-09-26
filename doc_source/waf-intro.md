@@ -16,6 +16,7 @@ Lumberyard includes the [Project Configurator](configurator-intro.md), a standal
 + [Waf Commands and Options](waf-commands.md)
 + [Waf Supported Operating Systems and Compilers](waf-platforms-compilers.md)
 + [Waf Project Settings](waf-project-settings.md)
++ [Using the Waf Artifacts Cache](waf-artifacts-cache.md)
 + [Adding Third\-Party Libraries](waf-adding-third-party-libraries.md)
 + [Creating Third\-Party Library Configuration Files for Waf](waf-third-party-library-configurations.md)
 + [Waf Extensions](waf-extensions.md)

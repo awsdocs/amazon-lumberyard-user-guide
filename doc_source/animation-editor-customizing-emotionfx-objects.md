@@ -1,4 +1,4 @@
-# Customizing EMotionFX Objects<a name="animation-editor-customizing-emotionfx-objects"></a>
+# Customizing EMotion FX Objects<a name="animation-editor-customizing-emotionfx-objects"></a>
 
 
 ****  
@@ -7,14 +7,14 @@
 | --- |
 | This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
-The EMotionFX API supports registering custom object types, including state machine nodes, blend tree nodes, transitions, and conditions\. You can define custom object types in your game code or a custom gem\. This allows you to have granular control of the Lumberyard animation system\.
+The EMotion FX API supports registering custom object types, including state machine nodes, blend tree nodes, transitions, and conditions\. You can define custom object types in your game code or a custom gem\. This allows you to have granular control of the Lumberyard animation system\.
 
 **Note**  
-You must migrate any custom EMotionFX objects that you created in Lumberyard 1\.14 or earlier, if you want to use those custom objects in Lumberyard 1\.15\. For more information, see [Migrating Custom Nodes to use the Lumberyard Reflection System](lumberyard-migrating-1-15.md#lumberyard-migrating-1-15-migrating-custom-animation-nodes)\.
+You must migrate any custom EMotion FX objects that you created in Lumberyard 1\.14 or earlier, if you want to use those custom objects in Lumberyard 1\.15\. For more information, see [Migrating Custom Nodes to use the Lumberyard Reflection System](lumberyard-migrating-1-15.md#lumberyard-migrating-1-15-migrating-custom-animation-nodes)\.
 
 ## Registering Custom Objects<a name="animation-editor-registering-custom-objects"></a>
 
-Before registering custom objects, activate the EMotionFX `SystemComponent` to ensure the EMotionFX runtime is initialized correctly\. Then use an EBus call to the `EMotionFXRequestBus::Events::RegisterAnimGraphObjectType` method\. You can ensure that EMotionFX runtime is activated by registering your custom node from a component that has a dependency on `EmotionFXAnimationService`\. You do not need to manually instantiate the EMotionFX `SystemComponent` and call `Activate`; component dependencies handle these tasks\.
+Before registering custom objects, activate the EMotion FX `SystemComponent` to ensure the EMotion FX runtime is initialized correctly\. Then use an EBus call to the `EMotionFXRequestBus::Events::RegisterAnimGraphObjectType` method\. You can ensure that EMotion FX runtime is activated by registering your custom node from a component that has a dependency on `EmotionFXAnimationService`\. You do not need to manually instantiate the EMotion FX `SystemComponent` and call `Activate`; component dependencies handle these tasks\.
 
 **To register your custom node**
 
@@ -39,7 +39,7 @@ Before registering custom objects, activate the EMotionFX `SystemComponent` to e
 
 ## Implementing AnimGraphObject Subclasses<a name="animation-editor-implementing-animgraphobject-subclasses"></a>
 
-`AnimGraphObject` is the base class for all objects in the animation graph\. The constructor on the base class is protected; instead, objects are instantiated with the `Create()` method\. The Lumberyard animation system \(EMotionFX\) uses an instance of `AnimGraphObject` to create other instances by calling the `Clone()` method\.
+`AnimGraphObject` is the base class for all objects in the animation graph\. The constructor on the base class is protected; instead, objects are instantiated with the `Create()` method\. The Lumberyard animation system \(EMotion FX\) uses an instance of `AnimGraphObject` to create other instances by calling the `Clone()` method\.
 
 Each `AnimGraphObject` subclass has a unique type ID that is used to serialize an object to and unserialize an object from an `.animgraph` file\. You use a public anonymous enum with a `TYPE_ID` member to declare the type ID for an object\.
 

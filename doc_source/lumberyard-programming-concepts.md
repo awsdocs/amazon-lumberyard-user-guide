@@ -83,7 +83,7 @@ For more information about entities and components, see [Programmer's Guide to E
 
 ## Gems and AZ Modules<a name="lumberyard-programming-concepts-gems-and-modules"></a>
 
-Lumberyard is designed to create applications that are small executables\. A Lumberyard application has a simple application class \(`AZ::ComponentApplication`\)\. The application class reads a manifest \(a `gems.json` file\) and loads modules that provide functionality for your game\. Lumberyard calls these modules `gems`\. Lumberyard's goal is to have you choose a set of gems that match the requirements of your game and only compile what you need\. Lumberyard includes a variety of prebuilt gems that add functionality to the game engine, such as VR, cloud connectivity, and the EMotionFX animation system\. 
+Lumberyard is designed to create applications that are small executables\. A Lumberyard application has a simple application class \(`AZ::ComponentApplication`\)\. The application class reads a manifest \(a `gems.json` file\) and loads modules that provide functionality for your game\. Lumberyard calls these modules `gems`\. Lumberyard's goal is to have you choose a set of gems that match the requirements of your game and only compile what you need\. Lumberyard includes a variety of prebuilt gems that add functionality to the game engine, such as VR, cloud connectivity, and the EMotion FX animation system\. 
 
 [Cloud gems](cloud-canvas-cloud-gems-intro.md) are gems that add AWS cloud\-connected functionality to your game\. 
 

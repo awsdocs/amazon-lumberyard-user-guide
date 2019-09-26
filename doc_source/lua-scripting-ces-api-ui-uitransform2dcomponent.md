@@ -8,7 +8,7 @@ Services messages for the `UiTransform2dComponent`\.
 
 ### GetCanvasPosition<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-getcanvasposition"></a>
 
-Returns the position for this element in canvas space\.
+Returns the position for this element in the canvas space\.
 
 **Syntax**
 
@@ -46,19 +46,35 @@ Returns the scale\.
 AZ::Vector2 GetScale()
 ```
 
-### GetScaleToDevice<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-getscaletodevice"></a>
+### GetScaleToDeviceMode<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-getscaletodevice"></a>
 
-Returns whether this element and all its children are scaled to allow for the difference between the authored canvas size and the actual viewport size\.
+Returns how this element and all of the child elements are scaled to allow for the difference between the authored canvas size and the actual viewport size\.
 
 **Syntax**
 
 ```
-bool GetScaleToDevice()
+ScaleToDeviceMode GetScaleToDeviceMode()
+```
+
+Following are possible values for `ScaleToDeviceMode`\.
+
+```
+enum ScaleToDeviceMode
+    {
+        None
+        UniformScaleToFit,
+        UniformScaleToFill,
+        UniformScaleToFitX,
+        UniformScaleToFitY,
+        NonUniformScale,
+        ScaleXOnly,
+        ScaleYOnly
+    };
 ```
 
 ### GetViewportPosition<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-getviewportposition"></a>
 
-Returns the position for this element in viewport space\.
+Returns the position for this element in the viewport space\.
 
 **Syntax**
 
@@ -78,7 +94,7 @@ float GetZRotation()
 
 ### MoveCanvasPositionBy<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-movecanvaspositionby"></a>
 
-Moves this element in canvas space\.
+Moves this element in the canvas space\.
 
 **Syntax**
 
@@ -98,7 +114,7 @@ void MoveLocalPositionBy(const AZ::Vector2& offset)
 
 ### MoveViewportPositionBy<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-moveviewportpositionby"></a>
 
-Moves this element in viewport space\.
+Moves this element in the viewport space\.
 
 **Syntax**
 
@@ -108,7 +124,7 @@ void MoveViewportPositionBy(const AZ::Vector2& offset)
 
 ### SetCanvasPosition<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-setcanvasposition"></a>
 
-Sets the position for this element in canvas space\.
+Sets the position for this element in the canvas space\.
 
 **Syntax**
 
@@ -146,19 +162,35 @@ Sets the scale\.
 void SetScale(AZ::Vector2 scale)
 ```
 
-### SetScaleToDevice<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-setscaletodevice"></a>
+### SetScaleToDeviceMode<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-setscaletodevice"></a>
 
-Sets whether the element and all its children are scaled to allow for the difference between the authored canvas size and the actual viewport size\.
+Sets how the element and all of its child elements are scaled to allow for the difference between the authored canvas size and the actual viewport size\.
 
 **Syntax**
 
 ```
-void SetScaleToDevice(bool scaleToDevice)
+void SetScaleToDeviceMode(bool scaleToDeviceMode)
+```
+
+Following are possible values for `scaleToDeviceMode`\.
+
+```
+enum ScaleToDeviceMode
+    {
+        None
+        UniformScaleToFit,
+        UniformScaleToFill,
+        UniformScaleToFitX,
+        UniformScaleToFitY,
+        NonUniformScale,
+        ScaleXOnly,
+        ScaleYOnly
+    };
 ```
 
 ### SetViewportPosition<a name="lua-scripting-ces-api-ui-uitransform2dcomponent-setviewportposition"></a>
 
-Sets the position for this element in viewport space\.
+Sets the position for this element in the viewport space\.
 
 **Syntax**
 
@@ -212,7 +244,7 @@ Returns the UI offsets\.
 UiOffsets GetOffsets()
 ```
 
-Following are possible values for `UiOffsets`\.
+The following are possible values for `UiOffsets`\.
 
 ```
 class UiOffsets

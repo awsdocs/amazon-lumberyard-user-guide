@@ -10,5 +10,7 @@ Games are often built with complex logic, and complex logic can produce a large 
 + [Visiting All Instances of a Node](script-canvas-working-with-nodes-visiting-all-instances.md)
 + [Aligning Nodes](script-canvas-working-with-nodes-aligning.md)
 + [Grouping Nodes](script-canvas-node-groups.md)
++ [Commenting Nodes](script-canvas-block-commenting.md)
++ [Comment and Group Presets](script-canvas-comment-and-group-presets.md)
 + [Deleting Node Connections](script-canvas-working-with-nodes-disconnecting.md)
 + [Deleting Nodes](script-canvas-working-with-nodes-deleting.md)

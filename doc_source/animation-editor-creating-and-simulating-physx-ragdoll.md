@@ -12,8 +12,8 @@ A ragdoll is a physical representation of a character in the animation system th
 To use the **[PhysX Ragdoll](component-physx-ragdoll.md)**, add it to an entity in Lumberyard Editor\. You can then follow the procedures below to create and control the physical representation of the ragdoll\.
 
 **Important**  
-To simulate the **PhysX Ragdoll** component, you must have an entity with the **[PhysX Terrain](component-physx-terrain.md)** component attached in the level\.
-The character controller currently doesn't support the **PhysX Ragdoll** component\.
+You can enable the ragdoll to interact physically with the terrain\. To do so, add a **[PhysX Terrain](component-physx-terrain.md)** component to an entity in the level\.
+The **PhysX Character Controller** component currently doesn't support the **PhysX Ragdoll** component\.
 
 This topic will teach you how to do the following:
 + [Set up a ragdoll\.](#animation-editor-setting-up-a-ragdoll)
@@ -82,7 +82,7 @@ In the following example, the collider for the second spine joint \(highlighted\
 
    1. Set the **Offset** and **Rotation** to move the collider to the correct location\. The **Offset** and **Rotation** are relative to the joint transform\.
 
-   1. Set the **Height** and **Radius** to resize the collider\.  
+   1. Adjust the collider dimensions \(for example, set the **Height** and **Radius** for a **Capsule**\) to resize the collider\.  
 ![\[Set the Offset, Rotation, Height, and Radius properties for the collider on the Ragdoll tab in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ragdoll-collider-options-offset-rotation-height-radius.png)
 
 1. Choose **File**, **Save Selected Actors**\. This saves the ragdoll data to the `.assetinfo` file for the character\. The Asset Processor then bakes the ragdoll data into the `.actor` file\.
@@ -174,7 +174,7 @@ Once you've created your ragdoll and animation graph, you can simulate the ragdo
    1. In the **Actor** component, for **Actor asset**, click the browse \(**\.\.\.**\) button\.
 
    1. In the **Pick EMotion FX Actor** window, select the actor for which you set up the ragdoll and then click **OK**\.  
-![\[Select the actor for which you set up the ragdoll from the Pick EMotionFX Actor window in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ragdoll-simulation-pick-ragdoll-actor.png)
+![\[Select the actor for which you set up the ragdoll from the Pick EMotion FX Actor window in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ragdoll-simulation-pick-ragdoll-actor.png)
 
 1. Add an **Anim Graph** component:
 
@@ -183,12 +183,12 @@ Once you've created your ragdoll and animation graph, you can simulate the ragdo
    1. In the **Anim Graph** component, for **Motion set asset**, click the browse \(**\.\.\.**\) button\.
 
    1. In the **Pick EMotion FX Motion Set** window, select your motion set and then click **OK**\.  
-![\[Select a motion set from the Pick EMotionFX Motion Set window in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ragdoll-simulation-pick-motion-set.png)
+![\[Select a motion set from the Pick EMotion FX Motion Set window in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ragdoll-simulation-pick-motion-set.png)
 
    1. In the **Anim Graph** component, for **Anim graph**, click the browse \(**\.\.\.**\) button\.
 
    1. In the **Pick EMotion FX Anim Graph** window, select your animation graph and then click **OK**\.  
-![\[Select an animation graph from the Pick EMotionFX Anim Graph window in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ragdoll-simulation-pick-animation-graph.png)
+![\[Select an animation graph from the Pick EMotion FX Anim Graph window in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ragdoll-simulation-pick-animation-graph.png)
 
 1. Click **Add Component**, **PhysX Ragdoll**\.
 

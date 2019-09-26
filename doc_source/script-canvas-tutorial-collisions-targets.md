@@ -85,52 +85,21 @@ Now that you've set up a projectile, you can create a script to propel the proje
 
 1. Under **Utilities**, drag **On Graph Start** from the **Node Palette** to the graph\. This event node executes only for the first tick after the entity has initialized\.
 
-1. To add the **Get World Transform** node, do the following:
+1. In the **Node Palette**, enter **Get Forward**\.
 
-   1. In the **Node Palette**, type **world transform** in the search box\.
+1.  From **Entity**, **Transform**, drag the **Get Forward** node to the graph\. 
 
-   1. Under **Entity**, **Transform**, drag **Get World Transform** from the **Node Palette** to the graph\.
+1. From **On Graph Start**, drag the **Out** pin to connect it to the **In** pin of the **Get Forward** node\.  
+![\[Get Forward node in Script Canvas.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-on-graph-start-get-forward-connection.png)
 
-   1. From **On Graph Start**, drag the **Out** pin to connect it to the **In** pin of the **Get World Transform** node\.  
-![\[Connect the On Graph Start node to the Get World Transform node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-on-graph-start-get-world-transform-connection.png)
+1. In the **Get Forward** node, for **Scale**, enter **200**\.
 
-1. To obtain the y\-axis of the transform, do the following:
+1. In the **Node Palette**, enter **Set Velocity** and drag the node to the graph\.
 
-   1. In the **Node Palette**, type **column** in the search box\.
+1. From **Get Forward**, drag the **Out** pin to connect it to the **In** pin of the **Set Velocity** node\.
 
-   1. Under **Math**, **Transform**, drag **Get Column** from the **Node Palette** to the graph\.
-
-   1. From **Get World Transform**, drag the **Out** pin to connect it to the **In** pin of the **Get Column** node\.  
-![\[Connect the Get World Transform node to the Get Column node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-get-world-transform-get-column-connection.png)
-
-   1. From **Get World Transform**, drag the **Transform** pin to connect it to the **Transform** pin of the **Get Column** node\.  
-![\[Connect the Get World Transform node to the Get Column node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-get-world-transform-get-column-connection-2.png)
-
-   1. In the **Get Column** node, for **Index**, type **1**\. This node returns the y\-axis of the transform, which you use as the forward direction for the entity\.
-
-1. To set the size of the forward node, do the following:
-
-   1. In the **Node Palette**, type **multiply** in the search box\.
-
-   1. Under **Math**, **Vector3**, drag **Multiply By Number** from the **Node Palette** to the graph\. This node increases the size of the forward node for the initial velocity of the projectile\.
-
-   1. From **Get Column**, drag the **Out** pin to connect it to the **In** pin of the **Multiply By Number** node\.
-
-   1. From **Get Column**, drag the **Column** pin to connect it to the **Vector 3** pin of the **Multiply By Number** node\.
-
-   1. In the **Multiply By Number** node, for **Number**, type **200**\.  
-![\[Connect the Get Column node to the Multiply By Number node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-multiply-by-number-node-properties-connections.png)
-
-1. To set the velocity, do the following:
-
-   1. In the **Node Palette**, type **velocity** in the search box\.
-
-   1. Under **Physics**, **Physics Component**, drag **Set Velocity** from the **Node Palette** to the graph\.
-
-   1. From **Multiply By Number**, drag the **Out** pin to connect it to the **In** pin of the **Set Velocity** node\.
-
-   1. From **Multiply By Number**, drag the **Vector3** pin to connect it to the **Velocity** pin of the **Set Velocity** node\.  
-![\[Connect the Multiply By Number node to the Set Velocity node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-set-velocity-node-properties-connections.png)
+1. From** Get Forward**, drag the **Forward** pin to the **Velocity** pin of the **Set Velocity** node\.  
+![\[Set Velocity node in Script Canvas.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-get-forward-set-velocity-connection.png)
 
 1. To set a lifetime for the projectile, do the following:
 
