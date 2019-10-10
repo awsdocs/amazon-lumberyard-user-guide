@@ -5,7 +5,7 @@ Follow these best practices for creating and using components and EBuses\.
 ## EBus Names<a name="component-entity-system-pg-components-ebuses-best-practices-ebus-names"></a>
 
 The following EBus naming conventions remove ambiguity and provide consistency\.
-+ Use the name format `MyComponentRequestBus` for the bus that others use to invoke functions on `MyComponent`, as in the following example\.
++ Use the name format `MyComponentRequestBus` for the bus that others use to make request of functions on `MyComponent`, as in the following example\. For the request interface class the name format of `MyComponentRequests` is recommended as well\.
 
   ```
   class CheeseburgerComponentRequests : public AZ::ComponentBus
@@ -15,6 +15,7 @@ The following EBus naming conventions remove ambiguity and provide consistency\.
   using CheeseburgerComponentRequestBus = AZ::EBus<CheeseburgerComponentRequests>;
   ```
 + Use the name format `MyComponentNotificationBus` for events that are broadcast from `MyComponent`, as in the following example\.
+  For the notifiction interface class the name format of `MyComponentNotifications` is recommended as well\.
 
   ```
   class CheeseburgerComponentNotifications : public AZ::ComponentBus
@@ -23,6 +24,7 @@ The following EBus naming conventions remove ambiguity and provide consistency\.
   };
   using CheeseburgerComponentNotificationBus = AZ::EBus<CheeseburgerComponentNotifications>;
   ```
+ Following these conventions helps readers quickly determine which EBuses service requests vs which EBuses listen for notifications. 
 
 ## Provide Default Implementations of Methods<a name="component-entity-system-pg-components-ebuses-best-practices-default-implementations"></a>
 
