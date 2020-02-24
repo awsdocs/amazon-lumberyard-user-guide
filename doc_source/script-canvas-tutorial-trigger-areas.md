@@ -181,7 +181,7 @@ When multiple connections enter a single logic pin, the node is executed each ti
 
    1. In the **Duration** node, for **Duration**, enter **1\.0** \(seconds\)\.  
 **Example**    
-![\[Connect the Get Local Translation node to the Set current_position node to the Duration node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/get-local-translation-connection-to-duration-node-2.PNG)
+![\[Connect the Get Local Translation node to the Set current_position node to the Duration node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/get-local-translation-connection-to-duration-node-2.png)
 
 1. Do the following to set up interpolation between the current position and the destination:
 
@@ -203,7 +203,7 @@ When multiple connections enter a single logic pin, the node is executed each ti
 
    1. From **Get destination\_position**, drag the **Vector3** pin to connect it to the **End** pin of the **Lerp** node\.  
 **Example**    
-![\[Use the Lerp node to blend together the values from the Percentage pin.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-current-position-destination-interpolation-2.PNG)
+![\[Use the Lerp node to blend together the values from the Percentage pin.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-current-position-destination-interpolation-2.png)
 
 1. Do the following to set the position of the door when the **Duration** node blends between the current and destination positions:
 
@@ -219,7 +219,7 @@ When multiple connections enter a single logic pin, the node is executed each ti
 
    1. Verify that your `door.scriptcanvas` graph looks like the following\.  
 **Example**    
-![\[Finished Script Canvas graph for creating a trigger area for an entity.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-door-translation-2.PNG)
+![\[Finished Script Canvas graph for creating a trigger area for an entity.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-door-translation-2.png)
 
 1. Save your graph\.
 

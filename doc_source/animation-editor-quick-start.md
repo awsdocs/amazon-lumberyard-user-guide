@@ -80,7 +80,7 @@ In the following procedure, create an animation graph and nodes\.
 1. From the **Motion0** node, click and drag a line to the **BlendTree0** node\. A transition line with an arrow connects the nodes\.
 
 1. From the **BlendTree0** node, click and drag a line to the **Motion0** node\.   
-![\[Connect the motion and blend tree nodes in the animation graph.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animationeditorquickstart/animation-editor-quick-start-motion-blend-tree-nodes.PNG)
+![\[Connect the motion and blend tree nodes in the animation graph.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animationeditorquickstart/animation-editor-quick-start-motion-blend-tree-nodes.png)
 
 1. In the **Parameters** pane, click the **\+** icon to create a parameter\.
 

@@ -2,7 +2,7 @@
 
 Use [AWS Device Farm ](https://aws.amazon.com/device-farm/)to test your Android or iOS apps on many different types of devices without needing to have any of them present physically\. Device Farm can help you find and resolve compatibility issues on a large number of devices\. For more information about Device Farm, see the [Device Farm Developer Guide](https://docs.aws.amazon.com/devicefarm/latest/developerguide/)\.
 
-Starting in Lumberyard version 1\.20, you can use the Lumberyard Editor [Deployment Tool](android-game-building.md) to make Device Farm a deployment target\.
+Starting in Lumberyard version 1\.20, you can use the Lumberyard Editor [Deployment Tool](building-your-android-game.md) to make Device Farm a deployment target\.
 
 ![\[Lumberyardintegration with AWS Device Farm.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ios-android-deployment-tool-device-farm-integration-1.png)
 
@@ -77,9 +77,7 @@ After you have selected a valid AWS profile in Lumberyard Editor, you can use th
 1. In **Deployment Tool**, under **Deploy**, click the **AWS Device Farm** tab\.  
 ![\[AWS Device Farm features in the Deployment Tool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ios-android-deployment-tool-device-farm-integration-6.png)
 
-1. For information about general Deployment Tool options, see [Setting Deployment Tool Options](android-game-building.md#android-game-building-deployment-tool-options)\.
-
-   The following options are specific to Device Farm usage\.  
+1. The following options are specific to Device Farm usage\.  
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/ios-android-deployment-tool-device-farm-integration.html)
 

@@ -20,9 +20,9 @@ If you instantiate a slice that has a track view sequence, this creates another 
 
 1. You create a track view sequence named *Seq* that is in a slice and you then instantiate that slice three times in the level\. 
 
-1. In the **Track View** editor, for the **Active Sequence** drop\-down menu, you will see *Seq* three times, one for each instantiated slice\. Because the slices have the same name, it’s unclear which instance of the sequence that you are editing in the **Track View** editor\.
+1. In the **Track View**, for the **Active Sequence** drop\-down menu, you will see *Seq* three times, one for each instantiated slice\. Because the slices have the same name, it’s unclear which instance of the sequence that you are editing in the **Track View**\.
 
-1. To determine which slice you are editing, in the **Track View** editor, in the **Node Browser**, right\-click the track view sequence and in the context menu, choose **Select in Viewport**\. 
+1. To determine which slice you are editing, in the **Track View**, in the **Node Browser**, right\-click the track view sequence and in the context menu, choose **Select in Viewport**\. 
 
 1. In the **Entity Outliner**, you can see the selected slice instance and track view sequence that you are editing\.
 
@@ -34,7 +34,7 @@ If you instantiate a slice for a track view sequence, ensure that parent entitie
 The **Entity Outliner** shows two **Parent** slices, which have two children entities and a track view sequence\.  
 
 ![\[Example slice that has a track view sequence, which has been instantiated.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-slice-example-1.png)
-In the **Track View** editor, the **ExampleSequence** animates only the two children entities in the slice\. The **Parent** entity cannot be animated in a slice\.   
+In the **Track View**, the **ExampleSequence** animates only the two children entities in the slice\. The **Parent** entity cannot be animated in a slice\.   
 
 ![\[Example track view sequence that animates child slices, not the parent.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-slice-example-2.png)
 

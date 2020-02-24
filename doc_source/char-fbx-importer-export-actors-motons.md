@@ -1,6 +1,6 @@
 # Exporting Actors and Motions<a name="char-fbx-importer-export-actors-motons"></a>
 
-Use the following best practices when you export your skinned meshes using the **FBX Settings** tool\.
+Use the following best practices when you export your skinned meshes using the ****FBX Settings**** tool\.
 + If you use the z\-up world coordinate system, use the following guidelines:
   + Ensure that your DCC scene is set to z for the up\-axis world coordinate system\.
   + Set the axis conversion up axis to z when exporting an `.fbx` file\.

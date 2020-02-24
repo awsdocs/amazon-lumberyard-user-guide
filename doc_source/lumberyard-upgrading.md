@@ -127,5 +127,5 @@ Once you have upgraded Lumberyard, you can upgrade each of your game projects\.
 1. In a command line window, locate the new `dev` directory and enter the following build command for your version of Visual Studio: 
 
    ```
-   lmbr_waf build_win_x64_vs2015_profile -p all
+   lmbr_waf build_win_x64_vs2017_profile -p all
    ```

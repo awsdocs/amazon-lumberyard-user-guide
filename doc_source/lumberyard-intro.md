@@ -58,7 +58,7 @@ Real\-time gameplay editing helps you iterate on gameplay and immediately see yo
 
 ### Modular Gems<a name="lumberyard-aaa-engine-gems"></a>
 
-Lumberyard's Modular Gems system gives you a library of prebuilt features with which you can start new projects or prototype ideas quickly\. Modular gems offer increased control over which technologies to include in your game project\. Create your own modular gems or use the gems included with Lumberyard, such as weather effects, a boids\-based ambient creature system, lightning effects, a camera framework, and more\.
+Lumberyard's Modular Gems system gives you a library of prebuilt features with which you can start new projects or prototype ideas quickly\. Modular Gems offer increased control over which technologies to include in your game project\. Create your own modular Gems or use the Gems included with Lumberyard, such as weather effects, a boids\-based ambient creature system, lightning effects, a camera framework, and more\.
 
 For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
 

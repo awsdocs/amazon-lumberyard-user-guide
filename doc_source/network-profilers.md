@@ -24,10 +24,10 @@ The Profiler tool has a GridMate channel with **Carrier** and **Replica activity
 
 **To open the detail view for the Carrier profiler**
 + Click the **Detailed Profiling Information** icon for **Carrier** in the GridMate channel:   
-![\[Carrier details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Carrier details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Carrier details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Carrier details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-gridmate-carrier-detail-icon.png)
 
   The Carrier profiler detail view resembles the following image:   
-![\[Carrier Profiler detail view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Carrier Profiler detail view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Carrier Profiler detail view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Carrier Profiler detail view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-gridmate-carrier-detail-view.png)
 
   This view uses all of the data supplied in the capture session to show an overview of the bandwidth usage through the GridMate carrier for the selected connection\. It includes the following information:
   + **Total Sent/Total Received** – The total number of bytes sent and the total number of bytes received on the selected connection\.
@@ -47,10 +47,10 @@ You can use the Replica Activity profiler to see how much replica bandwidth your
 
 **To open the Replica Activity profiler**
 + Click the **Detailed Profiling Information** icon for **Replica activity**\.   
-![\[Replica activity details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Replica activity details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Replica activity details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Replica activity details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-gridmate-replica-activity-detail-icon.png)
 
   The Replica Activity profiler detail view has a pair of **Bytes Sent** and **Bytes Received** graphs at the top, a toolbar to control the display in the middle, and a table of replicas at the bottom:   
-![\[Replica network activity\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Replica network activity\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Replica network activity\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Replica network activity\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity.png)
 
   This view is useful for discovering how much bandwidth a single entity is using, and for finding what information is synchronized in response to particular events for particular entities\. 
 
@@ -62,7 +62,7 @@ In replica view, the table shows how much data each replica used in a given fram
 
 **To change the view to Replica**
 +  In the toolbar, choose **Replica**\.  
-![\[Choosing replica view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Choosing replica view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Choosing replica view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Choosing replica view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-choose-replica-view.png)
 
   Each replica is represented by its associated color in the graphs above the toolbar\. Replica view includes the following information:
   + ** Bytes Sent** – Shows bandwidth usage in bytes sent by the object for a particular frame\.
@@ -91,10 +91,10 @@ In replica view, the table shows how much data each replica used in a given fram
 
 **To display replica chunk details for a particular replica**
 + Click its details icon\.  
-![\[Replica chunk details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Replica chunk details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Replica chunk details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Replica chunk details icon\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-replica-details-icon.png)
 
   The graph shows the bytes sent and received for a replica chunk, data set, and RCP:   
-![\[Details view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Details view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Details view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Details view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-replica-details-view.png)
 
   You can use this details view to see what replica chunk types a given replica is using, how much data each replica chunk type is using, and how much bandwidth individual data sets and RPCs are using\. 
 
@@ -102,7 +102,7 @@ In replica view, the table shows how much data each replica used in a given fram
 Click **Expand All** to list all replica chunks in all replicas, and every data set and remote procedure call \(RPC\) in each replica chunk:   
    
 
-![\[Expanded view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Expanded view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Expanded view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Expanded view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-replica-details-view-expanded.png)
 
 **To use the Replica Activity profiler tree view**
 + Do either of the following:
@@ -126,17 +126,17 @@ Chunk type view shows you how much data each chunk type used in a given frame\. 
 
 **To change the view to Chunk Type**
 + In the toolbar on the main detail page for **Replica activity**, choose **Chunk Type**\.   
-![\[Changing to Chunk Type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Changing to Chunk Type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Changing to Chunk Type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Changing to Chunk Type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-choose-chunk-type-view.png)
 
   The chunk type view shows how much data a particular replica chunk type is using in a given frame:   
-![\[Chunk type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Chunk type view\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-chunk-type-table-view.png)
 
 **To inspect chunk type details**
 + Click the details icon for the chunk type:   
-![\[Chunk type details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Chunk type details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-chunk-type-details-icon.png)
 
   The details window shows which replicas are using a chunk type's bandwidth, how much data they are using, and how much data the individual data sets and RPCs are using:   
-![\[Chunk type details collapsed\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type details collapsed\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type details collapsed\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Chunk type details collapsed\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-inspecting-chunk-type-details.png)
 
   As before, you can expand the items in the tree to see detailed information about each:   
-![\[Chunk type details expanded\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type details expanded\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Chunk type details expanded\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Chunk type details expanded\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/profiler-network-replica-activity-inspecting-chunk-type-details-expanded.png)

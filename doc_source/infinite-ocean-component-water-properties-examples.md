@@ -14,5 +14,5 @@ In the following example, the underwater fog appears greenish\.
 **Example**  
 In the following example, the underwater fog appears brown\.  
 
-![\[Example ocean where the underwater fog appears brown.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/infiniteocean/infinite-ocean-component-7.JPG)
+![\[Example ocean where the underwater fog appears brown.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/infiniteocean/infinite-ocean-component-7.jpg)
 Avoid using only the reflection to achieve the appearance that you want\. The water appearance is the sum of the reflection on the ocean surface and the underwater fog below the surface\.

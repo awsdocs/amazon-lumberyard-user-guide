@@ -1,10 +1,10 @@
 # Using the Track View Editor<a name="cinematics-track-view-editor"></a>
 
-The **Track View** editor is the primary tool to create and manage cinematic sequences\. A *[sequence](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#sequence)* is the content generated from the **Track View** editor for cutscenes or other canned animation triggers\. When you create a sequence, this creates a component entity in the level\. The component entity stores all of the animation key data that you specified in the **Track View** editor\.
+The **Track View** is the primary tool to create and manage cinematic sequences\. A *[sequence](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#sequence)* is the content generated from the **Track View** for cutscenes or other canned animation triggers\. When you create a sequence, this creates a component entity in the level\. The component entity stores all of the animation key data that you specified in the **Track View**\.
 
-If you want to generate cutscenes for games or create a script to trigger an animation, you can use the **Track View** editor to control cameras, component entities, global variables in a level, and so on\. 
+If you want to generate cutscenes for games or create a script to trigger an animation, you can use the **Track View** to control cameras, component entities, global variables in a level, and so on\. 
 
-**To create a sequence in the **Track View** editor**
+**To create a sequence in the **Track View****
 
 1. Do one of the following:
    + In Lumberyard Editor, choose **Tools**, **Track View**\.
@@ -16,14 +16,14 @@ If you want to generate cutscenes for games or create a script to trigger an ani
 
 1. Enter a sequence name, such as *Example Sequence* and click **OK**\.
 
-1. In the **Entity Outliner**, a component entity appears with the same name as your sequence\. This component entity has a **Sequence** component that stores your sequence data from the **Track View** editor\.  
+1. In the **Entity Outliner**, a component entity appears with the same name as your sequence\. This component entity has a **Sequence** component that stores your sequence data from the **Track View**\.  
 ![\[Sequence component entity in the Entity Outliner.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/track-view-editor-sequence-entity.png)
 
 After you create a sequence, you can add properties to it\. Any part of the sequence is considered a *node*\. Nodes can be a reference to existing component entities or added to a sequence\. For example, if you want to include an active camera for your sequence, you can add the **Director** node\. Each node can have one or more tracks, depending your animation sequence\. A *track* displays animation keys on a timeline in relation to the property that is animated on a node\.
 
 **To add a node to a sequence**
 
-1. In the **Track View** editor, right\-click the sequence or the node browser and select **Add *Name* Node**\. 
+1. In the **Track View**, right\-click the sequence or the node browser and select **Add *Name* Node**\. 
 
 1. Select the node to update its properties\.
 

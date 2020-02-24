@@ -10,7 +10,6 @@ See the following **Rendering** nodes for the **Script Canvas** editor\.
 + [Procedural Material Nodes](script-canvas-procedural-material-nodes.md)
 + [Shadow Nodes](script-canvas-shadow-scripting-nodes.md)
 + [Time of Day Nodes](script-canvas-time-of-day-nodes.md)
-+ [Utilities Nodes](script-canvas-utilities-nodes.md)
 + [Material Variables](script-canvas-variable-material-node.md)
 + [Finding the Material Name](finding-materials-by-name.md)
 + [Finding the Material Parameter Name](material-param-names.md)

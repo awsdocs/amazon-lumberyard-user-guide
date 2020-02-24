@@ -146,7 +146,7 @@ The following is an event with the attributes\.
     "uid": "cognito-id",
     "msgid": "GUID",
     "bldid": "1.0.1.2354",
-    "pltf": "XBOX|PS4|PC|IOS|ANDROID",
+    "pltf": "PC|IOS|ANDROID",
     "tmutc": "ISO 639-1",
     "session_id": "GUID",
     "source": "cloudgemmetric"

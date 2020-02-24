@@ -6,7 +6,7 @@ Each gem package can contain the following:
 + An icon file
 + Code
 
-**To locate Lumberyard gems**
+**To locate Lumberyard Gems**
 + Navigate to the `lumberyard_version\dev\Gems` directory\. For more information, see [Gems Available in Lumberyard](gems-system-ref.md)\. 
 
 **Topics**

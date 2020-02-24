@@ -203,6 +203,6 @@ After you create the code for your component, add it to your project's system en
    The `"HttpRequestor"` and `"Will make HTTP Rest calls"` string parameters specify the UI name and tooltip information for the component in the **Add Component** list\. The `Category` field specifies the group in which the component appears\. In this case, no category is specified, so the group is **Miscellaneous** by default\. 
 
    The following image shows the result in the System Entity Editor\.  
-![\[The HttpRequestor system component appears in the System Entity Editor Add Component menu\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[The HttpRequestor system component appears in the System Entity Editor Add Component menu\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-entity-system-pg-creating-system-components-system-editor.png)
 
    For detailed steps on using the System Entity Editor to add a system component to a project, see [Configuring System Entities](az-module-system-entities-configuring.md)\. 

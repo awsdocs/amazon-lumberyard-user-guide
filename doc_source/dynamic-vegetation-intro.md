@@ -1,6 +1,8 @@
 # Dynamic Vegetation<a name="dynamic-vegetation-intro"></a>
 
-The dynamic vegetation system uses vegetation components to customize vegetation coverage for worlds of any size\. To use the dynamic vegetation system, enable the Vegetation gem\.
+The dynamic vegetation system uses vegetation components to customize vegetation coverage for worlds of any size\. To use the dynamic vegetation system, you must enable the Vegetation gem for your game project\.  
+
+For more information, see [Enabling Gems](gems-system-using-project-configurator.md)\.
 
 ![\[Example of vegetation landscape that you can achieve by using dynamic vegetation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/dynamic-vegetation-intro.png)
 
@@ -10,7 +12,6 @@ Using combinations of components from vegetation and other categories, you can d
 + Reconfigure any aspect of vegetation during any development phase without starting from scratch\. All edits are nondestructive and populate rapidly throughout the level\.
 + Create complex ecological biomes all in one nested slice containing many layers of broad coverage for blending across areas or an entire world\.
 + Configure vegetation to grow only on certain surfaces\. Use components to specify where vegetation can grow such as on a range of ground slope angles or at specified altitudes\.
-+ Configure vegetation to grow only on certain surfaces\. Use components to specify where vegetation can grow, such as on a range of ground slope angles or at specified altitudes\.
 
 The dynamic vegetation system interacts in several ways with the [static vegetation system](vegetation-intro.md)\. For example, you can do the following:
 + Use the same assets in both dynamic and static vegetation systems

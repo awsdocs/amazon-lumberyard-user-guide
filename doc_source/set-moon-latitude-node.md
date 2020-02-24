@@ -6,7 +6,7 @@ Sets the moon's latitude in the sky\.
 + [Inputs](#set-moon-latitude-node-input)
 + [Outputs](#set-moon-latitude-node-output)
 
-![\[setmoonlatitude, setmoonlatitudenode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-moon-latitude-node.PNG)
+![\[setmoonlatitude, setmoonlatitudenode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-moon-latitude-node.png)
 
 ## Inputs<a name="set-moon-latitude-node-input"></a>
 

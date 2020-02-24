@@ -14,4 +14,4 @@ For example, you can create a chat command `#cheer` that triggers celebration an
 To use Twitch ChatPlay, you use flow graph nodes to connect to your Twitch channel and to listen for key words and then act on those keywords when they’re sent by a Twitch user\.
 
 ## Additional Links<a name="gems-system-gem-chatplay-additional-links"></a>
-+ [Tutorial: Adding Twitch ChatPlay ](https://s3.amazonaws.com/gamedev-tutorials/Tutorials/Twitch-Incorporating_Twitch_into_your_game-(01)_Adding_Twitch_ChatPlay.pdf)
++ [Intro to ChatPlay](https://docs.aws.amazon.com/lumberyard/latest/userguide/chatplay-intro.html)

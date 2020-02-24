@@ -44,7 +44,7 @@ After you complete the prerequisites, you can create a heatmap to view your data
 **Note**  
 Lumberyard includes a sample screenshot in the `lumberyard_version\dev\CloudGemSamples\Levels\MetricsSample\cloud_gem_portal_heatmap_image.png` directory\.  
 You can also create your own screenshot\. For more information, see [Creating Screenshots of Your Level](#cloud-gem-game-metrics-heatmaps-creating-screenshots-of-game-level)\.  
-![\[Example of a top-down screenshot of a level in the gray image box in the Amazon Lumberyard Cloud Gem Portal.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-create-heatmap-resize-image.PNG)
+![\[Example of a top-down screenshot of a level in the gray image box in the Amazon Lumberyard Cloud Gem Portal.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-create-heatmap-resize-image.png)
 
 1. For **Max Zoom Scale**, set the minimum and maximum values\. You can adjust these values to change how the aggregated data points appear as heat spots on the map\.
 

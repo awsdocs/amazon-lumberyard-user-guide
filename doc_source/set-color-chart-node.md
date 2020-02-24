@@ -81,7 +81,7 @@ You can install the plugin in Lumberyard Setup Assistant\. For more information,
 ![\[Example color chart processed by the Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/set-color-chart-processed.png)
 **Note**  
 You can clear the **Tiled** option to preview the image correctly\. This option does not affect your color chart\.
-To see more information about **ColorChart** settings, click **Show preset info**\. You can find these settings in the `rc.ini` file, located in the `lumberyard_version\dev\Bin64vc140\rc\` directory\.   
+To see more information about **ColorChart** settings, click **Show preset info**\. You can find these settings in the `rc.ini` file, located in the `lumberyard_version\dev\Bin64vc141\rc\` directory\.   
 For more information, see [Using the Resource Compiler Image Tool](asset-pipeline-images-using-resourcecompiler-image-tool.md)\.
 
 1. Repeat steps 5 and 6 for all your color chart images\.

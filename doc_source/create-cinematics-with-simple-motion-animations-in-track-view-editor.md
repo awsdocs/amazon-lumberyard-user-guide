@@ -1,6 +1,6 @@
 # Creating Character Animations with the Simple Motion Component<a name="create-cinematics-with-simple-motion-animations-in-track-view-editor"></a>
 
-To create character animations with the **Track View** editor, you can add the **Simple Motion** component and the **Actor** component to an entity\. You then add the entity to a track view sequence and specify the motions that you want your character to animate\. When you add a motion track to a track view sequence, the **Track View** editor drives animation on the **Simple Motion** component and its properties: 
+To create character animations with the **Track View**, you can add the **Simple Motion** component and the **Actor** component to an entity\. You then add the entity to a track view sequence and specify the motions that you want your character to animate\. When you add a motion track to a track view sequence, the **Track View** drives animation on the **Simple Motion** component and its properties: 
 + **Motion**
 + **Play speed**
 + **Play time**
@@ -10,7 +10,7 @@ To create character animations with the **Track View** editor, you can add the *
 For more information, see the **[Simple Motion](component-simple-motion.md)** component\.
 
 **Note**  
-The **Play speed** property is always set to `0.0`\. This is because the **Track View** editor will set the **Play time** value every frame to drive the playback of the motion\. This allows scrubbing and playback in the **Track View** editor as well as playback in the game\.
+The **Play speed** property is always set to `0.0`\. This is because the **Track View** will set the **Play time** value every frame to drive the playback of the motion\. This allows scrubbing and playback in the **Track View** as well as playback in the game\.
 When you add the **Simple Motion** component to a track view sequence, the **Preview in Editor** property is automatically enabled\.
 
 The following procedure uses [Starter Game](sample-level-starter-game.md)\.
@@ -29,7 +29,7 @@ The following procedure uses [Starter Game](sample-level-starter-game.md)\.
 **Example**  
 
    Your entity should look like the following\.   
-![\[Components for the entity to add to the track view sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-1.PNG)
+![\[Components for the entity to add to the track view sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-1.png)
 
 1. In Lumberyard Editor, choose **Tools**, **Track View**\. 
 
@@ -54,14 +54,14 @@ You can set the **Loop** parameter so that motion continues to play as long as t
 **Example**    
 ![\[Key properties for the first motion.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-4.png)
 
-1. Click the play icon ![\[Play the track view sequence\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-5.png) to view the animation in the track view sequence\. You can also drag the **Track View** editor needle across the timeline\.   
+1. Click the play icon ![\[Play the track view sequence\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-5.png) to view the animation in the track view sequence\. You can also drag the **Track View** needle across the timeline\.   
 **Example**  
 
    The following shows the actor animating the idle to walk motion\.  
 ![\[Example animation of a single motion in the track view sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared-cinematics-track-view-simple-motion-component-6-example.gif)
 
 **Note**  
-When you update properties in the **Track View** editor, the original values for the entity properties are overwritten and are not restored\. For example, if you set the **Start time** to `3.0` in the **Track View** editor, this updates the **Simple Motion** component properties in the **Entity Inspector**\. If you want to reuse an entity with a **Simple Motion** component after a track view sequence is completed, update the **Play speed** parameter; the **Play speed** parameter always resets to zero in the **Track View** editor\. You can also avoid this issue by not reusing entities in this way\.
+When you update properties in the **Track View**, the original values for the entity properties are overwritten and are not restored\. For example, if you set the **Start time** to `3.0` in the **Track View**, this updates the **Simple Motion** component properties in the **Entity Inspector**\. If you want to reuse an entity with a **Simple Motion** component after a track view sequence is completed, update the **Play speed** parameter; the **Play speed** parameter always resets to zero in the **Track View**\. You can also avoid this issue by not reusing entities in this way\.
 
 ## Blending Motions in the Track View Editor<a name="blending-motions-in-track-view-editor"></a>
 
@@ -101,6 +101,6 @@ The **Blend In Time** and **Blend Out Time** parameters affect the bone weight t
    The following is a timeline with four motions blended together\.  
 ![\[Timeline in a track view sequence with four motions.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-9.png)
 
-1. Click the play icon to view the track view sequence\. You can also drag the **Track View** editor needle across the timeline\. The motions blend together in the track view sequence\.  
+1. Click the play icon to view the track view sequence\. You can also drag the **Track View** needle across the timeline\. The motions blend together in the track view sequence\.  
 **Example**    
 ![\[Example of blending motions together in the track view sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-simple-motion-component-10.gif)

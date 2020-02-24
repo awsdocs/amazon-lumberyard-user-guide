@@ -1,6 +1,6 @@
 # Using GridMate for Large\-Scale Worlds<a name="network-interest-manager-large-scale-worlds"></a>
 
-GridMate is Lumberyard's networking system\. Interest manager is a Lumberyard's solution to large\-scale networked worlds\.
+GridMate is Lumberyard's networking system\. Interest manager is Lumberyard's solution to large\-scale networked worlds\.
 
 **Topics**
 + [The Relationship Between Replica Manager and Interest Manager](#network-interest-manager-large-scale-worlds-replica-manager-and-interest-manager)

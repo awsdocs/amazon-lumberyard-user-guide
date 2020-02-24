@@ -24,11 +24,9 @@ Copy the Windows 10 SDK version\. In Windows, you can find this value in **Progr
    ```
 
 1. Configure your Lumberyard project by doing one of the following:
-   + With a text editor, open the `user_settings.options` file in the `lumberyard_version\dev\_WAF_` directory and edit the following parameters:
+   + With a text editor, open the `user_settings.options` file in the `lumberyard_version\dev\_WAF_` directory and edit the following parameters, removing any leading semicolons to uncomment the line:
      + Under the `[Build Options]` section, set `win_build_renderer` to **DX12**\.
-     + Under the `[Windows Options]` section, set `win_vs2015_winkit` to your version of the Windows 10 SDK \(for example, **10\.1\.17134\.12**\)\.
-**Note**  
-If you are compiling for Visual Studio 2017, you must also set `win_vs2017` to your version of the Windows 10 SDK\.
+     + Under the `[Windows Options]` section, set `win_vs2017_winkit` to your version of the Windows 10 SDK \(for example, **10\.1\.17134\.12**\)\.
 
      Navigate to the `lumberyard_version\dev` directory and, in a command line window, enter the following:
 
@@ -38,13 +36,13 @@ If you are compiling for Visual Studio 2017, you must also set `win_vs2017` to y
    + Or, with a command line window, navigate to the `lumberyard_version\dev` directory and enter the following: 
 
      ```
-     lmbr_waf configure --win-build-renderer=DX12 --win-vs2015-winkit=10.1.17134.12
+     lmbr_waf configure --win-build-renderer=DX12 --win-vs2017-winkit=10.1.17134.12
      ```
 
 1. In a command line window, build your project with the following command:
 
    ```
-   lmbr_waf build_win_x64_vs2015_profile -p game_and_engine
+   lmbr_waf build_win_x64_vs2017_profile -p game_and_engine
    ```
 
 1. Start your game with the launcher\. You can verify that your game has enabled DX12 in the top\-right of the viewport\.  

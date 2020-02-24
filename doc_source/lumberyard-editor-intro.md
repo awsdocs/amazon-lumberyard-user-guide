@@ -12,7 +12,6 @@ If you receive errors from the `AssetProcessor.exe` or `AssetProcessor_temp.exe`
 The Lumberyard Editor desktop shortcut points to the `lumberyard_installation\dev\Bin64vcxxx\Editor.exe` file that corresponds to the version of Visual Studio that you chose in Lumberyard Setup Assistant during setup\. If you later change the version of Visual Studio that you use with Lumberyard, this desktop shortcut may no longer be valid\.
   + From Lumberyard Setup Assistant, on the **Summary** page, click **Launch Editor**\.
   + For Visual Studio 2017, navigate to the `lumberyard_version\dev\Bin64vc141` directory and double\-click `Editor.exe`\.
-  + For Visual Studio 2015, navigate to the `lumberyard_version\dev\Bin64vc140` directory and double\-click `Editor.exe`\.
 
 After the first launch and each time you change projects, Asset Processor runs in the background using the project configuration settings to populate the **Asset Browser**\. Messages appear with status information before the editor opens\. For more information about Asset Processor, see [Using Asset Processor](asset-pipeline-processor.md)\.
 

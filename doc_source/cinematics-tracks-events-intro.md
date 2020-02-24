@@ -6,7 +6,7 @@ Track events can also be used to change the time of day in terrain level\.
 
 **To add a track event**
 
-1. In the **Track View** editor, right\-click the applicable scene\. Click **Edit Events**\.
+1. In the **Track View**, right\-click the applicable scene\. Click **Edit Events**\.
 
 1. Click **Add**, and then enter a name\. Close the dialog\.
 
@@ -25,9 +25,9 @@ Track events can also be used to change the time of day in terrain level\.
 | --- |
 | This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
 
-The track events you create in the **Track View** editor can be used in Flow Graph by adding a Track Event node in Flow Graph and setting its **Sequence** property to the track view sequence triggering the event\. The Track Event Flow Graph node has outputs for each event in that sequence\.
+The track events you create in the **Track View** can be used in Flow Graph by adding a Track Event node in Flow Graph and setting its **Sequence** property to the track view sequence triggering the event\. The Track Event Flow Graph node has outputs for each event in that sequence\.
 
-Certain features required for creating cinematic effects are available only in Flow Graph\. To access these features, you need a link between the **Track View** editor and Flow Graph\. Specifically, track view trigger entities are used to send events to Flow Graph where various nodes are then triggered\.
+Certain features required for creating cinematic effects are available only in Flow Graph\. To access these features, you need a link between the **Track View** and Flow Graph\. Specifically, track view trigger entities are used to send events to Flow Graph where various nodes are then triggered\.
 
 Use the following procedure to create your link between track view sequence and flow graph after you have created an event and assigned it to the key, as described in the previous section\.
 

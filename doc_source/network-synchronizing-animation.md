@@ -79,7 +79,6 @@ Now that you have added the **Net Binding** and **Anim Graph Net Sync** componen
 
 1. Open a Windows command console on the `lumberyard_version\dev\Bin` directory that you are using\.
    + For Visual Studio 2017, the directory is `lumberyard_version\dev\Bin64vc141\`\.
-   + For Visual Studio 2015, the directory is `lumberyard_version\dev\Bin64vc140\`\.
 
 1. Run the following command to start the server:
 

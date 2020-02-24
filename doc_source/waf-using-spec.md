@@ -90,7 +90,7 @@ After saving the new spec, do one of the following:
 + Build the spec from the command line by entering the following command for your version of Visual Studio: 
 
   ```
-  lmbr_waf build_win_x64_vs2015_profile -p MySpec
+  lmbr_waf build_win_x64_vs2017_profile -p MySpec
   ```
 
 The `build` command builds the game project specified in the `user_settings`, even if the module is not defined in the spec\. The exception is if the option `disable_game_projects` is set to **True**\.

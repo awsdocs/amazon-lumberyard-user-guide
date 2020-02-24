@@ -65,7 +65,7 @@ You can generate the data for your app on a computer running either Windows or m
 1. Do the following to launch Asset Processor:
 
    1. Navigate to the following directory:
-      + On a Windows computer: `lumberyard_version\dev\Bin64vc140` or `Bin64vc141`
+      + On a Windows computer: `lumberyard_version\dev\Bin64vc141`
       + On a macOS computer: `lumberyard_version/dev/Bin64Mac/`
 
    1. Double\-click `AssetProcessor.exe`\.
@@ -150,7 +150,6 @@ You must modify certain configuration files to allow your iOS app to connect to 
 
    Choose the appropriate shader compiler version\.
    + For Visual Studio 2017, launch `CrySCompileServer_vc141x64`\.
-   + For Visual Studio 2015, launch `CrySCompileServer_vc140x64`\.
 
 ## Step 6: Build Code from a Command Line<a name="ios-build-code-from-command-line"></a>
 

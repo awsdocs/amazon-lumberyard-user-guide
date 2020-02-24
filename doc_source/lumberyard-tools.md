@@ -36,7 +36,7 @@ Displays the ID and name for component entity system objects\.
 [Entity Outliner](component-entity-outliner.md)  
 Displays all component entities used for a level\.
 
-[FBX Settings](char-fbx-importer.md)  
+[**FBX Settings**](char-fbx-importer.md)  
 Imports single static meshes and materials from FBX\.
 
 Flow Graph \(Legacy\)  
@@ -79,7 +79,7 @@ Provides a library of prebuilt features that you can use to quickly start new pr
 Creates and simulates explosions, fire, sparks, and other visual effects\.
 
 [Project Configurator](configurator-intro.md)  
-Standalone application used to tell the Waf build system which gems to include in the game build\.
+Standalone application used to tell the Waf build system which Gems to include in the game build\.
 
 [Resource Compiler](asset-pipeline-processor.md)  
 Compresses and processes source game asset files and creates package files\.
@@ -109,7 +109,7 @@ Creates and paints terrain texture layers in your level\.
 Creates and manages day–night cycles and other dynamic sky effects\.
 
 [Track View Editor](cinematics-track-view-editor.md)  
-Creates and manages cinematic scenes and sequences; consists of the **Track View** editor and **Curves Editor**\.
+Creates and manages cinematic scenes and sequences; consists of the **Track View** and **Curves Editor**\.
 
 [UI Editor](ui-editor-intro.md)  
 Creates, manages, and simulates user interface elements for your game, such as menus and heads\-up displays \(HUD\)\.

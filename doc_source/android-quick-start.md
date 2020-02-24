@@ -7,14 +7,22 @@ You can use this quick start to run the [Samples Project](sample-project-samples
 This topic assumes that you meet the following requirements:
 + Lumberyard installed on a Windows computer\.
 + An Android device [configured](https://developer.android.com/studio/run/device) and connected to your computer with a USB cable
-+ You are familiar with Lumberyard Editor
++ Familiarity with Lumberyard Editor
+
+**Topics**
++ [Prerequisites](#android-quick-start-prerequisites)
++ [Downloading Required Software](#android-quick-start-downloads)
++ [Configuring Android Studio](#configuring-android-studio)
++ [Configuring Lumberyard Setup Assistant](#set-up-samples-project-on-android)
++ [Configuring Asset Processor](#set-up-asset-processor-for-android)
++ [Running the Deployment Tool](#run-the-deployment-tool-for-android)
 
 ## Downloading Required Software<a name="android-quick-start-downloads"></a>
 
 Download the following software:
-+ [Android Studio 3\.3 or newer](https://developer.android.com/studio/index.html)
-+ [Android NDK r15c or newer](https://developer.android.com/ndk/downloads/older_releases)
-+ [Java SE Development Kit \(JDK\) 1\.8 or newer](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
++ [Android Studio 3\.3 or later](https://developer.android.com/studio/index.html)
++ [Android NDK r20 or later](https://developer.android.com/ndk/downloads/older_releases)
++ [Java SE Development Kit \(JDK\) 1\.8 or later](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 ## Configuring Android Studio<a name="configuring-android-studio"></a>
 
@@ -53,11 +61,13 @@ Use Lumberyard Setup Assistant to install the required third\-party software and
 1. On the **Required Software** page, click **Browse** and specify the paths for the following:
    + **Android Native Development \(NDK\)**
    + **Android Software Development Kit \(SDK\) Tools**
-   + **Java SE Development Kit \(JDK\)**  
+   + **Java SE Development Kit \(JDK\)**
+
+     See the following example,  
 **Example**    
 ![\[Required software for Android in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-third-party-software.png)
 
-1. Click **Next** until you reach the final page and close Lumberyard Setup Assistant\.
+1. Click **Next** until you reach the final page, and close Lumberyard Setup Assistant\.
 
 ## Configuring Asset Processor<a name="set-up-asset-processor-for-android"></a>
 
@@ -67,7 +77,7 @@ Next, you must configure Asset Processor so that it can process your game assets
 
 1. In a text editor, open the `AssetProcessorPlatformConfig.ini` file\. 
 
-1. Remove the semicolon to uncomment `es3=enabled`\.
+1. Remove the semicolon to uncomment `es3=enabled`, as shown in the following example\.
 
    ```
    [Platforms]
@@ -95,6 +105,6 @@ Next, you must run Lumberyard Editor and the **Deployment Tool** so that the Sam
    + For **Target Platform**, select **Android ARMv8**\.
    + For **Build Options**, select **Build Game**\.
 
-1. Click **Deploy to local device**\. Text appears while the code builds and deploys to your device\.  
+1. Click **Deploy to local device**\. The code builds and deploys to your device, as shown in the following example\.  
 **Example**    
 ![\[Deploying to the local Android device from Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-quick-start-log.png)

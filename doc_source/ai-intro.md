@@ -8,7 +8,7 @@ The selection strip at the bottom of Lumberyard Editor features controls to enab
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ai-intro-ai-physics-button.png)
 
-The pause and next step buttons are used for stepping through the Ai system one frame at a time for debugging\. To use these correctly, first click the pause button, then click the **AI/Physics** button, then click the next step button\.
+The pause and next step buttons are used for stepping through the AI system one frame at a time for debugging\. To use these correctly, first click the pause button, then click the **AI/Physics** button, then click the next step button\.
 
 Make sure to disable the pause button again to return to normal operation\.
 

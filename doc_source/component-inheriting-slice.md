@@ -10,6 +10,9 @@ For example, suppose that you have a slice called `wheel.slice`, composed of one
 
 1. Right\-click the parent entity and choose **Create slice**\.
 
+1. The **Create Slice** dialog box will appear giving you a choice of creating a fresh slice or a nested slice\. Choose **Nested Slice**\.  
+![\[Choose Nested Slice in the Create Slice dialog box.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-slice-fresh-or-nested.png)
+
 1. Enter a file name for the slice and then save\.
 
 When you create a slice hierarchy, you can select the root slice for that slice\. This is useful if you have a large slice hierarchy and you want to quickly navigate between the slice instances\.

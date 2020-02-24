@@ -23,8 +23,8 @@ You can use Lumberyard to build macOS applications\. Lumberyard includes four ma
 
 To build games for macOS or iOS, Lumberyard requires the following on your Mac: 
 + [Lumberyard Mac Support Files](https://aws.amazon.com/lumberyard/downloads/)
-+ [Xcode 7\.1](https://developer.apple.com/xcode/download/) or later
-+ OS X El Capitan
++ [Xcode 11](https://developer.apple.com/xcode/download/) or later
++ macOS Mojave or later
 
 **Note**  
 Lumberyard Editor requires Windows 7 or later to edit levels\. You must have access to a PC with Lumberyard installed and be able to navigate and run commands from Terminal on your Mac\.

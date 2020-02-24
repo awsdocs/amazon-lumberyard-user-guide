@@ -9,13 +9,13 @@ You can capture image frames using render output, a capture track, or console va
 
 ## Capturing Image Frames with Render Output<a name="cinematics-image-capture-render-output"></a>
 
-You can use the **Render Output** tool in the **Track View** editor to capture image frames\. 
+You can use the **Render Output** tool in the **Track View** to capture image frames\. 
 
 **To capture image frames using Render Output**
 
 1. In Lumberyard Editor, choose **Tools**, **Track View**\.
 
-1. In the **Track View** editor, click **Tools**, **Render Output**\.
+1. In the **Track View**, click **Tools**, **Render Output**\.
 
 1. In **Render Output**, set the input and out properties, and then click **Add**\. You will see the capture added under **Batch**\.
 
@@ -40,7 +40,7 @@ You can capture image frames when a sequence is played in game mode\.
 
 1. In Lumberyard Editor, choose **Tools**, **Track View**\.
 
-1. In the **Track View** editor, right\-click the **Director** node and choose **Add Track**, **Capture**\.
+1. In the **Track View**, right\-click the **Director** node and choose **Add Track**, **Capture**\.
 
 1. Double\-click the created track to add a capture keyframe\. You can set the following key properties:  
 ****    

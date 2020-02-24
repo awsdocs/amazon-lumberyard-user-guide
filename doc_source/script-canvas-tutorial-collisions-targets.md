@@ -121,7 +121,7 @@ Now that you've set up a projectile, you can create a script to propel the proje
 ![\[Use the Destroy Game Entity and Descendents node to destroy entities that are generated.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-game-entity-destroy-game-entity-descendants-node.png)
 
    1. From **Delay**, drag the **Out** pin to connect it to the **In** pin of the **Destroy Game Entity and Descendants** node\.  
-![\[Connect the Delay node to the Destroy Game Entity and Descendents node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-destroy-gem-entity-descendents-node-properties-connections.PNG)
+![\[Connect the Delay node to the Destroy Game Entity and Descendents node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-destroy-gem-entity-descendents-node-properties-connections.png)
 
    1. Verify that your `projectile.scriptcanvas` graph looks like the following\.  
 **Example**    

@@ -3,7 +3,7 @@
 The default Web Communicator authentication system uses authenticated Amazon Cognito users with AWS Signature Version 4\. For more information, see [Authenticating Requests \(AWS Signature Version 4\)](https://docs.aws.amazon.com/general/latest/gr/sig-v4-authenticating-requests.html) in the *AWS General Reference*\.
 
 **Note**  
-Lumberyard advises against implementing unauthenticated access\. If you surrender control over which users can connect to your [AWS IoT](https://aws.amazon.com//iot-core) network, you can incur unexpected costs\.
+Lumberyard advises against implementing unauthenticated access\. If you surrender control over which users can connect to your [AWS IoT](https://aws.amazon.com/iot-core) network, you can incur unexpected costs\.
 
 Connection to AWS IoT requires two policies, which Web Communicator generates for you:
 + A `PlayerAccess` role that can connect to, subscribe to, and receive messages from any AWS resource that is added to Web Communicator\.

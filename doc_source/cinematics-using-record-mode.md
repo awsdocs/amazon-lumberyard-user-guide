@@ -1,10 +1,10 @@
 # Using Record Mode<a name="cinematics-using-record-mode"></a>
 
-The **Track View** editor's **Play** toolbar has the **Start Animation Recording** icon to enter record mode\. In record mode, you can manipulate component entities for a sequence directly in the viewport\. Animation keys are automatically placed on the appropriate node tracks in the timeline based on the current location of the timeline playhead\.
+The **Track View**'s **Play** toolbar has the **Start Animation Recording** icon to enter record mode\. In record mode, you can manipulate component entities for a sequence directly in the viewport\. Animation keys are automatically placed on the appropriate node tracks in the timeline based on the current location of the timeline playhead\.
 
 **To use record mode**
 
-1. In the **Track View** editor, select or create the sequence that you want\.
+1. In the **Track View**, select or create the sequence that you want\.
 
 1. In the **Play** toolbar, click the **Start Animation Recording** icon\.
 
@@ -19,7 +19,7 @@ You can also use the **Start Auto Recording** option\. When you choose this opti
 
 **To start auto recording**
 
-1. In the **Track View** editor, select or create the sequence that you want\.
+1. In the **Track View**, select or create the sequence that you want\.
 
 1. In the **Play** toolbar, click the **Start Auto Recording** icon\. The playhead automatically moves in the timeline based on the setting specified in the drop\-down menu\. 
 
@@ -40,7 +40,7 @@ The following example uses the **Transform** component, but the same idea applie
 
 1. Select and drag the playhead to a different location on the timeline\. This example moves the playhead to `1` second\.
 
-1. Move the **Track View** editor window to the side or dock it so that it's still open but not blocking the viewport for the currently open level\.
+1. Move the **Track View** window to the side or dock it so that it's still open but not blocking the viewport for the currently open level\.
 
 1. Click the **Start Animation Recording** icon to enter record mode\.
 
@@ -68,7 +68,7 @@ The following example shows how you can add animation keys automatically in the 
 
 1. Move the playhead to a different location on the timeline\.
 
-1. Move the **Track View** editor window to the side or dock it so that it's still open but not blocking the viewport for the currently open level\.
+1. Move the **Track View** window to the side or dock it so that it's still open but not blocking the viewport for the currently open level\.
 
 1. Click the **Start Animation Recording** icon to enter record mode\.
 

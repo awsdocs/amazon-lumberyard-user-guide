@@ -12,9 +12,9 @@ The Project Configurator is a standalone application that allows you to specify 
 For information about Waf build system, see [Using the Waf Build System](waf-intro.md)\. For information about Gems, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
 
 **Note**  
-Before you can run the Project Configurator, you must first run Lumberyard Setup Assistant and close Lumberyard Editor\.
+Before you can run the Project Configurator, you must first run [Lumberyard Setup Assistant](lumberyard-launcher-using.md) and close Lumberyard Editor\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/project-configurator-1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setup/ui-project-configurator-1.22.png)
 
 **Topics**
 + [Creating and Switching Game Projects](configurator-projects.md)

@@ -6,7 +6,7 @@ Each component entity has a **Transform** component\. By default, when you add a
 
 ![\[Transform properties in a sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-editor-moving-component-entity-1.png)
 
-You can add any number of keys for each track as needed, and adjust the transitions with the **Curve Editor**\. 
+You can add any number of keys for each track as needed, and adjust the transitions with the ****Curve Editor****\. 
 
 For more information, see [Using Animation Curves](cinematics-track-view-editor-animation-curves.md)\.
 
@@ -18,7 +18,7 @@ When moving component entities, we recommend the following workflows:
 
 **To set transform keys with record mode**
 
-1. In the **Track View** editor, create or select sequence and add a component entity\. See [Adding Component Entities](cinematics-adding-component-entities.md)\.
+1. In the **Track View**, create or select sequence and add a component entity\. See [Adding Component Entities](cinematics-adding-component-entities.md)\.
 
 1. By default, the **Transform** component attached to the entity automatically adds the **Position** and **Rotation** tracks to the sequence\.  
 ![\[Position and Rotation properties in the timeline for a sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-editor-using-record-mode-1.png)
@@ -27,7 +27,7 @@ When moving component entities, we recommend the following workflows:
 
 1. Select and drag the playhead to a different position on the timeline\.
 
-1. Move the **Track View** editor window to the side or dock it so that it's still open, but not blocking the viewport for the currently open level\.
+1. Move the **Track View** window to the side or dock it so that it's still open, but not blocking the viewport for the currently open level\.
 
 1. Click the **Start Animation Recording** icon to enter record mode\.
 

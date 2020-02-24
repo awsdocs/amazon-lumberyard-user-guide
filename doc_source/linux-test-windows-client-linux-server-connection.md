@@ -57,7 +57,6 @@ Once the Lumberyard executable is ready, you can test the connection between the
    1. Edit the `bootstrap.cfg` file \(located in the `lumberyard_version\dev` directory\) to set `connect_to_remote` to **1**\.
 
    1. Double\-click the `MultiplayerSampleLauncher.exe` file in the following directory:
-      + For Visual Studio 2015: `lumberyard_version\dev\Bin64vc140\`
       + For Visual Studio 2017: `lumberyard_version\dev\Bin64vc141\`
 
    1. After the launcher loads, open the console by pressing the accent grave key **`** and enter the following command: 

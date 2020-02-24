@@ -17,11 +17,11 @@ In addition, [Twitch JoinIn](chatplay-joinin.md) enables broadcasting players on
 
 The following diagram illustrates Twitch ChatPlay's server\-side components\.
 
-![\[Twitch ChatPlay server-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Twitch ChatPlay server-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Twitch ChatPlay server-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Twitch ChatPlay server-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay-server.png)
 
 The following diagram illustrates Twitch ChatPlay's client\-side components\.
 
-![\[Twitch ChatPlay client-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Twitch ChatPlay client-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Twitch ChatPlay client-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Twitch ChatPlay client-side components\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay-client.png)
 
 **Topics**
 + [Setting up a Twitch ChatPlay Channel](chatplay-setup-channel.md)

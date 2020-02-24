@@ -462,99 +462,7 @@ if (AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(
 }
 ```
 
-## Versioning<a name="component-entity-system-reflection-serialization-context-versioning"></a>
-
-As requirements, code, and data representation change, you might find it necessary to modify your existing implementation of data reflection\. However, changes to serialized data can result in incompatibilities\. To manage compatibility, you can assign a version number to serialized data structures\. With this approach, you can perform validation during serialization to ensure that the data that is read matches the format that the reflection system specifies\. We recommend that you increase the version number of serialized data anytime there is a change to the reflected fields\.
-
-The following code shows how to specify a version number for the serialization context\.
-
-```
-serializeContext->Class<SerializedStruct>()
-    ->Version(1)
-;
-```
-
-### Version Converters<a name="component-entity-system-reflection-serialization-context-versioning-converters"></a>
-
-A version change can create incompatibilities that require data to be converted from one format to another\. To resolve this, you can implement a version converter that reformats data "on the spot" to maintain data compatibility\. For example, you might require a version converter if you change a data type or a container \(for example, an `AZStd::vector` becomes an `AZStd::unordered_map`\)\.
-
-Use the `Version` function mentioned in the previous section to specify a version converter, as in the following example\.
-
-```
-serializeContext->Class<EditorEntitySortComponent, EditorComponentBase>()
-      ->Version(2, &SerializationConverter)
-```
-
-Version converters operate directly on the serialized data\.
-
-To facilitate the creation of version converters, Lumberyard provides helper functions and examples such as the following:
-+ To locate a specific element to manipulate, you can use the `AZ::Utils::FindDescendantElements` helper function\.
-+ To access serialized data and manipulate it, you can use the public functions in the `DataElementNode` class \(`\dev\Code\Framework\AzCore\AzCore\Serialization\SerializeContext.h`\)\.
-+ For version converter examples, see the AZ core serialization unit test in the `dev\Code\Framework\AzCore\Tests\Serialization.cpp` file\.
-
-A version conversion operation that replaces a container might follow this common pattern:
-
-1. Compare the version number of the data being serialized with the current version\. If the versions do not match, perform the steps that follow\.
-
-1. Locate the element to convert by its `Crc32` key\.
-
-1. Create a container to store the updated elements\.
-
-1. Populate the new container with the existing data\.
-
-1. Delete the old element from the root data\.
-
-1. Use the same `Crc32` key to add the new container as a new element in the root data\.
-
-After this operation is completed, the data exists in the new format\. When the data is serialized again, it is stored in the latest format\.
-
-The following code shows an example of data conversion:
-
-```
-if (rootElement.GetVersion() <= 1)
-{
-	// This line of code:
-	//  using Events = AZStd::vector<EBusEventEntry>;
-	//  is changed to this:
-	//  using EventMap = AZStd::unordered_map<AZ::Crc32, EBusEventEntry>; 
-	auto ebusEventEntryElements = AZ::Utils::FindDescendantElements(serializeContext, rootElement, AZStd::vector<AZ::Crc32>{AZ_CRC("m_events", 0x191405b4), AZ_CRC("element", 0x41405e39)}); 
-	EBusEventHandler::EventMap eventMap;
-	for (AZ::SerializeContext::DataElementNode* ebusEventEntryElement : ebusEventEntryElements)
-	{
-		EBusEventEntry eventEntry;
-		if (!ebusEventEntryElement->GetDataHierarchy(serializeContext, eventEntry))
-		{
-			return false;
-		}
-		AZ::Crc32 key = AZ::Crc32(eventEntry.m_eventName.c_str());
-		AZ_Assert(eventMap.find(key) == eventMap.end(), "Duplicated event found while converting EBusEventHandler from version 1 to 2.");
-		eventMap[key] = eventEntry;
-	} 
-    // Remove the previous Events element.
-	rootElement.RemoveElementByName(AZ_CRC("m_events", 0x191405b4)); 
-    // Replace it with the new EventMap element.
-	if (rootElement.AddElementWithData(serializeContext, "m_eventMap", eventMap) == -1)
-	{
-		return false;
-	} 
-	return true;
-}
-```
-
-**Note**  
-If you need to emit a warning or error when a conversion fails \(for example, for asset builds\), use the `AZ_Warning` or `AZ_Error` macro\. For related source code, see `lumberyard_version\dev\Code\Framework\AzCore\AzCore\Debug\Trace.h`\. 
-
-### Deprecation<a name="component-entity-system-reflection-serialization-context-versioning-deprecation"></a>
-
-The serialization context also supports deprecation of a previously reflected class name\. To deprecate a class, use the `ClassDeprecate` method\. After a class is deprecated, any instances of the class are silently discarded during load\.
-
-The following example shows the use of the `ClassDeprecate` method\.
-
-```
-serializationContext->ClassDeprecate("DeprecatedClass", "{893CA46E-6D1A-4D27-94F7-09E26DE5AE4B}"); 
-```
-
-### Data Overlays<a name="component-entity-system-reflection-serialization-context-versioning-data-overlays"></a>
+## Data Overlays<a name="component-entity-system-reflection-serialization-context-versioning-data-overlays"></a>
 
 You can use the serialization context to provide data from an external source during serialization\. These external sources of data are called *data overlays*\.
 
@@ -578,9 +486,9 @@ The `DataOverlayTestStruct` holds data fields to be reflected for serialization:
 
 ```
 serializeContext.Class<DataOverlayTestStruct>()
-                    ->Field("int", &DataOverlayTestStruct::m_int)
-                    ->Field("intVector", &DataOverlayTestStruct::m_intVector)
-                    ->Field("pointer", &DataOverlayTestStruct::m_ptr);
+                  ->Field("int", &DataOverlayTestStruct::m_int)
+                  ->Field("intVector", &DataOverlayTestStruct::m_intVector)
+                  ->Field("pointer", &DataOverlayTestStruct::m_ptr);
 ```
 
 Next, implement the data overlay provider\. The provider represents the data source that is overlaid into the serialized data\.

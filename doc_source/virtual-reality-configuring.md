@@ -1,5 +1,12 @@
 # Configuring your Project for Virtual Reality<a name="virtual-reality-configuring"></a>
 
+
+****  
+
+|  | 
+| --- |
+|  This topic references the deprecated OSVR Gem, which will be removed in a future version of Lumberyard\.  | 
+
 Add one or more Virtual Reality gems available in Lumberyard Editor to enable virtual reality for supported head\-mounted displays \(HMDs\)\. You can add the gem\(s\) to new or existing projects\. If you add more than one gem, the system automatically detects which HMD is connected, and uses the appropriate gem code to control the specific HMD and any associated virtual reality \(VR\) controllers\. 
 
 Supported HMDs include:

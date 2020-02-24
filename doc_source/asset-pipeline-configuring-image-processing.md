@@ -6,7 +6,7 @@ You can [edit the configuration files](asset-pipeline-creating-image-processing-
 
 After Asset Processor successfully converts the image, the resulting `.dds` asset is placed in the appropriate `lumberyard_version\dev\Cache` directory\. The image source file remains in its original form and location\.
 
-Asset Processor calls the Resource Compiler, `rc.exe` \(located in `lumberyard_version\dev\Bin64vc140_or_Bin64vc141\rc`\), to convert the image files\. Resource Compiler also has an [image tool](asset-pipeline-images-using-resourcecompiler-image-tool.md), which you can use to manually select image presets, mip maps, and so on\. The Resource Compiler image tool can also output an `imagefilename.exportsettings`, which you must check in if your project uses source control such as Perforce\. Checking in the `.exportsettings` file ensures that the texture renders similarly for each person working on the project\.
+Asset Processor calls the Resource Compiler, `rc.exe` \(located in `lumberyard_version\dev\Bin64vc141\rc`\), to convert the image files\. Resource Compiler also has an [image tool](asset-pipeline-images-using-resourcecompiler-image-tool.md), which you can use to manually select image presets, mip maps, and so on\. The Resource Compiler image tool can also output an `imagefilename.exportsettings`, which you must check in if your project uses source control such as Perforce\. Checking in the `.exportsettings` file ensures that the texture renders similarly for each person working on the project\.
 
 Lumberyard supports the following image file types:
 + TIFF – No grayscale

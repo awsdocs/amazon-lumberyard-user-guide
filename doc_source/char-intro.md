@@ -8,7 +8,7 @@ You can then blend animations, so that your character transitions from one anima
 
 In the **Animation Editor**, you can preview the animations and blends between the animations for your characters\. 
 
-Lumberyard has the **FBX Settings** tool that converts static `.fbx` meshes, skeletons, skins, animations, and materials into Lumberyard assets\. For more information, see [Working with the FBX Settings Tool](char-fbx-importer.md)\.
+Lumberyard has the ****FBX Settings**** tool that converts static `.fbx` meshes, skeletons, skins, animations, and materials into Lumberyard assets\. For more information, see [Working with the **FBX Settings** Tool](char-fbx-importer.md)\.
 
 **Note**  
 If you are using Lumberyard 1\.10 or earlier, you can use the legacy animation system \(Geppetto and Mannequin\) to accomplish these tasks\. For more information, see [Animation System](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/char-legacy-intro.html) in the *Amazon Lumberyard Legacy Reference*\.
@@ -31,4 +31,5 @@ If you are using Lumberyard 1\.10 or earlier, you can use the legacy animation s
 + [Creating Additive Animations](char-fbx-importer-motion-additive.md)
 + [Retargeting Motions](animation-editor-retargeting-animations.md)
 + [Creating Simulated Objects](animation-editor-creating-simulated-objects.md)
++ [Add Cloth Colliders to Characters](char_animation_add_cloth_colliders.md)
 + [Best Practices for Working with Skinned Meshes for Animation](best-practices-for-working-with-meshes-for-animations.md)

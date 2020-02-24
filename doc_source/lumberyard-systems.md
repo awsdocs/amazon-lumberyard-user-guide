@@ -90,7 +90,7 @@ The following Lumberyard tools are outside of the main editor and are used for p
    
 + [Creating Android and iOS Games](mobile-support-intro.md)
 
-  You can use Lumberyard to build your games for Android devices such as the NVIDIA Shield, Samsung Galaxy Note 5, and Motorola Nexus 6, and iOS devices that use the A8 GPUs, including iPhone 5s, iPhone 6s, iPhone 6s Plus, iPad Air 2, and iPad Pro\.
+  You can use Lumberyard to build your games for Android devices such as the NVIDIA Shield, Samsung Galaxy Note 5, and Motorola Nexus 6, and iOS devices that use the A8 GPUs or later\. See [Apple's GPU list](https://developer.apple.com/library/archive/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/HardwareGPUInformation/HardwareGPUInformation.html) for a list of these devices\.
 
    
 + [Creating macOS Games](osx-intro.md)

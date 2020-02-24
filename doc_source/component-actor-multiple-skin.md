@@ -16,9 +16,9 @@ You can use multiple skin attachments on an actor or character to add interchang
 + Provides flexibility for multiple content creators to manipulate meshes as needed\.
 + Asset Processor generates an `.mtl` \(material\) file for each FBX regardless of whether you intend to share materials\.
 
-Whether you use a single FBX file or multiple FBX files, you create an actor for each skinned mesh attachment\. The single FBX file method requires some additional configuration in the **FBX Settings** tool\.
+Whether you use a single FBX file or multiple FBX files, you create an actor for each skinned mesh attachment\. The single FBX file method requires some additional configuration in the ****FBX Settings**** tool\.
 
-For more information, see [Working with the FBX Settings Tool](char-fbx-importer.md)\.
+For more information, see [Working with the **FBX Settings** Tool](char-fbx-importer.md)\.
 
 To download the assets used in the following sections, see [Amazon Lumberyard Downloads](https://aws.amazon.com/lumberyard/downloads/) and choose the Lumberyard characters file\.
 
@@ -26,7 +26,7 @@ To download the assets used in the following sections, see [Amazon Lumberyard Do
 
 When you use a single FBX file embedded with multiple meshes, you must create an actor for each attachment\. For example, a cowboy character would be an actor, while his interchangeable hat and belt must each be added as additional actors\.
 
-**To add multiple actors from a single FBX file in the FBX Settings tool**
+**To add multiple actors from a single FBX file in the **FBX Settings** tool**
 
 1. In Lumberyard Editor's **Asset Browser**, right\-click the `.fbx` file that contains your meshes and choose **Edit Settings**\.
 
@@ -44,7 +44,7 @@ When you use a single FBX file embedded with multiple meshes, you must create an
 **Example**    
 ![\[Create multiple actor groups from a single FBX file in the FBX Settings tool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-actor-single-fbx-1.png)
 
-1. Click **Update** to save your settings and close the **FBX Settings** tool\.
+1. Click **Update** to save your settings and close the ****FBX Settings**** tool\.
 
 1. In the **Asset Browser**, navigate to the directory that contains your FBX file to view your actor files\. You can see the primary actor and each attachment that you added\.  
 **Example**  
@@ -54,7 +54,7 @@ When you use a single FBX file embedded with multiple meshes, you must create an
 
 ## Using Multiple FBX Files<a name="component-actor-multiple-fbx"></a>
 
-When you use an FBX file for each skin attachment, Asset Processor automatically generates an **Actor** file for each FBX file\. Modify the **FBX Settings** tool only if you want to change the default Asset Processor behavior\.
+When you use an FBX file for each skin attachment, Asset Processor automatically generates an **Actor** file for each FBX file\. Modify the ****FBX Settings**** tool only if you want to change the default Asset Processor behavior\.
 
 **Example**  
 In the **Asset Browser**, multiple FBX files each contain a separate actor file\.  

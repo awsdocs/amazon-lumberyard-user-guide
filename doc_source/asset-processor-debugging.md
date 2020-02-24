@@ -65,9 +65,7 @@ You must start Asset Processor before you can enter a `-debug` command\.
 
 **To debug Asset Processor using Asset Builder**
 
-1. Navigate to the `lumberyard_version\dev\Bin64vc140_or_141` directory\.
-**Note**  
-For Visual Studio 2015, use the `\Bin64vc140` directory\. For Visual Studio 2017, use the `\Bin64vc141` directory\. 
+1. Navigate to the `lumberyard_version\dev\Bin64vc141` directory\.
 
 1. In a command line prompt, enter the following command to get a list of possible options\.
 

@@ -49,6 +49,7 @@ In the **Entity Outliner**, you can identify different entities by their icon an
 + [Slice Reloading](component-slice-reloading.md)
 + [Working with Dynamic Slices](dynamic-slices-what-is.md)
 + [Slice Favorites](component-slice-favorites.md)
++ [Converting Slices with the Slice Upgrade Pipeline](component-slice-upgrade-process.md)
 
 The sections in this chapter use the following terminology to describe working with slices\.
 
@@ -98,3 +99,6 @@ A transform hierarchy defines movement, rotation, and scaling of entities in bot
 
 **Slice Hierarchy**  
 A slice hierarchy defines a slice instance's relationship to its source slices\. An entity inside of a nested slice can potentially inherit from multiple source slices\. When this happens, slice data at the top of the slice hierarchy overrides slice data at the bottom of that hierarchy\.
+
+**Data Patch**  
+Generically speaking, a data patch captures the difference between two serializable objects, such that when you take the first object and apply the patch, you get the second object as a result\. With respect to slices, when you edit an instance of a slice in the Editor and create an override, a data patch is generated and saved to a slice file\. A data patch stored in a slice preserves the information needed to modify the source slice to create a slice with overrides\. This may be as simple as changing a value in a field, or something more complex such as adding or removing components or entire entities\.

@@ -39,3 +39,7 @@ You can use the [Spawner](component-spawner.md) component to instantiate dynamic
    ```
 
    For more information about working with slices, see [Working with Slices](component-slices.md)\.
+
+## Additional Links<a name="dynamic-slices-additional-links"></a>
++ [ Amazon Lumberyard Getting Started series \- Spawning dynamic slices \(video\)](https://www.youtube.com/watch?v=ERL4sqSXpMA&feature=youtu.be&t=1142)
++ [ Spawning and Shooting a Projectile with Legacy Physics and Dynamic Slices with Lumberyard Script Canvas \(video\)](https://www.youtube.com/watch?v=u_OwrFTLQfY&feature=youtu.be&t=320)

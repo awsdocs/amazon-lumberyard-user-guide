@@ -48,7 +48,7 @@ For more information about creating iOS apps, see [iOS Support](ios-intro.md)\.
 1. Launch Asset Processor\.
 
    1. Navigate to the following directory and double\-click `AssetProcessor.exe`:
-      + On Windows: `lumberyard_version\dev\Bin64vc140\`
+      + On Windows: `lumberyard_version\dev\Bin64vc141\`
       + On macOS: `lumberyard_version\dev\BinMac64\`
 
    1. In Asset Processor, verify that the **Status** is **Idle**\.  

@@ -1,12 +1,12 @@
 # Exposing Custom Components to Track View for Animation<a name="component-entity-system-track-view"></a>
 
-To include custom components in cinematic cut scenes and movies rendered to disk, you must expose animatable component properties to Lumberyard’s **Track View** editor and **Entity Inspector**\. To expose a custom component and its properties, you must perform three steps:
+To include custom components in cinematic cut scenes and movies rendered to disk, you must expose animatable component properties to Lumberyard’s **Track View** and **Entity Inspector**\. To expose a custom component and its properties, you must perform three steps:
 
 1. Create getter and setter methods for the animated property on one of the component’s request event buses\.
 
 1. Implement the getter and setter request handlers in your component\.
 
-1. Reflect your component to the edit context and the behavior context\. Edit context reflection exposes your component in **Entity Inspector**, and behavior context reflection exposes it in the **Track View** editor\.
+1. Reflect your component to the edit context and the behavior context\. Edit context reflection exposes your component in **Entity Inspector**, and behavior context reflection exposes it in the **Track View**\.
 
 ## Exposing a Custom Component: Example<a name="component-entity-system-track-view-example"></a>
 
@@ -146,7 +146,7 @@ The following example assumes that a custom component called `ImaginaryTargetCom
 
 ## Viewing the Result<a name="component-entity-system-track-view-viewing-the-result"></a>
 
-Now you can view how the example component and property appear in the **Entity Inspector** and the **Track View** editor\.
+Now you can view how the example component and property appear in the **Entity Inspector** and the **Track View**\.
 
 In the following **Entity Inspector** image, `EditContext` reflection has exposed the **ImaginaryTarget** component and its **Imaginary Target Pos** property\.
 
@@ -154,4 +154,4 @@ In the following **Entity Inspector** image, `EditContext` reflection has expose
 
 In the following **Track View** image, `BehaviorContext` reflection has exposed the **ImaginaryTarget** component and the **ImaginaryPosition** track from the corresponding virtual property\.
 
-![\[ImaginaryTarget component in the Track View editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/exposing-custom-components-to-track-view-for-animation-track-view.jpg)
+![\[ImaginaryTarget component in the Track View\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/exposing-custom-components-to-track-view-for-animation-track-view.jpg)

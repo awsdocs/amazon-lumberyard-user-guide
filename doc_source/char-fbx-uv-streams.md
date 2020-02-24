@@ -1,6 +1,6 @@
 # Using Multiple UV Channels<a name="char-fbx-uv-streams"></a>
 
-You can use the **FBX Settings** tool to import multiple UV channels\. That way, you can apply to your geometry a detail or blend layer map with UV channels that are independent of the diffuse, normal, and spec channels\. With multiple UV channels, you can also apply an animated emittance glow that is independent of other texture maps on a mesh\.
+You can use the ****FBX Settings**** tool to import multiple UV channels\. That way, you can apply to your geometry a detail or blend layer map with UV channels that are independent of the diffuse, normal, and spec channels\. With multiple UV channels, you can also apply an animated emittance glow that is independent of other texture maps on a mesh\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared-multi-uv-support-meshes-example.gif)
 
@@ -13,14 +13,14 @@ You can use the **FBX Settings** tool to import multiple UV channels\. That way,
 
 When a new `.fbx` file is added to your project directory, **Asset Processor** automatically detects the file and imports it as a `.cgf`\. If needed, you can use your DCC tool to rebuild the UV channels\.
 
-The **FBX Settings** tool follows these rules:
+The ****FBX Settings**** tool follows these rules:
 + If the `.fbx` file contains one UV channel on a mesh, that channel is automatically imported\.
 + If the `.fbx` file contains two UV channels on a mesh, both channels are automatically imported\.
 + If the `.fbx` file contains three or more UV channels on any of the meshes, the first two channels are automatically imported, and the remaining channels are ignored\.
 
 ## Setting up Multiple UV Materials<a name="char-fbx-setup-multiple-uv-channels"></a>
 
-By default, the **FBX Settings** tool creates materials for your imported mesh\. You must use the **Shader Generation Parameters** in the **Material Editor** to specify how the material should use the second UV channel\.
+By default, the ****FBX Settings**** tool creates materials for your imported mesh\. You must use the **Shader Generation Parameters** in the **Material Editor** to specify how the material should use the second UV channel\.
 
 **To apply the second UV channel**
 

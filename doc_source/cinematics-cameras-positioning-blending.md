@@ -21,7 +21,7 @@ You can still manipulate the component entity camera within the level from the d
 
 1. Select and drag the playhead to a different location on the timeline\.
 
-1. Move the **Track View** editor window to the side or dock it so that it's open but not blocking the viewport for the currently open level
+1. Move the **Track View** window to the side or dock it so that it's open but not blocking the viewport for the currently open level
 
 1. Click the **Start Animation Recording** icon to enter record mode\.
 

@@ -127,5 +127,5 @@ The final step is to update enabled\_game\_projects to include or exclusively se
 + Build the project with the following command for your version of Visual Studio\. Use `--enabled-game-projects=MyGame` to override every build command\. This does not include the project in the generated solution, but it sets specific game projects to build during the build commands\.
 
   ```
-  lmbr_waf build_win_x64_vs2015_debug -p game_and_engine --enabled-game-projects=MyGame
+  lmbr_waf build_win_x64_vs2017_debug -p game_and_engine --enabled-game-projects=MyGame
   ```

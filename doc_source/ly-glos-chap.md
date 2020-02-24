@@ -108,6 +108,9 @@ A game object with one or more components that provide some behavior or function
 **environment probe**<a name="environment_probe"></a>  
 A technique that uses cube maps to provide a game level or location with realistic ambient lighting\.
 
+**experimental**<a name="experimental"></a>  
+A designation for a Lumberyard tool that we recommend that you not use in production yet, as it is still in the early stages of development and we have no current plans to support it\. However, it also means that feature is stable enough and functional for specific use cases\. You may find the experimental feature helpful as a guideline for implementing your own game\-specific features\. API operations are subject to change\.
+
 **gem**<a name="gem"></a>  
 A package that contains code and assets to provide a single feature or multiple tightly scoped functions\.
 
@@ -228,7 +231,7 @@ Used for creating logic and behaviors for your game project\. You can create scr
 + Lua is a lightweight and embeddable scripting language\. You can use Lua to facilitate quick iteration of your game project\. Lua scripts have the file extension `.lua` or `.luac`, such as `myscriptexample.lua`\. You can add script functionality to your game entities with the **Lua Script** component\.
 
 **sequence**<a name="sequence"></a>  
-The content generated from the **Track View** editor for cutscenes or other canned animation triggers\.
+The content generated from the **Track View** for cutscenes or other canned animation triggers\.
 
 **shadow map**<a name="shadow_map"></a>  
 A technique for controlling how shadows are added to a scene\. You can use multiple, cascaded shadow maps to control how sun shadows look at varying distances\.

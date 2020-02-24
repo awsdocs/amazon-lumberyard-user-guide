@@ -46,7 +46,7 @@ static string AutoselectPreset(const ConvertContext& CC, const uint32 width, con
 ...
 ```
 
-The `rc.ini` file \(located in the `lumberyard_version\dev\Bin64vc140_or_Bin64vc141\rc` directory\) contains the following setup information:
+The `rc.ini` file \(located in the `lumberyard_version\dev\Bin64vc141\rc` directory\) contains the following setup information:
 + Asset presets for operating systems\.
 + Image preset aliases \(profile mapping from a legacy preset\)\.
 + Image format settings, such as compression method, pixel format, and so on\.
@@ -87,7 +87,7 @@ You can edit `ImageCompiler.cpp` and `rc.ini` to add your own image presets\.
 
 1. Save and close `ImageCompiler.cpp`\.
 
-1. In a text editor, open `rc.ini`, located in the `lumberyard_version\dev\Bin64vc140_or_Bin64vc141\rc` directory\.
+1. In a text editor, open `rc.ini`, located in the `lumberyard_version\dev\Bin64vc141\rc` directory\.
 
 1. Add your new definition\.
 

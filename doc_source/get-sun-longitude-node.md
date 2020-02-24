@@ -6,7 +6,7 @@ Returns the sun's longitude in the sky\.
 + [Inputs](#get-sun-longitude-node-input)
 + [Outputs](#get-sun-longitude-node-output)
 
-![\[getsunlongitude, sunlongitudenode, getsunlongitudenode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-get-sun-longitude-node.PNG)
+![\[getsunlongitude, sunlongitudenode, getsunlongitudenode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-get-sun-longitude-node.png)
 
 ## Inputs<a name="get-sun-longitude-node-input"></a>
 

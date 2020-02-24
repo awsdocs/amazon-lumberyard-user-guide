@@ -1,6 +1,6 @@
 # Track View Editor Nodes<a name="cinematics-trackview-nodes"></a>
 
-The **Track View** editor offers a variety of nodes for specific purposes\. Anything part of the sequence is considered a *node*\. Nodes can be a reference to existing component entities or added to a sequence\. The top\-level node in the tree view is the sequence and all other nodes are listed below the sequence\.
+The **Track View** offers a variety of nodes for specific purposes\. Anything part of the sequence is considered a *node*\. Nodes can be a reference to existing component entities or added to a sequence\. The top\-level node in the tree view is the sequence and all other nodes are listed below the sequence\.
 
 **Topics**
 + [Component Entities and Component Nodes](cinematics-track-view-nodes-component-entity.md)

@@ -29,7 +29,7 @@ In the following procedure, you must build the editor so that you can view your 
    ```
 
    ```
-   lmbr_waf build_win_x64_vs2015_profile -p all
+   lmbr_waf build_win_x64_vs2017_profile -p all
    ```
 
 1. After your build succeeds, open Lumberyard Editor and choose or create a level\.

@@ -22,7 +22,7 @@ Alternatively, you can use a Cloud Canvas `(AWS):Configuration:ApplyConfiguratio
 
 ## Authenticated Player Login<a name="cloud-canvas-authenticated-player-login"></a>
 
-In order to understand how to use Cloud Canvas to implement authenticated player identities for your game, you must be familiar with Amazon Cognito's Enhanced \(Simplified\) Authflow\. For information, see the article [Authentication Flow](https://docs.aws.amazon.com/cognito/devguide/identity/concepts/authentication-flow/) in the [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/devguide/)\.
+In order to understand how to use Cloud Canvas to implement authenticated player identities for your game, you must be familiar with Amazon Cognito's Enhanced \(Simplified\) Authflow\. For information, see the article [Authentication Flow](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html) in the [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/what-is-amazon-cognito.html)\.
 
 The login process for authenticated player identities is more complex than the anonymous player login process\. The Player Account Cloud Gem handles this for Amazon Cognito user pools\. For other providers, this login process requires additional setup beyond what Cloud Canvas provides by default\.
 

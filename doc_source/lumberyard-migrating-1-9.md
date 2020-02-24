@@ -67,7 +67,6 @@ def get_platform_list():
     platform_list = []
 
     platform_list.append(get_windows_vs2017())
-    platform_list.append(get_windows_vs2015())
     platform_list.append(get_darwin())
     platform_list.append(get_ios())
     
@@ -77,28 +76,6 @@ def get_platform_list():
 ```
 
 #### Customizing Services<a name="lumberyard-migrating-1-9-upgrade-script-customizing-services"></a>
-
-To customize services for all platforms or individual platforms, modify the script as in the following example for Microsoft Visual Studio 2015 on Windows\.
-
-```
-def get_windows_library_list():
-    return_list = get_default_library_list()
-
-    ## Libraries by customer request
-    return_list.append('access-management')
-    return_list.append('transfer')
-
-    return return_list
-
-def get_windows_vs2015():
-    vs2015 = {}
-    vs2015['platform'] = 'windows'
-    vs2015['zipfile'] = 'aws-sdk-cpp_x86_64_visual_cpp-14x.zip'
-    vs2015['libraries'] = get_windows_library_list()
-    vs2015['libextensions'] = ['.dll', '.lib']
-
-    return vs2015
-```
 
 To add a service to Windows, add the service to `get_windows_library_list()`\. The following example adds the `polly` service to Windows\.
 

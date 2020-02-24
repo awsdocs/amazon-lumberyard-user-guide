@@ -9,7 +9,7 @@ You can run Waf using the following methods:
 **Note**  
 Waf requires Python 2\.7 or later\.
 
-Lumberyard includes the [Project Configurator](configurator-intro.md), a standalone application that allows you to specify to Waf which game templates and assets \(gems\) to include in the game build\.
+Lumberyard includes the [Project Configurator](configurator-intro.md), a standalone application that allows you to specify to Waf which game templates and assets \(Gems\) to include in the game build\.
 
 **Topics**
 + [Waf File System](waf-files.md)

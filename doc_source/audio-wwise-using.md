@@ -2,7 +2,7 @@
 
 Lumberyard includes Audiokinetic Wwise LTX, which is an exclusive, free version of the Audiokinetic Wwise audio middleware\. Sound designers and composers can use Wwise LTX to work independently from the engineering team and author rich soundscapes for your games\.
 
-If your game requires advanced features, you can upgrade to the full version of Wwise\. For more information, see [Upgrading Wwise LTX to Full Version](audio-wwise-3d-wwise.md)\.
+If your game requires advanced features, you can upgrade to the full version of Wwise\. For more information, see [Upgrading Wwise LTX to the Full Version](audio-wwise-3d-wwise.md)\.
 
 **Topics**
 + [Installing Wwise LTX Authoring Tool](#audio-installing-wwise)

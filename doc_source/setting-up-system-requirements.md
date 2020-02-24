@@ -37,9 +37,8 @@ Lumberyard requires the following developer tools:
 
 ### Visual Studio<a name="lumberyard-visual-studio-requirement"></a>
 
-You must have one or both of the following versions of Visual Studio to compile the game code, compile the engine and asset pipeline, or compile the Lumberyard Editor and tools:
-+ Visual Studio 2017 version 15\.9\.2
-+ Visual Studio 2015 Update 3 or later
+You must have the following version of Visual Studio to compile the game code, compile the engine and asset pipeline, or compile the Lumberyard Editor and tools:
++ Visual Studio 2017 version 15\.9\.14 or above
 
 #### Visual Studio 2017 Installation Requirements<a name="visual-studio-installation-requirements-2017"></a>
 
@@ -63,22 +62,6 @@ The Visual Studio 2017 default installation may not include all of the required 
 
 **Note**  
 Beginning with Visual Studio 2017, Microsoft now releases updates on a more frequent cadence \(in some cases weekly\)\. Lumberyard is tested with the latest version of Visual Studio available during the release cycle\.
-
-#### Visual Studio 2015 Installation Requirements<a name="visual-studio-installation-requirements-2015"></a>
-
-The Visual Studio 2015 default installation may not include all of the required features to run Lumberyard\. Ensure these features are selected during installation\. 
-
-**Note**  
-Lumberyard does not support using only Visual C\+\+ Build Tools 2015\.
-
-**To verify your current installation of Visual Studio 2015**
-
-1. From Windows, click **Control Panel**, **Programs and Features**, **Microsoft Visual Studio *version\_number***\.
-
-1. Select **Modify** and under **Programming Languages**, **Visual C\+\+**, select the following:
-   + **Common Tools for Visual C\+\+ 2015**
-
-To use both versions of Visual Studio, see [Configuring Visual Studio 2015 and 2017 for Lumberyard](lumberyard-launcher-using.md#lumberyard-launcher-visual-studio-configuration)\.
 
 ### Visual C\+\+ Redistributable Packages for Visual Studio 2012, 2013, 2015, and 2017<a name="lumberyard-visual-studio-redistributable-packages-requirement"></a>
 

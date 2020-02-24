@@ -1,6 +1,6 @@
 # Best Practices for Creating and Exporting Meshes<a name="char-fbx-importer-best-practices"></a>
 
-Follow the recommended best practices for creating and exporting skinned meshes when working with the **FBX Settings** tool\.
+Follow the recommended best practices for creating and exporting skinned meshes when working with the ****FBX Settings**** tool\.
 
 **Note**  
 If you are working with meshes for the **Animation Editor**, see [Best Practices for Working with Skinned Meshes for Animation](best-practices-for-working-with-meshes-for-animations.md)\.

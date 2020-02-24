@@ -1,55 +1,55 @@
 # Modifying Project Settings for Mobile Device Games<a name="mobile-project-settings-tool"></a>
 
-Use the **** \(PST\) to make streamlined changes to project settings across all mobile platforms\. The **** shows properties from all of the project settings files so that you can edit and save changes at once\.
+Use the **Project Settings Tool** \(PST\) to make streamlined changes to project settings across all mobile platforms\. The **Project Settings Tool** shows properties from all of the project settings files so that you can edit and save changes at once\.
 
 **Note**  
-Before you can use the ****, you must have Lumberyard Editor installed, and an active project created and set as the default project\.
+Before you can use the **Project Settings Tool**, you must have Lumberyard Editor installed, and an active project created and set as the default project\.
 Currently, only Android and iOS are supported for platform\-specific configuration\.
 
 **Topics**
 + [Settings Files](#mobile-project-settings-tool-settings-files)
-+ [Using the](#mobile-project-settings-tool-using)
++ [Using the Project Settings Tool](#mobile-project-settings-tool-using)
 + [Properties](#mobile-project-settings-tool-properties)
 
 ## Settings Files<a name="mobile-project-settings-tool-settings-files"></a>
 
-The **** modifies project settings files which are located in their respective project directories\. The main settings file, [`project.json`](waf-files-projects-file.md), is located in the root directory of each project and contains cross\-platform settings for platforms such as PC and Android\. The file also contains platform\-specific settings for PC and Android\.
+The **Project Settings Tool** modifies project settings files which are located in their respective project directories\. The main settings file, [`project.json`](waf-files-projects-file.md), is located in the root directory of each project and contains cross\-platform settings for platforms such as PC and Android\. The file also contains platform\-specific settings for PC and Android\.
 
 You can find the project settings for iOS in `project_name\Root\Gem\Resources\PlatformLauncher\Info.plist`\. Plist files have a special format of XML that use dictionaries to store properties\. All plist files have some properties that are common across platforms, yet are stored in each individual file\. 
 
-For more information about `.plist` files, see [About Info\.plist Keys and Values](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1) and [Core Foundation Keys](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW1)\.
+For more information about `.plist` files, see [About Info\.plist Keys and Values](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html) and [Core Foundation Keys](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html)\.
 
-For more information about iOS\-specific settings, see [iOS Keys](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW1)\.
+For more information about iOS\-specific settings, see [iOS Keys](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html)\.
 
-## Using the<a name="mobile-project-settings-tool-using"></a>
+## Using the Project Settings Tool<a name="mobile-project-settings-tool-using"></a>
 
-You can use the **** to set settings related to the current project\. 
+You can use the **Project Settings Tool** to set settings related to the current project\. 
 
 **To open the PST**
 
-1. In Lumberyard Editor, choose **File**, **Project Settings**, ****\.
+1. In Lumberyard Editor, choose **File**, **Project Settings**, **Project Settings Tool**\.
 
-1. In the ****, you can review and change your settings\. For more information, pause on a property and review the tooltip\. You can also see [Properties](#mobile-project-settings-tool-properties)\.
+1. In the **Project Settings Tool**, you can review and change your settings\. For more information, pause on a property and review the tooltip\. You can also see [Properties](#mobile-project-settings-tool-properties)\.
    + The **Base Settings** apply to all platforms\. 
    + The **Platform Settings** section has tabs for platform\-specific settings\.
 
 1. If you haven't saved your changes, and you want to reload the settings back to the way they are on disk \(in your settings files\), choose **Reload**\.
 
-![\[The interface with Base Settings and Platform Settings.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-ui.png)
+![\[The Project Settings Tool interface with Base Settings and Platform Settings.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-ui.png)
 
 ### Image Previews<a name="mobile-project-settings-tool-using-imagepreview"></a>
 
-For image settings such as **Icons** and **Splashscreens**, the **** displays image previews using the image to be used for each dpi or size\.
+For image settings such as **Icons** and **Splashscreens**, the **Project Settings Tool** displays image previews using the image to be used for each dpi or size\.
 
-![\[The displays image previews for image settings, such as for Splashscreens and Icons.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-using-imagepreview.png)
+![\[The Project Settings Tool displays image previews for image settings, such as for Splashscreens and Icons.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-using-imagepreview.png)
 
 ### Validation<a name="mobile-project-settings-tool-using-validation"></a>
 
-The **** validates settings as you enter values and provides feedback when a value is invalid with the selected setting\. 
+The **Project Settings Tool** validates settings as you enter values and provides feedback when a value is invalid with the selected setting\. 
 
 A red outline appears around the setting to indicate an invalid value\. You can also pause on the setting to view the error message that describes the reason that the field is invalid\. 
 
-![\[The displays a red outline and an error message for incompatible inputs on settings.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-using-validation.png)
+![\[The Project Settings Tool displays a red outline and an error message for incompatible inputs on settings.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-using-validation.png)
 
 ### Linked Properties<a name="mobile-project-settings-tool-using-linked-properties"></a>
 
@@ -57,7 +57,7 @@ You can link similar properties to each other\. When you link properties to one 
 
 **To work with link properties**
 
-1. In the ****, navigate to the property that you want to link\. Properties that you can link have a chain\-link icon\.
+1. In the **Project Settings Tool**, navigate to the property that you want to link\. Properties that you can link have a chain\-link icon\.
 
 1. Pause on the link icon to see what properties are linked\. Properties that you can link are automatically linked when loaded from the settings file if all relevant properties have the same value\. 
 
@@ -72,11 +72,11 @@ You can link similar properties to each other\. When you link properties to one 
 1. To disable a link, click the icon again\.
 
 **Note**  
-Some properties are always linked and can't be disabled, such as **Base Settings \- Project Name** and **iOS \- Bundle Name**\. This ensures accuracy for properties that are required to have the same values across platforms\. If the **** finds discrepancies between settings files for the always\-linked properties, the `project.json` values take precedence\.
+Some properties are always linked and can't be disabled, such as **Base Settings \- Project Name** and **iOS \- Bundle Name**\. This ensures accuracy for properties that are required to have the same values across platforms\. If the **Project Settings Tool** finds discrepancies between settings files for the always\-linked properties, the `project.json` values take precedence\.
 
 ### Reconfiguring the Project<a name="mobile-project-settings-tool-using-reconfigure"></a>
 
-After you make changes and save, the **** prompts you to reconfigure your project\.
+After you make changes and save, the **Project Settings Tool** prompts you to reconfigure your project\.
 
 ![\["For new settings to be applied the project must be reconfigured. Would you like to run configure now?"\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-using-reconfigure.png)
 
@@ -85,11 +85,11 @@ If you choose to run the `configure` command, the output appears at the bottom o
 **Note**  
 If you want to deploy your changes immediately, choose **Yes**\. Lumberyard Editor doesn't automatically run the `configure` command and will not prompt you to do so later\.
 
-![\[The displays a successful configure and shows "Reconfiguration Finished."\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-using-reconfigure-result.png)
+![\[The Project Settings Tool displays a successful configure and shows "Reconfiguration Finished."\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile-project-settings-tool-using-reconfigure-result.png)
 
 ## Properties<a name="mobile-project-settings-tool-properties"></a>
 
-See the following properties in the ****\.
+See the following properties in the **Project Settings Tool**\.
 
 ### Base Settings<a name="mobile-project-settings-tool-properties-base"></a>
 

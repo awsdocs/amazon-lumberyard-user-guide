@@ -8,7 +8,7 @@ An actor is an entity that you create for characters in your game\. You can then
 **Example Actor**  
 The entity in the Lumberyard Editor viewport has an **Actor** component attached\.  
 
-![\[You can add an Actor component to an entity to create a character for your game.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terms/example-actor-entity-and-component.PNG)
+![\[You can add an Actor component to an entity to create a character for your game.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terms/example-actor-entity-and-component.png)
 For more information, see [Creating and Animating Characters](char-intro.md)\.
 
 **Asset Builder API**  
@@ -85,4 +85,4 @@ For more information, see [Working with Slices](component-slices.md)\.
 **Virtual File System \(VFS\)**  
 This system is designed for non\-PC platforms to handle game assets for live reloading\. The virtual file system streams and loads your assets from your development machine as needed\. You do not have to load your entire level or game to the device ahead of time and you can avoid deploying assets to a target device\. When you make a change on your development machine, live reloading automatically updates the asset in Lumberyard Editor and for the target device\.  
 For example, if you want to run your game on an iOS device and you change an asset, Asset Processor uses the virtual file system to stream the updated asset from your development machine to the iOS device\.   
-For more information, see [Live Reloading and VFS](asset-pipeline-live-reloading.md) and [Using Virtual File System with Android](android-virtual-file-system.md)\.
+For more information, see [Live Reloading and VFS](asset-pipeline-live-reloading.md) and [Using the Virtual File System](using-the-virtual-filing-system-vfs.md)\.

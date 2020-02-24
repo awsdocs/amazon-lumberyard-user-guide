@@ -121,7 +121,7 @@ File path for the cubemap asset\.
 ## Additional Resources<a name="component-environment-probe-additional-links"></a>
 
 For more information about the **Environment Probe** component, see the following:
-+ [Getting Started: Using Lighting Tutorial \(text\)](https://s3.amazonaws.com/gamedev-tutorials/Tutorials/Getting_Started_04_Using-Lighting_1.8.pdf)
++ [Intro to Environment Lighting](https://docs.aws.amazon.com/lumberyard/latest/userguide/enviro-lighting-intro.html) 
 + [Getting Started: Using Lighting Tutorial \(video\)](https://www.youtube.com/watch?v=-KdwKZtzzo0)
 
 ## EBus Request Bus Interface<a name="component-environment-probe-ebusrequest"></a>

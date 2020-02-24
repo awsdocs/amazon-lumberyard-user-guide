@@ -2,18 +2,18 @@
 
 The **Director \(Scene\)** node includes a camera track that specifies the active camera for a track view sequence\. You can add sequence\-specific nodes \(for example, **Depth of Field** or **Comment**\) under the **Director** node to override the same nodes that were set at the sequence level\.
 
-**To add a Director node in the **Track View** editor**
+**To add a Director node in the **Track View****
 
 1. In Lumberyard Editor, choose **Tools**, **Track View**\.
 
-1. In the **Track View** editor, click the **Add Sequence** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics_add_sequence_icon.png) icon\.
+1. In the **Track View**, click the **Add Sequence** ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics_add_sequence_icon.png) icon\.
 
 1. In the **Add New Sequence** dialog box, enter a name for your sequence and click **OK**\.
 
 1. Right\-click your sequence and choose **Add Director \(Scene\) Node**\.
 
 1. Right\-click the **Director** node and click **Add Track**\.  
-![\[Add the Director node in the Track View editor to manage your track view sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-trackview-nodes-director.png)
+![\[Add the Director node in the Track View to manage your track view sequence.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-trackview-nodes-director.png)
 
 1. Select the track and double\-click to position the key on its highlighted row in the timeline\.
 

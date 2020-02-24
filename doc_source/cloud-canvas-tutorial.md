@@ -123,7 +123,7 @@ This tutorial uses the Lumberyard CloudGemSamples project, which includes many o
 
 **To enable the CloudGemSamples project**
 
-1. Open the Lumberyard Project Configurator \(`lumberyard-version\dev\Tools\LmbrSetup\Win\ProjectConfigurator.exe`\)\.
+1. Open the Lumberyard Project Configurator, located at `lumberyard-version\dev\Bin64BuildPlatform\ProjectConfigurator.exe`\. For example, when using Visual Studio 2017 as your build platform, the Project Configurator is located at `lumberyard-version\dev\Bin64vc141\ProjectConfigurator.exe`\. 
 
 1. Click **CloudGemSamples**\.
 
@@ -141,7 +141,6 @@ In order to begin managing a Cloud Canvas project, you add the IAM user credenti
    + From the desktop, double\-click the Lumberyard Editor icon\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lumberyard-editor-launch.png) 
    + From Lumberyard Setup Assistant, on the **Summary** page, click **Launch Editor**\.
    + For Visual Studio 2017, navigate to the `lumberyard-version\dev\Bin64vc141` directory and double\-click `Editor.exe`\.
-   + For Visual Studio 2015, navigate to the `lumberyard-version\dev\Bin64vc140` directory and double\-click `Editor.exe`\.
 
 1.  In Lumberyard Editor, choose **AWS**, **Credentials manager**\.   
 ![\[Open Credentials manager\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-credentials-manager-open.png)
@@ -152,14 +151,14 @@ In order to begin managing a Cloud Canvas project, you add the IAM user credenti
 1. In the **Add profile** dialog box, enter the following information:
    + For **Profile name**, enter a name of your choice \(for example, **CloudCanvasAdmin**\)\.
    + For **AWS access key** and **AWS secret key**, enter the access key and secret key\.  
-![\[Enter profile information for your AWS account in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Enter profile information for your AWS account in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-credentials-manager-add-profile-dialog-box.png)
 **Important**  
 Do not share these credentials with anyone, and do not check them into source control\. These credentials grant control over your AWS account, and a malicious user could incur charges\.
 
 1. Click **Save**\.
 
 1. In **Credentials Manager**, click **OK**\.  
-![\[Profile added in the Credentials Manager.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Profile added in the Credentials Manager.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-credentials-manager-profile-added.png)
 
 You have now created a profile to administer a Cloud Canvas project\. The profile name is associated with your credentials, and saved locally on your machine in your AWS credentials file\. This file is normally located in your `C:\Users\user_name\.aws\` directory\. As a convenience, other tools such as the [AWS Command Line Interface](https://aws.amazon.com/cli/) or the [AWS Toolkit for Visual Studio](https://aws.amazon.com/visualstudio/) can access these credentials\. 
 

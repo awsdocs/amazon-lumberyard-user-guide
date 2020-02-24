@@ -37,7 +37,6 @@ Ensure the server or computer that is running the remote shader compiler is in a
 You can find the remote shader compiler in the following directories:
 + PC – `lumberyard_version\dev\Tools\CrySCompileServer\x64\profile\`
   + For Visual Studio 2017, use `CrySCompileServer_vc141x64.exe`\. 
-  + For Visual Studio 2015, use `CrySCompileServer_vc140x64.exe`\. 
 + Mac – `lumberyard_version\dev\Tools\CrySCompileServer\osx\profile\CrySCompileServer`
 
 A [configuration file](#mat-shaders-custom-dev-remote-compiler-config) is also available for configuring the TCP port that the server application will listen on\.
@@ -173,7 +172,7 @@ You can update `RC.exe` to look for assets in the `lumberyard_version\dev\cache\
 
 **To create paks for server assets**
 
-1. Navigate to the `lumberyard_version\dev\Bin64vc140_or_141\rc` directory\.
+1. Navigate to the `lumberyard_version\dev\Bin64vc141\rc` directory\.
 
 1. In a text editor, open the `RCJob_Generic_MakePaks.xml` file\.
 

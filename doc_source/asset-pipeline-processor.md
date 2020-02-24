@@ -2,13 +2,15 @@
 
 Asset Processor is a utility that runs in the background to detect changes to your asset files\. When Asset Processor detects new or updated asset files, it launches the Resource Compiler \(`Rc.exe` for FBX and ABC files, `AssetBuilder.exe` for all other types\), processes the assets, and then places them in the cache\. Asset Processor then notifies all running game or tool instances that the assets are updated\. The game can then reload the updated assets\.
 
+As part of Asset Processing, the Asset Processor generates and stores product and source dependencies \. In this context, a dependency defines how a one product or source asset depends on another asset\. A given asset may have 0 or more dependencies, and these dependencies are used by features such as the [Asset Bundler](asset-bundler-intro.md) in order to determine which assets must be included when you bundle your game for release\.
+
 **Topics**
 + [Modifying the Asset Processor Configuration File](#asset-pipeline-processor-config)
 + [Using the Asset Processor Batch Program](#asset-pipeline-processor-batch-processing)
 + [Asset Processor Interface](asset-pipeline-processor-ui.md)
 + [Enabling Asset Processor's Faster Scanning Mode](asset-processor-faster-scanning.md)
 + [Importing Assets into Lumberyard](asset-pipeline-importing.md)
-+ [Working with the FBX Settings Tool](char-fbx-importer.md)
++ [Working with the **FBX Settings** Tool](char-fbx-importer.md)
 + [Using Resource Compiler](asset-pipeline-rc.md)
 + [Debugging Asset Processor](asset-processor-debugging.md)
 

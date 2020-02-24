@@ -15,7 +15,7 @@ This tutorial assumes the following:
 + Your game project has the **Multiplayer** gem\. You can enable the gem in Lumberyard's [Project Configurator](configurator-intro.md)\. After enabling the gem, [build your project](building-your-lumberyard-game-project.md)\.
 
 **Note**  
-This tutorial uses Visual Studio 2015, but you can also use Visual Studio 2017\. 
+This tutorial uses Visual Studio 2017\.
 
 **Topics**
 + [Prerequisites](#network-multiplayer-gs-prerequisites)
@@ -127,8 +127,6 @@ This step shows you how to connect a client to the server instance and then obse
 
    For Visual Studio 2017, the directory is `lumberyard_version\dev\Bin64vc141\`\. 
 
-   For Visual Studio 2015, the directory is `lumberyard_version\dev\Bin64vc140\`\. 
-
 1. Press the **`** key \(above the **Tab** key\) to open the console\.
 
 1. Run the command map *MultiplayerTutorial* where *MultiplayerTutorial* is the name of the level to load\.  
@@ -152,5 +150,4 @@ You have successfully created a simple networked level\. You can now use the **N
 
 You have created a simple networking sample to see the effects of networking in Lumberyard\. See the following to learn more about what else you can add to your game:
 +  [Configuring the Multiplayer Sample for Amazon GameLift](network-multiplayer-gs-gamelift.md) 
-+ [Tutorial: Overview of GameLift](https://s3.amazonaws.com/gamedev-tutorials/Tutorials/GameLift-Overview_of_GameLift-(01)_Introduction_to_Amazon_GameLift.pdf)
-+ [Tutorial: Overview of Cloud Canvas](https://s3.amazonaws.com/gamedev-tutorials/Tutorials/Cloud_Canvas-Overview_of_Cloud_Canvas-(01)_What_is_Cloud_Canvas.pdf)
++ [Using Amazon GameLift](https://docs.aws.amazon.com/lumberyard/latest/userguide/network-gamelift-using.html)

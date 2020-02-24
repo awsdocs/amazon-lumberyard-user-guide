@@ -4,7 +4,7 @@ When you change any part of a slice instance, such as adding a component, removi
 
 **To revert property overrides**
 
-1. In the **Entity Outliner**, right\-click the property, component, or entity that you modified\.
+1. In the **Entity Inspector**, right\-click the property, component, or entity that you modified\.
 
 1. Choose **Revert overrides** and choose one of the following: 
    + **Property** – Revert changes to the property that you selected\.

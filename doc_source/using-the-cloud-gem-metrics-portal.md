@@ -7,7 +7,7 @@ After you send test events with the Metrics Sample level or the command line, yo
 1. In Lumberyard Editor, choose **AWS**, **Open Cloud Gem Portal**\.
 
 1. In the **Cloud Gem Portal**, on the **Cloud Gems** page, choose **Game Metrics**\.  
-![\[Choose Game Metrics in the Cloud Gem Portal.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-game-metrics-gem.PNG)
+![\[Choose Game Metrics in the Cloud Gem Portal.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-game-metrics-gem.png)
 
 1. Choose the game metric data that you want to view\. Metrics are automatically updated every five minutes\. You can view the following:
 

@@ -6,7 +6,7 @@ Sets the sun's longitude in the sky\.
 + [Inputs](#set-sun-longitude-node-input)
 + [Outputs](#set-sun-longitude-node-output)
 
-![\[setsunlongitudenode, setsunlongitude\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-sun-longitude-node.PNG)
+![\[setsunlongitudenode, setsunlongitude\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-sun-longitude-node.png)
 
 ## Inputs<a name="set-sun-longitude-node-input"></a>
 

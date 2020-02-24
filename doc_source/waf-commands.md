@@ -37,12 +37,8 @@ Capabilities Available, [x] enabled  - [ ] disabled:
 [ ] compileios - Compile for iOS devices
 Successfully executed
 [INFO] Configure "win_x64_vs2017 - [debug, profile, performance, release, debug_dedicated, profile_dedicated, performance_dedicated, release_dedicated]"
-[INFO] Configure "win_x64_vs2015 - [debug, profile, performance, release, debug_dedicated, profile_dedicated, performance_dedicated, release_dedicated]"
 
 
-[INFO] Configure "android_armv7_gcc - [debug, profile, performance, release, debug_dedicated, profile_dedicated, performance_dedicated, release_dedicated]"
-[WARN] Removing the following Android target platforms due to "Compile For Android" not checked in Setup Assistant.
-        -> android_armv7_gcc, android_armv7_clang
 [WAF] 'configure' finished successfully (10.335s)
 [WAF] Executing 'generate_uber_files' in 'd:\ws\lyengine\dev\BinTemp'
 [WAF] 'generate_uber_files' finished successfully (2.177s)
@@ -74,10 +70,10 @@ The following commands and options are available:
 + deploy\_\* – Deploys the specified project spec for the specified platform and configuration to a remote device for supported platforms\. Supported operating systems and devices include Android\.
 + clean\_\* – Cleans out intermediate and target files that were generated for the particular platform and configuration\.
 
-The following example shows how to build release for Windows x64 with Visual Studio 2015: 
+The following example shows how to build release for Windows x64 with Visual Studio 2017: 
 
 ```
-lmbr_waf build_win_x64_vs2015_release -p all
+lmbr_waf build_win_x64_vs2017_release -p all
 ```
 
 **Note**  
@@ -106,10 +102,10 @@ Only modules that support each project configuration are built from the project 
 
 | Spec | Platform | Configuration | Description | 
 | --- | --- | --- | --- | 
-| all | win\_x64\_vs2017, win\_x64\_vs2015, darwin\_x64 | Debug, profile, performance, release | Configuration to build the engine, editor, plugins, and tools | 
-| game\_and\_engine | win\_x64\_vs2017, win\_x64\_vs2015, darwin\_x64, linux\_x64 | Debug, profile, performance, release | Configuration to build the engine and game project | 
-| dcc\_plugins | win\_x64\_vs2017, win\_x64\_vs2015 | Debug, profile | Configuration to build tools for the asset pipeline | 
-| resource\_compiler | win\_x64\_vs2017, win\_x64\_vs2015 | Debug, profile | Configuration to build the Resource Compiler only | 
+| all | win\_x64\_vs2017, darwin\_x64 | Debug, profile, performance, release | Configuration to build the engine, editor, plugins, and tools | 
+| game\_and\_engine | win\_x64\_vs2017, darwin\_x64, linux\_x64 | Debug, profile, performance, release | Configuration to build the engine and game project | 
+| dcc\_plugins | win\_x64\_vs2017 | Debug, profile | Configuration to build tools for the asset pipeline | 
+| resource\_compiler | win\_x64\_vs2017 | Debug, profile | Configuration to build the Resource Compiler only | 
 
 
 **Build configuration options**  
@@ -126,8 +122,8 @@ Only modules that support each project configuration are built from the project 
 
 | Command | Option | Description | 
 | --- | --- | --- | 
-| build\_\* | ‑‑package‑projects‑automatically=\(True\|False\) |  Automatically runs the package command after each successful build command, where available\. The default is `True`\. Supported platforms include Android, iOS, and macOS\. The following example runs only the build command: lmbr\_waf \-p all build\_android\_armv7\_clang\_profile \-\-package\-projects\-automatically=True  | 
-|  build\_\* package\_\*  | \-\-deploy\-platform\_root=\(True\|False\) | Automatically sends a deploy command to remove devices after each successful package generated, where available\. Can be combined with \-\-package\-projects\-automatically=True in a build command to chain all three commands\. The default is `True`\.Supported platforms include Android\.*platform\_root* example:android\_armv7\_clang, android\_armv8\_clang => android \(\-\-deploy\-android\)The following example runs only the package command: lmbr\_waf package\_android\_armv7\_clang\_profile \-\-deploy\-android=False The following command ensures that all three commands \(build, package, and deploy\) run:lmbr\_waf \-p all build\_android\_armv8\_clang\_profile \-\-package\-projects\-automatically=True \-\-deploy\-android=True | 
+| build\_\* | ‑‑package‑projects‑automatically=\(True\|False\) |  Automatically runs the package command after each successful build command, where available\. The default is `True`\. Supported platforms include Android, iOS, and macOS\. The following example runs only the build command: lmbr\_waf \-p all build\_android\_armv8\_clang\_profile \-\-package\-projects\-automatically=True  | 
+|  build\_\* package\_\*  | \-\-deploy\-platform\_root=\(True\|False\) | Automatically sends a deploy command to remove devices after each successful package generated, where available\. Can be combined with \-\-package\-projects\-automatically=True in a build command to chain all three commands\. The default is `True`\.Supported platforms include Android\.*platform\_root* example:android\_armv8\_clang => android \(\-\-deploy\-android\)The following example runs only the package command: lmbr\_waf package\_android\_armv8\_clang\_profile \-\-deploy\-android=False The following command ensures that all three commands \(build, package, and deploy\) run:lmbr\_waf \-p all build\_android\_armv8\_clang\_profile \-\-package\-projects\-automatically=True \-\-deploy\-android=True | 
 
 ## Multiplayer Configuration<a name="waf-multiplayer-configuration"></a>
 
@@ -136,5 +132,5 @@ Before you can build multiplayer information, you must build the dedicated serve
 To build the dedicated server, run the following build command for your version of Visual Studio:
 
 ```
-lmbr_waf build_win_x64_vs2015_profile_dedicated -p dedicated_server
+lmbr_waf build_win_x64_vs2017_profile_dedicated -p dedicated_server
 ```

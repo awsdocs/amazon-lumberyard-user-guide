@@ -2,7 +2,7 @@
 
 Use the **Motion Set** pane to create motion set files and add motion files to it\.
 
-![\[Create and manage motion sets in the Animation Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-motion-set-user-interface.PNG)
+![\[Create and manage motion sets in the Animation Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-motion-set-user-interface.png)
 
 In the **Motion Sets** pane, you can do the following:
 

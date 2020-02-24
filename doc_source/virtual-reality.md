@@ -1,5 +1,12 @@
 # Creating Virtual Reality Games in Lumberyard<a name="virtual-reality"></a>
 
+
+****  
+
+|  | 
+| --- |
+|  This topic references the deprecated OSVR Gem, which will be removed in a future version of Lumberyard\.  | 
+
 Lumberyard's [virtual reality](ly-glos-chap.md#virtual_reality) system integrates the use of the OculusRift, HTC Vive, and Open Source Virtual Reality \(OSVR\) head\-mounted displays \(HMD\) on PC gaming systems\. Before using these head\-mounted displays, read each manufacturer's safety guide:
 + [Oculus Rift Health and Safety Warning](http://www.oculus.com/warnings)
 + [HTC Vive Safety and Regulatory Guide](http://dl4.htc.com/web_materials/Safety_Guide/Vive/Vive_safety_and_regulatory_guide_ENG-FRC-ESM.pdf)

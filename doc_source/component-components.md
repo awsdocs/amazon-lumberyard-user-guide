@@ -69,6 +69,7 @@ For more information, see [Using Gems to Add Modular Features and Assets](gems-s
 The following components support the PhysX system, which is not compatible with the legacy physics system\. You can't use components interchangeably between each system\.
 
 For more information, see [Simulating Physics Behavior with the PhysX System](physx-intro.md)\.
++ [Cloth Component](component-cloth.md)
 + [PhysX Character Controller](component-physx-character-controller.md)
 + [PhysX Collider](component-physx-collider.md)
 + [PhysX Force Region](component-physx-force-region.md)

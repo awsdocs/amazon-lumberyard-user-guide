@@ -7,8 +7,8 @@ Lumberyard includes four iOS\-supported sample projects that you can use to lear
 ## Prerequisites<a name="ios-prerequisites"></a>
 
 To build apps for iOS devices, you must have the following:
-+ [Xcode 10\.0](https://developer.apple.com/xcode/download/) or later
-+ iOS v11\.0 SDK or later
++ [Xcode 11](https://developer.apple.com/xcode/download/) or later
++ iOS 13 SDK or later
 + [Lumberyard Mac Support Files](https://aws.amazon.com/lumberyard/downloads/)
 + Lumberyard installed on a Windows computer
 + Lumberyard installed on a macOS computer
@@ -32,7 +32,6 @@ During installation, Lumberyard creates the following directories for its binari
 + `BinMac64`
 
 **PC**
-+ `Bin64vc140` \(for binaries generated with Visual Studio 2015\)
 + `Bin64vc141` \(for binaries generated with Visual Studio 2017\)
 
 ## Anatomy of a Lumberyard iOS App<a name="ios-support-lumberyard-ios-app-anatomy"></a>

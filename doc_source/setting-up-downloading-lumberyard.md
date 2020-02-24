@@ -1,38 +1,39 @@
 # Downloading Lumberyard<a name="setting-up-downloading-lumberyard"></a>
 
-Use the Lumberyard Installer to download Lumberyard\. After installation, you can use Lumberyard Editor and other engine tools\.
+**Download the latest version of Lumberyard Editor**  
+[https://d1a5h15s88ekwk.cloudfront.net/latest/installer/LumberyardInstaller.exe](https://d1a5h15s88ekwk.cloudfront.net/latest/installer/LumberyardInstaller.exe)
+
+You can also download earlier versions of Lumberyard and assets from the [Amazon Lumberyard Downloads](https://aws.amazon.com/gamedev/lumberyard/downloads) page\.
 
 **Note**  
 Verify that you have the required hardware and software for Lumberyard\. For more information, see [System Requirements](setting-up-system-requirements.md)\.
 
 **Topics**
-+ [Using the Lumberyard Installer to Download Lumberyard](#download-lumberyard-installer)
++ [Using the Lumberyard Installer](#download-lumberyard-installer)
 + [Using GitHub to Download Lumberyard](#download-lumberyard-github)
 + [Lumberyard Directories and Files](#lumberyard-installed-directories-and-files)
 
-## Using the Lumberyard Installer to Download Lumberyard<a name="download-lumberyard-installer"></a>
+## Using the Lumberyard Installer<a name="download-lumberyard-installer"></a>
 
-To install Lumberyard, download the `LumberyardInstaller.exe`\. The Lumberyard Installer extracts the Lumberyard files and adds shortcuts to your desktop and start menu for the following:
+The Lumberyard Installer extracts the Lumberyard files and adds shortcuts to your desktop and start menu for the following:
 + Lumberyard Setup Assistant
 + Project Configurator
 + Lumberyard Editor
-
-If your download is interrupted, the installer automatically resumes the download\. 
 
 If you have an existing Lumberyard project and you want to upgrade, see [Upgrading Lumberyard](lumberyard-upgrading.md)\.
 
 **Note**  
 If you get file errors during extraction about `AssetProcessor.exe`, `AssetProcessor_temp.exe`, or `CrySystem.dll`, verify if your antivirus software is placing these files in quarantine\. If needed, grant exceptions for the affected files\.
 
-**To download Lumberyard with the installer**
+**To use the Lumberyard installer**
 
-1. On the [Lumberyard Downloads](https://aws.amazon.com/gamedev/lumberyard/downloads) page, click **Download Now**\.
+1. If you haven't already, on the [Lumberyard Downloads](https://aws.amazon.com/gamedev/lumberyard/downloads) page, click **Download Now**\. If your download is interrupted, the installer automatically resumes the download\. 
 
-1. Navigate to your download directory and run the Lumberyard Installer executable file: `LumberyardInstallerversion_number.exe`
+1. Navigate to your download directory and run the Lumberyard Installer executable file: `LumberyardInstaller.exe`
 
 1. On the **Welcome** page of the installer, click **Install**\.
 **Note**  
-By default, the Lumberyard Installer uses `c:\Amazon` as the root directory\. You can specify a different directory, but we recommend that you use the default\.
+By default, the Lumberyard Installer uses `C:\Amazon` as the root directory\. You can specify a different directory, but we recommend that you use the default\. 
 
 1. Follow the instructions to complete your installation\.
 
@@ -49,7 +50,6 @@ After you install Lumberyard, the Lumberyard root directory includes the followi
   + `_WAF_` – Waf build system files\.
   + `Bin64` – Binaries directory and configuration files for the Resource Compiler\.
   + `Bin64vc141` – Binaries directory and configuration files for Visual Studio 2017\.
-  + `Bin64vc140` – Binaries directory and configuration files for Visual Studio 2015\.
   + `Code` – Source files directory and solution files\.
   + `Editor` – Editor assets\.
   + `Engine` – Engine assets\.

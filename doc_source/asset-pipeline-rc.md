@@ -2,7 +2,7 @@
 
 Resource Compiler converts certain assets into a format that Lumberyard can use\. Resource Compiler stores the converted, game\-ready assets in a cache that mirrors your project directory\. This cache is located in the `\lumberyard_version\dev\Cache` directory\. Resource Compiler can also create PAK files\.
 
-Asset Processor calls Resource Compiler to automatically convert new or modified assets in your Lumberyard directory\. The Resource Compiler application, `rc.exe`, is located in the `\lumberyard_version\dev\Bin64vc140orBin64vc141\rc` directory\.
+Asset Processor calls Resource Compiler to automatically convert new or modified assets in your Lumberyard directory\. The Resource Compiler application, `rc.exe`, is located in the `\lumberyard_version\dev\Bin64vc141\rc` directory\.
 
 Resource Compiler converts the following file types\.
 
@@ -32,7 +32,7 @@ You can access a full list of arguments available for use in `AssetProcessorPlat
 
 1. Open a command line\.
 
-1. Navigate to the `\lumberyard_version\dev\Bin64vc140_or_Bin64vc141\rc` directory\.
+1. Navigate to the `\lumberyard_version\dev\Bin64vc141\rc` directory\.
 
 1. Enter the following command:
 

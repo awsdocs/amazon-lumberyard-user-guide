@@ -10,9 +10,9 @@ Lumberyard supports the following minimum specifications for Android and iOS:
 |  | Android | iOS | 
 | --- | --- | --- | 
 | CPU | ARM quad\-core or newer\(for example, ARM Krait 400, Cortex\-A53\) | ARM v8 or newer | 
-| GPU | Adreno 330, Mali\-T760 or newerSupports OpenGL 3\.0 | PowerVR G6430 \(quad\-core\) or newerSupports Metal | 
-| OS | 5\.1 or newer | iOS 7\.0 or newer | 
-| Example devices | Samsung Galaxy Note 4LG Nexus 5Kindle Fire HDX | iPhone 5s and newer | 
+| GPU | Adreno 330, Mali\-T760 or newerSupports OpenGL 3\.0 | A8 or newerSupports Metal | 
+| OS | 5\.1 or newer | iOS 13 or newer | 
+| Example devices | Samsung Galaxy Note 4LG Nexus 5Kindle Fire HDX | iPhone 6 and newer | 
 
 **Topics**
 + [Android Support](android-intro.md)

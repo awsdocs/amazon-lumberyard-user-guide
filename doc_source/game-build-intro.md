@@ -23,10 +23,9 @@ You can create a variety of game builds, including a release build\. See the fol
 + Removes all game developer and programmer features such as console usage, cheat commands, command line parsing, and batch mode processing\.
 + Combines everything into a single executable file instead of DLLs\.
 
-For more information about creating release builds for Android and iOS, see [Creating Android and iOS Games](mobile-support-intro.md)\.
+To learn the general steps for creating a release build in Lumberyard, see [Simple Asset Bundling and Release Tutorial](asset-bundler-tutorial-simple.md)\. For more information about creating release builds for Android and iOS, see [Creating Android and iOS Games](mobile-support-intro.md)\.
 
 **Topics**
-+ [Creating Release Builds for PC](game-build-release.md)
 + [Compiling Shaders for Release Builds](asset-pipeline-shader-compilation.md)
 + [Adding Custom Game Icons](game-build-custom-game-icons.md)
 + [Using the Waf Build System](waf-intro.md)

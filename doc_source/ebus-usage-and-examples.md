@@ -115,9 +115,7 @@ protected:
 };
 ```
 
-Note that handlers are not automatically connected to an EBus, but are disconnected automatically because the destructor of `Handler` calls `BusDisconnect`\. 
-
-EBus handlers that specify a non-NullMutex for the EBus mutex should explicitly disconnect in the `Handler` destructor as relying on automatic disconnection causes a race condition to occur where the EBus Handler internal class is waiting on the EBus mutex to be unlocked in order to complete destruction, but because the `Handler` didn't disconnect in it's destructor, its virtual table entries are removed and another thread could inside of one of the `Handlers` virtual function calls leading to a crash\.
+Note that handlers are not automatically connected to an EBus, but are disconnected automatically because the destructor of `Handler` calls `BusDisconnect`\.
 
 In order to actually connect to the EBus and start receiving events, your handler must call `BusConnect()`:
 
@@ -137,180 +135,6 @@ If your EBus is addressed, connect to the EBus by passing the EBus ID to `BusCon
 ```
 // connect to the EBus at address 5.
 ExampleAddressBus::Handler::BusConnect(5);
-```
-
-### Access Specifiers to use when Inheriting from an EBus Interface
-
-The type of access specifiers(public, private, protected) to use when inheriting from an EBus interface is normally based on whether the EBus interface represents a request bus or a notification bus
-
-### Request Bus
-
-+ For a request bus it is recommended that any EBus handler inherit publically from the EBus interface.
-
-The reason for inheriting publically from a request bus is that it allows for performance optimizations where a pointer to the EBus interface is able to cached off after BusConnect. This allow direct calls to EBus interface to be made. Furthermore the protection of using non-public inheritance is easily worked around by using the EBus FindFirstHandler() method or by using a C-style cast on the EBus Handler.
-
-```
-class TouchBendingRequests
-    : public AZ::EBusTraits
-{
-public:
-    static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::Single;
-    static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
- 
-    virtual bool IsTouchBendingEnabled() const = 0;
-    virtual TouchBendingTriggerHandle* CreateTouchBendingTrigger(const AZ::Transform& worldTransform, const AZ::Aabb& worldAabb, ITouchBendingCallback* callback, const void* callbackPrivateData) = 0;
-};
-using TouchBendingRequestBus = AZ::EBus<TouchBendingRequests>;
- 
- 
-namespace TouchBending
-{
-    namespace Simulation
-    {
-        class PhysicsComponent
-            : public AZ::Component
-            , protected Physics::TouchBendingBus::Handler
-{
-protected:
-    bool IsTouchBendingEnabled() const override
-    Physics::TouchBendingTriggerHandle* CreateTouchBendingTrigger(const AZ::Transform& worldTransform, const AZ::Aabb& worldAabb, Physics::ITouchBendingCallback* callback, const void* callbackPrivateData) override;
-}
- 
-// Later on when the touch bending bus is desired to be used and the PhysicsComponent is available
-AZ::Entity* physicsEntity = TouchBending::Simultation::GetPhysicsEntity();
-auto* physicsComponent = physicsEntity->FindComponent<TouchBending::Simulation::PhysicsComponent>();
- 
- 
-// Compiler Error: Not allowed to invoke protected function
-// physicsComponent->IsTouchBendingEnabled();
- 
- 
-// C-style cast gets around the protected inheritance
-auto* touchBendingRequests = (TouchBendingRequests*)physicsComponents;
-touchBendingRequests->IsTouchBendingEnabled();
- 
- 
-// Furthermore looking up the handler on the EBus allows access to the TouchBendingRequest interface also avoiding the benefits of protected inheritance
-typename TouchBendingRequestBus::InterfaceType* touchBendingRequest2 = TouchBendingRequestBus::FindFirstHandler();
-touchBendingRequest2->IsTouchBendingEnabled();
-```
-
-+ Request bus functions on an EBus interface are recommended to be pure virtual functions.
-
-The implementer of the EBus handler should actively choose which requests functions to implement and which request functions to ignore.
-
-```
-class RigidBodyRequests
-    : public AZ::EBusTraits
-{
-public:
-    static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-    static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Single;
-    using BusIdType = AZ::EntityId;
- 
-    virtual AZ::Vector3 GetCenterOfMassWorld() const = 0;
-    virtual AZ::Vector3 GetLinearVelocityWorld() const = 0;
-};
-using RigidBodyRequestBus = AZ::EBus<RigidBodyRequests>;
- 
- 
-class RigidBodyComponent
-    : public RigidBodyRequestBus::Handler
-{
-    AZ::Vector3 GetCenterOfMassWorld() const override;
-    AZ::Vector3 GetLinearVelocityWorld() const override;
-}
- 
-//...
-class MyFooComponent:
-     public: AZ::Component
-{
-public:
-     void Activate()
-     {
-         m_rigidBodyRequests = RigidBodyRequestBus::FindFirstHandler(GetEntity());
-         if(m_rigidBodyRequests)
-         {
-             // For the RigidBodyRequests interface, because the GetCenterOfMass and GetLinearVelocity functions are public
-             // the following ways to invoke an EBus is available
-             // Directly calling method on interface pointer
-             AZ::Vector3 linearVelocity = m_rigidBodyRequests->GetLinearVelocityWorld();
-             AZ::Vector3 centerOfMass = m_rigidBodyRequests->GetCenterOfMassWorld();
-              
-             // Using the EBus Enumerate/Event/Broadcast functions with a lambda
-             AZ::Vector3 resultVelocity = AZ::Vector3::CreateZero();
-             AZ::Vector3 resultMass = AZ::Vector3::CreateZero();
-             auto GetVelocityAndMassCB = [&resultVelocity, &resultMass](typename RigidBodyRequestBus::InterfaceType* rigidBodyRequests)
-             {
-                 resultVelocity = rigidBodyRequests->GetLinearVelocityWorld();
-                 resultMass = rigidBodyRequests->GetCenterOfMassWorld();
-             };
-             RigidBodyRequestBus::EnumerateHandlers(GetEntityId(), GetVelocityAndMassCB);
-             RigidBodyRequestBus::Event(GetEntityId(), GetVelocityAndMassCB);
-             RigidBodyRequestBus::Broadcast(GetVelocityAndMassCB);
- 
-             // Normal Case: Invoking the Event/Broadcast through a pointer to member function
-             AZ::Vector3 resultVelocity2 = AZ::Vector3::CreateZero();
-             AZ::Vector3 resultMass2 = AZ::Vector3::CreateZero();
-             RigidBodyRequestBus::EventResult(resultVelocity2, GetEntityId(), &RigidBodyRequestBus::InterfaceType::GetLinearVelocityWorld);
-             RigidBodyRequestBus::EventResult(resultMass2, GetEntityId(), &RigidBodyRequestBus::InterfaceType::GetCenterOfMassWorld);
-         }
-     }
-private:
-    RigidBodyRequests* m_rigidBodyRequests;
-};
-```
-
-### Notification Bus
-
-+ For notification buses it is recommanded to inherit privately from the EBus interface.
-
-Notification Buses are normally handled internally implementing class and therefore does not need to be invoked as part of the public API.
-
-+ As a notification bus is meant to handle notifications sent after a request has been serviced, it is optional that handlers need to handle each notification. Most notification bus methods provides an empty method implementation instead of a pure virtual method to facilate this use.
-
-As opposed to request buses, notification buses normally have many handlers that listen for a subset of notifications from that bus. Therefore adding a new notification to a notification bus needs to be balanced with the fact that every additional notification causes an additional function call for every handler. The additional function call creates overhead for the handlers that aren't interested in this new notification.
-
-```
-class RigidBodyNotifications
-    : public AZ::EBusTraits
-{
-    static const AZ::EBusAddressPolicy AddressPolicy = AZ::EBusAddressPolicy::ById;
-    static const AZ::EBusHandlerPolicy HandlerPolicy = AZ::EBusHandlerPolicy::Multiple;
-    using BusIdType = AZ::EntityId;
- 
-    // Recommended: Create empty implementations for Notification methods
-    void OnCenterOfMassWorldChanged()
-    {
-    }
-    void OnLinearVelocityWorldChanged()
-    {
-    }
- 
-    // Not Recommended: Don't set functions on the notification interface to pure virtual, it just makes it so that handlers of the notification bus has to implement the function even in the case where the handler is interested in the call
-    void OnAngularVelocityWorldChanged() = 0;
-};
- 
-using RigidBodyNotificationBus = AZ::EBus<RigidBodyNotifications>;
- 
-class MyBarComponent
-    : private RigidBodyNotificationBus::Handler
-{
-private:
-    // MyBar performs special logic receives an OnCenterOfMassWorldChanged event for the entity it is connected to in the EBus
-    void OnCenterOfMassWorldChanged() override
-    {
-         AZ::EntityId* busId = RigidBodyNotificationBus::GetCurrentBusId();
-         // ...
-    }
- 
-    // MyBar doesn't perform any logic related to OnLinearVelocityWorldChanged, so it doesn't implement, the function and falls back to the interface implementation
-    // EXPOSITION ONLY: void OnLinearVelocityWorldChanged();
-    // Not Recommended: MyBar doesn't perform any logic related to the OnAngularVelocityWorldChanged function, but must implement it anyway in order to compile
-    void OnAngularVelocityWorldChanged() override
-    {
-    }
-}
 ```
 
 ## Sending Messages to an EBus<a name="ebus-usage-and-examples-messages"></a>
@@ -340,43 +164,6 @@ ExampleAddressBus::Broadcast(&ExampleAddressBus::Events::Test);
   
 // Broadcasts only to handlers connected to address 5.
 ExampleAddressBus::Event(5, &ExampleAddressBus::Events::Test);
-```
-
-What should be noticed with the above calls to send messages to an EBus is that references to the EBus interface method uses the `EBusName::Events::FuncName` approach instead of `EBusInterfaceName::FuncName`.
-This approach eases any potential renaming of the EBus interface as only the interface class and the EBus type alias would need to be updated.
-
-### Sending a Message using a C++ callable instead of a pointer to member
-
-Sending messages through an EBus supports accepting any type that implements the C++ callable concept as long as the firstt parameter accepts a `EBus::InterfaceType*`\.
-
-This allows for batching up multiple calls to an EBus interface in one function, which can improve performance in scenarios where an EBus is protected by a mutex.
-
-The following example below makes a single call to the ComponentApplicationBus instea instead of multiple calls to lookup every entity from a container of Entity IDS. This is more performant as the ComponentApplicationBus requires a for each Broadcast() call.
-
-```
-void DestroyEntitiesById(const AZStd::vector<AZ::EntityId>& entityIdsToBeDeleted)
-{
-    // The AZ::ComponentApplicationBus locks access for every call
-    // If there are X amount of entities, the bus will be locked X number of times
-    for (auto entityIdIter = entityIdsToBeDeleted.rbegin(); entityIdIter != entityIdsToBeDeleted.rend(); ++entityIdIter)
-    {
-        AZ::Entity* currentEntity{};
-        AZ::ComponentApplicationBus::BroadcastResult(currentEntity, AZ::ComponentApplicationBus::Events::FindEntity, *entityIdIter);
-        delete currentEntity;
-    }
-    
-    // Using a C++ callable(C++ lambda in this case), the AZ::ComponentApplicationBus is only locked once
-    auto DeleteAllEntities = [&entityIdsToBeDelete](typename AZ::ComponentApplicationBus::InterfaceType* componentApplicationInterface)
-    {
-    for (auto entityIdIter = entityIdsToBeDeleted.rbegin(); entityIdIter != entityIdsToBeDeleted.rend(); ++entityIdIter)
-    {
-        // Multiple direct calls to ComponentApplicationRequest::FindEntity is performed underneath the lock
-        AZ::Entity* currentEntity = componentApplicationInterface->FindEntity(*entityIdIter);
-        delete currentEntity;
-    }
-
-    AZ::ComponentApplicationBus::Broadcast(DeleteAllEntities);
-}
 ```
 
 ## Retrieving Return Values<a name="ebus-usage-and-examples-return"></a>
@@ -416,18 +203,10 @@ SomeInterfaceBus::BroadcastResult(results, &SomeInterfaceBus::Events::DoesAnyone
 // results now contains a vector of all results from all handlers.
  
 // alternative:
-AZ::EBusReduceResult<bool, AZStd::logical_or<bool>> response(false);
+AZ::EBusLogicalResult<bool, AZStd::logical_or<bool>> response(false);
 SomeInterfaceBus::BroadcastResult(response, &SomeInterfaceBus::Events::DoesAnyoneObject);
  
 // response now contains each result, using a logical OR operation. So all responses are OR'd with each other.
-
-...
-// reduce result with custom reducer
-AZ::EBusReduceResult<AZ::Aabb, AabbAggregator> aabbResult(AZ::Aabb::CreateNull());
-EditorComponentSelectionRequestsBus::EventResult(aabbResult, entityId, &EditorComponentSelectionRequests::GetEditorSelectionBoundsViewport, viewportInfo);
-debugDisplay.DrawSolidBox(aabbResult.value.GetMin(), aabbResult.value.GetMax());
-
-// aabbResult now contains the bounds of all selected entities visible with the Editor viewport
 ```
 
 **Note**  

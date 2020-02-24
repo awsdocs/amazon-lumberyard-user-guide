@@ -18,7 +18,7 @@ If you prefer not to use your PC on a public IP address, you can use Amazon Elas
 
 ## Creating the Build<a name="android-builds-aws-device-farm-creating-build"></a>
 
-Follow the steps below to create your build to deploy to the AWS Device Farm\.
+Use the following steps to create your build to deploy to the AWS Device Farm\.
 
 1. Navigate to the `\dev` directory for your game project\. For example, the SamplesProject directory is `\dev\SamplesProject`\.
 
@@ -32,7 +32,7 @@ Follow the steps below to create your build to deploy to the AWS Device Farm\.
 
 ## Deploying to the AWS Device Farm<a name="android-builds-deploying-aws-device-farm"></a>
 
-Follow the steps below to deploy your build to the AWS Device Farm\.
+Use the following steps to deploy your build to the AWS Device Farm\.
 
 1. Open the AWS Management Console\.
 
@@ -52,8 +52,8 @@ Follow the steps below to deploy your build to the AWS Device Farm\.
 
    1. For the device pool, click **Create a new device pool**\.
 
-   1. Search for and select **Samsung Galaxy S7**\. Type the name and description for the pool and save it\.
+   1. Search for and select **Samsung Galaxy S7**\. Type the name and description for the pool, and save it\.
 
    1. Click through the remaining confirmation screens\.
 
-1. When the tests are complete, click to the **Screenshots** tab to see your deployed content\.
+1. When the tests are complete, open the **Screenshots** tab to see your deployed content\.

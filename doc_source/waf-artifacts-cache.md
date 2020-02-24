@@ -42,7 +42,7 @@ The Waf artifacts cache feature has the following Waf options:
 The following command specifies the artifacts cache path as `E:\waf_artifacts_cache` and restores artifacts from cache on cache hit\. On cache miss, the command uploads the task's target output files to the artifacts cache after the task is finished\.
 
 ```
-lmbr_Waf build_win_x64_vs2015_fullprofile -p all --artifacts-cache="E:\waf_artifacts_cache" --artifacts-cache-restore=True --artifacts-cache-upload=True
+lmbr_Waf build_win_x64_vs2017_fullprofile -p all --artifacts-cache="E:\waf_artifacts_cache" --artifacts-cache-restore=True --artifacts-cache-upload=True
 ```
 
 To build using Visual Studio, update the `dev/_WAF_/user_settings.options` file to enable the artifacts cache as in the following example:

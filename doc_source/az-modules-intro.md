@@ -49,7 +49,7 @@ AZ modules are code libraries that are built to use the AZ framework\. When an A
 
 ## Current Lumberyard AZ Modules<a name="az-modules-intro-current-az-modules"></a>
 
- The [gems](az-module-gems.md) provided with Lumberyard are all built as AZ modules\. In addition, there are two AZ modules that are not built as gems\. 
+ The [gems](az-module-gems.md) provided with Lumberyard are all built as AZ modules\. In addition, there are two AZ modules that are not built as Gems\. 
 
 ### LmbrCentral<a name="az-modules-intro-current-az-modules-lmbrcentral"></a>
 

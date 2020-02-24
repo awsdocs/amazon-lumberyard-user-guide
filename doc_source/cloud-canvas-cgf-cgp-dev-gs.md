@@ -110,7 +110,7 @@ To learn how to set up Microsoft Visual Studio for creating cloud gems, see the 
 
 ### Microsoft Visual Studio Setup<a name="cloud-canvas-cgf-cgp-dev-gs-setup-visual-studio"></a>
 
-You can edit your code with any text editor, but for creating cloud gems, you might prefer Microsoft Visual Studio for its Typescript support\. To use Visual Studio 2015 to create cloud gems, you configure it to work with Node\.js, add some TypeScript extensions, and optionally install Task Runner Explorer to run gulp tasks\.
+You can edit your code with any text editor, but for creating cloud gems, you might prefer Microsoft Visual Studio for its Typescript support\. To use Visual Studio 2017 to create cloud gems, you configure it to work with Node\.js, add some TypeScript extensions, and optionally install Task Runner Explorer to run gulp tasks\.
 
 #### Configuring Visual Studio to Work with Node\.js<a name="cloud-canvas-cgf-cgp-dev-gs-setup-visual-studio-node.js"></a>
 
@@ -142,9 +142,6 @@ Next, you must install TypeScript\-related extensions for Visual Studio\.
 ![\[Install NuGet packages\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-cgf-cgp-dev-gs-7.png)
 
    After you install these packages, you can create cloud gems in Visual Studio\.
-
-**Note**  
-If you are using Visual Studio 2015, it is possible to update npm packages or run a local server by right\-clicking **package\.json** and then choosing **Restore Packages**\. However, you might find that using the `npm install` command from the `<Lumberyard directory path>\dev\Gems\CloudGemFramework\v<N>\Website\CloudGemPortal\` directory works more consistently\.
 
 #### Using the Task Runner Explorer \(Optional\)<a name="cloud-canvas-cgf-cgp-dev-gs-setup-visual-studio-task-runner-explorer"></a>
 

@@ -19,7 +19,7 @@ Once you install the RC Shell Commands, you can use the Resource Compiler image 
 
 ![\[Open image files with the Resource Compiler image tool\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-images-resourcecompiler-2.png)
 
-The Resource Compiler image tool lists image processing presets defined in the `rc.ini` file, located in the `lumberyard_version\dev\Bin64vc140_or_vc141\rc` directory\. Select a preset to create the `imagefilename.exportsettings` file that you can check in to your source control\.
+The Resource Compiler image tool lists image processing presets defined in the `rc.ini` file, located in the `lumberyard_version\dev\Bin64vc141\rc` directory\. Select a preset to create the `imagefilename.exportsettings` file that you can check in to your source control\.
 
 **To select an image processing preset and save it to an \.exportsettings file**
 

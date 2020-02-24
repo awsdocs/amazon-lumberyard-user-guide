@@ -22,12 +22,12 @@ DoF is rendered only for a single view pane layout \(the default\) in the viewpo
 
 **To add a Depth of Field node**
 
-1. In the **Track View** editor, select or create the sequence that you want\.
+1. In the **Track View**, select or create the sequence that you want\.
 
 1. In the node browser, right\-click the **Director** node or any **Camera** node and choose **Add Depth of Field Node**\.
 
 **Camera** nodes take precedence over the **Director** node\. Use the **Director** DoF node if you want the same DoF setup for multiple cameras\. In most cases, you want separate, specific DoF setups for each camera for more control\.
 
-You can add as many keys as you want, and use the **Curve Editor** to further adjust DoF settings to change over time\. 
+You can add as many keys as you want, and use the ****Curve Editor**** to further adjust DoF settings to change over time\. 
 
 For more information, see [Using Animation Curves](cinematics-track-view-editor-animation-curves.md)\.

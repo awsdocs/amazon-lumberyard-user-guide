@@ -12,7 +12,7 @@ Wwise software consists of the SDK and the Authoring Tool\. The SDK contains the
 
 **Topics**
 + [Setting up a Wwise Project](audio-wwise-project-setting-up.md)
-+ [Upgrading Wwise LTX to Full Version](audio-wwise-3d-wwise.md)
++ [Upgrading Wwise LTX to the Full Version](audio-wwise-3d-wwise.md)
 + [Comparing Wwise Full to Wwise LTX](audio-wwise-ltx-full-comparison.md)
 + [Connecting Wwise to the Editor and Game](audio-wwise-connecting-editor-game.md)
 + [Audiokinetic Wwise LTX](audio-wwise-using.md)

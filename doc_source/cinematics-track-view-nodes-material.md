@@ -7,7 +7,7 @@ The name of the **Material** node must be the full path of the material that you
 
 A recommended workflow is to select the material inside the **Material Editor** that you want to animate\.
 
-**To add a Material node in the **Track View** editor**
+**To add a Material node in the **Track View****
 
 1. In Lumberyard Editor, choose **Tools**, **Material Editor**\.
 
@@ -22,11 +22,11 @@ A recommended workflow is to select the material inside the **Material Editor** 
 
 1. In the node tree, right\-click and choose **Add Material Node** and then in the **Material Name** dialog box, press **Ctrl\+V** to paste the full path to the material that you copied in step 3 and then click **OK**\.
 
-1. If the material is in a material group, the text appears red on the **Material** node in the **Track View** editor\. This means that a submaterial hasn't been selected\. 
+1. If the material is in a material group, the text appears red on the **Material** node in the **Track View**\. This means that a submaterial hasn't been selected\. 
 
    To add a submaterial, do the following:
 
-   1. In the **Track View** editor, right\-click the **Material** node\.
+   1. In the **Track View**, right\-click the **Material** node\.
 
    1. Select the submaterial that you want to animate\.
 

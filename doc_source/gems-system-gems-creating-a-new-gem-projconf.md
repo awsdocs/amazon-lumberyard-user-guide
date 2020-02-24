@@ -2,7 +2,7 @@
 
 Use Project Configurator to create a new, empty gem\.
 
-1. Navigate to the `lumberyard_version\dev\Tools\LmbrSetup\Win\` directory and start `ProjectConfigurator`\. 
+1. Open the Lumberyard Project Configurator, located at `lumberyard-version\dev\Bin64BuildPlatform\ProjectConfigurator.exe`\. For example, when using Visual Studio 2017 as your build platform, the Project Configurator is located at `lumberyard-version\dev\Bin64vc141\ProjectConfigurator.exe`\.
 
 1. Select the project and click **Enable Gems**\.
 

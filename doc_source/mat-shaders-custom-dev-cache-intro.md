@@ -40,7 +40,7 @@ If you customized Lumberyard in any way, you must build Lumberyard and your game
 Enter the following command for your version of Visual Studio\.
 
 ```
-lmbr_waf build_win_x64_vs2015_profile -p all --targets=CrySCompileServer
+lmbr_waf build_win_x64_vs2017_profile -p all --targets=CrySCompileServer
 ```
 
 If you don’t want to \(or can't\) build using the `all` profile, you can alternatively just build the `game_and_engine` spec and the `shadercachegen` spec\.
@@ -48,8 +48,8 @@ If you don’t want to \(or can't\) build using the `all` profile, you can alter
 Enter the following command for your version of Visual Studio\.
 
 ```
-lmbr_waf build_win_x64_vs2015_profile -p game_and_engine
-lmbr_waf build_win_x64_vs2015_profile -p shadercachegen
+lmbr_waf build_win_x64_vs2017_profile -p game_and_engine
+lmbr_waf build_win_x64_vs2017_profile -p shadercachegen
 ```
 
 ### Packing the Shader Cache as Part of the Release Build<a name="packing-shader-cache-as-part-of-release-build"></a>

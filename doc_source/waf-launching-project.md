@@ -9,7 +9,6 @@ To launch your project, open the executable file\. The directory and file name a
 Where:
 + `compiler`
   + `vc141` – Visual Studio 2017\.
-  + `vc140` – Visual Studio 2015\.
 + [ `build mode`](game-build-intro.md)
   + `Debug` – Built in debug mode\.
   + \(None\) – Built in profile mode\.
@@ -18,9 +17,9 @@ Where:
 + `executable name` – The `executable_name` specified in your [`project.json`](waf-files-projects-file.md) file\. The file name typically mirrors the project name\.
 
 For example, if your project was configured with the following:
-+ Compiler: Visual Studio 2015
++ Compiler: Visual Studio 2017
 + Build mode: `debug`
 + Executable name: `SampleProjectLauncher`
 
 Then your directory and file name would be the following:
-+ `lumberyard_version/dev/Bin64vc140.Debug/SampleProjectLauncher.exe`
++ `lumberyard_version/dev/Bin64vc141.Debug/SampleProjectLauncher.exe`

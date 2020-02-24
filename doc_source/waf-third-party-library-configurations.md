@@ -60,7 +60,7 @@ Instead, you could use the following third\-party configuration files for the tw
     "description": "My Static Library A",
     "includes": "includes",
     "platform": {
-        "win_x64_vs2015": {
+        "win_x64_vs2017": {
             "libpath": [
                 "win32/lib"
             ],
@@ -86,7 +86,7 @@ Instead, you could use the following third\-party configuration files for the tw
     "description": "My Dynamic Library B",
     "includes": "includes",
     "platform": {
-        "win_x64_vs2015": {
+        "win_x64_vs2017": {
             "importlibpath": [
                 "win32/lib"
             ],
@@ -181,18 +181,7 @@ Static third\-party library configuration files declare header include paths, li
     "lib_required": "True",
     "shared_required": "False",
     "platform": {
-        "win_x64_vs2013": {
-            "libpath_debug": [
-                "build/win_x64/vc120/debug"
-            ],
-            "libpath_release": [
-                "build/win_x64/vc120/release"
-            ],
-            "lib": [
-                "lz4.lib"
-            ]
-        },
-        "win_x64_vs2015": {
+        "win_x64_vs2017": {
             "libpath_debug": [
                 "build/win_x64/vc140/debug"
             ],
@@ -203,7 +192,6 @@ Static third\-party library configuration files declare header include paths, li
                 "lz4.lib"
             ]
         },
-        "win_x64_vs2017": "@win_x64_vs2015",
         ...
 ```
 
@@ -226,7 +214,7 @@ Shared libraries are more complex than static libraries\. Shared libraries must 
    "defines": [],
    "lib_required": "False",
    "platform": {
-      "win_x64_vs2013": {
+      "win_x64_vs2017": {
          "includes": [
             "."
          ],
@@ -237,19 +225,19 @@ Shared libraries are more complex than static libraries\. Shared libraries must 
             "lib/windows/x64"
          ],
          "import_debug": [
-            "boost_python-vc120-mt-gd-1_61.lib"
+            "boost_python-vc140-mt-gd-1_61.lib"
          ],
          "import_release": [
-            "boost_python-vc120-mt-1_61.lib"
+            "boost_python-vc140-mt-1_61.lib"
          ],
          "shared_debug": [
-            "boost_python-vc120-mt-gd-1_61.dll"
+            "boost_python-vc140-mt-gd-1_61.dll"
          ],
          "shared_release": [
-            "boost_python-vc120-mt-1_61.dll"
+            "boost_python-vc140-mt-1_61.dll"
          ],
          "pdb_debug": [
-            "boost_python-vc120-mt-gd-1_61.pdb"
+            "boost_python-vc140-mt-gd-1_61.pdb"
          ]
       },
       ....
@@ -302,7 +290,7 @@ In the `platform` section, the shared library definitions for `import`, `shared`
     ]
 },
 "platform": {
-	"win_x64_vs2015": {
+	"win_x64_vs2017": {
 		...
 		"import": {
 			"${all_foo_lib_names}.lib"
@@ -410,7 +398,7 @@ The following example configuration file defines two third\-party identifiers th
 	"source": "elements",
 	...
 	"platform": {
-		"win_x64_vs2015": {
+		"win_x64_vs2017": {
 			"libpath":	[
 				"lib"
 			],

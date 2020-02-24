@@ -5,7 +5,7 @@ You can use levels of detail \([LODs](https://docs.aws.amazon.com/lumberyard/lat
 **Topics**
 + [Using Actor LODs in Lumberyard](#optimize-character-fbx-settings-lod-in-lumberyard)
 + [Using Digital Content Creation Tools to Create LODs](#using-dccs-to-create-lods-for-character-fbx-settings)
-+ [Using the FBX Settings Tool to Check LODs](#using-fbx-settings-tool-to-check-lods-character-fbx-settings)
++ [Using the **FBX Settings** Tool to Check LODs](#using-fbx-settings-tool-to-check-lods-character-fbx-settings)
 + [Adding Actor LOD to a Level in Lumberyard](#adding-actor-lod-to-a-level-in-lumberyard)
 + [Adding the Simple LOD Distance Component](#adding-simple-lod-distance-component)
 
@@ -58,19 +58,19 @@ Currently, Lumberyard supports skeletons created with LOD groups only\.
 + To create an actor with multiple LOD meshes, use an empty LOD group as the parent of the skeleton and the LOD meshes\. The following example shows a skeleton created with an LOD group and imported into Lumberyard\.  
 ![\[Skeleton created as an LOD group\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/character-fbx-settings-lod-optimize-0.png)
 
-## Using the FBX Settings Tool to Check LODs<a name="using-fbx-settings-tool-to-check-lods-character-fbx-settings"></a>
+## Using the **FBX Settings** Tool to Check LODs<a name="using-fbx-settings-tool-to-check-lods-character-fbx-settings"></a>
 
 After you export your `.fbx` file to Lumberyard, do the following:
 
-**To use the FBX Settings to check LODs**
+**To use the **FBX Settings** to check LODs**
 
 1. In Lumberyard Editor, choose **Tools**, **Asset Browser**\.
 
-1. Right click the `.fbx` file and choose **Edit Settings**\. The **FBX Settings** tool shows a **Level of Detail** modifier that lists the additional LOD meshes\.
+1. Right click the `.fbx` file and choose **Edit Settings**\. The ****FBX Settings**** tool shows a **Level of Detail** modifier that lists the additional LOD meshes\.
 
 ![\[LOD entries in the FBX Settings tool\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/character-fbx-settings-lod-optimize-1.png)
 
-You can use the **FBX Settings** tool to verify that your LODs were imported correctly\. Currently, you can also unselect a mesh or skeleton for each LOD, but you can't move a mesh or skeleton across a level or add a new mesh or skeleton to a level\.
+You can use the ****FBX Settings**** tool to verify that your LODs were imported correctly\. Currently, you can also unselect a mesh or skeleton for each LOD, but you can't move a mesh or skeleton across a level or add a new mesh or skeleton to a level\.
 
 ## Adding Actor LOD to a Level in Lumberyard<a name="adding-actor-lod-to-a-level-in-lumberyard"></a>
 

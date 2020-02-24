@@ -8,7 +8,6 @@ This topic provides information about the operating systems and compilers that W
 | Operating system | Build environment | Waf short name | 
 | --- | --- | --- | 
 | 64\-bit Windows | MSBuild / Visual Studio 2017 | win\_x64\_vs2017 | 
-| 64\-bit Windows | MSBuild / Visual Studio 2015 | win\_x64\_vs2015 | 
 
 The following compilers are supported based on the build operating system\.
 

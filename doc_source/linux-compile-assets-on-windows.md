@@ -21,7 +21,7 @@ You must compile assets and the `3rdParty` directory for the multiplayer project
 
 1. Run the following command from the `\dev` directory: `lmbr_waf.bat configure`
 
-1. Follow these instructions for [Creating Release Builds for PC](game-build-release.md)\. Alternatively, you can run the `BuildMultiplayerSample_Paks_PC_dedicated.bat` file \(located in the `\dev` directory\)\.
+1. Follow these instructions for [Getting Started with Asset Bundling and the Lumberyard StarterGame](asset-bundler-starter-game.md)\. Alternatively, you can run the `BuildMultiplayerSample_Paks_PC_dedicated.bat` file \(located in the `\dev` directory\)\.
 
 1. To create a Linux deployment package, run the `MultiplayerSample_LinuxPacker.bat` file \(located in the `\dev` directory\) as Administrator\.
 

@@ -2,6 +2,7 @@
 
 Amazon Lumberyard offers the following guides:
 + **[Amazon Lumberyard Getting Started Guide](https://docs.aws.amazon.com/lumberyard/latest/gettingstartedguide/)** – Get familiar with Lumberyard basics, such as navigating the editor, building terrain, and lighting a scene\. 
++ **[Amazon Lumberyard Tutorials](https://docs.aws.amazon.com/lumberyard/latest/tutorials/)** – Learn how to use Amazon Lumberyard with developer led step\-by\-step video tutorials\.
 + **[Amazon Lumberyard C\+\+ API Reference](https://docs.aws.amazon.com/lumberyard/latest/apireference/)** – Learn more about the fundamental C\+\+ API operations of the Lumberyard component entity system\. 
 + **[Amazon Lumberyard Release Notes](https://docs.aws.amazon.com/lumberyard/latest/releasenotes/)** – Learn more about improvements, highlights, and known issues for Lumberyard features and systems\.
 +  **[Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)** – Learn more about legacy features and tools for Lumberyard\. 

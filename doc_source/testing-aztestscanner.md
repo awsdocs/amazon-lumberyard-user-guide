@@ -13,11 +13,11 @@ Unit and integration tests are not included in Lumberyard builds by default as t
 To create test builds, use the [Waf build system](waf-intro.md) in the same way that you create regular builds\. The only difference is that you add `test` to the platform\. You can create a test build on Windows using one of the following examples:
 
 ```
-// Build with tests using debug configuration. Outputs to the \Bin64vc140.Debug.Test folder.
-lmbr_waf.bat build_win_x64_vs2015_debug_test -p all
+// Build with tests using debug configuration. Outputs to the \Bin64vc141.Debug.Test folder.
+lmbr_waf.bat build_win_x64_vs2017_debug_test -p all
 
-// Build with tests using profile configuration. Outputs to the \Bin64vc140.Test folder.
-lmbr_waf.bat build_win_x64_vs2015_profile_test -p all
+// Build with tests using profile configuration. Outputs to the \Bin64vc141.Test folder.
+lmbr_waf.bat build_win_x64_vs2017_profile_test -p all
 ```
 
 **Note**  
@@ -27,7 +27,7 @@ For more information on writing tests, see [Writing Tests for AzTest](testing-az
 
 ## Running Unit and Integration Test Builds<a name="testing-aztestscanner-running"></a>
 
-A completed test build includes the file `AzTestRunner.exe` in the `\Bin64vc140.Test` folder\. Although you can use this to run tests, we recommend that you use the test scanner that uses `AzTestRunner.exe` in an automated manner\.
+A completed test build includes the file `AzTestRunner.exe` in the `\Bin64vc141.Test` folder\. Although you can use this to run tests, we recommend that you use the test scanner that uses `AzTestRunner.exe` in an automated manner\.
 
 You have two ways to use the scanner:
 + Include the AZ test module in your Python path: `python -m aztest`\. 
@@ -37,7 +37,7 @@ The following example uses the `lmbr_test.cmd` scripts\. The scanner has several
 
 ```
 // Scan entire test build and run all found tests
-lmbr_test.cmd scan --dir Bin64vc140.Debug.Test
+lmbr_test.cmd scan --dir Bin64vc141.Debug.Test
 ```
 
 **Note**  
@@ -54,7 +54,7 @@ The scanner runs only unit tests by default\. This is because unit tests are des
 
 ```
 // Scan test build and run integration tests on CrySystem.dll
-lmbr_test.cmd scan --dir Bin64vc140.Debug.Test --only CrySystem.dll --integ
+lmbr_test.cmd scan --dir Bin64vc141.Debug.Test --only CrySystem.dll --integ
 ```
 
 **Note**  
@@ -83,17 +83,17 @@ The scanner also accepts additional parameters that are passed to the testing fr
 
 ```
 // Scan CrySystem.dll and shuffle the test order before running
-lmbr_test.cmd scan --dir Bin64vc140.Test --only CrySystem.dll --gtest_shuffle
+lmbr_test.cmd scan --dir Bin64vc141.Test --only CrySystem.dll --gtest_shuffle
 ```
 
 The scanner can also be called as a chained command using Waf\. This means that you can build tests and run them using a single command line\. The Waf command `run_tests` calls the scanner on the most recent build folder\. For example:
 
 ```
 // Build a debug test build and then run tests in it
-lmbr_waf.bat build_win_x64_vs2015_debug_test -p all run_tests
+lmbr_waf.bat build_win_x64_vs2017_debug_test -p all run_tests
 ```
 
-The `run_tests` command automatically points to the `\Bin64vc140.Debug.Test` folder to scan\. It also uses the `all` option for whitelisting\. The build step does not require the use of `run_tests`; it always matches the last build\. You can also send all of the scanner parameters through using `--test-params`:
+The `run_tests` command automatically points to the `\Bin64vc141.Debug.Test` folder to scan\. It also uses the `all` option for whitelisting\. The build step does not require the use of `run_tests`; it always matches the last build\. You can also send all of the scanner parameters through using `--test-params`:
 
 ```
 // Run tests on the last build with additional parameters (use quotes to capture as string)
@@ -103,7 +103,7 @@ lmbr_waf.bat run_tests --test-params="--no-timestamp"
 You can also use the `--target` flag to build and test just one module:
 
 ```
-lmbr_waf.bat build_win_x64_vs2015_debug_test -p all --target CrySystem run_tests
+lmbr_waf.bat build_win_x64_vs2017_debug_test -p all --target CrySystem run_tests
 ```
 
 ### Whitelisting and Blacklisting<a name="testing-aztestscanner-whitelisting-blacklisting"></a>
@@ -127,13 +127,13 @@ EditorPlugins\\.*
 To run the scanner using text files, use the following example:
 
 ```
-lmbr_test.cmd scan --dir Bin64vc140.Test --whitelist-file my_whitelist.txt --blacklist-file my_blacklist.txt
+lmbr_test.cmd scan --dir Bin64vc141.Test --whitelist-file my_whitelist.txt --blacklist-file my_blacklist.txt
 ```
 
 You can specify as many whitelists or blacklists as you need\. The patterns in each file are combined into one set\. For example:
 
 ```
-lmbr_test.cmd scan --dir Bin64vc140.Test --whitelist-file whitelist1.txt --whitelist-file whitelist2.txt
+lmbr_test.cmd scan --dir Bin64vc141.Test --whitelist-file whitelist1.txt --whitelist-file whitelist2.txt
 ```
 
 To set a default whitelist that is always included, create a text file called `lmbr_test_whitelist.txt`\. Place the text file in the root directory of the build \(where `lmbr_test.cmd` is\)\. The default blacklist is similarly called `lmbr_test_blacklist.txt`\. A default blacklist is provided with the build to capture known libraries that do not need to be scanned\.

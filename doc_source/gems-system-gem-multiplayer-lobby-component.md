@@ -11,11 +11,7 @@ In addition using the flow graph nodes to create a simple lobby, you can use the
 
 ## Supported Session Services<a name="gems-system-gem-multiplayer-lobby-component-supported-session-services"></a>
 
-The `MultiplayerLobbyComponent` currently supports the following session services:
-+ `LANSessionService`
-+ `PSNSessionService`
-+ `XBoneSessionService`
-+ `GameLiftSessionService`
+The `MultiplayerLobbyComponent` supports all of Lumberyard's session services, including `LANSessionService` and `GameLiftSessionService`\.
 
 ## Configuration Settings<a name="gems-system-gem-multiplayer-lobby-component-configuration-settings"></a>
 

@@ -92,7 +92,7 @@ Lumberyard recognizes names without an underscore \(\_\) as slot names\.
 
 1. In the **PhysX Collider** component, for **Shape**, choose **PhysicsAsset**\.
 
-1. [Export](physx-export-physx-mesh-asset.md) a `.pxmesh` file as a static object\. To make the mesh a static object, ensure that the **Export Mesh As Convex** check box in the **FBX Settings** tool is cleared\.  
+1. [Export](physx-export-physx-mesh-asset.md) a `.pxmesh` file as a static object\. To make the mesh a static object, ensure that the **Export Mesh As Convex** check box in the ****FBX Settings**** tool is cleared\.  
 ![\[Clear the Export Mesh as Convex option in the Fbx Settings tool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-7.png)
 
 1. Select the generated `.pxmesh` file for the collision\.

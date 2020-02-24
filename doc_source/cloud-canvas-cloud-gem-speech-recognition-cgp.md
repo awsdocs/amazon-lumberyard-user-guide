@@ -24,7 +24,7 @@ To use the Speech Recognition Cloud Gem Portal, you must meet the following requ
 + You are using a Lumberyard project that has the Speech Recognition Cloud Gem enabled\. In the Lumberyard Project Configurator, select the **CloudGemSamples** project as the default project\. If you want to use a different project, enable the **Cloud Gem Speech Recognition \[PREVIEW\]** and **Microphone** gems, and then [build your project](building-your-lumberyard-game-project.md)\.
 + You have used [Understanding Cloud Canvas Resource Manager](cloud-canvas-ui-rm-overview.md) to create a project stack and deployment\.
 + You have opened the Cloud Gem Portal\. In Lumberyard Editor, choose **AWS**, **Open Cloud Gem Portal**\.
-+ Starting in Lumberyard 1\.13, Cloud Gem Speech Recognition supports microphone input from Windows, iOS, MacOS, and Android operating systems\.
++ Starting in Lumberyard 1\.13, Cloud Gem Speech Recognition supports microphone input from Windows, iOS, macOS, and Android operating systems\.
 
 ## Opening the Speech Recognition Cloud Gem<a name="cloud-canvas-cloud-gem-speech-recognition-cgp-opening-the-speech-recognition-cloud-gem"></a>
 

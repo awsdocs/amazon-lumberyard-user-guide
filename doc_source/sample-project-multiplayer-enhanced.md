@@ -19,12 +19,11 @@ Follow these steps to build and run the sample\.
 1. Run the following command which builds everything in the profile, for your version of Visual Studio\.
 
    ```
-   lmbr_waf build_win_x64_vs2015_profile -p all
+   lmbr_waf build_win_x64_vs2017_profile -p all
    ```
 
 1. Run the `MultiplayerSampleLauncher.exe` file from your default bin directory\.
    + For Visual Studio 2017, use the `Bin64vc141.Dedicated` directory\.
-   + For Visual Studio 2015, use the `Bin64vc140.Dedicated` directory\.
 
 ## MultiplayerLobby<a name="sample-project-multiplayer-enhanced-multiplayerlobby"></a>
 
@@ -62,7 +61,7 @@ When destroyed, some asteroids spawn collectibles that award a short\-time power
 
 ## Game Controls<a name="sample-project-multiplayer-enhanced-controls"></a>
 
-The following tables list command controls for keyboards and Xbox controllers\.
+The following tables list controls for keyboards, controllers, and touch interfaces\.
 
 
 **Keyboard**  
@@ -75,7 +74,7 @@ The following tables list command controls for keyboards and Xbox controllers\.
 | Tab \(hold\) | Open the Player Stats window\. | 
 
 
-**Xbox Controller**  
+**Controller**  
 
 | Control | Action | 
 | --- | --- | 
@@ -85,17 +84,7 @@ The following tables list command controls for keyboards and Xbox controllers\.
 | Back button \(hold\) | Open the Player Stats window\. | 
 
 
-**PS4 Controller**  
-
-| Control | Action | 
-| --- | --- | 
-| Left joystick | Move the ship in absolute terms relative to the screen\. | 
-| Right joystick | Rotate the ship clockwise or counterclockwise\. | 
-| R2 | Fire the ship's weapon \(if applicable\)\. | 
-| Options button \(hold\) | Open the Player Stats window\. | 
-
-
-**Touch Controls**  
+**Touch interface**  
 
 | Control | Action | 
 | --- | --- | 
@@ -147,18 +136,17 @@ To create a dedicated server for the game, perform the following steps\.
 1. Enter the following command which builds everything in the profile, for your version of Visual Studio: 
 
    ```
-   lmbr_waf build_win_x64_vs2015_profile -p all
+   lmbr_waf build_win_x64_vs2017_profile -p all
    ```
 
 1. Enter the following command which builds `game_and_engine` in `profile_dedicated`, for your version of Visual Studio:
 
    ```
-   lmbr_waf build_win_x64_vs2015_profile_dedicated –p game_and_engine
+   lmbr_waf build_win_x64_vs2017_profile_dedicated –p game_and_engine
    ```
 
 1. Run the `MultiplayerSampleLauncher_Server.exe` file from your default bin directory\.
    + For Visual Studio 2017, use the `Bin64vc141.Dedicated` directory\.
-   + For Visual Studio 2015, use the `Bin64vc140.Dedicated` directory\.
 
 ## Supported Platforms<a name="sample-project-multiplayer-enhanced-supported-platforms"></a>
 
@@ -166,13 +154,13 @@ The Multiplayer sample is currently supported on a variety of client and server 
 
 **Clients**  
 The following playable client platforms are supported:
-+ Windows \(Visual Studio 2015, 2017\)
++ Windows \(Visual Studio 2017\)
 + Android
 + iOS
 
 **Dedicated Server Platforms**  
 The following dedicated server platforms are supported:
-+ Windows \(Visual Studio 2015, 2017\)
++ Windows \(Visual Studio 2017\)
 + Linux \(Ubuntu\)
 
 ## About Self\-Signed Certificates in the Multiplayer Sample<a name="sample-project-multiplayer-enhanced-self-signed-certificates"></a>

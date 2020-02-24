@@ -1,5 +1,12 @@
 # Configuring OSVR<a name="virtual-reality-configuring-osvr"></a>
 
+
+****  
+
+|  | 
+| --- |
+|  This topic references the deprecated OSVR Gem, which will be removed in a future version of Lumberyard\.  | 
+
 If you are using an OSVR HDK, use the following procedure to ensure that Lumberyard correctly detects and identifies your head\-mounted display \(HMD\)\.
 
 **To configure Lumberyard to use the OSVR head\-mounted display**

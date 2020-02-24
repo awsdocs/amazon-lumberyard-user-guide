@@ -7,13 +7,12 @@
 | --- |
 | This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
-`Lmbr.exe` is a command\-line tool for managing capabilities, game projects, and gems\.
+`Lmbr.exe` is a command\-line tool for managing capabilities, game projects, and Gems\.
 
 **To find the `Lmbr.exe` file**
 
 1. Navigate to one of the following directories:
    + For Visual Studio 2017: `lumberyard_version\dev\Bin64vc141`
-   + For Visual Studio 2015: `lumberyard_version\dev\Bin64vc140`
 
 1. In a command line prompt, enter the following command to see the commands that you can run\. 
 

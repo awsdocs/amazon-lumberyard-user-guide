@@ -65,7 +65,7 @@ The **Editors** toolbar allows you to access various editor tools:
 + **F** – Open the **Mannequin Editor** 
 + **G** – Open the **Flow Graph** editor \(legacy\)
 + **H** – Open the **AI Debugger**
-+ **I** – Open the **Track View** editor
++ **I** – Open the **Track View**
 + **J** – Open the **Audio Controls Editor**
 + **K** – Open the **Terrain Editor**
 + **L** – Open the **Terrain Texture Layers** editor

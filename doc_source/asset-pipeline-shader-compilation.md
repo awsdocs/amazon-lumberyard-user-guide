@@ -1,9 +1,9 @@
 # Compiling Shaders for Release Builds<a name="asset-pipeline-shader-compilation"></a>
 
-If you build game projects with Lumberyard, shaders for release builds should be [compiled \(packaged\)](game-build-release.md) into `.pak` files\. 
+If you build game projects with Lumberyard, shaders for release builds should be compiled and packaged into `.pak` files\. 
 
 **Mobile devices** – On mobile devices, runtime shader compilation is not supported for release builds\. Shaders will compile at run time only if you are running in profile mode or debug mode and can connect to a [remote shader compiler server](mat-shaders-custom-dev-remote-compiler.md)\. For more information, see the following:
-+ [Building Shaders for Android Games](android-shaders-building.md)
++ [Running the Remote Shader Compiler](building-your-android-game.md#running-the-shader-compiler-for-android)
 + [Creating a Release App](ios-creating-release-app.md)
 + [Running the Shader Compiler on Amazon EC2](ios-android-running-shader-compiler-amazon-EC2.md)
 

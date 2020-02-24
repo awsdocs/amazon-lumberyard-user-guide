@@ -86,10 +86,10 @@ To create a Amazon GameLift package, complete the following steps\.
    ```
 
    ```
-   cp -r Bin64vc140.Dedicated/* GameLiftPackageWindows/
+   cp -r Bin64vc141.Dedicated/* GameLiftPackageWindows/
    ```
 
-1. Upload your build and create a fleet from the Amazon GameLift console\. For more information, see [Uploading Your Game to Amazon GameLift](https://docs.aws.amazon.com/gamelift/latest/developerguide//gamelift-build-intro.html)\.
+1. Upload your build and create a fleet from the Amazon GameLift console\. For more information, see [Uploading Your Game to Amazon GameLift](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-intro.html)\.
 
 ## Secured Connection \(Not Amazon GameLift Specific\)<a name="network-multiplayer-gs-gamelift-secured-connection-non-gamelift"></a>
 

@@ -17,7 +17,7 @@ Because gems have all the required code for an AZ module, it's easier to create 
 
 1. First, create a gem by performing the following steps:
 
-   1. Go to your Lumberyard `\dev\Bin64\ `directory, then run `ProjectConfigurator.exe`\.
+   1. Open the Lumberyard Project Configurator, located at `lumberyard-version\dev\Bin64BuildPlatform\ProjectConfigurator.exe`\. For example, when using Visual Studio 2017 as your build platform, the Project Configurator is located at `lumberyard-version\dev\Bin64vc141\ProjectConfigurator.exe`\.
 
    1. Select your project \(the default is **SamplesProject**\)\.
 

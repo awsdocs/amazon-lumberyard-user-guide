@@ -30,7 +30,7 @@ With the **Sky Cloud** component, you can do the following:
 + Randomly generate common and volumetric clouds in controlled areas\.
 + Control where clouds generate by using entities with **[Box Shape](component-shapes.md)** components\.
 + Define the area in which clouds can move with a loop box\.
-+ Programmatically manage **Sky Cloud** component properties with the **Script Canvas** editor, Lua scripting, and the **Track Editor**\.
++ Programmatically manage **Sky Cloud** component properties with the **Script Canvas** editor, Lua scripting, and the ****Track Editor****\.
 + Create and use slices that include cloud components\.
 
 The following procedure demonstrates how to create a common or volumetric cloud with the **Sky Cloud** component\. After you create a cloud, you can customize its appearance and movement using the procedures in this chapter\.

@@ -17,4 +17,4 @@ This topic discusses how to set up the Flow Graph logic required to listen for k
 
 1. Connect the **output** of the **Game:start** node to the **Start** inputs of both **Twitch:ChatPlay:Keyword** nodes\.
 
-![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay-keyword-listen.png)

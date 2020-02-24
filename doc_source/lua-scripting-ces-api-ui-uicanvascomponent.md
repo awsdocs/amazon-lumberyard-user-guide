@@ -16,6 +16,16 @@ Returns the entity ID of the first UI element in this canvas that has the specif
 AZ::EntityId FindElementByName(const AZStd::string& name)
 ```
 
+### ForceEnterInputEventOnInteractable<a name="lua-scripting-ces-api-ui-uicanvascomponent-uicanvasbus-forceenterinputeventoninteractable"></a>
+
+Forces a specified interactive element to receive an Enter press/release navigation event\. This is useful for automated testing using script, such as simulating a button click\.
+
+**Syntax**
+
+```
+void ForceEnterInputEventOnInteractable(AZ::EntityId entityId)
+```
+
 ### ForceHoverInteractable<a name="lua-scripting-ces-api-ui-uicanvascomponent-uicanvasbus-forcehoverinteractable"></a>
 
 Forces a specified interactive element to receive the hover\.

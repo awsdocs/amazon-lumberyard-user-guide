@@ -66,7 +66,7 @@ Create a `.json` definition file for the third\-party library\. Using the direct
     "defines": [],
     "lib_required": "True",
     "platform": {
-        "win_x64_vs2015": {
+        "win_x64_vs2017": {
             "libpath": [
                 "lib/win32"
             ],
@@ -74,7 +74,6 @@ Create a `.json` definition file for the third\-party library\. Using the direct
                 "superlibrary.lib"
             ]
         },
-        "win_x64_vs2017": "@win_x64_vs2015",
         "darwin_x64": {
             "libpath": [
                 "lib/osx"
@@ -148,7 +147,7 @@ lmbr_waf configure
 
 After the `configure` command completes successfully, the configured values appear in the Waf variant cache files in the `BinTemp\c4che` directory\.
 
-The entries are similar to the following ones in the variant cache file for the Microsoft Visual Studio 2015 profile configuration `lumberyard_version\dev\BinTemp\c4che\win_x64_vs2015_profile_cache.py`\.
+The entries are similar to the following ones in the variant cache file for the Microsoft Visual Studio 2017 profile configuration `lumberyard_version\dev\BinTemp\c4che\win_x64_vs2017_profile_cache.py`\.
 
 ```
 ...

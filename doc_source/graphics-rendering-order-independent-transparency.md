@@ -41,9 +41,7 @@ OIT requires the following:
 
 1. With a text editor, open the `user_settings.options` file in the `lumberyard_version\dev\_WAF_` directory\.
 
-1. Under the `[Windows Options]` section, set `win_vs2015_winkit` to your version of the Windows 10 SDK \(for example, *10\.1\.17134\.12*\)\. 
-**Note**  
-If you are compiling for Visual Studio 2017, you must also set `win_vs2017` to your version of the Windows 10 SDK\.
+1. Under the `[Windows Options]` section, set `win_vs2017_winkit` to your version of the Windows 10 SDK \(for example, *10\.1\.17134\.12*\)\. 
 
 1. Build your game project\. For more information, see [Building Your Game Project](building-your-lumberyard-game-project.md)\.
 **Note**  

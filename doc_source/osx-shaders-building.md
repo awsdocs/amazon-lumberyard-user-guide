@@ -23,7 +23,7 @@ You can use a whitelist to specify the IP addresses that are allowed to connect 
 1. Enter the build command for your version of Visual Studio: 
 
    ```
-   lmbr_waf build_win_x64_vs2015_profile -p all --targets=CrySCompileServer
+   lmbr_waf build_win_x64_vs2017_profile -p all --targets=CrySCompileServer
    ```
 
 **To run the shader compiler on your PC**

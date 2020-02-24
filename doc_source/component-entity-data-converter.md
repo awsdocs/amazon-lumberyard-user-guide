@@ -28,10 +28,10 @@ The CryEntity Removal gem disables all legacy features in Lumberyard Editor\. Fo
 1. The dialog box shows the number of legacy entities in your level\. Choose **Convert Entities**\. 
 
    A progress bar appears that shows the number of entities that the Legacy Converter is processing\. The conversion takes several seconds to complete\.  
-![\[The conversion log shows which entities were converted and which were not in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/legacy-converter-entities-detected.PNG)
+![\[The conversion log shows which entities were converted and which were not in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/legacy-converter-entities-detected.png)
 
 1. After the conversion completes, the dialog box shows the number of converted and unconverted entities\. See the **Status** and **Message** columns for more information\. Choose **OK**\.  
-![\[The conversion log shows that entities converted and which did not in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/legacy-converter-conversion.PNG)
+![\[The conversion log shows that entities converted and which did not in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/legacy-converter-conversion.png)
 **Note**  
 If the Legacy Converter can't convert an entity, a **Conversion Error** dialog box appears that shows the number of entities that were not converted\. If the CryEntity Removal gem is enabled, unconverted entities remain in your level but cannot be edited\. For more information, choose **View Log**\. You can also choose **Export Log** to save the conversion log as a `.csv` file\.
 

@@ -4,7 +4,7 @@ You can add an **Event** node to your sequence to trigger and send values to Scr
 
 **To add an Event node**
 
-1. In the **Track View** editor, select or create a sequence\. 
+1. In the **Track View**, select or create a sequence\. 
 
 1. In the node browser, right\-click and choose **Add Event Node**\.
 

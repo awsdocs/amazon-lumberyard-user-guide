@@ -11,7 +11,7 @@ You can use Lumberyard to develop games for the following platforms:
 + Xbox One
 
  Some platforms have requirements beyond the scope of this documentation\. 
-+ For console support, see [Developing Games for Xbox One](http://www.xbox.com/en-US/developers) and [Become a Registered Developer](https://www.playstation.com/en-us/develop/) \(for PlayStation\)\.
++ For console support, see [Developing Games for Xbox One](http://www.xbox.com/en-US/developers) and [Become a Registered Developer for PlayStation](https://www.playstation.com/en-us/develop/)\.
 + For mobile devices, see [Creating Android and iOS Games](mobile-support-intro.md)\.
 + For macOS, see [Creating macOS Games](osx-intro.md)\.
 

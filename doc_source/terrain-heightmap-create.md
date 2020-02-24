@@ -6,17 +6,28 @@ Meters per texel is the distance in meters between two vertices on the grid\. So
 
 The following images show a terrain heightmap and the corresponding generated terrain\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-heightmap-create.png)
+**Example Terrain Heightmap**  
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-heightmap-create-2.png)
+![\[Create a terrain heightmap in Lumberyard\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-heightmap-create.png)
 
-**To create a new heightmap using Terrain Editor**
+**Example Generated Terrain**  
+
+![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-heightmap-create-2.png)
+
+If you want to create the highest quality terrain heightmap for a 2K world, use the following settings:
++ 2K heightmap
++ 2K splatmaps
+
+  As the splat weighting is applied and stored in the terrain mesh, the splatmaps should match the terrain heightmap resolution\.
++ 4K – 16K megaterrain color map
+
+**To create a heightmap using the Terrain Editor**
 
 1. In Lumberyard Editor, click **File**, **New\.**
 
 1. In **New Level**, enter a file name and directory location for the heightmap file\.
 
-1. Select the desired **Heightmap Resolution** and **Meters per Texel** values, and then click **OK**\.
+1. Select the desired **Heightmap Resolution** and **Meters per Texel** values and click **OK**\.
 
 1. In the editor menu, click **Game**, **Terrain**, **Edit Terrain**\.
 

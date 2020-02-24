@@ -6,7 +6,7 @@ If you add a **Code & Assets** gem, you must [build your project](building-your-
 
 **To create a gem with the command line**
 
-1. Open a command\-line prompt and navigate to the `lumberyard_version\dev\Bin64vc140_or_Bin64vc141` directory\.
+1. Open a command\-line prompt and navigate to the `lumberyard_version\dev\Bin64vc141` directory\.
 
 1. Enter one of the following commands:
    + Create a **Code & Asset** gem if your gem contains assets as well as code that performs certain functions upon the assets\.

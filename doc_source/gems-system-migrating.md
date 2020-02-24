@@ -1,8 +1,8 @@
 # Migrating Your Gems<a name="gems-system-migrating"></a>
 
-Beginning in Lumberyard version 1\.5, gems with code should be built as [Using AZ Modules to Initialize Gems](az-modules-intro.md)\. Gems built as AZ modules are better integrated with the Lumberyard's new [component entity system](component-intro.md)\. As of Lumberyard 1\.5, all gems that ship with Lumberyard have been migrated to be AZ modules\.
+Beginning in Lumberyard version 1\.5, Gems with code should be built as [Using AZ Modules to Initialize Gems](az-modules-intro.md)\. Gems built as AZ modules are better integrated with the Lumberyard's new [component entity system](component-intro.md)\. As of Lumberyard 1\.5, all Gems that ship with Lumberyard have been migrated to be AZ modules\.
 
-Legacy gems built with Lumberyard 1\.4 or earlier are still supported, but to avoid issues, we strongly recommend that you migrate them\. If your custom gems make use of the component entity system, you should migrate your gems immediately\.
+Legacy Gems built with Lumberyard 1\.4 or earlier are still supported, but to avoid issues, we strongly recommend that you migrate them\. If your custom gems make use of the component entity system, you should migrate your gems immediately\.
 
 To migrate a gem, you modify the initialization code and change the gem's public API to use [Working with the Event Bus \(EBus\) System](ebus-intro.md)\. To accomplish this, you must:
 + A\. Rename your gem files

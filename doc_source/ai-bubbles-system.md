@@ -7,7 +7,7 @@ The AI Bubbles system collects AI error messages for level designers to address\
 Message include a set of information \(agent name, position, etc\.\) that help the designer to understand that something is wrong in the normal flow\. Message notifications can be displayed in any of the following ways:
 + Speech bubble over the AI agent
 + Error message in the console   
-![\[Error message in the console\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Error message in the console\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Error message in the console\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Error message in the console\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ai_bubbles_console_error_message.png)
 + Blocking Windows message box 
 
 ## Specifying Notification Display Types<a name="ai-bubbles-system-message-define"></a>

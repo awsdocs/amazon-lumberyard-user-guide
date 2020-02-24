@@ -4,7 +4,7 @@ You can enable gems using the Project Configurator or from a command line\. To e
 
 **To enable gems with the Project Configurator**
 
-1. Navigate to the `lumberyard_version\dev\Tools\LmbrSetup\Win\` directory and then start `ProjectConfigurator`\. 
+1. Open the Lumberyard Project Configurator, located at `lumberyard-version\dev\Bin64BuildPlatform\ProjectConfigurator.exe`\. For example, when using Visual Studio 2017 as your build platform, the Project Configurator is located at `lumberyard-version\dev\Bin64vc141\ProjectConfigurator.exe`\.
 
 1. In the Project Configurator, select your active game project and choose **Set as default**\.
 

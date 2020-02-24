@@ -2,9 +2,9 @@
 
 You use the **Color Correction** node to change the CMYK, brightness, contrast, saturation, and hue in a scene\. Most color correction properties don't update smoothly\. For this reason, you should hide stronger color correction changes should by cuts or fading between scenes\.
 
-**To add a Color Correction node in the **Track View** editor**
+**To add a Color Correction node in the **Track View****
 
-1. In the **Track View** editor, right\-click either the sequence \(top node\) or the **Director** node in the tree as applicable, and then click **Add Color Correction Node**\.
+1. In the **Track View**, right\-click either the sequence \(top node\) or the **Director** node in the tree as applicable, and then click **Add Color Correction Node**\.
 
 1. Click the applicable key listed under the **ColorCorrection** node\.
 

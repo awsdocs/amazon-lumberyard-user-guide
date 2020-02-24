@@ -10,7 +10,7 @@ For more information, see [Setting Effect Strength Based on Camera Distance](eff
 + [Inputs](#apply-effect-group-at-position-node-input)
 + [Outputs](#apply-effect-group-at-position-node-output)
 
-![\[applyeffectgroupatposition, applyefffectgroupatpositionnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-apply-effect-group-at-position-node.PNG)
+![\[applyeffectgroupatposition, applyefffectgroupatpositionnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-apply-effect-group-at-position-node.png)
 
 ## Inputs<a name="apply-effect-group-at-position-node-input"></a>
 

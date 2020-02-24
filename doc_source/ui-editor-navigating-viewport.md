@@ -14,7 +14,7 @@ Do one of the following:
 + Menu – Click **View**, then click **Zoom In** or **Zoom Out**\.
 + Toolbar – In the **Zoom** box, enter a percentage value or click the up and down arrows\.
 
-**To pan the view on a UI canvas**
+**To pan the view on a UI canvas while dragging the canvas with the left mouse button**
 + With the mouse on the UI canvas, drag using the middle mouse button\.
 + Press and hold the space bar while dragging the canvas\.
 

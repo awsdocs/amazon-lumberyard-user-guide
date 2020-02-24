@@ -4,7 +4,7 @@ Configures the depth of field \(DOF\) effect, which gives you control over dista
 
 To disable the effect, see [Disable Depth of Field](disable-depth-of-field-node.md)\.
 
-You can also apply depth of field in the **Track View** editor\. See [Adding a Depth of Field Node](cinematics-track-view-nodes-dof.md)\.
+You can also apply depth of field in the **Track View**\. See [Adding a Depth of Field Node](cinematics-track-view-nodes-dof.md)\.
 
 **Contents**
 + [Inputs](#enable-depth-of-field-note-input)

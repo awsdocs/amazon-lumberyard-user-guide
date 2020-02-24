@@ -19,7 +19,7 @@ You may need to consider the various physical input devices when you design your
 
 You can use the **TouchEvent** node \(located under **Input**, **Touch**\) in the Flow Graph Editor to script touch\-specific input\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/input-touch-touchevent-fg-node.png)
 
 You can also script touch input using more advanced flow nodes: 
 + MultiTouchCoords – Outputs touch events from the specified ID \(finger\)
@@ -39,7 +39,7 @@ Lumberyard provides a Gestures Gem \(in the Project Configurator\) that allows y
 + Pinch \(multi\-touch\)
 + Rotate \(multi\-touch\)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/input-gestures-swipe-fg-node.png)
 
 Gestures that require only a single touch to be recognized \(Tap, Drag, Hold, and Swipe\) function the same when using mouse input on PC\. Multi\-touch gestures \(Pinch and Rotate\) can only be recognized through multiple, simultaneous touches\.
 
@@ -51,13 +51,13 @@ You can use a range of MotionSensor nodes in the Flow Graph Editor to return mot
 + Magnetic Field – Raw, unbiased, or magnetic north
 + Orientation – Absolute or difference from the previous reading
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/input-motionsensor-fg-node.png)
 
 ## Game Logic<a name="mobile-design-considerations-game-logic"></a>
 
 You can use the `CheckPlatform` node in the Flow Graph Editor to modify your game logic by branching your logic based on the current platform\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game-checkplatform-fg-node.png)
 
 You can also use the `AZ_PLATFORM_*` \#defines in C\+\+ to explicitly include or exclude code for compilation based on specific platforms\. Or you can include entire files for compilation for a specific platform by listing the files in a separate `.waf_files` file\.
 
@@ -77,12 +77,12 @@ Lumberyard provides a Process Life Management Gem \(in the Project Configurator\
 
 | Lumberyard Application Lifecycle Events | [iOS](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html) | [Android](http://developer.android.com/reference/android/app/Activity.html#ActivityLifecycle) | 
 | --- | --- | --- | 
-| OnApplicationConstrained | [applicationWillResignActive](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/applicationWillResignActive:) | [onPause\(\)](http://developer.android.com/reference/android/app/Activity.html#onPause()) | 
-| OnApplicationUnconstrained | [applicationDidBecomeActive](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/applicationDidBecomeActive:) | [onResume\(\)](http://developer.android.com/reference/android/app/Activity.html#onStart()) | 
-| OnApplicationSuspended | [applicationDidEnterBackground](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/applicationDidEnterBackground:) | [onPause\(\)](http://developer.android.com/reference/android/app/Activity.html#onPause()) | 
-| OnApplicationResumed | [applicationWillEnterForeground](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/applicationWillEnterForeground:) | [onResume\(\)](http://developer.android.com/reference/android/app/Activity.html#onStart()) | 
-| OnMobileApplicationWillTerminate | [applicationWillTerminate](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/applicationWillTerminate:) | [onDestroy\(\)](http://developer.android.com/reference/android/app/Activity.html#onDestroy()) | 
-| OnMobileApplicationLowMemoryWarning | [applicationDidReceiveMemoryWarning](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html#//apple_ref/occ/intfm/UIApplicationDelegate/applicationDidReceiveMemoryWarning:) | [onLowMemory\(\)](http://developer.android.com/reference/android/content/ComponentCallbacks.html#onLowMemory()) | 
+| OnApplicationConstrained | [applicationWillResignActive](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622950-applicationwillresignactive) | [onPause\(\)](http://developer.android.com/reference/android/app/Activity.html#onPause()) | 
+| OnApplicationUnconstrained | [applicationDidBecomeActive](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622956-applicationdidbecomeactive) | [onResume\(\)](http://developer.android.com/reference/android/app/Activity.html#onStart()) | 
+| OnApplicationSuspended | [applicationDidEnterBackground](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622997-applicationdidenterbackground) | [onPause\(\)](http://developer.android.com/reference/android/app/Activity.html#onPause()) | 
+| OnApplicationResumed | [applicationWillEnterForeground](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623076-applicationwillenterforeground) | [onResume\(\)](http://developer.android.com/reference/android/app/Activity.html#onStart()) | 
+| OnMobileApplicationWillTerminate | [applicationWillTerminate](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623111-applicationwillterminate) | [onDestroy\(\)](http://developer.android.com/reference/android/app/Activity.html#onDestroy()) | 
+| OnMobileApplicationLowMemoryWarning | [applicationDidReceiveMemoryWarning](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623063-applicationdidreceivememorywarni) | [onLowMemory\(\)](http://developer.android.com/reference/android/content/ComponentCallbacks.html#onLowMemory()) | 
 
 **To receive process lifecycle events in your game**
 

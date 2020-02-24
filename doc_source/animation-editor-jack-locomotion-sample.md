@@ -19,7 +19,7 @@ Once the sample level is open, in the **Perspective** viewport in Lumberyard Edi
 + To aim, hold the left mouse button\.
 + To exit game mode, press **Esc**\.
 
-You can also use an Xbox game controller connected to your computer:
+You can also use a controller connected to your computer:
 + To control the movement direction, use the left joystick\.
 + To control the camera navigation around the character, use the right joystick\.
 + To toggle the character aim on and off, press the right trigger\.
