@@ -99,6 +99,8 @@ Build the shader assets and auxiliary data for your game and add them to your re
    Build_AssetBundler_AuxiliaryContent_PC.bat --game <AssetBundlingDemo>
    ```
 
+   [Download](https://d1a5h15s88ekwk.cloudfront.net/1.22.0.0/scripts/Build_AssetBundler_AuxiliaryContent_PC.bat) the `Build_AssetBundler_AuxiliaryContent_PC.bat` if it is not available\.
+   
    Auxiliary data is generated in the directory `{Lumberyard Install Root Directory here}\dev\<AssetBundlingDemo>_pc_paks`\.
 
 1. Copy the contents of `<AssetBundlingDemo>_pc_paks` into the root of the game content subfolder of the release bundle that you created in the previous section\.
