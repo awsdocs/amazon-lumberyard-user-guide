@@ -21,7 +21,7 @@ Callback that notifies the title when a new member joins the game session\.
 Callback that notifies the title that a member is leaving the game session\.   
 The member pointer is not valid after the callback returns\.
 
-**`virtual void OnMemberKicked(GridSession* session, GridMember* member)`**  
+**`virtual void OnMemberKicked(GridSession* session, GridMember* member, AZ::u8 kickreason)`**  
 Callback that occurs when a host decides to kick a member\. An `OnMemberLeaving` event is triggered when the actual member leaves the session\.
 
 **`virtual void OnSessionCreated(GridSession* session)`**  
