@@ -82,7 +82,7 @@ local InLavaBehavior ={
 
 function InLavaBehavior:OnActivate()
     local gameplayId = GameplayNotificationId(self.entityId, "InLava")
-    self.gameplayBus = GameplayNotificationBus.CreateHandler(self, inputBusId)
+    self.gameplayBus = GameplayNotificationBus.Connect(self, inputBusId)
 end
 ```
 

@@ -20,7 +20,7 @@ local SpawnerScriptSample = { }
 function SpawnerScriptSample:OnActivate()
     -- Register our handlers to receive notification from the spawner attached to this entity.
     if( self.spawnerNotiBusHandler == nil ) then
-        self.spawnerNotiBusHandler = SpawnerComponentNotificationBus.CreateHandler(self, self.entityId)
+        self.spawnerNotiBusHandler = SpawnerComponentNotificationBus.Connect(self, self.entityId)
     end
 end
 
@@ -63,7 +63,7 @@ The following example shows how to register with the tick bus\.
 local TestScript = { }
 function TestScript:OnActivate()
     -- Inform the tick bus that you want to receive event notifications
-    self.tickBusHandler = TickBus.CreateHandler(self)
+    self.tickBusHandler = TickBus.Connect(self)
     self.tickBusHandler:Connect()
 end
 
@@ -78,13 +78,6 @@ function TestScript:OnDeactivate()
 end
 
 return TestScript
-```
-
-**Note**  
-Instead of calling `CreateHandler` and then calling `Connect` on the handler, you can use the Lua shortcut function `TickBus.Connect`\. The `Connect` function uses the following syntax to create a handler and automatically connect the handler to the bus\.   
-
-```
-handler = TickBus.Connect(handlerTable[, connectionId])
 ```
 
 ## Sending Events to a Component<a name="lua-scripting-ces-sending-events-to-a-component"></a>

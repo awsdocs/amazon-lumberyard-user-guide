@@ -4,6 +4,8 @@ Generate the auxiliary data, and move that data into your release build bundle d
 
 1. Open a command prompt\. Run the following batch file to generate the auxiliary data that you need to finish preparing your bundle: `Build_AssetBundler_AuxiliaryContent_PC.bat --game StarterGame`
 
+   [Download](https://d1a5h15s88ekwk.cloudfront.net/1.22.0.0/scripts/Build_AssetBundler_AuxiliaryContent_PC.bat) the `Build_AssetBundler_AuxiliaryContent_PC.bat` if it is not available\.
+
    Running this file places the auxiliary data into a directory called `startergame_pc_paks` under `{Lumberyard Install Root Directory here}\dev`\.
 
 1. Copy the contents of `startergame_pc_paks` into your `startergame` release build subdirectory\.   
