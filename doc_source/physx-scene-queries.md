@@ -26,9 +26,9 @@ To perform a raycast query, use the `WorldRequestBus`\.
 **Example Raycast Closest**  
 
 ```
-Physics::RaycastRequest request;
-Physics::RaycastHit result;
-WorldRequestBus::BroadcastResult(result, &WorldRequests::RayCast, request);
+Physics::RayCastRequest request;
+Physics::RayCastHit result;
+Physics::WorldRequestBus::BroadcastResult(result, &Physics::WorldRequests::RayCast, request);
 ```
 
 You can also retrieve objects that intersect with the ray by using the multiple version\.
@@ -36,9 +36,9 @@ You can also retrieve objects that intersect with the ray by using the multiple 
 **Example Raycast Multiple**  
 
 ```
-Physics::RaycastRequest request;
-vector<Physics::RaycastHit> results;
-WorldRequestBus::BroadcastResult(result, &WorldRequests::RayCastMultiple, request);
+Physics::RayCastRequest request;
+vector<Physics::RayCastHit> results;
+Physics::WorldRequestBus::BroadcastResult(result, &Physics::WorldRequests::RayCastMultiple, request);
 ```
 
 **Note**  
@@ -84,9 +84,9 @@ To perform a shapecast query, use the `WorldRequestBus`\.
 **Example Shapecast Closest**  
 
 ```
-Physics::ShapecastRequest request;
-Physics::RaycastHit result;
-WorldRequestBus::BroadcastResult(result, &WorldRequests::ShapeCast, request);
+Physics::ShapeCastRequest request;
+Physics::RayCastHit result;
+Physics::WorldRequestBus::BroadcastResult(result, &Physics::WorldRequests::ShapeCast, request);
 ```
 
 Similar to raycasting, there is a multiple version for retrieving all objects that intersect with the volume\.
@@ -94,8 +94,8 @@ Similar to raycasting, there is a multiple version for retrieving all objects th
 **Example Shapecast Multiple**  
 
 ```
-Physics::ShapecastRequest request;
-vector<Physics::RaycastHit> results;
+Physics::ShapeCastRequest request;
+vector<Physics::RayCastHit> results;
 WorldRequestBus::BroadcastResult(results, &WorldRequests::ShapeCastMultiple, request);
 ```
 
@@ -129,7 +129,7 @@ The overlap query is a sphere shape that intersects with both entities\.
 ```
 Physics::OverlapRequest request;
 vector<Physics::OverlapHit> results;
-WorldRequestBus::BroadcastResult(results, &WorldRequests::Overlap, request);
+Physics::WorldRequestBus::BroadcastResult(results, &Physics::WorldRequests::Overlap, request);
 ```
 
 **Note**  
