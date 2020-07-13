@@ -43,6 +43,8 @@ After you generate asset bundles to deliver with your game, switch your release 
 
    1. Create a customized batch file\. You can use the file `Build_AssetBundler_AuxiliaryContent_PC.bat` as a template and update the operating system\. You also must update the reference to the RC config file to point to the file that you created in the previous step\.
 
+      [Download](https://d1a5h15s88ekwk.cloudfront.net/1.22.0.0/scripts/Build_AssetBundler_AuxiliaryContent_PC.bat) the `Build_AssetBundler_AuxiliaryContent_PC.bat` if it is not available\.
+
    1. Run the customized batch file to generate auxiliary data and the asset bundles\.
 
    1. Add the new bundle files to the directory `gamename_platform_paks/gamename`\. You can do this manually or create custom scripts based on the samples described in the next section\.
