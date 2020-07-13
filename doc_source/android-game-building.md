@@ -20,10 +20,8 @@ If you change your default project, you must ensure the new default project is s
 
 1. In Lumberyard Editor, choose **File**, **Project Settings**, **Deployment Tool**\.
 
-1. In the **Base Options**, for **Target Platform**, choose one of the following:
-   + **Android ARMv7** – Targets 32\-bit Android devices\. This option enables the greatest range of compatibility\. Choose this option if you are unsure of the device type\.
-   + **Android ARMv8** – Targets 64\-bit Android devices\. This option targets newer Android devices and typically offers a performance increase over ARMv7\. 
-
+1. In the **Base Options**, for **Target Platform**, choose **Android ARMv8**
+   
 1. For **Build Game**, select this option if your game project meets one of the following:
    + You haven't built your game project for the Android target that you specified\.
    + There are code changes to your game project since the last build\.
@@ -102,36 +100,36 @@ You can build your game for Android using Clang\. Building for Android \(ARM\) i
    + On a PC, run the following command: 
 
      ```
-     lmbr_waf.bat build_android_armv7_clang_debug -p all
+     lmbr_waf.bat build_android_armv8_clang_debug -p all
      ```
    + On a Mac, run the following command: 
 
      ```
-     sh lmbr_waf.sh build_android_armv7_clang_debug
+     sh lmbr_waf.sh build_android_armv8_clang_debug
      ```
 
 **To build profile**
    + On a PC, run the following command: 
 
      ```
-     lmbr_waf.bat build_android_armv7_clang_profile -p all
+     lmbr_waf.bat build_android_armv8_clang_profile -p all
      ```
    + On a Mac, run the following command: 
 
      ```
-     sh lmbr_waf.sh build_android_armv7_clang_profile -p all
+     sh lmbr_waf.sh build_android_armv8_clang_profile -p all
      ```
 
 **To build release**
    + On a PC, run the following command: 
 
      ```
-     lmbr_waf.bat build_android_armv7_clang_release -p all
+     lmbr_waf.bat build_android_armv8_clang_release -p all
      ```
    + On a Mac, run the following command: 
 
      ```
-     sh lmbr_waf.sh build_android_armv7_clang_release -p all
+     sh lmbr_waf.sh build_android_armv8_clang_release -p all
      ```
 
 1. Debug your application\. For information, see [Android Debugging](android-debugging.md)\.
