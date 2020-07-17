@@ -8,6 +8,6 @@ Gravity bending is controlled by adjusting the [shader parameter](shader-ref-fur
 
 For example, the following image shows a fur ball with a very low gravity applied\. The second image shows the same fur ball with a higher maximum gravity applied\.
 
-![\[Example fur sphere with high maximum gravity applied.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shader-ref-fur-11.png)
+![\[Example fur sphere with high maximum gravity applied.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shaders/shader-ref-fur-11.png)
 
-![\[Example fur object with low gravity applied.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shader-ref-fur-12.png)
+![\[Example fur object with low gravity applied.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shaders/shader-ref-fur-12.png)

@@ -1,13 +1,6 @@
 # Virtual Reality Samples Project<a name="sample-project-virtual-reality"></a>
 
-
-****  
-
-|  | 
-| --- |
-|  This topic references the deprecated OSVR Gem, which will be removed in a future version of Lumberyard\.  | 
-
-The Virtual Reality Samples Project is a template that you can use to build virtual reality \(VR\) applications for any supported device\. The sample is configured with the base set of gems \(HMD Framework, Oculus, OpenVR, and OSVR\) that you need for VR and demonstrates the following essential VR features:
+The Virtual Reality Samples Project is a template that you can use to build virtual reality \(VR\) applications for any supported device\. The sample is configured with the base set of gems \(HMD Framework, Oculus, and OpenVR\) that you need for VR and demonstrates the following essential VR features:
 + Room\-scale VR setup
 + Tracked controller input system
 + Spatialized audio playback
@@ -35,10 +28,11 @@ The video playback on the TV in the **VR\_TVRoom\_Sample** level must be enabled
 
 1. Close Lumberyard Setup Assistant\.
 
-1. After completing video playback setup, you must also [build](building-your-lumberyard-game-project.md) the virtual reality project\.
+1. After completing video playback setup, you must also [build](game-build-intro.md) the virtual reality project\.
 
 1. Start `Editor.exe` from one of the following directories:
    + For Visual Studio 2017, use the `lumberyard_version\dev\Bin64vc141` directory\.
+   + For Visual Studio 2019, use the `lumberyard_version\dev\Bin64vc142` directory\.
 
 **Topics**
 + [VR Islands Level](sample-level-vr-islands.md)

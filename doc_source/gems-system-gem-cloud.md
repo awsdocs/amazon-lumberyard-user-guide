@@ -2,7 +2,7 @@
 
 The Sky Clouds gem creates realistic and detailed cloud and weather effects in your game levels\. You can create clouds with either simple, sprite\-based shading, or more complex, voxelized 3D volume shading\. 
 
-To enable the Sky Clouds gem for your project, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\. 
+To enable the Sky Clouds gem for your project, see [Add modular features and assets with Gems](gems-system-gems.md)\. 
 
 For more information about creating and placing clouds in your level, see [Sky Cloud](component-sky-cloud.md)\. 
 

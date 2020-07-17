@@ -169,7 +169,7 @@ Sets how the element and all of its child elements are scaled to allow for the d
 **Syntax**
 
 ```
-void SetScaleToDeviceMode(bool scaleToDeviceMode)
+void SetScaleToDeviceMode(ScaleToDeviceMode scaleToDeviceMode)
 ```
 
 Following are possible values for `scaleToDeviceMode`\.

@@ -23,16 +23,16 @@ Returns the auto position mode\.
 **Syntax**
 
 ```
-eUiTooltipDisplayAutoPositionMode GetAutoPositionMode()
+AutoPositionMode GetAutoPositionMode()
 ```
 
-Following are possible values for `eUiTooltipDisplayAutoPositionMode`\.
+Following are possible values for `AutoPositionMode`\.
 
 ```
-enum eUiTooltipDisplayAutoPositionMode
+enum AutoPositionMode
     {
-        eUiTooltipDisplayAutoPositionMode_OffsetFromMouse,
-        eUiTooltipDisplayAutoPositionMode_OffsetFromElement
+        OffsetFromMouse,
+        OffsetFromElement
     };
 ```
 
@@ -48,7 +48,7 @@ bool GetAutoSize()
 
 ### GetDelayTime<a name="lua-scripting-ces-api-ui-uitooltipdisplaycomponent-uitooltipdisplaybus-getdelaytime"></a>
 
-Returns the amount of time to wait before showing the tooltip display element after hover start\.
+Returns the amount of time to wait before showing the tooltip display element after the trigger condition has occurred\.
 
 **Syntax**
 
@@ -86,6 +86,29 @@ Returns the entity ID of the text element that is used for resizing\.
 AZ::EntityId GetTextEntity()
 ```
 
+### GetTriggerMode<a name="lua-scripting-ces-api-ui-uitooltipdisplaycomponent-uitooltipdisplaybus-gettriggermode"></a>
+
+Returns the trigger mode describing the condition under which the tooltip will be displayed\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+TriggerMode GetTriggerMode()
+```
+
+Following are possible values for `TriggerMode`\.
+
+```
+enum TriggerMode
+    {
+        OnHover,
+        OnPress,
+        OnClick
+    };
+```
+
 ### SetAutoPosition<a name="lua-scripting-ces-api-ui-uitooltipdisplaycomponent-uitooltipdisplaybus-setautoposition"></a>
 
 Sets whether the tooltip display element is auto positioned\.
@@ -103,10 +126,18 @@ Sets the auto position mode\.
 **Syntax**
 
 ```
-void SetAutoPositionMode(eUiTooltipDisplayAutoPositionMode autoPositionMode)
+void SetAutoPositionMode(AutoPositionMode autoPositionMode)
 ```
 
-For possible values for `eUiTooltipDisplayAutoPositionMode`, see [GetAutoPositionMode](#lua-scripting-ces-api-ui-uitooltipdisplaycomponent-uitooltipdisplaybus-getautopositionmode)\.
+Following are possible values for `AutoPositionMode`\.
+
+```
+enum AutoPositionMode
+    {
+        OffsetFromMouse,
+        OffsetFromElement
+    };
+```
 
 ### SetAutoSize<a name="lua-scripting-ces-api-ui-uitooltipdisplaycomponent-uitooltipdisplaybus-setautosize"></a>
 
@@ -120,7 +151,7 @@ void SetAutoSize(bool autoSize)
 
 ### SetDelayTime<a name="lua-scripting-ces-api-ui-uitooltipdisplaycomponent-uitooltipdisplaybus-setdelaytime"></a>
 
-Sets the amount of time to wait before showing the tooltip display element after hover start\.
+Sets the amount of time to wait before showing the tooltip display element after the trigger condition has occurred\.
 
 **Syntax**
 
@@ -156,4 +187,27 @@ Sets the entity ID of the text element that is used for resizing\. The text elem
 
 ```
 void SetTextEntity(AZ::EntityId textEntity)
+```
+
+### SetTriggerMode<a name="lua-scripting-ces-api-ui-uitooltipdisplaycomponent-uitooltipdisplaybus-settriggermode"></a>
+
+Sets the trigger condition for displaying the tooltip after the set amount of delay time has elapsed\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+void SetTriggerMode(TriggerMode triggerMode)
+```
+
+Following are possible values for `TriggerMode`\.
+
+```
+enum TriggerMode
+    {
+        OnHover,
+        OnPress,
+        OnClick
+    };
 ```

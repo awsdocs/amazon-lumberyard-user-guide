@@ -1,16 +1,12 @@
-# Creating Lumberyard Executables for Linux<a name="linux-intro"></a>
-
+# Creating Lumberyard dedicated servers for Linux<a name="linux-intro"></a>
 
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Lumberyard supports compiling a Windows client for a multiplayer project and connecting to a Linux dedicated server\. You must do the following for the Windows client to work properly on a Linux dedicated server:
 + [Compile the assets on a Windows computer](linux-compile-assets-on-windows.md)
 + [Compile the server executable for use on a Linux computer](linux-build-lumberyard-executable.md)
-+ [Compile a Windows client to use to connect to the Linux server](building-your-lumberyard-game-project.md)
++ [Compile a Windows client to use to connect to the Linux server](game-build-intro.md)
 
 Once compiled, you can deploy assets to either a Linux server or Windows client\.
 

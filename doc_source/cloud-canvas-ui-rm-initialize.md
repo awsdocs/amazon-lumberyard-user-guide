@@ -2,7 +2,7 @@
 
 When you perform an operation that requires an AWS account, and no account has been associated with your Lumberyard project, the **Initialize Cloud Canvas Resource Manager** dialog prompts you for the required information\. 
 
-![\[Initialize Cloud Canvas Resource Manager\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-ui-rm-initialize.png)
+![\[Initialize Cloud Canvas Resource Manager\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-canvas-ui-rm-initialize.png)
 
 **To initialize **Cloud Canvas Resource Manager****
 

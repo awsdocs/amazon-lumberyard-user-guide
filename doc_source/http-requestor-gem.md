@@ -1,6 +1,6 @@
 # HttpRequestor Gem<a name="http-requestor-gem"></a>
 
-You can use the HttpRequestor gem to make asynchronous HTTP/HTTPS requests and return data through a user\-provided call back function\. This gem uses the EBus for communication and provides all requests asynchronously\. For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+You can use the HttpRequestor gem to make asynchronous HTTP/HTTPS requests and return data through a user\-provided call back function\. This gem uses the EBus for communication and provides all requests asynchronously\. For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **Note**  
 This feature is supported only on Windows and replaces `CryAction::HttpRequest`\.

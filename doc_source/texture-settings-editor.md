@@ -1,8 +1,8 @@
-# **Texture Settings Editor**<a name="texture-settings-editor"></a>
+# Texture Settings Editor<a name="texture-settings-editor"></a>
 
-You can use the **Texture Settings Editor** to edit the texture settings for individual images\. This is useful if you are customizing your images for different platforms, such as PC and Android\. For example, you can specify compression scheme, mipmap generation parameters, alpha map combinations, and so on for images\. When you edit your texture settings for an image, the **Texture Settings Editor** generates a `.imagesettings` file to save your settings\. 
+You can use the Texture Settings Editor to edit the texture settings for individual images\. This is useful if you are customizing your images for different platforms, such as PC and Android\. For example, you can specify compression scheme, mipmap generation parameters, alpha map combinations, and so on for images\. When you edit your texture settings for an image, the Texture Settings Editor generates a `.imagesettings` file to save your settings\. 
 
-The **Texture Settings Editor** supports the following image formats:
+The Texture Settings Editor supports the following image formats:
 + `.bmp`
 + `.gif`
 + `.jpg`
@@ -13,11 +13,11 @@ The **Texture Settings Editor** supports the following image formats:
 + `.tiff`
 
 **Note**  
-The **Texture Settings Editor** requires the [Image Processing](gems-system-gem-image-processing.md) gem\. By default, this gem is enabled\.
+The Texture Settings Editor requires the [Image Processing](gems-system-gem-image-processing.md) gem\. By default, this gem is enabled\.
 
-The **Texture Settings Editor** can also load the previous Resource Compiler \(RC\) generated `.exportsettings` file\. If you make any changes to this file, the **Texture Settings Editor** deletes this file and generates a new `.imagesettings` file\. If you have Perforce enabled, Perforce tracks the new or modified files\. 
+The Texture Settings Editor can also load the previous Resource Compiler \(RC\) generated `.exportsettings` file\. If you make any changes to this file, the Texture Settings Editor deletes this file and generates a new `.imagesettings` file\. If you have Perforce enabled, Perforce tracks the new or modified files\. 
 
-You can find the default settings for the **Texture Settings Editor** in the `ImageBuilderDefaultPresets.settings` file\. You can modify the default settings file as needed\.
+You can find the default settings for the Texture Settings Editor in the `ImageBuilderDefaultPresets.settings` file\. You can modify the default settings file as needed\.
 
 **To modify the default settings**
 
@@ -30,19 +30,19 @@ You can find the default settings for the **Texture Settings Editor** in the `Im
 1. In a text editor, make your changes and save\.
 
 **Note**  
-This file replaces the previous `rc.ini` file, which contains the predefined presets to generate textures for your game\. To migrate your settings from the `rc.ini` file, see [Migrate RC\.ini Settings to the **Texture Settings Editor**](#migrate-settings-from-rc-texture-settings-editor)\.
+This file replaces the previous `rc.ini` file, which contains the predefined presets to generate textures for your game\. To migrate your settings from the `rc.ini` file, see [Migrate RC\.ini Settings to the Texture Settings Editor](#migrate-settings-from-rc-texture-settings-editor)\.
 
 **Topics**
-+ [Using the **Texture Settings Editor**](#using-the-texture-settings-editor)
++ [Using the Texture Settings Editor](#using-the-texture-settings-editor)
 + [Preview](#texture-editor-preview)
 + [Texture Presets](#texture-presets)
 + [Platform](#texture-platform-resolution)
 + [Mipmap Settings](#texture-mipmap-settings)
-+ [Migrate RC\.ini Settings to the **Texture Settings Editor**](#migrate-settings-from-rc-texture-settings-editor)
++ [Migrate RC\.ini Settings to the Texture Settings Editor](#migrate-settings-from-rc-texture-settings-editor)
 
-## Using the **Texture Settings Editor**<a name="using-the-texture-settings-editor"></a>
+## Using the Texture Settings Editor<a name="using-the-texture-settings-editor"></a>
 
-**To use the **Texture Settings Editor****
+**To use the Texture Settings Editor**
 
 1. In Lumberyard Editor, choose **Tools**, **Asset Browser**\.
 
@@ -67,10 +67,10 @@ This file replaces the previous `rc.ini` file, which contains the predefined pre
    + Color space
    + Image flag
 
-1. To open the **Texture Settings Editor**, right\-click the source file, and choose **Edit Texture Settings**\.  
+1. To open the Texture Settings Editor, right\-click the source file, and choose **Edit Texture Settings**\.  
 ![\[Open the source file in the Texture Settings Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/texture-pipeline-editor-3.png)
 
-1. In the **Texture Settings Editor**, you can view the following:
+1. In the Texture Settings Editor, you can view the following:
 
    1. **[Preview](#texture-editor-preview)** – Preview of the processed image with the current settings\.
 
@@ -118,9 +118,9 @@ In the preview panel, you can do the following:
 ![\[Set the texture presets for the file in the Texture Settings Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/texture-pipeline-editor-5.png)
 + **Active preset** – Click the drop\-down menu to view the presets that you can assign to a texture\. The texture using the preset values automatically appears in the preview panel\. Texture properties are also updated\.
 **Note**  
-The **Texture Settings Editor** supports different presets that specify the options that are applied when an image asset is compiled\. When you open the **Texture Settings Editor**, it loads the main settings and presets from the game project folder at the following file:  
+The Texture Settings Editor supports different presets that specify the options that are applied when an image asset is compiled\. When you open the Texture Settings Editor, it loads the main settings and presets from the game project folder at the following file:  
 `lumberyard_version\dev\game_project\Config\ImageBuilder\ImageBuilderPresets.settings`  
-If this file doesn't exist, the **Texture Settings Editor** loads the default settings from the following file:  
+If this file doesn't exist, the Texture Settings Editor loads the default settings from the following file:  
 `lumberyard_version\dev\Gems\ImageProcessing\Code\Source\ImageBuilderDefaultPresets.settings`
 + Click the reset icon to reset all texture properties to the default values of the current preset\.
 + Click the info icon to display a pop\-up window for the current settings\.  
@@ -163,11 +163,11 @@ If this file doesn't exist, the **Texture Settings Editor** loads the default se
 |  **Pixel Sampling Type**  |  Specifies how the pixel is generated when sampling mipmaps\. You can specify the following options: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/texture-settings-editor.html)  | 
 |  **Filter Method**  |  Specifies the filter method used to process the mipmap\. You can specify the following options: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/texture-settings-editor.html)  | 
 
-## Migrate RC\.ini Settings to the **Texture Settings Editor**<a name="migrate-settings-from-rc-texture-settings-editor"></a>
+## Migrate RC\.ini Settings to the Texture Settings Editor<a name="migrate-settings-from-rc-texture-settings-editor"></a>
 
-The Resource Compiler uses the `rc.ini` file to store your default texture presets\. In Lumberyard 1\.18, the **Texture Settings Editor** uses the `ImageBuilderDefaultPresets.settings` instead\. 
+The Resource Compiler uses the `rc.ini` file to store your default texture presets\. In Lumberyard 1\.18, the Texture Settings Editor uses the `ImageBuilderDefaultPresets.settings` instead\. 
 
-If you want to transfer your settings from the Resource Compiler to the **Texture Settings Editor**, you must do this manually\.
+If you want to transfer your settings from the Resource Compiler to the Texture Settings Editor, you must do this manually\.
 
 **Example**  
 In `rc.ini`, settings are ordered by preset, which contains the format for all devices\. For example, the `Albedo` preset is stored\.  

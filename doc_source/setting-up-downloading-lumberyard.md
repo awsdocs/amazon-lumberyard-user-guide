@@ -6,7 +6,7 @@
 You can also download earlier versions of Lumberyard and assets from the [Amazon Lumberyard Downloads](https://aws.amazon.com/gamedev/lumberyard/downloads) page\.
 
 **Note**  
-Verify that you have the required hardware and software for Lumberyard\. For more information, see [System Requirements](setting-up-system-requirements.md)\.
+Verify that you have the required hardware and software for Lumberyard\. For more information, see [System requirements](setting-up-system-requirements.md)\.
 
 **Topics**
 + [Using the Lumberyard Installer](#download-lumberyard-installer)
@@ -31,9 +31,11 @@ If you get file errors during extraction about `AssetProcessor.exe`, `AssetProce
 
 1. Navigate to your download directory and run the Lumberyard Installer executable file: `LumberyardInstaller.exe`
 
+1. **\(Optional\)** Change the location of the installation by selecting **Options**\. The default installation location is `C:\Amazon`\. 
+
 1. On the **Welcome** page of the installer, click **Install**\.
 **Note**  
-By default, the Lumberyard Installer uses `C:\Amazon` as the root directory\. You can specify a different directory, but we recommend that you use the default\. 
+In some situations, the Lumberyard Installer can hang and refuse to progress\. The only known remedy at this time is to forcibly terminate the installer through the Windows Task Manager and reboot, then retry the installation\.
 
 1. Follow the instructions to complete your installation\.
 
@@ -50,6 +52,7 @@ After you install Lumberyard, the Lumberyard root directory includes the followi
   + `_WAF_` – Waf build system files\.
   + `Bin64` – Binaries directory and configuration files for the Resource Compiler\.
   + `Bin64vc141` – Binaries directory and configuration files for Visual Studio 2017\.
+  + `Bin64vc142` – Binaries directory and configuration files for Visual Studio 2019\.
   + `Code` – Source files directory and solution files\.
   + `Editor` – Editor assets\.
   + `Engine` – Engine assets\.

@@ -1,11 +1,7 @@
 # Simple\_JackLocomotion Sample<a name="animation-editor-jack-locomotion-sample"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 This sample level showcases Jack the robot in a basic environment and demonstrates how the **Animation Editor** uses actors, motion sets, and animation graphs to control character behavior\. Playable animations include idle, walk, run, and navigate\.
 
@@ -25,8 +21,8 @@ You can also use a controller connected to your computer:
 + To toggle the character aim on and off, press the right trigger\.
 + To toggle the **LookAt** node on and off during the idle animation, press the left trigger\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-jack-sample-01.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-jack-sample-01.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-jack-sample-02.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-jack-sample-02.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-jack-sample-03.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-jack-sample-03.png)

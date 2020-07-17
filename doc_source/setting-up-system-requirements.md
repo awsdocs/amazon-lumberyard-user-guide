@@ -1,74 +1,70 @@
-# System Requirements<a name="setting-up-system-requirements"></a>
+# System requirements<a name="setting-up-system-requirements"></a>
 
-See the following system requirements for Lumberyard\. If you already installed Lumberyard, you can use Lumberyard Setup Assistant to see the requirements for the tools and features that you want for developing your game project\. Lumberyard Setup Assistant provides information about installing third\-party software and SDKs on your computer\. For more information, see [Using Lumberyard Setup Assistant to Set Up Your Development Environment](lumberyard-launcher-intro.md)\. 
+Lumberyard has a minimum set of system requirements for development, as outlined in the following sections\. Disk space and RAM requirements are dependent on the options that you choose during installation\. If you have already installed Lumberyard, you can use Lumberyard Setup Assistant to see the requirements for the tools and features that you want for your Lumberyard development environment\. Lumberyard Setup Assistant provides information about installing third\-party software and SDKs on your computer\. For more information, see [Using Lumberyard Setup Assistant to Set Up Your Development Environment](lumberyard-launcher-intro.md)\. 
 
-**Topics**
-+ [Operating System](#required-operating-systems-for-lumberyard)
-+ [Required Hardware](#required-hardware-for-lumberyard)
-+ [Developer Tools](#required-developer-tools-for-lumberyard)
+ If your system is capable of running a modern real\-time 3D game with good performance you should be set, however, review these detailed requirements to be certain\. 
 
-## Operating System<a name="required-operating-systems-for-lumberyard"></a>
+Lumberyard requires Windows 10\.
 
-Lumberyard requires one of the following operating systems:
-+ Windows 7 64\-bit
-+ Windows 8\.0
-+ Windows 10
-
-## Required Hardware<a name="required-hardware-for-lumberyard"></a>
-
-Lumberyard requires the following hardware:
-+ 3GHz minimum quad\-core processor
-+ 8 GB RAM minimum
-+ 2 GB minimum DirectX 11 or later compatible video card
-+ NVIDIA driver version 368\.81 or AMD driver version 16\.15\.2211 graphics card
-+ 60 GB minimum of free disk space
-
-Lumberyard requires the following hardware to compile builds:
-+ 14 GB RAM minimum
+**Lumberyard minimum hardware requirements:**
++ 3 GHz quad\-core processor
++ 8 GB RAM
++ 2 GB VRAM DirectX 11 or later compatible video card
+  + NVIDIA GeForce GTX 660 Ti with driver version 368\.81 or later
+  + AMD Radeon HD 8730M with driver version 16\.15\.2211 or later
++ 60 GB of free disk space
 
 **Note**  
-Specify the `--max-cores` parameter in Waf to set the maximum number of compilation jobs\. The default value is `0`, which automatically determines the appropriate number of compilation jobs\.  
-Specify the `--max-parallel-link` parameter in Waf to set the number of linker processes that simultaneously generate executable files\.  
-For more information, see [Waf User Settings \(user\_settings\.options\)](waf-user-options-and-settings.md#waf-files-user-settings)\.
+If you select options to build the engine, editor, or tools in **Setup Assistant**, 14 GB RAM is required for compilation\.  
+Some advanced graphics features require a DirectX 12 or later compatible video card\.  
+Required free disk space is dependent on the options that you select when installing Lumberyard\.
 
-## Developer Tools<a name="required-developer-tools-for-lumberyard"></a>
+## Developer tools<a name="lumberyard-visual-studio-requirement"></a>
 
-Lumberyard requires the following developer tools:
-
-### Visual Studio<a name="lumberyard-visual-studio-requirement"></a>
-
-You must have the following version of Visual Studio to compile the game code, compile the engine and asset pipeline, or compile the Lumberyard Editor and tools:
-+ Visual Studio 2017 version 15\.9\.14 or above
-
-#### Visual Studio 2017 Installation Requirements<a name="visual-studio-installation-requirements-2017"></a>
-
-The Visual Studio 2017 default installation may not include all of the required features to run Lumberyard\. Ensure these features are selected during installation\. 
-
-**To verify your current installation of Visual Studio 2017**
-
-1. From Windows, click **Control Panel**, **Programs and Features**, **Microsoft Visual Studio *version\_number***\.
-
-1. Select **Modify**\.
-
-1. On the **Workloads** tab, do the following:
-   + Select **Universal Windows Platform Development** and select the following:
-     + **C\+\+ Universal Windows Platform tools**
-     + **Graphics debugger and GPU profiler for DirectX**
-   + Select **Game development with C\+\+** and select the following:
-     + **Windows 8\.1 SDK and UCRT SDK**
-
-1. On the **Individual components** tab, under **Compilers, build tools, and runtime**, select the following:
-   + You must select at least one version of the **VC\+\+ 2017 toolset**\.
+You can use the Lumberyard Editor and tools without installing additional software\. To create new projects or use advanced development features in Lumberyard, you need a developer environment\. One of the following versions of Microsoft Visual Studio is required: 
++  Microsoft Visual Studio 2019 version **16\.2\.4** or later\. 
++  Microsoft Visual Studio 2017 version **15\.9\.14** or later\. 
 
 **Note**  
-Beginning with Visual Studio 2017, Microsoft now releases updates on a more frequent cadence \(in some cases weekly\)\. Lumberyard is tested with the latest version of Visual Studio available during the release cycle\.
+The definitive source for the minimum version of Visual Studio for any particular release of Lumberyard is set in the file `dev\_WAF_\settings\platforms\platform.win_x64_vs2019.json`\. Look for the `vswhere-args` settings\. The minimum version is the first value in the `default_value` range\. 
 
-### Visual C\+\+ Redistributable Packages for Visual Studio 2012, 2013, 2015, and 2017<a name="lumberyard-visual-studio-redistributable-packages-requirement"></a>
+Microsoft offers Visual Studio Community edition free to individual developers\. For more information and to download and install Visual Studio Community, visit the [ Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) portal\. 
 
-If you do not already have Visual C\+\+ Redistributable Packages for Visual Studio installed, do one of the following:
-+ After you have installed Lumberyard, run the redistributable installers from the Visual Studio \(2012, 2013, 2015, and 2017\) directories in the following directory: `lumberyard_version\dev\Tools\Redistributables\`
-+ Download and run the installer directly from Microsoft:
-  + [ Visual C\+\+ Redistributable Packages for Visual Studio 2012 ](https://www.microsoft.com/en-us/download/details.aspx?id=30679)
-  + [Visual C\+\+ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-  + [Visual C\+\+ Redistributable Packages for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
-  +  [Visual C\+\+ Redistributable Packages for Visual Studio 2017](https://www.visualstudio.com/downloads/) 
+**Visual Studio 2017 and 2019 required features**  
+The default Visual Studio installation might not include all of the features that are required by Lumberyard\. Ensure that the following Visual Studio features are enabled:
+
+1. Launch the **Visual Studio Installer** from your download directory or the **Start Menu** if you've already installed Visual Studio\. 
+
+1. If you've installed Visual Studio, choose **More \- Modify** on the version of Visual Studio you'll use with Lumberyard\. 
+
+1. On the **Workloads** tab:
+   + Select **Game development with C\+\+**\.
+     + In the **Installation details** panel on the right, select at least one **Windows 10 SDK**\.
+
+1. On the **Individual components** tab, under **Compilers, build tools, and runtime**, select the **VC\+\+ toolset** that corresponds to the installed version of Visual Studio: 
+   + **Visual Studio 2017**: Select at least one version of the **VC\+\+ 2017 toolset**\. 
+   + **Visual Studio 2019**: Select at least one version of the **MSVC v142 \- VS 2019 C\+\+ x64/x86 build tool**\. 
+     + \(Optional\) To build with the Visual Studio 2017 toolset, select **MSVC v141 \- VS 2017 C\+\+ x64/x86 build tools**\. 
+
+**Note**  
+Incredibuild users: Installing, reinstalling, or upgrading Visual Studio may cause the Incredibuild Agent to lose its settings or require an update\. After modifying Visual Studio, be sure to confirm your Incredibuild Agent is active\. For instructions on configuring the agent properly, see [Compiling with IncrediBuild](waf-extensions.md#waf-extensions-incredibuild)\. 
+
+**Note**  
+Beginning with Visual Studio 2017, Microsoft now releases updates on a more frequent cadence \(in some cases weekly\)\. Lumberyard is tested with the latest version of Visual Studio available during the release cycle\. 
+
+## Visual C\+\+ redistributable packages<a name="visual-studio-redistributable-requirements"></a>
+
+**Lumberyard Installer** will attempt to download and install the required Visual C\+\+ Redistributable packages during the installation process\. Under some circumstances, the installation of these redistributable packages may fail\. If you receive a missing Visual C\+\+ runtime `.dll` error while running Lumberyard Installer, Lumberyard Setup Assistant, or Project Configurator, do the following: 
+
+1. Check that the Visual C\+\+ redistributable installers for Visual Studio 2012 and Visual Studio 2019 have been successfully downloaded\. The installers are located in the corresponding **Visual Studio** directories in the `lumberyard_version\dev\Tools\Redistributables\` directory\. 
+
+1. If the Visual C\+\+ redistributable installers for Visual Studio 2012 and Visual Studio 2019 have not been downloaded by Lumberyard Installer, manually download the installers from Microsoft\. 
+   + [ Visual C\+\+ Redistributable for Visual Studio 2012](https://www.microsoft.com/en-us/download/details.aspx?id=30679) 
+   + [ Visual C\+\+ Redistributable for Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#other-family) 
+
+1. Run both Visual C\+\+ redistributable installers\. 
+
+1. Retry the Lumberyard installation after the Visual Studio redistributables have successfully installed\. 
+
+**Note**  
+The Visual C\+\+ Redistributable for Visual Studio 2019 also contains redistributables for Visual Studio 2015 and 2017\. 

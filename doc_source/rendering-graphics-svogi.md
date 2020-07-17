@@ -1,11 +1,7 @@
 # Voxel\-based Global Illumination \(SVOGI\)<a name="rendering-graphics-svogi"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
 
 Sparse voxel octree global illumination \(SVOGI\), also known as voxel GI, is a global illumination solution based on voxel ray tracing\. It does not require prebaking or manual setup of bounce lights or light volumes\. This solution is experimental and may be memory intensive\.
 
@@ -15,7 +11,7 @@ Voxel GI provides the following effects:
 
 For every frame, thousands of rays are traced through voxels and shadow maps to gather occlusion and in\-directional lighting\.
 
-![\[Example global illumination enabled and disabled.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/SVOGI.gif)
+![\[Example global illumination enabled and disabled.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/rendering/SVOGI.gif)
 
 To use this feature, you must [enable](gems-system-using-project-configurator.md) the SVOGI gem for your project\.
 

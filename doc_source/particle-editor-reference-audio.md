@@ -2,7 +2,7 @@
 
 In the **Audio** attribute, specify which sounds the particle system emits and when\.
 
-![\[Audio attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor-audio.png)
+![\[Audio attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor-audio.png)
 
 
 **Audio Attribute Parameters for CPU Emitters**  

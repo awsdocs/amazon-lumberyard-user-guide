@@ -1,11 +1,7 @@
 # Blending Poses with Blend Nodes<a name="animation-editor-blending-poses"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use **Blend** nodes in animation graphs to create an animation that blends two input poses\. 
 
@@ -24,7 +20,7 @@ The blend nodes feature a set of attributes that control different aspects of ho
 
 The **Sync Mode** attribute determines the method of synchronizing motion clips to keep the feet synchronized\.
 
-![\[Blend node attributes: Sync Mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-blending-attributes-1.png)
+![\[Blend node attributes: Sync Mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-blending-attributes-1.png)
 
 
 ****  
@@ -39,7 +35,7 @@ The **Sync Mode** attribute determines the method of synchronizing motion clips 
 
 The **Event Filter Mode** attribute determines which node's events are emitted\.
 
-![\[Blend node attributes: Event Filter Mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-blending-attributes-2.png)
+![\[Blend node attributes: Event Filter Mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-blending-attributes-2.png)
 
 
 ****  
@@ -55,7 +51,7 @@ The **Event Filter Mode** attribute determines which node's events are emitted\.
 
 The **Extraction Mode** attribute controls how the motion extraction behaves when blending\. For example, for transitions inside state machines, you can use this node to ensure that a 180 degree turn completes\.
 
-![\[Blend node attributes: Extraction Mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-blending-attributes-3.png)
+![\[Blend node attributes: Extraction Mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-blending-attributes-3.png)
 
 
 ****  

@@ -16,7 +16,7 @@ The **UI Editor** **Preview** consists of the following:
 
 1. [**Action Log**](ui-editor-previewing-behavior.md#action-log) – Record of actions triggered by the canvas's interactable elements\. Close this pane to increase the viewport size\. Use the **View** menu to restore it\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-preview-overview.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-preview-overview.png)
 
 **To open UI canvas **Preview****
 

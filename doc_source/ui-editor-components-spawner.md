@@ -2,7 +2,7 @@
 
 Use the **UISpawner** component to spawn a runtime dynamic [slice](ui-editor-working-slices.md) \(\*\.`dynamicslice`\) at an entity's location with an optional offset\. In combination with scripting, you can use the **UISpawner** component to spawn any dynamic slice at any time and to spawn multiple instances of the same dynamic slice\.
 
-![\[UISpawner component with an example slice file.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-components-uispawner.png)
+![\[UISpawner component with an example slice file.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-components-uispawner.png)
 
 **Contents**
 + [Example UISpawner Component](#ui-spawner-component-example)
@@ -60,7 +60,7 @@ If selected, spawns the selected slice upon activation\.
 
 Use the following request functions with the **UiSpawnerBus** EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### Spawn<a name="ui-editor-components-spawner-ebus-spawn"></a>
 
@@ -146,7 +146,7 @@ Yes
 
 Use the following notification functions with the UiSpawnerNotificationBus EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### OnSpawnBegin<a name="ui-editor-components-spawner-notification-bus-onspawnbegin"></a>
 

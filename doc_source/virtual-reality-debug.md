@@ -9,4 +9,4 @@ You can debug your virtual reality project either through a running instance of 
 
 When in debug mode, motion controllers appear as white crosshairs\. That is, if you assigned an object or entity to represent the motion controller in the gameplay world, you will see it rendered with white crosshairs\. The following picture shows two controllers, one with render geometry assigned, and the other without\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/virtual-reality-crosshairs.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/vr/virtual-reality-crosshairs.png)

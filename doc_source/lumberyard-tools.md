@@ -1,11 +1,7 @@
 # Lumberyard Editors and Tools<a name="lumberyard-tools"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
 
 Lumberyard provides the following suite of applications, editors, and tools for game development\.
 
@@ -36,11 +32,8 @@ Displays the ID and name for component entity system objects\.
 [Entity Outliner](component-entity-outliner.md)  
 Displays all component entities used for a level\.
 
-[**FBX Settings**](char-fbx-importer.md)  
+[FBX Settings](char-fbx-importer.md)  
 Imports single static meshes and materials from FBX\.
-
-Flow Graph \(Legacy\)  
-Implements complex game logic using a visual scripting system\.
 
 [Layers](component-entity-outliner-layers.md)  
 Organizes level data into discrete files\.
@@ -84,9 +77,6 @@ Standalone application used to tell the Waf build system which Gems to include i
 [Resource Compiler](asset-pipeline-processor.md)  
 Compresses and processes source game asset files and creates package files\.
 
-[Rollup Bar](lumberyard-editor-rollup-bar.md)  
-Accesses and places objects, vegetation, modified terrain, and modeling tools; includes display options, profile tools, and layer controls\.
-
 [Script Canvas](script-canvas-intro.md)  
 Create game logic and behaviors with Lumberyard's new visual scripting environment\.
 
@@ -109,7 +99,7 @@ Creates and paints terrain texture layers in your level\.
 Creates and manages day–night cycles and other dynamic sky effects\.
 
 [Track View Editor](cinematics-track-view-editor.md)  
-Creates and manages cinematic scenes and sequences; consists of the **Track View** and **Curves Editor**\.
+Creates and manages cinematic scenes and sequences; consists of the Track View and **Curves Editor**\.
 
 [UI Editor](ui-editor-intro.md)  
 Creates, manages, and simulates user interface elements for your game, such as menus and heads\-up displays \(HUD\)\.

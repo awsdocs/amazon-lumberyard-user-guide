@@ -1,6 +1,6 @@
 # Lambda Language Support in the Cloud Gem Framework<a name="cloud-canvas-cgf-lambda-languages"></a>
 
-Prior to Lumberyard version 1\.16, Cloud Canvas supported Lambda functions that used the Node\.js or Python runtimes\. In version 1\.16, Lumberyard extends this support to Lambda deployment packages that include Lambda functions written in Java, Go, or the \.NET framework\.
+Lumberyard has support for Lambda deployment packages that include Lambda functions written in Node\.js, Python 3\.7 or later, Java, Go, or the \.NET framework\.
 
 **To add a non\-Python Lambda function to a cloud gem**
 
@@ -133,7 +133,7 @@ Running the sample requires the following prerequisites:
 1. Choose **LambdaLanguage**, and then click **Open**\.
 
 1. Click **Play Game** or press **Ctrl\+G** to switch to gameplay mode\. After a short pause, a message reports success, as seen in the following image\.  
-![\[Lambda functions in different languages report success in the LambdaLanguage sample level\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-cgf-lambda-languages-1.png)
+![\[Lambda functions in different languages report success in the LambdaLanguage sample level\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-canvas-cgf-lambda-languages-1.png)
 
 ### Additional Resources<a name="cloud-canvas-cgf-lambda-languages-additional-resources"></a>
 

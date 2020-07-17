@@ -1,11 +1,7 @@
 # Portal<a name="component-portal"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Use the **Portal** component to create efficient indoor areas with the **[VisArea](component-vis-area.md)** component\. You can use portals to specify areas where you can look out of a visible area and see beyond it, such as windows or doors between visible areas\.
 
@@ -20,7 +16,7 @@ You can't modify the **[OccluderArea](component-occluder-area.md)**, **[Portal](
 
 ## Portal Component Properties<a name="component-portal-properties"></a>
 
-![\[The Portal component properties in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/portal-component-properties.png)
+![\[The Portal component properties in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/portal-component-properties.png)
 
 The **Portal** component has the following properties\.
 
@@ -47,22 +43,22 @@ The **Portal** component has the following properties\.
 **Example 1**  
 In the following examples, two boxes are inside several visible areas\. The visible areas are connected by the portals, which are green\. The portal lets you see between the visible areas\. The shadows of the boxes inside the visible areas appear because the **AffectedBySun** option is enabled\.  
 
-![\[Two Portal components connecting multiple VisArea components.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-portal-1.png)
+![\[Two Portal components connecting multiple VisArea components.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-portal-1.png)
 
 **Example 2**  
 The following example shows how the portal lets you see between two visible areas\. Although the boxes are in separate visible areas, the portal creates a window between them so that you can see both boxes\.  
 
-![\[Portal component creates a window between two visible areas.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-portal-2.png)
+![\[Portal component creates a window between two visible areas.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-portal-2.png)
 
 **Example 3**  
 In the following example, you see the portal at an angle\. You can't see the box in the other visible area because there is no portal in that line of sight\.  
 
-![\[Portal doesn't render objects that aren't in the line of sight.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-portal-3.png)
+![\[Portal doesn't render objects that aren't in the line of sight.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-portal-3.png)
 
 **Example 4**  
 In the following example, you can see a box through a different portal, but because the **DoubleSide** option is disabled, the portal is one\-sided\.  
 
-![\[Portal component with DoubleSide option disabled.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-portal-4.png)
+![\[Portal component with DoubleSide option disabled.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-portal-4.png)
 
 **Example 5**  
 In the following example, if you go through the portal and look back, you can see the other visible areas, but you can't see the boxes in those areas\. You can't see through portals that aren't connected to the visible area that you're in\.   

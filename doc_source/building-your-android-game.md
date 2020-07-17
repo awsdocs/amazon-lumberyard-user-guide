@@ -57,12 +57,12 @@ Next, you must configure Asset Processor to process your game assets for Android
 
 1. Open Asset Processor\.
 
-   1. For PC, navigate to the `dev/Bin64vc141` directory\. 
+   1. For PC, navigate to the `dev/Bin64vc141` directory\.
 
    1. For macOS, navigate to `dev/Bin64Mac` directory\.
 
    If Asset Processor is running, it automatically detects the change to the config file and restarts\. When Asset Processor finishes, the **Idle** status appears,  
-![\[Wait for Asset Processor to process your changes.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-asset-processsor-idle-status.png)
+![\[Wait for Asset Processor to process your changes.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-asset-processsor-idle-status.png)
 
 ## Configuring the Build System<a name="configuring-the-build-system-for-android"></a>
 
@@ -100,7 +100,7 @@ Next, configure the build system to generate your project files for Visual Studi
    [WAF] Executing 'msvs' in 'e:\lyengine\dev\BinTemp'
    [INFO] Using Visual Studio version installed at: C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional
    [INFO] Generating Visual Studio 2017 solution.
-   Creating e:\lyengine\dev\Solutions\LumberyardSDK_vs15.sln
+   Creating e:\lyengine\dev\Solutions\LumberyardSDK_vs2017.sln
    [WAF] 'msvs' finished successfully (32.833s)
    [WAF] Executing 'generate_uber_files' in 'e:\lyengine\dev\BinTemp'
    [WAF] 'generate_uber_files' finished successfully (4.552s)
@@ -217,16 +217,16 @@ When you use Android Studio, you can use the project file to edit and build your
 
 1. Open Android Studio and select the **Import project \(Eclipse ADT, Gradle, etc\)**\.  
 **Example**    
-![\[Import your project into Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-1.png)
+![\[Import your project into Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-1.png)
 
 1. Navigate to the Android Studio project that you created using the configure command\. The default location is `lumberyard_version/dev/Solutions/LumberyardAndroidSDK`\.  
-![\[Select your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-2.png)
+![\[Select your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-2.png)
 
 1. Wait for the project to finish loading\. On the top left side of the window, click **Project** to view your files\.  
-![\[Import your project into Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-3.png)
+![\[Import your project into Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-3.png)
 
 1. To change your build variants, open the **Build Variants** pane in the bottom left of the window\.  
-![\[Change your build variants in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-4.png)
+![\[Change your build variants in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-4.png)
 **Note**  
 This affects only the launcher target\. In the example, this is **SamplesProjectLauncher**\. The build configuration for other targets during the build process are ignored\.
 
@@ -239,16 +239,16 @@ Use the following procedure to debug your app in Android Studio\.
 1. In Android Studio, at the top middle of the window, in the **Run/Debug Configuration** drop\-down menu, select **Edit Configurations**\.
 
 1. Select the launcher for your project, such as **SamplesProjectLauncher**\.  
-![\[Select your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-5.png)
+![\[Select your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-5.png)
 
 1. Click the project's **Run/Debug** configuration drop\-down menu and choose **Edit Configuration**\.  
-![\[Edit the configurations for your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-6.png)
+![\[Edit the configurations for your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-6.png)
 
 1. In the **Run/Debug Configuration** dialog box, click the **Debugger** tab, and expand the **\+** icon\.  
-![\[Use the Run/Debug Configuration dialog box in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-7.png)
+![\[Use the Run/Debug Configuration dialog box in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-7.png)
 
 1. Navigate to the location of the APK so that the debugger finds the symbols for your app\.  
-![\[Set the path for the Symbol Directories in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-8.png)
+![\[Set the path for the Symbol Directories in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-8.png)
 
 1. \(Optional\) Set the **Debug type** field to **Native** if you're not going to debug Java code\.
 
@@ -263,26 +263,26 @@ If you're not using Android Studio as your main IDE \(for example, you're using 
 **To use Android Studio as a standalone debugger**
 
 1. In Android Studio, click **File**, **Profile or Debug APK**  
-![\[Use Android Studio as a standalone debugger.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-9.png)
+![\[Use Android Studio as a standalone debugger.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-9.png)
 
 1. Select your APK, click the **Run/Debug Configuration** drop\-down menu, and choose **Edit Configuration**\.  
-![\[Edit Configurations in the Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-10.png)
+![\[Edit Configurations in the Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-10.png)
 
 1. In the dialog box, the **General** tab should be selected\. If you're using WAF to deploy your builds to your device, for **Installation Options**, for **Deploy**, select **Nothing**\.
 
 1. For **Deployment Target Options**, for **Target**, select **USB Device**\.
 
 1.   
-![\[Make the general settings for your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-11.png)
+![\[Make the general settings for your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-11.png)
 
 1. Click the **Debugger** tab, and click the **\+** icon\.  
-![\[Enter debugging for your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-12.png)
+![\[Enter debugging for your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-12.png)
 
 1. Navigate to the location of the APK so that the debugger finds the symbols for your app\.  
-![\[Set the path for the Symbol Directories in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-8.png)
+![\[Set the path for the Symbol Directories in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-8.png)
 
 1. Click the **Debug** icon to start the debugging session\.  
-![\[Debug your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-studio-build-code-13.png)
+![\[Debug your game project in Android Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-studio-build-code-13.png)
 
 1. After the debugger session starts, open any C\+\+ files in the `lumberyard_version/dev` directory, place your breakpoints, and step through the code\.
 
@@ -468,7 +468,7 @@ You must make changes to your code for a release APK\.
 ## Using Your Signing Key<a name="using-your-signing-key"></a>
 
 **Prerequisite**  
-We recommend that you read the official [Android documentation](https://developer.android.com/google/play/licensing/index.html;) about licensing apps\.
+We recommend that you read the official [Android documentation](https://developer.android.com/google/play/licensing/index.html) about licensing apps\.
 
 Lumberyard provides a default development keystore for Android\. This is normally used to sign an app\. However, for apps that you want to release, you must specify a keystore that you create yourself\. 
 

@@ -6,7 +6,7 @@ Returns a material parameter as a **Vector4** value\.
 + [Inputs](#script-canvas-material-get-vector4-param-node-input)
 + [Outputs](#script-canvas-material-get-vector4-param-node-output)
 
-![\[getparamvector4, getparamvector4node\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-get-param-vector4-node.png)
+![\[getparamvector4, getparamvector4node\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-get-param-vector4-node.png)
 
 ## Inputs<a name="script-canvas-material-get-vector4-param-node-input"></a>
 

@@ -1,11 +1,7 @@
 # Building Shaders for macOS Games<a name="osx-shaders-building"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Lumberyard uses a versatile shader system to achieve high quality, realistic graphics\. Because the shader compilation pipeline depends on the Windows\-specific HLSL optimizer, you must connect to a shader compiler on your PC when running a game on macOS during development\. This compiles the subset of shaders required by your game, on demand\.
 

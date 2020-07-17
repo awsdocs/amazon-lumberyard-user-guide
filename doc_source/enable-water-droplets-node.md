@@ -8,11 +8,11 @@ To disable the effect, see [Disable Water Droplets](disable-water-droplets-node.
 + [Inputs](#enable-water-droplets-node-input)
 + [Outputs](#enable-water-droplets-node-output)
 
-![\[enablewaterdropletsnode, enablewaterdroplets\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-enable-water-droplets-node.png)
+![\[enablewaterdropletsnode, enablewaterdroplets\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-enable-water-droplets-node.png)
 
 **Example**  
 
-![\[Use the Enable Water Droplets node to have water wash down the screen.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/enable-water-droplets-node-example.gif)
+![\[Use the Enable Water Droplets node to have water wash down the screen.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/enable-water-droplets-node-example.gif)
 
 ## Inputs<a name="enable-water-droplets-node-input"></a>
 

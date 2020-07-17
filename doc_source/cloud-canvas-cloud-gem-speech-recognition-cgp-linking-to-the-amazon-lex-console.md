@@ -1,11 +1,7 @@
 # Linking to the Amazon Lex Console<a name="cloud-canvas-cloud-gem-speech-recognition-cgp-linking-to-the-amazon-lex-console"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in preview release and is subject to change\. | 
+This feature is in preview release and is subject to change\.
 
 You can configure speech recognition settings directly in the Amazon Lex console\.
 
@@ -21,6 +17,6 @@ You can configure speech recognition settings directly in the Amazon Lex console
 
 1.  Choose the **Settings** tab and click the **Amazon Lex Console** link\.
 
-![\[Linking to the Amazon Lex console\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-cloud-gem-speech-recognition-cgp-5.png)
+![\[Linking to the Amazon Lex console\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-canvas-cloud-gem-speech-recognition-cgp-5.png)
 
 For information about using Amazon Lex, see the [Amazon Lex Developer Guide](https://docs.aws.amazon.com/lex/latest/dg/)\.

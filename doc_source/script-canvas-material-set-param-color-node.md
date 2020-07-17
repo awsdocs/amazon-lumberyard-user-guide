@@ -6,7 +6,7 @@ Sets a material parameter with a color value\.
 + [Inputs](#script-canvas-material-set-param-color-node-input)
 + [Outputs](#script-canvas-material-set-param-color-node-output)
 
-![\[setparamcolor, setparamcolornode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-param-color-node.png)
+![\[setparamcolor, setparamcolornode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-set-param-color-node.png)
 
 ## Inputs<a name="script-canvas-material-set-param-color-node-input"></a>
 

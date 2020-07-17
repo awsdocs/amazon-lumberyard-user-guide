@@ -24,6 +24,7 @@ Follow these steps to build and run the sample\.
 
 1. Run the `MultiplayerSampleLauncher.exe` file from your default bin directory\.
    + For Visual Studio 2017, use the `Bin64vc141.Dedicated` directory\.
+   + For Visual Studio 2019, use the `Bin64vc142.Dedicated` directory\.
 
 ## MultiplayerLobby<a name="sample-project-multiplayer-enhanced-multiplayerlobby"></a>
 
@@ -147,6 +148,7 @@ To create a dedicated server for the game, perform the following steps\.
 
 1. Run the `MultiplayerSampleLauncher_Server.exe` file from your default bin directory\.
    + For Visual Studio 2017, use the `Bin64vc141.Dedicated` directory\.
+   + For Visual Studio 2019, use the `Bin64vc142.Dedicated` directory\.
 
 ## Supported Platforms<a name="sample-project-multiplayer-enhanced-supported-platforms"></a>
 
@@ -154,13 +156,13 @@ The Multiplayer sample is currently supported on a variety of client and server 
 
 **Clients**  
 The following playable client platforms are supported:
-+ Windows \(Visual Studio 2017\)
++ Windows \(Visual Studio 2017 or Visual Studio 2019\)
 + Android
 + iOS
 
 **Dedicated Server Platforms**  
 The following dedicated server platforms are supported:
-+ Windows \(Visual Studio 2017\)
++ Windows \(Visual Studio 2017 or Visual Studio 2019\)
 + Linux \(Ubuntu\)
 
 ## About Self\-Signed Certificates in the Multiplayer Sample<a name="sample-project-multiplayer-enhanced-self-signed-certificates"></a>

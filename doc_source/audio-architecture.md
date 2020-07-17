@@ -1,22 +1,28 @@
 # Audio System Overview<a name="audio-architecture"></a>
 
-The Lumberyard audio system consists of modules, components, and content\.
+The Lumberyard audio system consists of Gems, components, and content\.
 
-## Modules<a name="audio-architecture-modules"></a>
+## Gems<a name="audio-architecture-gems"></a>
 
-Lumberyard audio features the following modules:
+Lumberyard provides two audio Gems:
++ **AudioSystem**
++ **AudioEngineWwise**
+
+AudioEngineWwise is an audio engine implementation provided by Lumberyard for Audiokinetic Wwise\. An audio engine implementation translates generic Audio Translation Layer \(ATL\) state requests into real calls to the audio middleware API\. It also implements low\-level hooks for file I/O and memory allocation as needed for the audio middleware\.
+
+The AudioEngineWwise Gem depends on the AudioSystem Gem\. It is recommended that you enable both Gems to enable audio, but the AudioSystem Gem has no dependencies and can be enabled by itself\. This leaves open the possibility of other audio middleware Gems to be developed and used instead of AudioEngineWwise\.
+
+Lumberyard audio Gems feature the following modules:
 
 
 ****  
 
-| Modules | Description | 
+| Module | Description | 
 | --- | --- | 
-| CrySoundSystem |  Contains the audio translation layer \(ATL\) code and manages the state of the audio system in Lumberyard\. Most of this module runs on the audio thread, but it also synchronizes with the main thread\.  | 
-| CryAudioImplWwise |  Contains the implementation of `AudioSystemImplementation` interfaces for Wwise\. Contains all Audiokinetic APIs\. This is the only module that links with Wwise libraries\.  | 
-| CryAudioImplNoSound |  Contains the implementation of `AudioSystemImplementation` interfaces that don't produce sound output\. This module is an example that you can use as a starting point for implementing a new middleware\.  | 
-| EditorAudioControlsEditor |  Lumberyard Editor plugin\. Contains the **Audio Controls Editor** \(ACE\) to create and manage ATL controls\.  | 
-| EditorAudioControlsEditorWwise |  Additional module that the **Audio Controls Editor** loads when Lumberyard uses Wwise\.  | 
-| EditorNoSound |  Additional module that **Audio Controls Editor** loads when `NoSound` is specified\.  | 
+| Audio System |  Part of the Audio System Gem\. Contains the audio translation layer \(ATL\) code and manages the state of the audio system in Lumberyard\. Most of this module runs on the audio thread, but it also synchronizes with the main thread\.  | 
+| Audio System Editor |  A Lumberyard Editor plugin, and part of the Audio System Gem\. Contains the **Audio Controls Editor** \(ACE\) to create and manage ATL controls\.  | 
+| Audio Engine Wwise |  Part of the Audio Engine Wwise Gem\. Contains the implementation of `AudioSystemImplementation` interfaces for Wwise\. Contains all Audiokinetic APIs\. This is the only module that links with Wwise SDK\. Can be configured to use Wwise LTX or the full version of Wwise\.  | 
+| Audio Engine Wwise Editor |  A Lumberyard Editor plugin, and part of the Audio Engine Wwise Gem\. This is an additional module that the **Audio Controls Editor** loads when Lumberyard uses Wwise\.  | 
 
 ## Components<a name="audio-architecture-components"></a>
 

@@ -1,12 +1,5 @@
 # Trigger Area<a name="component-triggerarea"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Trigger Area** component provides generic triggering services by using [Shape](component-shapes.md) components as its bounds\. 
 
 **To add a trigger component**
@@ -22,6 +15,9 @@ The **Trigger Area** component provides generic triggering services by using [Sh
    The shape component you select defines the boundaries for the trigger\.
 
 1. If you want to change the boundaries of your shape component, simply remove the existing shape component, and then add a different shape component\.
+
+**Note**  
+The **Trigger Area** component does not work with the PhysX system\. 
 
 ## Trigger Area Component Properties<a name="component-triggerarea-properties"></a>
 
@@ -48,7 +44,7 @@ A list of tags that exclude an entity from triggering this area\.
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### AddRequiredTag<a name="triggerarea-ebus-addrequiredtag"></a>
 
@@ -109,7 +105,7 @@ Yes
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 The **Trigger** component sends notifications to:
 + Entities listening on the TriggerAreaNotificationBus for the entity with the trigger on it\.

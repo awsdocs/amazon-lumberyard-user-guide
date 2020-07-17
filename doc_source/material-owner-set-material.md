@@ -6,7 +6,7 @@ Sets an entity's material\. If the material is `Invalid`, this node removes the 
 + [Inputs](#material-owner-set-material-input)
 + [Outputs](#material-owner-set-material-output)
 
-![\[setmaterialnode, setmaterial\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-material-owner-node.png)
+![\[setmaterialnode, setmaterial\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-set-material-owner-node.png)
 
 ## Inputs<a name="material-owner-set-material-input"></a>
 
@@ -16,7 +16,7 @@ Sets an entity's material\. If the material is `Invalid`, this node removes the 
 | Pin | Type | Description | 
 | --- | --- | --- | 
 | In | Event | Triggers the node\. | 
-| Source | EntityID |  References a specific entity from which events are generated\. By default, it references **Self**, the entity to which the **[Script Canvas](component-script-canvas.md)** component attaches the current script\. You can also select another entity\. For more information, see [Referencing Entities for Nodes](script-canvas-referencing-entities.md)\.  | 
+| Source | EntityID |  References a specific entity from which events are generated\. By default, it references **Self**, the entity to which the **[Script Canvas](component-script-canvas.md)** component attaches the current script\. You can also select another entity\. For more information, see [Setting Entity Targets](script-canvas-referencing-entities.md)\.  | 
 | Material | Material |  The new material\.  | 
 
 ## Outputs<a name="material-owner-set-material-output"></a>

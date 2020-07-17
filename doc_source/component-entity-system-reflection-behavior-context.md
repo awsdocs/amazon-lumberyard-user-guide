@@ -193,7 +193,7 @@ behaviorContext->Enum<(int)GlobalClassEnum::Value2>("Value2");
 
 The ability to bind an EBus to the behavior context enables scripting to become driven and modular\. The two main use cases for reflecting EBuses to the behavior context are event handlers and events\.
 
-Because EBuses are highly configurable, the features that become available depend on how the EBus was created\. For more information, see the [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+Because EBuses are highly configurable, the features that become available depend on how the EBus was created\. For more information, see the [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### Event Handlers<a name="component-entity-system-reflection-behavior-context-ebus-event-handlers"></a>
 
@@ -283,6 +283,6 @@ behaviorContext.EBus<TestBus>("TestBus")->
 local result = TestBus.Broadcast.GetSum1(1)
 ```
 
-For information on addressing EBuses, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For information on addressing EBuses, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 For more information about the behavior context, see [Behavior Context in Depth](component-entity-system-behavior-context-in-depth.md)\.

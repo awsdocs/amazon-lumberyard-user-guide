@@ -1,4 +1,4 @@
-# Working with the Asset Pipeline and Asset Files<a name="asset-pipeline-intro"></a>
+# Working with the Asset Pipeline and asset files<a name="asset-pipeline-intro"></a>
 
 The Asset Pipeline converts source art and other assets into OS\-specific, game ready data\. To prepare your game to ship, build all your game assets with the Asset Pipeline and package them with your game for your supported operating systems\.
 
@@ -7,7 +7,7 @@ The Asset Processor \(AP\) is a service that runs in the background and monitors
 **Note**  
 The asset cache should not be added to your source control\.
 
-![\[Understand the Asset Pipeline and how it processes files for your game project in Amazon Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-diagram.png)
+![\[Understand the Asset Pipeline and how it processes files for your game project in Amazon Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assets/pipeline/asset-pipeline-diagram.png)
 
 The Asset Processor detects changes in the directories that contain input assets, with the game directory being the highest priority\. Therefore, if you put assets in the game directory, those assets override assets with the same path in Lumberyard or other directories with lower priority\.
 
@@ -18,6 +18,7 @@ Each output directory in the asset cache represents a full image of all files \(
 + [Configuring the Asset Pipeline](asset-pipeline-configuring.md)
 + [Configuring Image Processing](asset-pipeline-configuring-image-processing.md)
 + [Live Reloading and VFS](asset-pipeline-live-reloading.md)
++ [Compiling Shaders for Release Builds](asset-pipeline-shader-compilation.md)
 + [Shader Compiler Proxy](asset-pipeline-shader-compiler.md)
 + [Shader Cache and Generation](mat-shaders-custom-dev-cache-intro.md)
 + [Game Startup Sequence](asset-pipeline-game-sequence.md)

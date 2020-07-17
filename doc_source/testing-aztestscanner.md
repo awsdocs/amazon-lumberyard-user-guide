@@ -18,6 +18,12 @@ lmbr_waf.bat build_win_x64_vs2017_debug_test -p all
 
 // Build with tests using profile configuration. Outputs to the \Bin64vc141.Test folder.
 lmbr_waf.bat build_win_x64_vs2017_profile_test -p all
+
+// Build with tests using debug configuration. Outputs to the \Bin64vc142.Debug.Test folder.
+lmbr_waf.bat build_win_x64_vs2019_debug_test -p all
+
+// Build with tests using profile configuration. Outputs to the \Bin64vc142.Test folder.
+lmbr_waf.bat build_win_x64_vs2019_profile_test -p all
 ```
 
 **Note**  

@@ -1,17 +1,13 @@
 # Running AWS API Jobs Using the Cloud Gem Framework<a name="cloud-canvas-cgf-aws-api-jobs"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| The Cloud Gem Framework and this documentation are in preview release and are subject to change\. | 
+The Cloud Gem Framework and this documentation are in preview release and are subject to change\.
 
 The Cloud Gem Framework Gem provides C\+\+ classes that can execute any C\+\+ AWS API call by using the Lumberyard job execution system\. This allows the operation to be performed on background threads that are managed by the job system\. 
 
 **To use AWS API Jobs in your project**
 
-1. In the [Creating Lumberyard Game Projects](configurator-intro.md), enable the **Cloud Canvas Common** and **Cloud Gem Framework** gems for your project\.
+1. In the [Creating Lumberyard projects](configurator-intro.md), enable the **Cloud Canvas Common** and **Cloud Gem Framework** gems for your project\.
 
 1. We recommend that you put the code that uses AWS in a gem, but this is not required\. If you do use a gem, make the **Cloud Gem Framework** and **Cloud Canvas Common** gems dependencies of your gem by adding the following to your gem's `gem.json` file\.
 

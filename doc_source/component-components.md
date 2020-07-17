@@ -1,17 +1,10 @@
 # Component Reference<a name="component-components"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 You can use the **Entity Inspector** to add the following components to you entities\. 
 
 **Note**  
 Some components are only available through gems\. For example, you must enable the [Rain](gems-system-gem-rain.md) gem for your project, so that the **[Rain](component-rain.md)** component is available\.  
-For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 ## AI<a name="component-entity-AI"></a>
 + [Behavior Tree](component-behavior-tree.md)
@@ -68,13 +61,14 @@ For more information, see [Using Gems to Add Modular Features and Assets](gems-s
 
 The following components support the PhysX system, which is not compatible with the legacy physics system\. You can't use components interchangeably between each system\.
 
-For more information, see [Simulating Physics Behavior with the PhysX System](physx-intro.md)\.
-+ [Cloth Component](component-cloth.md)
+For more information, see [Simulating physics behavior with the PhysX system](physx-intro.md)\.
++ [Cloth](component-cloth.md)
 + [PhysX Character Controller](component-physx-character-controller.md)
 + [PhysX Collider](component-physx-collider.md)
 + [PhysX Force Region](component-physx-force-region.md)
 + [PhysX Ragdoll](component-physx-ragdoll.md)
-+ [PhysX Rigid Body Physics](component-physx-rigid-body-physics.md)
++ [PhysX Rigid Body](component-physx-rigid-body-physics.md)
++ [PhysX Shape Collider](component-physx-shape-collider.md)
 + [PhysX Terrain](component-physx-terrain.md)
 
 ## Physics \(Legacy\)<a name="component-entity-physics-legacy"></a>
@@ -98,7 +92,6 @@ The components for the legacy physics system are not compatible with the PhysX s
 + [VisArea](component-vis-area.md)
 
 ## Scripting<a name="component-entity-scripting"></a>
-+ [Flow Graph](component-flowgraph.md)
 + [Lua Script](component-lua-script.md)
 +  [Script Canvas](component-script-canvas.md) 
 + [Trigger Area](component-triggerarea.md)
@@ -112,8 +105,11 @@ The components for the legacy physics system are not compatible with the PhysX s
 + [Sphere Shape](component-shapes.md)
 +  [Spline](component-spline.md) 
 +  [Tube Shape](component-tube-shape.md) 
++  [White Box component](component-white-box.md) 
++  [White Box Collider component](component-white-box-collider.md) 
 
 ## Terrain<a name="component-entity-terrain"></a>
++ [Legacy Terrain level component](component-legacy-terrain.md)
 + [River](component-river.md)
 + [Road](component-road.md)
 

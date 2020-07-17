@@ -1,11 +1,7 @@
 # Understanding the Project Configurator<a name="configurator-how-it-works"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 The Project Configurator is an application for specifying the settings that affect building and editing of your game project\. When you work with the Project Configurator, note the following changes\.
 

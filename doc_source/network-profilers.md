@@ -1,11 +1,7 @@
 # Using Profiler for Networking<a name="network-profilers"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| Profiler is in preview release and is subject to change\.  | 
+Profiler is in preview release and is subject to change\. 
 
 You can use the Lumberyard Profiler tool to examine how your game uses network bandwidth, including its GridMate carrier connections and replica activity\. You can use network\-specific profilers to drill down further into the activity of specific replica chunks, RPCs, and data sets\. 
 

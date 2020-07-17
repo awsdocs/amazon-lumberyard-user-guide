@@ -1,11 +1,7 @@
 # Lua Editor<a name="lua-editor-debugger"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Lumberyard Lua Editor \(Lua IDE\) offers an intuitive integrated development environment \(IDE\) that makes it easy to author, debug, and edit Lua scripts when you create or extend your game\. Lua Editor is a standalone application, but can be opened directly from Lumberyard Editor\.
 

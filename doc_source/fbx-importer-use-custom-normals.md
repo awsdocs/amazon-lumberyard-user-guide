@@ -29,9 +29,9 @@ You can configure specific `.fbx` files so that the mesh assets use custom norma
 
 1. In the **Asset Browser**, right\-click an `.fbx` file and choose **Edit Settings**\.
 
-1. In the ****FBX Settings**** tool, for the **Meshes** tab, choose **Add Modifier** and then choose **Mesh \(Advanced\)** if the modifier doesn't already exist\.
+1. In the **FBX Settings** tool, for the **Meshes** tab, choose **Add Modifier** and then choose **Mesh \(Advanced\)** if the modifier doesn't already exist\.
 
 1. Select the **Use Custom Normals** check box and click **Update**\.  
 ![\[Use Custom Normals when importing assets from a DCC.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx-settings-using-custom-normals-for-mesh-assets.png)
 
-   For more information, see [Editing the **FBX Settings**](char-fbx-importer-edit-import-settings.md)\.
+   For more information, see [Editing the FBX Settings](char-fbx-importer-edit-import-settings.md)\.

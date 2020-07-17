@@ -2,7 +2,7 @@
 
 You can use Lua scripting functions to add Twitch ChatPlay features to your game project\.
 
-For information about event buses that Lumberyard uses, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For information about event buses that Lumberyard uses, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **Topics**
 + [ChatPlayRequestBus](#twitch-chatplayrequestbus-ebus)

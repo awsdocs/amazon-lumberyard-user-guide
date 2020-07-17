@@ -1,13 +1,9 @@
 # Create Cloth for Characters<a name="tutorial-cloth-characters"></a>
 
-
 ****  
+This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
 
-|  | 
-| --- |
-| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
-
-To use **Cloth**, you must enable the **NVIDIA Cloth Gem**\. For more information, see the [**NVIDIA Cloth Gem** documentation](gems-system-gem-nv-physx-cloth.md)\. 
+To use **Cloth**, you must enable the NVIDIA Cloth Gem\. For more information, see the [NVIDIA Cloth Gem documentation](gems-system-gem-nv-physx-cloth.md)\. 
 
 ## Cloth Assets for Characters<a name="cloth-character-assets"></a>
 
@@ -28,7 +24,7 @@ You can create character cloth assets in the DCC application of your choice and 
   + Key framed cloth animation on joints can be blended with simulated cloth animation at runtime\. 
 
 **Note**  
-A sample character cloth asset is located in the **NVIDIA Cloth Gem** directory located at `/dev/Gems/``NvCloth/Assets/Objects/cloth/Chicken/`\. 
+A sample character cloth asset is located in the NVIDIA Cloth Gem directory located at `\dev\Gems\``NvCloth/Assets/Objects/cloth/Chicken/`\. 
 
 ## Add Cloth to Character Assets<a name="cloth-character-setup"></a>
 
@@ -44,10 +40,10 @@ Create cloth by adding the **Cloth** component to an entity that has an **Actor*
 
 1. Set the cloth data of the mesh asset\. 
 
-   1. Click the button beside the **Mesh node** property to open the **FBX Settings** window\.   
+   1. Click the button beside the **Mesh node** property to open the FBX Settings window\.   
 ![\[Amazon Lumberyard cloth component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-L-1.23.png)
 
-   1. In the **FBX Settings** window, on the **Actors** tab, choose **Add Modifier**, **Cloth**\. 
+   1. In the FBX Settings window, on the **Actors** tab, choose **Add Modifier**, **Cloth**\. 
 
    1. In the **Cloth** modifier area: 
 
@@ -56,7 +52,7 @@ Create cloth by adding the **Cloth** component to an entity that has an **Actor*
       1. Select the vertex color stream that includes the invert masses\. If a vertex color stream is not provided, cloth defaults to invert mass 1\.0 for all vertices\.   
 ![\[Amazon Lumberyard cloth component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-O-1.23.png)
 
-   1. Choose the **Update** button\. Asset Processor then updates the asset and including the cloth data\. For more information, see [Editing the **FBX Settings**](char-fbx-importer-edit-import-settings.md)\. 
+   1. Choose the **Update** button\. Asset Processor then updates the asset and including the cloth data\. For more information, see [Editing the FBX Settings](char-fbx-importer-edit-import-settings.md)\. 
 
 1. Configure the cloth component\. 
 

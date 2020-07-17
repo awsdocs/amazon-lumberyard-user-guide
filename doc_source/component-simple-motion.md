@@ -1,11 +1,7 @@
 # Simple Motion<a name="component-simple-motion"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Simple Motion** component to play a motion without an animation graph\. Add this component to the **[Actor](component-actor.md)** component to use a single motion for your actor\. For complex motions, see the **[AnimGraph](component-animgraph.md)** component\.
 
@@ -13,7 +9,7 @@ For creating cinematics with the **Simple Motion** component, see [Creating Char
 
 ## Simple Motion Component Properties<a name="component-simple-motion-properties"></a>
 
-![\[Add the Simple Motion component to an entity to assign a motion for the actor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-simple-motion-properties.png)
+![\[Add the Simple Motion component to an entity to assign a motion for the actor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-simple-motion-properties.png)
 
 
 ****  

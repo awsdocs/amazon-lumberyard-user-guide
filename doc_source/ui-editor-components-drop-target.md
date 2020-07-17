@@ -8,7 +8,7 @@ To add the **DropTarget** component to a UI element, use the **Add Component** m
 
 The following picture shows an example of a **DropTarget** component, where color has been added to the state actions for **Drop States**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-components-drag-drop-droptarget.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-components-drag-drop-droptarget.png)
 
 The **DropTarget** component shares properties with interactive components, such as state actions and navigation settings\.
 

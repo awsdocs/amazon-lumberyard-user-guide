@@ -23,7 +23,7 @@ The Asset Bundler relies on accurate and complete product dependency information
    + [Using the Asset Validation Gem to Verify Seeds](asset-bundler-asset-validation-gem.md)
 
 1. Generate asset bundles using the Asset Bundler command line tools\.
-   + [Simple Asset Bundling and Release Tutorial](asset-bundler-tutorial-simple.md)
+   + [Build and bundle assets for release in Lumberyard](asset-bundler-tutorial-release.md)
    + [Lumberyard Asset Bundler Command\-Line Tool Reference](asset-bundler-command-line-reference.md)
 
 1. Have the system load up the bundles that you created in Step 5\. Then, use bundle mode to identify any missing assets in the bundle\. Ideally, you don't want to see any missing dependencies, but there is no requirement to resolve them all\.
@@ -33,9 +33,9 @@ The Asset Bundler relies on accurate and complete product dependency information
 
 After you generate asset bundles to deliver with your game, switch your release build process to use the new asset bundling system\. Use the following instructions to generate content including asset bundles for a release build\. 
 
-1. Configure your game project and set it as the active project\. Go to the StarterGame walkthrough \([Getting Started with Asset Bundling and the Lumberyard StarterGame](asset-bundler-starter-game.md)\) and follow Steps 1 through 4\. Be sure to specify your own game project name instead of "StartGame\." The instructions provided in the walkthrough are for PC builds\. If your game uses another operating system, such as macOS, iOS, or Android, specify the correct profile in your `lmbr_waf` and `lmbr_pak_shaders` calls\.
+1. Configure your game project and set it as the active project\. Go to the starter game walkthrough \([Build and bundle assets for release in Lumberyard](asset-bundler-tutorial-release.md)\) and follow Steps 1 through 4\. Be sure to specify your own game project name instead of "StartGame\." The instructions provided in the walkthrough are for PC builds\. If your game uses another operating system, such as macOS, iOS, or Android, specify the correct profile in your `lmbr_waf` and `lmbr_pak_shaders` calls\.
 
-1. If your game runs on the PC operating system, you are ready to create the release build for your game\. You can do this by using command line calls, as described in Steps 5 through 6 of the StarterGame walkthrough\. Alternatively, create custom scripts to generate your asset bundles and make `.pak` files for your content\. You can customize the samples described in the next section\.
+1. If your game runs on the PC operating system, you are ready to create the release build for your game\. You can do this by using command line calls, as described in Steps 5 through 6 of the starter game walkthrough\. Alternatively, create custom scripts to generate your asset bundles and make `.pak` files for your content\. You can customize the samples described in the next section\.
 
 1. If your game runs on any operating system other than PC, follow these steps:
 
@@ -67,7 +67,7 @@ class Args(object):
  
     def __init__(self, **kwargs):
         if kwargs:
-            for k, v in kwargs.iteritems():
+            for k, v in kwargs.items():
                 self.__dict__[k] = v
  
     def __str__(self):
@@ -121,14 +121,14 @@ def generate_bundle(args):
         '--platform={0}'.format(args.platform),
         '--allowOverwrites'])
  
-    print "Asset list file is stored at {}".format(asset_list_path)
+    print("Asset list file is stored at {}".format(asset_list_path))
      
     expected_bundle_path = os.path.join('ProjectName', 'Bundles', pak_name + '.' + args.platform + '.pak')
     if os.path.exists(expected_bundle_path):
         os.remove(expected_bundle_path)
  
     os.rename(bundle_path, expected_bundle_path)
-    print "Bundle file is stored at {}".format(expected_bundle_path)
+    print("Bundle file is stored at {}".format(expected_bundle_path))
  
 parser = argparse.ArgumentParser()
 parser.add_argument('--level', help='Specify the level name')
@@ -192,6 +192,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--platform', help='Specifies the platform that will be referenced when generating Bundles.')
 args = parser.parse_args()
  
-print args
+print(args)
 main(context, [args.platform])
 ```

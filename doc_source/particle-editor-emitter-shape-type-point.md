@@ -4,7 +4,7 @@ The **Point** emitter spawns particles in a spherical distribution from the orig
 
 The following are parameters for the **Point** emitter\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-emitter-type-point.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-emitter-type-point.png)
 
 
 **Point Emitter Parameters**  

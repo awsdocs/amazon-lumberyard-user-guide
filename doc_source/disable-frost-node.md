@@ -8,7 +8,7 @@ To enable the effect, see [Enable Frost](enable-frost-node.md)\.
 + [Inputs](#disable-frost-note-input)
 + [Outputs](#disable-frost-node-output)
 
-![\[disablefrost, disablefrostnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-disable-frost-node.png)
+![\[disablefrost, disablefrostnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-disable-frost-node.png)
 
 ## Inputs<a name="disable-frost-note-input"></a>
 

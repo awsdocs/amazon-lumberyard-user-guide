@@ -33,7 +33,7 @@ The following file formats are used for static geometry:
 
 **Material and Texture File Types**
 
-The following files are used for the **Material Editor**\. For more information, see [Working with Shaders and Materials](mat-intro.md)\.
+The following files are used for the **Material Editor**\. For more information, see [Working with shaders and materials](mat-intro.md)\.
 
 
 ****  

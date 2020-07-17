@@ -1,4 +1,4 @@
-# Exporting a PxMesh Asset<a name="physx-export-physx-mesh-asset"></a>
+# Export PhysX collider mesh assets<a name="physx-export-physx-mesh-asset"></a>
 
 If you want to use a mesh a collider for the **PhysX Collider** component, you need a `.pxmesh` file to define the entity's collision geometry\. You create this file from an FBX file with at least one mesh\. Lumberyard's PhysX system can export a mesh as a triangle mesh or a convex mesh\. The default is set to triangle mesh, which you can use only on static objects\. 
 
@@ -10,16 +10,16 @@ The following procedure shows you how to export your mesh with various settings\
 **To export a \.pxmesh file**
 
 1. On your file system, locate the FBX file with the mesh that you want to export\. Artists typically create these FBX files with DCC tools\.  
-![\[FBX file on the operating system\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-export-physx-mesh-asset-1.png)
+![\[FBX file on the operating system\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-export-physx-mesh-asset-1.png)
 
 1. Place the FBX file into your project's asset directory such as `lumberyard_version\dev\StarterGame\Objects`\. If Lumberyard Editor is not open, launch it\.
 
    Asset Processor automatically detects and processes the FBX file\.
 
-1. In the **[Asset Browser](asset-browser-intro.md)**, navigate to the FBX file, right\-click, and then choose **Edit Settings** to open the ****FBX Settings**** tool\.  
-![\[Right-click the FBX file and choose Edit Settings\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-export-physx-mesh-asset-2.png)
+1. In the **[Asset Browser](asset-browser-intro.md)**, navigate to the FBX file, right\-click, and then choose **Edit Settings** to open the **FBX Settings** tool\.  
+![\[Right-click the FBX file and choose Edit Settings\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-export-physx-mesh-asset-2.png)
 
-1. In the ****FBX Settings**** tool, configure PhysX mesh export parameters:
+1. In the **FBX Settings** tool, configure PhysX mesh export parameters:
 
    1. Click the **PhysX** tab\.
 
@@ -32,29 +32,29 @@ When enabled, this parameter exports the mesh as a convex mesh\. Otherwise, the 
    1. If no meshes are selected, click **Select meshes**\.
 
    1. Select one or more meshes \(**5**\) and click **Select**\.  
-![\[Edit parameters in the FBX Settings tool to export a mesh as a .pxmesh file\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-export-physx-mesh-asset-3.png)
+![\[Edit parameters in the FBX Settings tool to export a mesh as a .pxmesh file\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-export-physx-mesh-asset-3.png)
 
 1. Click **Update**\.
 
 1. Once Asset Processor finishes processing the updated mesh, click **OK**\. 
 
-1. Close the ****FBX Settings**** tool\.
+1. Close the **FBX Settings** tool\.
 
    For more information about the parameters in this window, see [PxMesh Export Parameters](#physx-mesh-export-params)\.
 
 1. In the **Asset Browser**, you can verify that the **PhysX Collision Mesh** \(`.pxmesh` file\) appears\.  
-![\[Edit parameters in the FBX Settings to export a mesh as a .pxmesh file\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-export-physx-mesh-asset-4.png)
+![\[Edit parameters in the FBX Settings to export a mesh as a .pxmesh file\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-export-physx-mesh-asset-4.png)
 
 ## Exporting PxMesh Automatically for Static Objects<a name="physx-automatic-pxmesh-export"></a>
 
 You can also set a mesh node in an FBX file to export automatically as a PhysX triangle mesh for static PhysX objects\. You do this by appending **`_phys`** to the end of a mesh node name\. Then, when you place the FBX file in your project's asset directory, Asset Processor automatically creates the `.pxmesh` file with a triangle mesh\. The `.pxmesh` file, or **PhysX Collision Mesh**, appears in the **Asset Browser** without any further action\.
 
 **Note**  
-If you want to export a convex mesh to use with a dynamic PhysX entity, you must do so manually using the ****FBX Settings**** tool\. See [Export Mesh as Convex](#convex-mesh)\.
+If you want to export a convex mesh to use with a dynamic PhysX entity, you must do so manually using the **FBX Settings** tool\. See [Export Mesh as Convex](#convex-mesh)\.
 
 ## PxMesh Export Parameters<a name="physx-mesh-export-params"></a>
 
-When you export a `.pxmesh` file from a mesh node in an FBX file, you use the ****FBX Settings**** tool\. You can export your `.pxmesh` file as a triangle mesh or a convex mesh\. 
+When you export a `.pxmesh` file from a mesh node in an FBX file, you use the **FBX Settings** tool\. You can export your `.pxmesh` file as a triangle mesh or a convex mesh\. 
 
 **Important**  
 Triangle meshes can be used only for static PhysX entities\. See [Triangle Mesh Parameters](#physx-mesh-export-params-triangular)\.
@@ -81,9 +81,9 @@ Use the PhysX mesh export parameters to configure and tune the output produced b
 
 ### Triangle Mesh Parameters<a name="physx-mesh-export-params-triangular"></a>
 
-These parameters appear in the ****FBX Settings**** tool when the **Export Mesh As Convex** parameter is not set\.
+These parameters appear in the **FBX Settings** tool when the **Export Mesh As Convex** parameter is not set\.
 
-![\[Triangle mesh export parameters for static objects only\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-mesh-export-params-1.png)
+![\[Triangle mesh export parameters for static objects only\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-mesh-export-params-1.png)
 
 
 ****  
@@ -100,9 +100,9 @@ These parameters appear in the ****FBX Settings**** tool when the **Export Mesh 
 
 ### Convex Mesh Parameters<a name="physx-mesh-export-params-convex"></a>
 
-These parameters appear in the ****FBX Settings**** when you set the **Export Mesh As Convex** parameter\.
+These parameters appear in the **FBX Settings** when you set the **Export Mesh As Convex** parameter\.
 
-![\[Convex mesh export parameters for static or dynamic objects\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-mesh-export-params-2.png)
+![\[Convex mesh export parameters for static or dynamic objects\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-mesh-export-params-2.png)
 
 
 ****  

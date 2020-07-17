@@ -23,14 +23,14 @@ After you install Android Studio, see the following procedure to configure it\.
 **To set up Android Studio**
 
 1. In Android Studio, choose **Tools**, **Android**, **SDK Manager**\.  
-![\[Configure Android Studio on initial setup.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-sdk-manager-set-up.png)
+![\[Configure Android Studio on initial setup.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-sdk-manager-set-up.png)
 
 1. In the SDK Manager dialog box, select the SDK tools to install\.
 
 1. Under the **SDK Tools** tab, there's a check box for **NDK**\. Make sure that it installs a version that Lumberyard supports before you download and install it\. 
 
    We recommend that you download the NDK directly from the [Android Developer Portal](https://developer.android.com/ndk/downloads/index.html)\. If you need an earlier version, you can find it in the [archives](https://developer.android.com/ndk/downloads/older_releases.html) section\.  
-![\[Configure Android Studio to download an NDK version that Lumberyard supports.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-sdk-manager-set-up-2.png)
+![\[Configure Android Studio to download an NDK version that Lumberyard supports.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-sdk-manager-set-up-2.png)
 
 1. Follow the prompts to install the tools\.
 
@@ -49,7 +49,7 @@ After you install Android Studio, see the following procedure to configure it\.
    + **Android Software Development Kit \(SDK\) Tools**
    + **Java SE Development Kit \(JDK\)**  
 **Example**    
-![\[Required software for Android in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-third-party-software.png)
+![\[Required software for Android in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-third-party-software.png)
 
 1. Click **Next** until you reach the final page and close Lumberyard Setup Assistant\.
 

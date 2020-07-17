@@ -1,11 +1,7 @@
-# Simulating Physics Behavior with the PhysX System<a name="physx-intro"></a>
-
+# Simulating physics behavior with the PhysX system<a name="physx-intro"></a>
 
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Lumberyard's PhysX system acts upon entities to create realistic physical effects such as collision detection and rigid body dynamics simulation\. To use the PhysX system, install the [PhysX SDK](https://developer.nvidia.com/gameworks-physx-overview) using the [Lumberyard Setup Assistant](lumberyard-launcher-using.md)\.
 
@@ -19,9 +15,10 @@ Lumberyard's PhysX system acts upon entities to create realistic physical effect
 + [PhysX Materials](#physx-intro-materials)
 + [PhysX Debugging](#physx-intro-debugging)
 + [Configuring the PhysX System](physx-configuration.md)
-+ [Working with PhysX Materials](physx-materials.md)
++ [Physics materials](physx-materials.md)
 + [PhysX Scene Queries](physx-scene-queries.md)
 + [Debugging PhysX](debugging-physx.md)
++ [PhysX Best Practices](physx-best-practices.md)
 
 ## PhysX Gems<a name="physx-intro-gems"></a>
 
@@ -41,7 +38,7 @@ The PhysX system uses the following gems, which you can [enable](gems-system-usi
 The **PhysX** gem has the following components, which you can [add](component-working-adding.md) to entities by using the [**Entity Inspector**](component-entity-inspector.md):
 + **[PhysX Collider](component-physx-collider.md)** – Enables physics objects to collide with other physics objects\. An entity that does not have a **PhysX Rigid Body Physics** component is a **static** collider, while an entity with the component is a **dynamic** collider\.
 + **[PhysX Force Region](component-physx-force-region.md)** – Enables an entity to specify a region that applies physical force to entities\. For each physics simulation frame, the component applies force to entities that are in the bounds of the region\.
-+ **[PhysX Rigid Body Physics](component-physx-rigid-body-physics.md)** – Enables an entity to be simulated by physics\. Rigid body mode can be **kinematic** or **dynamic**\. Dynamic rigid bodies respond to collision events with other rigid bodies\. Kinematic rigid bodies are not affected by outside forces and gravity; their motion is driven by scripting\.
++ **[PhysX Rigid Body](component-physx-rigid-body-physics.md)** – Enables an entity to be simulated by physics\. Rigid body mode can be **kinematic** or **dynamic**\. Dynamic rigid bodies respond to collision events with other rigid bodies\. Kinematic rigid bodies are not affected by outside forces and gravity; their motion is driven by scripting\.
 + **[PhysX Terrain](component-physx-terrain.md)** – Implements physical interaction with the terrain\. It exports terrain and saves it as an asset that loads at runtime\. 
 
 The **PhysX Characters** gem has the following components:
@@ -58,7 +55,7 @@ For more information, see [Configuring the PhysX System](physx-configuration.md)
 
 PhysX materials allow simulation properties to be configured by entity\. Materials customize how an object reacts when it hits a surface and control qualities like friction and bounciness\. You use the **Asset Editor** to create a material library, assign the library to a collider, and then select a specific material from the library for the collider\. 
 
-For more information, see [Working with PhysX Materials](physx-materials.md)\.
+For more information, see [Physics materials](physx-materials.md)\.
 
 ## PhysX Debugging<a name="physx-intro-debugging"></a>
 

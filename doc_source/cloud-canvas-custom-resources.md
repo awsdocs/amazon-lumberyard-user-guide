@@ -150,7 +150,7 @@ The `Custom::LambdaConfiguration` resource is used in `resource-template.json` f
   Optional\. Values that are made available to the Lambda function code\.
 + `Runtime`
 
-  Required\. Identifies the runtime used for the Lambda function\. Cloud Canvas currently supports the following Lambda runtimes: `nodejs`, `python2.7`\.
+  Required\. Identifies the runtime used for the Lambda function\.
 
 ### Output Properties<a name="cloud-canvas-custom-resources-lambda-configuration-output-properties"></a>
 + `ConfigurationBucket`

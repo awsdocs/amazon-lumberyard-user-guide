@@ -1,7 +1,5 @@
 # Adding Lighting<a name="cinematics-adding-lighting-to-scenes"></a>
 
-
-
 You can set up a different lighting scenario in a sequence using light components and/or a time of day settings that are only triggered during the sequence\. You can add light components to the sequence and then add the tracks that you want to animate\. You can then set the [Console Variable Node](cinematics-track-view-nodes-cvar.md) to specify the time of day settings\. 
 
 ## <a name="cinematics-lighting-animating"></a>
@@ -9,7 +7,7 @@ You can set up a different lighting scenario in a sequence using light component
 ## Cinematic Lighting Best Practices<a name="cinematics-lighting-bp"></a>
 
 See the following recommended guidelines and best practices for cinematics lighting\.
-+ Lights should be turned on and off while in the **Track View**\. If lights are off by default, they won't accidentally render in game or interfere with a scene shot\. You can animate the **Visible** track for each light to determine when a light should be turned on or off\.
++ Lights should be turned on and off while in the Track View\. If lights are off by default, they won't accidentally render in game or interfere with a scene shot\. You can animate the **Visible** track for each light to determine when a light should be turned on or off\.
 + Disable gameplay and cubemap lights as needed for shots to avoid interference\.
 + For pre\-rendered cinematic scenes, use the console variable `e_timeofday` to trigger the correct time of day\.
 

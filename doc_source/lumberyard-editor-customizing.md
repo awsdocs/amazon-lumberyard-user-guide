@@ -109,8 +109,8 @@ You can change the general Lumberyard Editor settings and file settings\.
 
 | Parameter | Description | 
 | --- | --- | 
-|   **Deep selection range**   |  | 
-|   **Stick duplicate to cursor**   |  | 
+|  **Deep selection range**  |  | 
+|  **Stick duplicate to cursor**  |  | 
 
 
 **Vertex Snapping**  
@@ -174,7 +174,7 @@ You can change the default settings for the viewport\.
 | Hide Cursor when Captured |  Shows or hides the mouse pointer in the viewport\.  | 
 | Drag Square Size |  Specifies the size of the drag square to prevent from accidentally moving objects when selecting\.  | 
 | Display Object Links |  Displays entity links in the viewport\.  | 
-| Display Animation Tracks |  Displays the animation path for any objects in the **Track View**\. One line = one frame\.  | 
+| Display Animation Tracks |  Displays the animation path for any objects in the Track View\. One line = one frame\.  | 
 | Always Show Radii |  Displays the area of effect \(radius\) for certain entities\.  | 
 | Always Show Prefab Bounds |  Displays the prefab boundary helpers\.  | 
 | Always Show Prefab Objects |  Displays the prefab object helpers\.  | 

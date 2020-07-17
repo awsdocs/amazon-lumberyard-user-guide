@@ -4,7 +4,7 @@ You can add the **Mesh** component to an entity to provide visual geometry on an
 
 ## Mesh Component Properties<a name="component-static-mesh-properties"></a>
 
-![\[Mesh component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-mesh-component-properties.png)
+![\[Mesh component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-mesh-component-properties.png)
 
 The **Mesh** component has the following properties:
 
@@ -35,7 +35,7 @@ For more information, see [Transform Component Properties](component-transform.m
 
 If your mesh is dynamic, the **Mesh** component has the following advanced properties\.
 
-![\[Advanced Mesh component properties for a dynamic mesh in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-mesh-component-properties-3.png)
+![\[Advanced Mesh component properties for a dynamic mesh in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-mesh-component-properties-3.png)
 
 
 ****  
@@ -50,7 +50,7 @@ If your mesh is dynamic, the **Mesh** component has the following advanced prope
 
 If the mesh is static, the **Mesh** component has the following advanced properties\.
 
-![\[Advanced Mesh component properties for a static mesh in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-mesh-component-properties-2.png)
+![\[Advanced Mesh component properties for a static mesh in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-mesh-component-properties-2.png)
 
 
 ****  

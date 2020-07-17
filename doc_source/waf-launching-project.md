@@ -9,6 +9,7 @@ To launch your project, open the executable file\. The directory and file name a
 Where:
 + `compiler`
   + `vc141` – Visual Studio 2017\.
+  + `vc142` – Visual Studio 2019\.
 + [ `build mode`](game-build-intro.md)
   + `Debug` – Built in debug mode\.
   + \(None\) – Built in profile mode\.

@@ -1,13 +1,9 @@
 # Cloth Simulation<a name="tutorial-cloth-simulation"></a>
 
-
 ****  
+This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
 
-|  | 
-| --- |
-| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
-
-Lumberyard **Cloth** allows designers and artists to create, customize, and iterate on cloth simulations\. With the **NVIDIA Cloth Gem**, you can add cloth simulations to your characters and environments\. 
+Lumberyard **Cloth** allows designers and artists to create, customize, and iterate on cloth simulations\. With the NVIDIA Cloth Gem, you can add cloth simulations to your characters and environments\. 
 + Import cloth assets into Lumberyard from FBX files\.
 + Add cloth simulation to entities with **Cloth** components\.
 + Apply realistic cloth simulation to both **Mesh** and **Actor** components\. 

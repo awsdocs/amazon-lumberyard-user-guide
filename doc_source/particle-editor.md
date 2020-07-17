@@ -1,18 +1,14 @@
 # Using the Particle Editor<a name="particle-editor"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
 
 Use the **Particle Editor** to create, edit, preview, and save particle libraries and emitters that are used with entities in your levels\.
 
 **To open the Particle Editor**
 + In Lumberyard Editor, choose **Tools**, **Particle Editor**\. You can also click the particle editor icon in the Lumberyard Editor toolbar\.
 
-![\[Particle Editor interface\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor.png)
+![\[Particle Editor interface\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor.png)
 
 The **Particle Editor** includes the following UI elements:
 + **Libraries** panel – Lists the particle art assets\. You can view and interact with multiple libraries simultaneously\.

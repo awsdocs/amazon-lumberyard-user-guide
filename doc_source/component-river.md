@@ -1,11 +1,7 @@
 # River<a name="component-river"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Use the **River** component to carve riverbeds into the terrain and fill them with moving water\. The **River** component uses 2D materials to create the illusion of flowing water\. Optimally, you should use this component to create flat rivers along level terrain\. To create rivers that run downhill, you can create a series of rivers separated by occasional waterfalls\.
 
@@ -22,7 +18,7 @@ To use the **River** component, you must [enable](gems-system-using-project-conf
 
 ## River Properties<a name="component-river-properties"></a>
 
-![\[River component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-river-properties.png)
+![\[River component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-river-properties.png)
 
 See the following **River** component properties\.
 

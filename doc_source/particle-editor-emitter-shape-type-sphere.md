@@ -4,11 +4,11 @@ The **Sphere** emitter enables spawning of particles along the shapes axial coor
 
 The following is an example of the **Sphere** emitter in the **Preview** viewport\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-emitter-type-sphere-1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-emitter-type-sphere-1.png)
 
 The following are parameters for the **Sphere** emitter\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-emitter-type-sphere-2.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-emitter-type-sphere-2.png)
 
 
 **Sphere Emitter Parameters**  

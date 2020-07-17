@@ -1,10 +1,10 @@
-# Editing the **FBX Settings**<a name="char-fbx-importer-edit-import-settings"></a>
+# Editing the FBX Settings<a name="char-fbx-importer-edit-import-settings"></a>
 
 If you update the FBX settings or add modifiers for the `.fbx` file, Lumberyard generates an `.assetinfo` file with the `.fbx` file\. The `.assetinfo` file stores the configuration and modifier settings that are applied when processing the `.fbx` file\. The original `.fbx` file remains intact\. 
 
 You can find a sample `.fbx` file in the `lumberyard_version/dev/SamplesProject/Objects/Tutorials/Fbx` directory\.
 
-**To edit the **FBX Settings****
+**To edit the FBX Settings**
 
 1. In Lumberyard Editor, in the **Asset Browser**, select the `.fbx` file to modify\.
 **Tip**  
@@ -12,7 +12,7 @@ Enter **fbx** into the **Asset Browser**'s search bar to find `.fbx` files\.
 
 1. Right\-click the `.fbx` file and then choose **Edit Settings**\.
 
-1. In the ****FBX Settings**** tool, you can specify changes for the following settings:
+1. In the **FBX Settings** tool, you can specify changes for the following settings:
    + **Meshes** – Modify the settings for static meshes \(`.cgf`\)\. This tab appears if the file includes static meshes\.
    + **Actors** – Modify the settings for actors \(`.actor`\)\. This tab appears if the file includes actors\. 
    + **Motions** – Modify the settings for motions \(`.motion`\)\. This tab appears if the file includes motions\. 

@@ -2,7 +2,7 @@
 
 In the **Configuration** attribute, specify the minimum and maximum specs for your particle emitters\.
 
-![\[Configuration attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor-configuration.png)
+![\[Configuration attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor-configuration.png)
 
 
 **Configuration Attribute Parameters for CPU Emitters**  

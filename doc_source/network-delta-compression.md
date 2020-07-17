@@ -72,11 +72,11 @@ The following table illustrates the behavior of a sample delta compressed datase
 
 | Chronological Order | Value | Bytes Sent | Description | 
 | --- | --- | --- | --- | 
-| 1 | 0\.0 | 4 |   Because this is the first value, it is sent as a full update\.  | 
-| 2 | 0\.1 | 1 |   The change is less than five, so a one\-byte delta is sent\.  | 
-| 3 | 4\.9 | 1 |   The change is still less than five, so a one\-byte delta is sent\.  | 
-| 4 | 5\.1 | 4 |   The change is greater than five, so a full update is sent\.  | 
-| 5 | 5\.3 | 1 |   The change since the last full update is less than five \(`5.3-5.1=0.2`\), so a one\-byte delta is sent\.  | 
+| 1 | 0\.0 | 4 |  Because this is the first value, it is sent as a full update\.  | 
+| 2 | 0\.1 | 1 |  The change is less than five, so a one\-byte delta is sent\.  | 
+| 3 | 4\.9 | 1 |  The change is still less than five, so a one\-byte delta is sent\.  | 
+| 4 | 5\.1 | 4 |  The change is greater than five, so a full update is sent\.  | 
+| 5 | 5\.3 | 1 |  The change since the last full update is less than five \(`5.3-5.1=0.2`\), so a one\-byte delta is sent\.  | 
 
 In practice, a slowly changing float value averages 1\.4 bytes for each update\.
 

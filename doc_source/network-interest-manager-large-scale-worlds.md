@@ -12,15 +12,15 @@ GridMate is Lumberyard's networking system\. Interest manager is Lumberyard's so
 
 ## The Relationship Between Replica Manager and Interest Manager<a name="network-interest-manager-large-scale-worlds-replica-manager-and-interest-manager"></a>
 
-Interest manager is an optional feature that controls the sending of replicas in large\-scale network game applications\. [Replica Manager](network-replicas-replica-manager.md) works without interest manager\. However, replica manager sends replicas to all peers\. Thus, all associated entities with the Network Binding component on them appear on all peers\. When interest manager is created and initialized, it tells replica manager to no longer broadcast all replicas to all peers\. Interest manager acts as an overseer of replica manager and coordinates replicas and peers\.
+Interest manager is an optional feature that controls the sending of replicas in large\-scale network game applications\. [Replica Manager](network-replicas-replica-manager.md) works without interest manager\. However, replica manager sends replicas to all peers\. Thus, all associated entities with the Network Binding component on them appear on all peers\. When the Interest Manager component is created and initialized, it tells the replica manager to no longer broadcast all replicas to all peers\. Interest manager acts as an overseer of replica manager and coordinates replicas and peers\.
 
-![\[Replica manager and interest manager\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/network-interest-manager-large-scale-worlds-1.png)
+![\[Replica manager and interest manager\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/networking/network-interest-manager-large-scale-worlds-1.png)
 
 ## Interest Manager<a name="network-interest-manager-large-scale-worlds-interest-manager"></a>
 
 Broadcasting all replicas to all peers is not feasible for large\-scale networked worlds\. For these applications, you can use interest manager to control which replicas are broadcast to which peers and under what conditions\. The following diagram shows the relationship between interest manager, clients, and replicas\.
 
-![\[Interest manager, clients, and replicas\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/network-interest-manager-large-scale-worlds-2.png)
+![\[Interest manager, clients, and replicas\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/networking/network-interest-manager-large-scale-worlds-2.png)
 
 In this arrangement, replicas have *attributes*\. Each peer can have *rules* that define the conditions under which attributes are matched and sent to or removed from that peer\. Your server or authoritative peer can have several *rule handlers* that match rules to attributes\. Interest manager does the work of matching and merging results and sending or removing replicas from the appropriate peers\.
 
@@ -38,7 +38,7 @@ The [Multiplayer Sample](sample-project-multiplayer-enhanced.md) that is include
 
 ## Slice Caching and Entity Lifecycle Management<a name="network-interest-manager-large-scale-worlds-caching"></a>
 
-`NetBindingSystem` caches slices for Interest Manager\. Slice instances are cached and reused for the entities from the same slice instance\. Whenever a replica is activated, the cache is searched to see if a slice that contains the entity is already in the cache\. If the lookup is successful, the entity is reused\.
+`NetBindingSystem` caches slices for interest manager\. Slice instances are cached and reused for the entities from the same slice instance\. Whenever a replica is activated, the cache is searched to see if a slice that contains the entity is already in the cache\. If the lookup is successful, the entity is reused\.
 
 When a game entity is no longer needed \(that is, `UnBindGameEntity` is called\), `NetBindingSystem` decides whether to deactivate the entity or destroy it\. If the entity is in the cache, `NetBindingSystem` deactivates the entity\. If the entity is not found in the cache, `NetBindingSystem` destroys the entity\.
 
@@ -57,7 +57,7 @@ While the sample is not comprehensive, it provides a starting point for you to u
 
 Lumberyard's `AzFramework::InterestManagerComponent` is intended for use as a system component in your application\.
 
-The Interest Manager component initializes both interest manager and the following built\-in rule handlers:
+The `InterestManagerComponent` initializes both the interest manager and the following built\-in rule handlers:
 + Proximity rule handler \(`GridMate::ProximityInterestHandler`\) – Use the proximity rule handler to specify, based on their spatial proximity, which entities appear in each of your peers\. The rule handler uses axis\-aligned bounding boxes\.
 + Bitmask rule handler \(`GridMate::BitmaskInterestHandler`\) – Use the bitmask rule handler to filter out replicas based on their bit mask value\. This is useful for entities whose presence is determined by custom grouping\.
 
@@ -155,7 +155,7 @@ void GamePlayerNetInterest::OnTick(float deltaTime, AZ::ScriptTimePoint time)
 
 The Proximity Net Interest component describes the attribute for the entity to which it is attached\. The component listens to the transform changes of the entity and updates its internal attribute accordingly\. This allows interest manager to control the entity's presence on peers based on the peers' game player net interest\. In the **Entity Inspector**, the name of this component is **Proximity Interest attribute**\.
 
-![\[Proximity Interest attribute in the Entity Inspector\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/network-interest-manager-large-scale-worlds-3.png)
+![\[Proximity Interest attribute in the Entity Inspector\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/networking/network-interest-manager-large-scale-worlds-3.png)
 
 Entities that are filtered by interest manager have the Proximity Net Interest component attached\. This component listens to transform changes of `TransformComponent` and updates its GridMate attribute accordingly\. The following is the related code snippet from `\dev\MultiplayerSample\Gem\Code\Source\Components\Networking\ProximityNetInterest.cpp`\.
 
@@ -170,7 +170,7 @@ void ProximityNetInterestComponent::OnTransformChanged(const AZ::Transform& loca
     {
         bbox = info.m_shape->GetEncompassingAabb();
     }
-    m_attribute->Set(bbox); // Update GridMate::ProximityInterestAttribute value for the InterestManager.
+    m_attribute->Set(bbox); // Update GridMate::ProximityInterestAttribute value for the interest manager.
     ...
 }
 ```

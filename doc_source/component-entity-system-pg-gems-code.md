@@ -4,7 +4,7 @@ To add C\+\+ code or assets to your Lumberyard game, use a [gem](gems-system-gem
 
 ## Creating and Configuring Gems<a name="component-entity-system-pg-gems-code-create-configure"></a>
 
-Creating a gem is straightforward\. To create or enable a gem for your game project, follow the steps in the [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\. The gem that you create or enable is located in the `\dev\Gems\<gem name>` directory\. The gem's directory structure is similar to the following example\. Your gem might not have all the directories listed\.
+Creating a gem is straightforward\. To create or enable a gem for your game project, follow the steps in the [Add modular features and assets with Gems](gems-system-gems.md)\. The gem that you create or enable is located in the `\dev\Gems\<gem name>` directory\. The gem's directory structure is similar to the following example\. Your gem might not have all the directories listed\.
 
 ```
 \3rdParty

@@ -1,6 +1,6 @@
 # Exporting Actors and Motions<a name="char-fbx-importer-export-actors-motons"></a>
 
-Use the following best practices when you export your skinned meshes using the ****FBX Settings**** tool\.
+Use the following best practices when you export your skinned meshes using the **FBX Settings** tool\.
 + If you use the z\-up world coordinate system, use the following guidelines:
   + Ensure that your DCC scene is set to z for the up\-axis world coordinate system\.
   + Set the axis conversion up axis to z when exporting an `.fbx` file\.
@@ -11,7 +11,7 @@ Use the following best practices when you export your skinned meshes using the *
 + When you create a `.motion` file, bake animations before you export\. Alternatively, bake animations when you use your DCC's `.fbx` export tools\.
 + Export only the skeleton and mesh\. Do not use transforms, groups, or parent nodes in the hierarchy above your root joint\. The root joint must be the top parent of the skeletal hierarchy to ensure that motion extraction works properly\.
 + Remove unused geometry, bones, vertices, materials, and nodes that are not necessary for the `.fbx` asset\. This reduces the processing time and offers a better chance that the automatic processing works properly without making adjustments later\. In your DCC, consider naming nodes with `_ignore` as a suffix to prevent those nodes from being processed\.
-+ We recommend that you enable the [EMotion FX Animation](gems-system-gem-emotionfx-animation.md) gem or the CryLegacyAnimation gem, but not both\. You can disable the animation gem that you don't use\. For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
++ We recommend that you enable the [EMotion FX Animation](gems-system-gem-emotionfx-animation.md) gem or the CryLegacyAnimation gem, but not both\. You can disable the animation gem that you don't use\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 + Use the following guidelines for vertex count:
   + 
 
@@ -29,7 +29,7 @@ The following are typical settings for the Maya Game Exporter when you export yo
 
 **Export settings for \.actor files**
 + Use the **Model** tab to export your `.fbx` files\.  
-![\[Models tab in the Maya Game Exporter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx-settings-actors-model-tab.png)
+![\[Models tab in the Maya Game Exporter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/fbx-settings-actors-model-tab.png)
 + Use the following settings:
   + Select **Export Selection** from the drop\-down list\.
   + Select the **Skinning** check box\.
@@ -42,7 +42,7 @@ The following are typical settings for the Maya Game Exporter when you export yo
 
 **Export settings for \.motion files \(Animation Clips tab\)**
 + Use the **Animation Clips** tab to export your `.fbx` files\.  
-![\[Animation Clips tab in the Maya Game Exporter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx-settings-motions-animation-clips-tab.png)
+![\[Animation Clips tab in the Maya Game Exporter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/fbx-settings-motions-animation-clips-tab.png)
 + Use the following settings:
   + Select **Export Selection** from the drop\-down list\.
   + Click the **\+** button to add an animation clip\.
@@ -57,7 +57,7 @@ The following are typical settings for the Maya Game Exporter when you export yo
 
 **Export Settings for \.motion files \(Time Editor tab\)**
 + Use the **Time Editor** tab to export your `.fbx` files\.  
-![\[Time Editor tab in the Maya Game Exporter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx-settings-motions-time-editor-tab.png)
+![\[Time Editor tab in the Maya Game Exporter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/fbx-settings-motions-time-editor-tab.png)
 + Use the following settings:
   + Select **Export Selection** from the drop\-down list\.
   + Select the clip that you want to export from the **Time Editor Clips** drop\-down list\.

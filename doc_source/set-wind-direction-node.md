@@ -6,7 +6,7 @@ Sets the direction of the global wind\. The length of the **Wind Direction** vec
 + [Inputs](#set-wind-direction-node-input)
 + [Outputs](#set-wind-direction-node-output)
 
-![\[setwinddirectionnode, setwinddirection\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-wind-direction-node.png)
+![\[setwinddirectionnode, setwinddirection\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-set-wind-direction-node.png)
 
 ## Inputs<a name="set-wind-direction-node-input"></a>
 

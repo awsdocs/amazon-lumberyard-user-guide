@@ -1,17 +1,10 @@
 # Particle<a name="component-particle"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 You can use the **Particle** component to place a single particle emitter on an entity\. An entity can have multiple **Particle** components\.
 
 ## Particle Component Properties<a name="component-particle-properties"></a>
 
-![\[Particle component properties\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-particle-properties.png)
+![\[Particle component properties\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-particle-properties.png)
 
 The **Particle** component has the following properties:
 
@@ -50,7 +43,7 @@ The **Particle** component has the following properties:
 
 Use the following request function with the EBus \(event bus\) interface to communicate with other components of your game\.
 
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

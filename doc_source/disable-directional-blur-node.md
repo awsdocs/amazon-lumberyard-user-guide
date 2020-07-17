@@ -8,7 +8,7 @@ To enable the effect, see [Enable Directional Blur](enable-directional-blur-node
 + [Inputs](#disable-directional-blur-note-input)
 + [Outputs](#disable-directional-blur-node-output)
 
-![\[disabledirectionalblur, disabledirectionalblurnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-disable-directional-blur-node.png)
+![\[disabledirectionalblur, disabledirectionalblurnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-disable-directional-blur-node.png)
 
 ## Inputs<a name="disable-directional-blur-note-input"></a>
 

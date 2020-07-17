@@ -22,12 +22,12 @@ Follow this guide to create Android applications \(apps\) using Lumberyard\. Thi
 ## Prerequisites<a name="android-prerequisites"></a>
 
 To build games for Android, meet the following requirements:
-+ Install Lumberyard on your computer\. You should be familiar with Lumberyard Editor, the Shader Compiler, and Asset Processor\.
++ You've installed Lumberyard on your computer\. You should be familiar with Lumberyard Editor, the Shader Compiler, and Asset Processor\.
 + You're comfortable using a command line interface\.
-+ You have built the PC code at least once\.
-+ Visual Studio 2017 with the **Mobile development with C\+\+** workload for debugging \(PC only\)
-+ An Android SDK supporting API level 29 or later
-+ Your device is [configured ](http://developer.android.com/tools/device.html) for development and connected to your computer using a USB cable\.
++ You've built the PC code at least once\.
++ You've configured Visual Studio 2017 or Visual Studio 2019 \(PC only\) with the **Mobile development with C\+\+** workload for debugging\.
++ You've installed Android Studio and an Android SDK supporting API level 29 or later\. For help setting up Android Studio and the minimum versions of the SDK, see [Setting Up Your Environment](android-setting-up-environment.md)
++ You've [configured ](http://developer.android.com/tools/device.html) your Android device for development and connected it to your computer using a USB cable\.
 
 **Topics**
 
@@ -36,8 +36,9 @@ In this guide, you'll see references about the directory where the Lumberyard bi
 
 **For PC**
 + `dev/Bin64vc141` – Binaries generated with Visual Studio 2017
++ `dev/Bin64vc142` – Binaries generated with Visual Studio 2019
 
 **For Mac**
 + `dev/BinMac64`
 
-If you use binaries generated with Visual Studio 2017, continue to use the mentioned executable from that directory, such as `Bin64vc141/AssetProcessor.exe`\.
+If you use binaries generated with Visual Studio, continue to use the mentioned executable from that directory, such as `Bin64vc141/AssetProcessor.exe`\.

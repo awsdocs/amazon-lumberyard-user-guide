@@ -1,11 +1,7 @@
 # Infinite Ocean<a name="component-infinite-ocean"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Infinite Ocean** component to add an ocean surface to your level\. The ocean expands to the horizon, no matter where the camera moves in the environment\. 
 + Ocean simulation is based on a fast Fourier transform \(FFT\) noise\-based gradient, normal, and height maps, and mixes multiple frequencies and scale for ambient waves\.
@@ -13,11 +9,11 @@ You can use the **Infinite Ocean** component to add an ocean surface to your lev
 + On higher\-end machines, vertex displacement is used and supports additional water interaction, such as buoyancy and floating objects\.
 
 **Note**  
-To enable the **Infinite Ocean** component, you must enable the Water gem\. For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+To enable the **Infinite Ocean** component, you must enable the Water gem\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 **Example Infinite Ocean Component**  
 
-![\[Example Infinite Ocean component in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/infiniteocean/infinite-ocean-component-1.png)
+![\[Example Infinite Ocean component in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/infiniteocean/infinite-ocean-component-1.png)
 
 Water rendering in real time is complex due to visual and physical contributing factors\. For example, light behaves differently when it moves from air into water\. Most sunlight reflects off the ocean, but a large amount also penetrates into the water, which absorbs light more strongly than air\. The visible light consists of a rainbow with different wavelengths, which appears as different colors\. 
 

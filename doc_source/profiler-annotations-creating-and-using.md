@@ -1,11 +1,7 @@
 # Creating and Using Annotations<a name="profiler-annotations-creating-and-using"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| Profiler is in preview release and is subject to change\.  | 
+Profiler is in preview release and is subject to change\. 
 
 In Profiler, annotations are a convenient way of highlighting per\-frame log information from the data captured from your application\. After you learn how annotations are used in Profiler, you can modify your application so that they appear in Profiler\. 
 

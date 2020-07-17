@@ -1,5 +1,8 @@
 # Signals<a name="ai-scripting-signals"></a>
 
+****  
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
+
 The Lumberyard AI system includes a fully customizable Signal system that enables AI entities to communicate with each other\. Communication consists of signal events that can be sent by an AI agent to another single agent \(including itself\), or to a group of AI agents currently active in the game\. 
 
 This topic describes how to send and receive signals between AI agents\. 

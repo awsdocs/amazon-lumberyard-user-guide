@@ -1,15 +1,11 @@
 # Road<a name="component-road"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Use the **Road** component to create paths in Lumberyard Editor\. You can create roads that follow the curvature of existing terrain by applying a texture over the terrain texture\. You can also use the **Align heightmap** feature with the **Road** component to shape the terrain to the height and curvature of the road you placed\.
 
-To enable the **Road** component, you must enable the **Roads and Rivers** gem\. For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+To enable the **Road** component, you must enable the **Roads and Rivers** gem\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 The **Road** requires the **[Spline](component-spline.md)** component to shape its path along the X, Y, and Z axes\. After you place a road, you can edit the points in the road's spline\.
 
@@ -28,7 +24,7 @@ You can rebuild roads at runtime by modifying the spline\. However, this method 
 
 ## Road Properties<a name="road-properties"></a>
 
-![\[Road component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/road-properties-1.png)
+![\[Road component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/road-properties-1.png)
 
 See the following **Road** properties:
 
@@ -65,7 +61,7 @@ See the following **Road** properties:
 
 The road is created with the default material **defaultRoad**\. The **Spline** component defaults to the **Linear** **Spline Type** and contains four vertices \(0, 1, 2, 3\)\. For a road that curves smoothly, specify the [**Bezier**](component-spline.md#spline-type-bezier) **Spline Type**\.
 
-![\[Basic road with default road material and four vertices placed with Linear Spline Type.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/creating-a-road.png)
+![\[Basic road with default road material and four vertices placed with Linear Spline Type.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/creating-a-road.png)
 
 ## Modifying Road Width<a name="modifying-road-width"></a>
 
@@ -73,7 +69,7 @@ You can modify the road's width by adjusting the road's **Global width** propert
 
 For more granular control over the road's width, you can adjust individual points with the **Per\-Vertex Width Modifiers** property\.
 
-![\[Per-Vertex Width Modifications with four Elements\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/modifying-road-width-1.png)
+![\[Per-Vertex Width Modifications with four Elements\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/modifying-road-width-1.png)
 
 **To adjust the width of individual points**
 + In the **Road** component properties, enter a negative or positive number for the property that you want to modify\.
@@ -82,7 +78,7 @@ For more granular control over the road's width, you can adjust individual point
 **Example**  
 
   The global width of this road is `2`, and the width at the selected point is set to `5`\. The total width at the selected point is `7`\.  
-![\[Road with one vertex widened\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/modifying-road-width-2.png)
+![\[Road with one vertex widened\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/modifying-road-width-2.png)
 
 ## Setting Road Material Properties<a name="setting-road-materials"></a>
 
@@ -100,12 +96,12 @@ Activates a blend fadeout at each end of the road\. This is a 100% to 0% fadeout
 ****Decal****  
 Enables alpha blending on the sides of the road, which comes from the diffuse texture's alpha channel\.
 
-![\[Road with one vertex widened.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setting-road-materials-1.png)
+![\[Road with one vertex widened.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/setting-road-materials-1.png)
 
 **Example**  
 In the left image, **Vertex Colors** is enabled\. In the right image, the parameter is disabled\.  
 
-![\[Road with Vertex Color enabled and disabled.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setting-road-materials-2.png)
+![\[Road with Vertex Color enabled and disabled.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/setting-road-materials-2.png)
 
 ## Using Roads to Modify Terrain<a name="using-roads-to-modify-terrain"></a>
 
@@ -124,17 +120,17 @@ You can use roads to modify the shape of the terrain\.
 **Example**  
 The following image shows a road that has been created and shaped, but not yet aligned\.  
 
-![\[Road not yet aligned with terrain.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/using-roads-to-modify-terrain-1.png)
+![\[Road not yet aligned with terrain.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/using-roads-to-modify-terrain-1.png)
 
 **Example**  
 The following image shows the road and terrain after alignment with a **Border width** of `5`\.  
 
-![\[Road aligned with terrain with Border width of 5.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/using-roads-to-modify-terrain-2.png)
+![\[Road aligned with terrain with Border width of 5.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/using-roads-to-modify-terrain-2.png)
 
 **Example**  
 The following image shows the road and terrain after alignment with a **Border width** of `20`\.  
 
-![\[Road aligned with terrain with Border width of 5.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/using-roads-to-modify-terrain-3.png)
+![\[Road aligned with terrain with Border width of 5.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/using-roads-to-modify-terrain-3.png)
 
 ## Erasing Vegetation<a name="erasing-road-vegetation"></a>
 
@@ -149,12 +145,12 @@ You can erase vegetation around the road's borders\.
 **Example**  
 The following image shows the road with no vegetation erased\.  
 
-![\[Road with no vegetation erased.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/erasing-road-vegetation-1.png)
+![\[Road with no vegetation erased.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/erasing-road-vegetation-1.png)
 
 **Example**  
 The following image shows the road with **Erase width** set to `0`\.  
 
-![\[Road with Erase width set to 0.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/erasing-road-vegetation-2.png)
+![\[Road with Erase width set to 0.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/erasing-road-vegetation-2.png)
 
 **Example**  
 The following image shows the road with **Erase width** set to `1` and **Erase variance** set to `5`\.  
@@ -165,7 +161,7 @@ The following image shows the road with **Erase width** set to `1` and **Erase v
 
 Use the following request functions with the `RoadRequestBus` EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  
@@ -179,7 +175,7 @@ For more information about using the event bus \(EBus\) interface, see [Working 
 
 Use the following request functions with the `RoadsAndRiversGeometryRequestsBus` EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

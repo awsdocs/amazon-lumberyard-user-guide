@@ -1,11 +1,7 @@
 # Lightning<a name="component-lightning"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Lightning** component to create a single lightning bolt effect\. In Lumberyard Editor, you can add the **Lightning** component to entities and trigger them later from Lua or Script Canvas\. For best results, use the **Lightning** component as part of a dynamic slice along with a spawning system\. After the **Lightning** component finishes its effect, the entity is automatically destroyed\. This makes it easier for you to spawn entities with a **Lightning** component, without needing manually to manage the lifetime of each entity\.
 
@@ -115,7 +111,7 @@ Specifies how long it takes for audio to arrive at the listener, in seconds\. Fo
 
 Use the following request functions with the EBus interface to communicate with other components of your game\. You can use this EBus to communicate to an entity with a **Lightning** component attached\. The EBus is available at game run time and editing and can be accessed from C\+\+, Lua, and the **Script Canvas** editor\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### StartEffect<a name="lightning-ebus-start-effect"></a>
 

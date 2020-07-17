@@ -6,7 +6,7 @@ Returns whether an entity's **[High Quality Shadow](component-high-quality-shado
 + [Inputs](#high-quality-shadow-get-enabled-input)
 + [Outputs](#high-quality-shadow-get-enabled-output)
 
-![\[getenabled, highqualityshadow, highqualityshadownode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/high-quality-shadow-get-enabled.png)
+![\[getenabled, highqualityshadow, highqualityshadownode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/high-quality-shadow-get-enabled.png)
 
 ## Inputs<a name="high-quality-shadow-get-enabled-input"></a>
 
@@ -16,7 +16,7 @@ Returns whether an entity's **[High Quality Shadow](component-high-quality-shado
 | Pin | Type | Description | 
 | --- | --- | --- | 
 | In | Event | Triggers the node\. | 
-| Source | EntityID |  References a specific entity from which events are generated\. By default, it references **Self**, the entity to which the **[Script Canvas](component-script-canvas.md)** component attaches the current script\.  You can also select another entity\. For more information, see [Referencing Entities for Nodes](script-canvas-referencing-entities.md)\.  | 
+| Source | EntityID |  References a specific entity from which events are generated\. By default, it references **Self**, the entity to which the **[Script Canvas](component-script-canvas.md)** component attaches the current script\.  You can also select another entity\. For more information, see [Setting Entity Targets](script-canvas-referencing-entities.md)\.  | 
 
 ## Outputs<a name="high-quality-shadow-get-enabled-output"></a>
 

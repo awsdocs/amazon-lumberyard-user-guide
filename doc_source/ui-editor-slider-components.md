@@ -2,7 +2,7 @@
 
 You can use the **Slider** component to make an element behave like a slider\. This component is typically applied to an element with three visual child elements: one immediate child, called **Track**, and two child elements of the track, called **Fill** and **Handle**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-slider-components.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-slider-components.png)
 
 To see in\-game examples of completed canvases with the **Slider** component, open the level UiFeatures in the project SamplesProject\. Press **Ctrl\+G** to play the game, and then choose **Components**, **Interactable Components**, **Slider**\. You can view examples of different slider behavior and positioning\. Press **Esc** to exit the game\.
 
@@ -35,7 +35,5 @@ Enter the upper limit of the slider\.
 Enter the step value\. For example, use `1` to only permit whole integer values\.  
 **Actions**, **Change**  
 Enter a text string\. This string is sent as an action on the UI canvas when the slider has finished changing values\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.  
 **Actions**, **End Change**  
-Enter a text string\. This string is sent as an action on the UI canvas when the slider has changing values\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.
+Enter a text string\. This string is sent as an action on the UI canvas when the slider has changing values\.

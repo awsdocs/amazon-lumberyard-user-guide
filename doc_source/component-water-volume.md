@@ -1,11 +1,7 @@
 # Water Volume<a name="component-water-volume"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Water Volume** component to add small and medium bodies of water to your level\. Use the following properties to adjust the water volume's physical attributes, aesthetic, and complex interactions\.
 
@@ -162,7 +158,7 @@ Range: `0.0` to `∞`
 
 Use the following request functions with the EBus interface to communicate with other components of your game\. You can use this EBus to communicate to an entity with a **Water Volume** component attached\. The EBus is available at game time and editing and can be accessed from C\+\+, Lua, and the **Script Canvas** editor\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### SetSurfaceUScale<a name="water-volume-ebus-setsurfaceuscale"></a>
 
@@ -864,15 +860,15 @@ The spilled water volume behaves similarly to the source water volume and can si
 
 The following image shows water volume above a pool that does not allow spilling\.
 
-![\[Example Water Volume component with water that does not spill.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/water-volume-pool-no-spill.png)
+![\[Example Water Volume component with water that does not spill.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/water-volume-pool-no-spill.png)
 
 The following image shows the water volume spilling 100 units into the pool\.
 
-![\[Example Water Volume component with water spilling at 100 units into the pool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/water-volume-pool-100-units-spill.png)
+![\[Example Water Volume component with water spilling at 100 units into the pool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/water-volume-pool-100-units-spill.png)
 
 The following image shows the water volume spilling 1000 units into the pool\.
 
-![\[Example Water Volume component with water spilling at 1000 units into the pool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/water-volume-pool-1000-units-spill.png)
+![\[Example Water Volume component with water spilling at 1000 units into the pool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/water-volume-pool-1000-units-spill.png)
 
 ## Setting up Wave Simulation<a name="water-volume-setup-wave-simulation"></a>
 

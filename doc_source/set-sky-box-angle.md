@@ -8,7 +8,7 @@ For more information, see [Creating Static Skyboxes](sky-skyboxes-intro.md)\.
 + [Inputs](#set-sky-box-angle-input)
 + [Outputs](#set-sky-box-angle-output)
 
-![\[setskyboxanglenode, setskyboxangle\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/environment-set-skybox-angle.png)
+![\[setskyboxanglenode, setskyboxangle\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/environment-set-skybox-angle.png)
 
 ## Inputs<a name="set-sky-box-angle-input"></a>
 

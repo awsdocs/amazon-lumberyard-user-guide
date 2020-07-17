@@ -74,6 +74,7 @@ Create a `.json` definition file for the third\-party library\. Using the direct
                 "superlibrary.lib"
             ]
         },
+        "win_x64_vs2019": "@win_x64_vs2017",
         "darwin_x64": {
             "libpath": [
                 "lib/osx"

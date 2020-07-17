@@ -156,11 +156,11 @@ wait_seconds 5.0
 screenshot autotestTime
 
 -- console --
-StarterGameLauncher.exe -devmode +map StarterGame +exec autotest +quit
+StarterGameLauncher.exe -devmode +map SinglePlayer +exec autotest +quit
 ```
 
 In the example, the following operations were performed:
-+ Load the StarterGame map\.
++ Load the SinglePlayer map\.
 + Wait for 100 frames\.
 + Take a screenshot called autotestFrames\.
 + Wait for 5 seconds\.

@@ -1,12 +1,5 @@
 # Transform<a name="component-transform"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Transform** component controls the translation, rotation, and scale information of an entity in the 3D world\. When you create an entity in Lumberyard Editor, the **Transform** component is automatically added\. The translation is the coordinate location \(x, y, and z axes\) of the entity\. The rotation is the degree in which the entity is rotated around its center\. The scale is the dimension of the entity in comparison to its original size\.
 
 *World space* refers to the entity's absolute translation, rotation, and scale in the level\. If a child is attached to a parent entity, *local space* refers to the entity's translation, rotation, and scale relative to its parent entity\.
@@ -57,7 +50,7 @@ Scale interpolation is not supported in the **Transform** component\.
 
 **TransformBus** is the request bus for the **Transform** component\. An entity's transform is the translation, rotation, and scale information\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
@@ -541,7 +534,7 @@ Boolean
 
 **TransformNotificationBus** is the notification bus for the **Transform** component\. Use the following notification functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### OnTransformChanged<a name="on-transform-changed"></a>
 

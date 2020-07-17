@@ -11,7 +11,7 @@ You can use this node with all substance data types: `Float1` through `Float4` a
 + [Inputs](#set-input-number-node-input)
 + [Outputs](#set-input-number-node-output)
 
-![\[SetInputNumber sets the numeric value for a procedural material input parameter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-input-number-node.png)
+![\[SetInputNumber sets the numeric value for a procedural material input parameter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-set-input-number-node.png)
 
 ## Inputs<a name="set-input-number-node-input"></a>
 

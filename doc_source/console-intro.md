@@ -41,7 +41,7 @@ You can retrieve a complete list of console commands and variables, including th
 
 ## Configuring Console Variables<a name="configuring-console-variables-cvars"></a>
 
-Console variables can also be set in code, flow graphs, or specified in configuration files\. Console variables are executed in the following order:
+Console variables can also be set in code or specified in configuration files\. Console variables are executed in the following order:
 
 1. Configuration files:
    + The `game.cfg` file in your project directory
@@ -50,8 +50,6 @@ Console variables can also be set in code, flow graphs, or specified in configur
    + The `level.cfg` file in your project's level directory
 
 1. Code
-
-1. Flow graphs
 
 1. Console variables typed directly into the console
 

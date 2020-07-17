@@ -1,6 +1,6 @@
-# Audio Console Variables Commands<a name="audio-console-commands"></a>
+# Audio Console Variables<a name="audio-console-commands"></a>
 
-The following console variable commands can be used with the Lumberyard Audio system\.
+The following console variables can be used with the Lumberyard Audio system\.
 
 **s\_ATLPoolSize**  
 Specifies in KB the size of the memory pool to be used by the audio translation layer \(ATL\)\.  
@@ -27,10 +27,6 @@ Can override on a global scale\. If set, it determines whether AudioProxies init
 Values: 0 = AudioProxy\-specific initialization; 1 = Initialize synchronously; 2 = Initialize asynchronously\.   
 Default value: 0 \(all platforms\)
 
-**s\_AudioSystemImplementationName**  
-Name of the AudioSystemImplementation library to be used without extension\.  
-Default value: CryAudioImplWwise
-
 **s\_AudioTriggersDebugFilter**  
 Allows for filtered display of audio triggers by a search string\.   
 Default value: "" \(all\)
@@ -51,13 +47,14 @@ Values:
 + v: List active Events
 + w: List active Audio Objects
 + x: Show FileCache Manager debug info
++ y: Show memory pool usage info for the audio impl
 
 **s\_ExecuteTrigger**  
 Executes an Audio Trigger\. The first argument is the name of the audio trigger to be executed, the second argument is an optional audio object ID\. If the second argument is provided, the audio trigger is executed on the audio object with the given ID; otherwise, the audio trigger is executed on the global audio object\.
 
 **s\_FileCacheManagerDebugFilter**  
 Allows for filtered display of the different AFCM entries such as Globals, Level Specifics, and Volatiles\.  
-Values: Default = 0 \(all\); a = Globals; b = Level Specifics; c =: Volatiles
+Values: Default = 0 \(all\); a = Globals; b = Level Specifics; c = Volatiles
 
 **s\_FileCacheManagerSize**  
 Sets the size in KB that the AFCM allocates on the heap\.  

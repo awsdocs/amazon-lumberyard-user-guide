@@ -1,6 +1,9 @@
 # AI Modular Behavior Tree<a name="ai-mbt-intro"></a>
 
-The Modular Behavior Tree \(MBT\) is a collection of XML\-based nodes that describe rules, behaviors, and tasks for AI agents to follow\. The Modular Behavior Tree Editor is used to create trees and nodes for AI agents, and is accessed from Lumberyard Editor by clicking **Tools**, **Other**, **Modular Behavior Tree Editor**\.
+****  
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
+
+The Modular Behavior Tree \(MBT\) is a collection of XML\-based nodes that describe rules, behaviors, and tasks for AI agents to follow\. 
 
 AI signals are sent either from the MBT itself using the Signal node or from code\. A signal sets a tree variable to true or false when it is triggered\. Tree variables can then be used to make decisions in the tree\. Timestamps are set when an AI signal comes in, and can be used to check how long ago something happened\.
 

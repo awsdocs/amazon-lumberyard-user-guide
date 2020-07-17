@@ -10,7 +10,7 @@ To use the **DynamicLayout** component, you place it on an element that also has
 
 The layout element \(1\) dynamically resizes to fit its child elements\. The first child \(2\) of the layout element acts as the prototype element\. At run time, the UI system clones the prototype element to achieve the specified number of children in the layout\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-components-dynamic-child.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-components-dynamic-child.png)
 
 The automatic resizing of the layout element depends on the layout type\. 
 
@@ -18,9 +18,7 @@ For [**LayoutColumn**](ui-editor-components-layout-column.md) and [**LayoutRow**
 
 For a [**LayoutGrid**](ui-editor-components-layout-grid.md) element, the cell size of the **LayoutGrid** component determines the size of the child elements\. The **LayoutGrid** element's initial size determines the number of children that can fit in each row or each column, depending on fill direction or **Order** settings\. If the **Starting with** fill direction is **horizontal**, the UI system uses the **LayoutGrid** element's initial width to determine how many children fit in each row\. If set to **vertical**, the initial height is used to determine how many children fit in each column\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-components-dynamic-fillorder.png)
-
-You can use flow graph to set the number of child elements in the layout, and to set up each child element with dynamic content\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-components-dynamic-fillorder.png)
 
 **To use a dynamic layout component**
 
@@ -66,7 +64,7 @@ The **DynamicScrollBox** component uses a bus called `UiDynamicScrollBoxDataBus`
 
 Use the following notification functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### UiDynamicScrollBoxDataBus:GetNumElements<a name="ui-editor-components-ebus-uidynamicscrollboxdatabus"></a>
 

@@ -1,5 +1,8 @@
 # AI System Overview<a name="ai-concepts-overview"></a>
 
+****  
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
+
 This section outlines basic concepts related to the AI system\.
 
 ## Navigation<a name="ai-concepts-navigation"></a>
@@ -14,8 +17,6 @@ This section outlines basic concepts related to the AI system\.
 + Multi\-layer navigation system
 + Smart object system: allows AI agents to move in special ways
 + AI territories & waves
-  + Control number of active AI agents \(through flow graph logic\)
-  + Activate, deactivate, and spawn all AI agents assigned to a territory using a single FG node
   + AI waves can be attached to AI territories and allow independent AI activations
   + AI waves automatically handle entity pool issues for assigned AI agents, such as loading/unloading 
 
@@ -46,17 +47,14 @@ In general, a search is time\-sliced to use 0\.5 ms per AI frame \(configured us
 The design and development environment includes the following components:
 + Game object model – Entity, movement controller, extensions
 + Actor & vehicle system – Health, camera, IK, weapons, animation, etc\.
-+ Flow graph – Visual definition of game logic
-+ AI debug renderer – HUD, geometric primitives, text labels, graphs, etc\.
 + Editor 
-  + AI entities – Properties, flow graphs, scripts
+  + AI entities – Properties, scripts
   + Entity archetypes – Templates for properties of individual AI agents
   + AI shapes – AI territories, AI paths, forbidden areas
   + Navigation – Navigation modifiers used instead of triangulation
   + Cover surfaces – CoverSurface anchors to indicate where cover should be
-  + Visual AI debugger – Recording AI signals, active behaviors, goals, stimuli, etc\.
 + Scripting with Lua 
-  + Entity definitions \(including entity flow graph nodes\)
+  + Entity definitions
   + AI behavior definitions
   + Group behavior definitions
   + Library or shared Lua code \(game rules, basic entities\)
@@ -80,20 +78,6 @@ The design and development environment includes the following components:
   + AI agents and vehicles are entities in the Entity system
   + To spawn an entity, its Entity class is required – Can be defined either using the `.ent` file in `Game\Entities` OR through a C\+\+ call to RegisterFactory\(\) in game code
   + An entity pool can be used to limit the number of active AI agents per each specified Entity class\.
-+ AI Debugger and AI Debug Draw
-  + Use AI Debugger to track multiple features, including active behavior, signal received, attention target, comments, etc\.
-  +  `ai_DebugDraw` 
-    + 1 – Basic info on AI agents \(selected by `ai_DrawAgentStats`\)
-    + 74 – All of the navigation graph \(can be slow\)
-    + 79 – Parts of the navigation graph around the player
-  + `ai_statsTarget <AI name>` – Detailed info for the specified AI
-  + `ai_DebugTargetTracksAgent <AI name>` – Perception information on the specified AI
-  + `ai_Recorder_Auto` – Record AI activity in Editor game mode for AI Debugger
-  + `ai_DebugTacticalPoints` – Debug TPS queries
-  + `ai_DrawPath <AI name>` – Draw the path of the specified AI \(optionally specify "all" for all AI agents\)
-  + `ai_DrawPathFollower` – Draw the actual path being followed
-  + `ai_DrawSmartObjects` – Display smart objects and their classes and attributes
-  + `ai_DebugDrawEnabledActors` – List currently enabled AI agents\.
 
 ## Execution Context<a name="ai-concepts-execution"></a>
 + AI update is called every frame, but are fully updated only at \~10Hz

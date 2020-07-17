@@ -260,7 +260,7 @@ The node always SUCCEEDS\.
 
 ## Communicate<a name="ai-scripting-mbt-nodes-ai-communicate"></a>
 
-Sends a request to the communication manager to play one of the AI agent's communications\. See [Communication System](ai-scripting-communication.md)\. 
+Sends a request to the communication manager to play one of the AI agent's communications\.  
 
 ### Parameters<a name="ai-scripting-mbt-nodes-ai-communicate-parameters"></a>
 

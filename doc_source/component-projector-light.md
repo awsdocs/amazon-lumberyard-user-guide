@@ -1,12 +1,5 @@
 # Projector Light<a name="component-projector-light"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 Use the **Projector Light** component on an entity to project a light\.
 
 The **Projector Light** component has the following settings:
@@ -128,6 +121,6 @@ Default value: 0
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 All light components share common EBus functions\. For more information, see [Light Components EBus Request Bus Interface](component-area-light.md#component-light-ebusrequest)\.

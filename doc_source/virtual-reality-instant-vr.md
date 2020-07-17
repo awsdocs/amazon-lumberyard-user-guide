@@ -1,11 +1,7 @@
 # Using the InstantVR Slice<a name="virtual-reality-instant-vr"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
 
 The **instantVR** slice is a set of entities, scripts, and assets that provide basic pieces of VR functionality to give you a starting point from which you can build your own VR application\.
 
@@ -19,7 +15,7 @@ The **instantVR** slice is part of the Virtual Reality Project sample level\. Fo
 **To use the **instantVR** slice**
 
 1. In the [**Asset Browser**](asset-browser-intro.md), navigate to `dev\VirtualRealityProject\slices\`\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/virtual-reality-instant-vr-ab.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/vr/virtual-reality-instant-vr-ab.png)
 
 1. Drag `instantvr.slice` into the viewport\.
 
@@ -29,6 +25,6 @@ The **instantVR** slice is part of the Virtual Reality Project sample level\. Fo
 
    You can use the trigger buttons on your controllers to teleport around the space\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/virtual-reality-instant-vr-1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/vr/virtual-reality-instant-vr-1.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/virtual-reality-instant-vr-2.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/vr/virtual-reality-instant-vr-2.png)

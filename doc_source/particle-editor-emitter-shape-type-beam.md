@@ -4,7 +4,7 @@ The **Beam** emitter spawns a length of connected particles at once, based on th
 
 The following are parameters for the **Beam** emitter \(CPU\)\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-emitter-type-beam.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-emitter-type-beam.png)
 
 
 **Beam Emitter Parameters for CPU Attributes**  

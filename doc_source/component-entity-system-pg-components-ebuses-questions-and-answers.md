@@ -5,9 +5,6 @@ The following are some questions and answers for using components and EBuses in 
 **Q\. Is it possible to mix Lumberyard's legacy object entity system with its newer component entity system? If so, what is the best practice?**  
 A\. If you enable legacy systems, the two systems can work side by side\. However, no formal mechanisms exist to have them work together in the way most games would expect\.
 
-**Q\. Is it possible to use Lumberyard's legacy FlowGraph visual scripting system with the new component entity system?**  
-A\. Only in very limited ways\. We recommend using [Script Canvas](script-canvas-intro.md) or [Lua scripting](lua-scripting-intro.md) because they are fully compatible with the new component entity system\.
-
 **Q\. Are there combinations of components that should be avoided?**  
 A\. In principle, no\. However, every component has a small resource cost associated with it\. When possible, avoid creating long chains of components if the desired objective be accomplished through simpler means\.
 
@@ -15,7 +12,7 @@ A\. In principle, no\. However, every component has a small resource cost associ
 A\. When editor–only functionality is required, or when the data in the editor must be different than the data in the runtime\. For more information, see [Editor Components](component-entity-system-pg-editor-components.md)\.
 
 **Q\. What is the best practice for a component to communicate with another component on the same entity? What if the component is on a different entity?**  
-A\. Using EBuses for both events and event monitoring\. For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+A\. Using EBuses for both events and event monitoring\. For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **Q\. What is the best way to find component entities at runtime?**  
 A\. The method depends on the use case\. Here are some possible approaches:  

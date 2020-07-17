@@ -11,7 +11,7 @@ A sample level for testing is located in the `\dev\CloudGemSamples\Levels\MsgOfT
 1. To display the messages in a specific order, set the priority field\. `0` signifies highest priority\.
 
 1. Press **Ctrl\+G** to start the level\. The test user interface appears\.  
-![\[Get messages\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-cloud-gem-mod-testing-get-messages.png)
+![\[Get messages\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-canvas-cloud-gem-mod-testing-get-messages.png)
 
 1. Click **Get Messages**\.
 

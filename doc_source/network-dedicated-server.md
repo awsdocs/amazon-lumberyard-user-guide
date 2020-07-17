@@ -16,4 +16,4 @@ To generate a dedicated server build that you can use locally or upload to Amazo
 
 ## Linux Support<a name="network-dedicated-server-linux-support"></a>
 
-Lumberyard has a Linux version of the dedicated server\. For information on how to compile and build dedicated server packages in Linux, see [Creating Lumberyard Executables for Linux](linux-intro.md)\.
+Lumberyard has a Linux version of the dedicated server\. For information on how to compile and build dedicated server packages in Linux, see [Creating Lumberyard dedicated servers for Linux](linux-intro.md)\.

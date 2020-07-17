@@ -1,11 +1,7 @@
 # Building the Lumberyard Executable for Linux<a name="linux-build-lumberyard-executable"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 After compiling the assets on a Windows computer, you must build the Lumberyard executable for a Linux computer\. Your Linux executable and compiled game assets must be packaged as the tar archive format \(\.tar\) for transfer to a Linux environment\. To create a Linux deployment package, run the **MultiplayerSample\_LinuxPacker\.bat** file \(located in the **\\dev** directory\) as Administrator\.
 

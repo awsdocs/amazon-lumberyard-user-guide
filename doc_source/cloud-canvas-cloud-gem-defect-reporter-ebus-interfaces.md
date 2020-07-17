@@ -229,8 +229,8 @@ void ReportData(int reportID, int handlerID, vector<MetricDesc> metricsData, vec
 | --- | --- | --- | 
 | reportID | int | Report ID for this data\. | 
 | handlerID | int | ID of the handler returned by GetHandlerID\. | 
-| metrics | vector<MetricDesc> |   A `MetricDesc` object that contains the metrics attributes for the report\.  For details, see [`MetricDesc`](#metric-desc)\.  | 
-| attachments | vector<AttachmentDesc> |   An `AttachmentDesc` object that contains descriptions \(names, local paths and mime types\) of the attachments to be sent with the report\.  For details, see [`AttachmentDesc`](#attachment-desc)\.  | <a name="metric-desc"></a>
+| metrics | vector<MetricDesc> |  A `MetricDesc` object that contains the metrics attributes for the report\.  For details, see [`MetricDesc`](#metric-desc)\.  | 
+| attachments | vector<AttachmentDesc> |  An `AttachmentDesc` object that contains descriptions \(names, local paths and mime types\) of the attachments to be sent with the report\.  For details, see [`AttachmentDesc`](#attachment-desc)\.  | <a name="metric-desc"></a>
 
 
 **MetricDesc**  

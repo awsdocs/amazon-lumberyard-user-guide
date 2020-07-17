@@ -1,11 +1,7 @@
 # Compiling Assets on a Windows Computer<a name="linux-compile-assets-on-windows"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You must compile assets and the `3rdParty` directory for the multiplayer project on a Windows computer\. Once compiled, you can deploy assets to either a Linux server or Windows client\.
 
@@ -21,7 +17,7 @@ You must compile assets and the `3rdParty` directory for the multiplayer project
 
 1. Run the following command from the `\dev` directory: `lmbr_waf.bat configure`
 
-1. Follow these instructions for [Getting Started with Asset Bundling and the Lumberyard StarterGame](asset-bundler-starter-game.md)\. Alternatively, you can run the `BuildMultiplayerSample_Paks_PC_dedicated.bat` file \(located in the `\dev` directory\)\.
+1. Follow these instructions for [Build and bundle assets for release in Lumberyard](asset-bundler-tutorial-release.md)\. Alternatively, you can run the `BuildMultiplayerSample_Paks_PC_dedicated.bat` file \(located in the `\dev` directory\)\.
 
 1. To create a Linux deployment package, run the `MultiplayerSample_LinuxPacker.bat` file \(located in the `\dev` directory\) as Administrator\.
 

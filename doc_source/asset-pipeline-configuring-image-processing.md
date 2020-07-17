@@ -18,7 +18,7 @@ Lumberyard supports the following image file types:
 
 The following diagram represents the general workflow for converting images\.
 
-![\[General workflow for converting images in Lumberyard\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-images.png)
+![\[General workflow for converting images in Lumberyard\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assets/pipeline/asset-pipeline-images.png)
 
 **Topics**
 + [Creating Image Processing Presets](asset-pipeline-creating-image-processing-presets.md)

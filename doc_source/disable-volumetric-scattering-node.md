@@ -8,7 +8,7 @@ To enable the effect, see [Enable Volumetric Scattering](enable-volumetric-scatt
 + [Inputs](#disable-volumetric-scattering-note-input)
 + [Outputs](#disable-volumetric-scattering-node-output)
 
-![\[disablevolumetricscattering, disablevolumetricscatteringnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-disable-volumetric-scattering-node.png)
+![\[disablevolumetricscattering, disablevolumetricscatteringnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-disable-volumetric-scattering-node.png)
 
 ## Inputs<a name="disable-volumetric-scattering-note-input"></a>
 

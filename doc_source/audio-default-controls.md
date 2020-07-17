@@ -8,7 +8,7 @@ To see the list of audio control types, see [ATL Controls Pane](audio-atl-editor
 
 The **Audio Controls Editor** automatically creates the following ATL controls by default\. You can find the controls in the `default_controls` folder\.
 
-![\[ATL controls that the Audio Controls Editor automatically creates by default.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/audio-atl-editor-default.png)
+![\[ATL controls that the Audio Controls Editor automatically creates by default.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/audio/audio-atl-editor-default.png)
 
 
 **Default ATL Controls**  

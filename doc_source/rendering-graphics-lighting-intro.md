@@ -1,4 +1,4 @@
-# Adding Lighting and Shadows<a name="rendering-graphics-lighting-intro"></a>
+# Adding lighting and shadows<a name="rendering-graphics-lighting-intro"></a>
 
 Lumberyard uses physically\-based lighting and shading models to implement global illumination and lighting\. 
 

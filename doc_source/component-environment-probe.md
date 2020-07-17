@@ -1,12 +1,5 @@
 # Environment Probe<a name="component-environment-probe"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 Use the **Environment Probe** component to achieve the right visual quality for a space\. Environment probes help to determine proper reflections, ambient diffuse values, particle diffuse values, and shadow colors\.
 
 For information about how to blend environment probes to create a smooth transition, for example, from day to night, see [Blending Environment Probes](level-blending-environment-probe.md)\.
@@ -128,6 +121,6 @@ For more information about the **Environment Probe** component, see the followin
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 All light components share common EBus functions\. For more information, see [Light Components EBus Request Bus Interface](component-area-light.md#component-light-ebusrequest)\.

@@ -1,11 +1,7 @@
-# Cloth Component<a name="component-cloth"></a>
-
+# Cloth<a name="component-cloth"></a>
 
 ****  
-
-|  | 
-| --- |
-| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
+This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
 
 The **Cloth** component treats the vertices of any mesh that it references as particles and applies physical properties, forces, and constraints to simulate the behavior of cloth\. You can add this component to any entity that has **Mesh** or **Actor** components\. 
 + [Cloth Component Properties](#component-cloth-properties) 
@@ -19,7 +15,7 @@ The **Cloth** component treats the vertices of any mesh that it references as pa
 
 Set the core behavior of the cloth simulation\.
 
-![\[Base properties of the Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-A-1.23.png)
+![\[Base properties of the Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-A-1.23.png)
 
 **Mesh node**  
 A list of meshes to simulate as cloth\. The meshes available in the list that have **Cloth** modifiers applied in the **Scene Settings** tool\. 
@@ -49,7 +45,7 @@ An exponent that adjusts the overall stiffness of the cloth simulation\. This ex
 
 Adjust the decay of particle velocities over time\.
 
-![\[Damping properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-B-1.23.png)
+![\[Damping properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-B-1.23.png)
 
 **Damping**  
 Damps particle velocity\.   
@@ -70,7 +66,7 @@ Portion of angular velocity applied to turning particles\.
 
 Adjust particle acceleration\. 
 
-![\[Inertia properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-C-1.23.png)
+![\[Inertia properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-C-1.23.png)
 
 **Linear**  
 Portion of linear acceleration applied to particles\.   
@@ -91,7 +87,7 @@ Portion of angular velocity applied to turning particles\.
 
 Create a wind force to act on the cloth simulation\. 
 
-![\[Wind properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-D-1.23.png)
+![\[Wind properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-D-1.23.png)
 
 **Velocity**  
 Wind vector \(direction and magnitude\) in world coordinates\. A greater magnitude applies a stronger wind force\.   
@@ -110,7 +106,7 @@ The density of air used for drag and lift calculations\.
 
 Adjust the effect of collisions with other PhysX colliders\.
 
-![\[Collision properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-E-1.23.png)
+![\[Collision properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-E-1.23.png)
 
 **Friction**  
 Controls the amount of friction between particles and colliders\.   
@@ -128,7 +124,7 @@ The increase in quality can impact performance\. We recommend that you use **Con
 
 Enable and adjust the effect of the cloth colliding with itself\.
 
-![\[Self collision properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-F-1.23.png)
+![\[Self collision properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-F-1.23.png)
 
 **Distance**  
 The minimum distance that the colliding particles must maintain from each other in meters\.   
@@ -142,7 +138,7 @@ Stiffness for the self collision constraints\.
 
 Adjust the stiffness of the cloth\. As values for these properties approach **1\.0**, the more heavy and stiff the cloth appears\. 
 
-![\[Fabric stiffness properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-G-1.23.png)
+![\[Fabric stiffness properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-G-1.23.png)
 
 **Horizontal**  
 Stiffness value for horizontal constraints\. This value defines how much a cloth stretches and compresses horizontally\.   
@@ -184,7 +180,7 @@ Scale value for shearing constraints\.
 
 Set the compression limits for fabric\.
 
-![\[Fabric Compression properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-H-1.23.png)
+![\[Fabric Compression properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-H-1.23.png)
 
 **Horizontal limit**  
 Compression limit for horizontal constraints\. This property is affected by **Horizontal multiplier** in the **Fabric stiffness** property group\.   
@@ -209,7 +205,7 @@ Set the stretch limits for fabric\.
 **Note**  
 For these properties, reduce **Stiffness** of **Tether constraints** or increase its **Scale** to allow cloth to stretch\. 
 
-![\[Fabric stretch properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-I-1.23.png)
+![\[Fabric stretch properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-I-1.23.png)
 
 **Horizontal limit**  
 Stretch limit for horizontal constraints\. This property is affected by **Horizontal multiplier** in the **Fabric stiffness** property group\.   
@@ -231,7 +227,7 @@ Stretch limit for shearing constraints\. This property is affected by **Shearing
 
 Adjust the stiffness for tether constraints between particles with mass values and static particles\.
 
-![\[Tether constraints properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-J-1.23.png)
+![\[Tether constraints properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-J-1.23.png)
 
 **Stiffness**  
 Stiffness for tether constraints\.   
@@ -245,7 +241,7 @@ Scale factor for tether constraint **Stiffness**
 
 Set the overall quality of the cloth simulation\.
 
-![\[Quality properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-K-1.23.png)
+![\[Quality properties of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-K-1.23.png)
 
 **Solver frequency**  
 Target solver iterations per second\. The executed number of iterations per second may vary dependent on many performance factors\. However, at least one iteration per frame is solved regardless of the value set\. 
@@ -255,9 +251,9 @@ Number of iterations to average the delta time factor used for gravity and exter
 
 ## Debug Visualization<a name="component-cloth-debug-visualization"></a>
 
-![\[Debug visualization of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/nvidiacloth/ui-cloth-component-debug-1.23.png)
+![\[Debug visualization of the NVIDIA Cloth component\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/nvidiacloth/ui-cloth-component-debug-1.23.png)
 
-To enable the debug visualization of cloth, use these **CVAR**s in the **Editor Console** 
+To enable the debug visualization of cloth, use these CVARs in the Editor Console 
 
 *cloth\_debugDraw*  
 Draw the cloth mesh wireframe\.   
@@ -284,3 +280,12 @@ Draw the cloth colliders\.
 ## References<a name="component-cloth-references"></a>
 
  [Nvidia NvCloth Documentation](https://gameworksdocs.nvidia.com/NvCloth/1.1/index.html) 
+
+**Topics**
++ [Cloth Component Properties](#component-cloth-properties)
++ [Debug Visualization](#component-cloth-debug-visualization)
++ [Known Issues](#component-cloth-known-issues)
++ [References](#component-cloth-references)
++ [Cloth Simulation](tutorial-cloth-simulation.md)
++ [Create Cloth for Environments](tutorial-cloth-environment.md)
++ [Create Cloth for Characters](tutorial-cloth-characters.md)

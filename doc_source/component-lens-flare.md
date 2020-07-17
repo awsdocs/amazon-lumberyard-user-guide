@@ -1,12 +1,5 @@
 # Lens Flare<a name="component-lens-flare"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Lens Flare** component allows the placement of a lens flare on an entity\.
 
 ## Lens Flare Component Properties<a name="component-lensflare-properties"></a>
@@ -76,7 +69,7 @@ Animation start offset from **0** to **1**\. **0\.1** would be 10% into the anim
 
 Use the following request function with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 + **SetLensFlareState** \(`On` or `Off`\) – Turns the lens flare on or off\.
 + **TurnOnLensFlare** – Turns the lens flare on\.
 + **TurnOffLensFlare** – Turns the lens flare off\.
@@ -86,7 +79,7 @@ For more information about using the Event Bus \(EBus\) interface, see [Working 
 
 Use the following notification functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 + **LensFlareTurnedOn** – Sends a signal when the lens flare is turned on\.
 + **LensFlareTurnedOff** – Sends a signal when the lens flare is turned off\.
 

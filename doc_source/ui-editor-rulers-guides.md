@@ -9,7 +9,7 @@ Use **Rulers** and **Guides** to visually guide the placement of your UI element
 
 The ruler's units are measured in pixels in the canvas space\. Magenta lines on the rulers mark the current location of your cursor\.
 
-![\[Magenta lines on the Rulers mark the current location of the cursor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-rulers-guides-magenta.png)
+![\[Magenta lines on the Rulers mark the current location of the cursor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-rulers-guides-magenta.png)
 
 **Guides** appear as green lines and act as a visual aid for positioning UI elements\.
 
@@ -29,10 +29,10 @@ You place the guides at a specific pixel offset on a canvas\. The **UI Editor** 
    If you start in the top ruler, you create a horizontal line\. Starting in the side ruler creates a vertical line\.
 
 1. Release at the position that you want to place the guide\.  
-![\[To create guides, ensure the Ruler is displayed and then drag down or across from the side or top ruler.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-rulers-guides-creating-gif.gif)
+![\[To create guides, ensure the Ruler is displayed and then drag down or across from the side or top ruler.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-rulers-guides-creating-gif.gif)
 
 1. To adjust the position of the guide, click the guide and drag it to a new position\.  
-![\[Adjust the guide position by placing the cursor on the guide and dragging it.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-rulers-guides-adjust.png)
+![\[Adjust the guide position by placing the cursor on the guide and dragging it.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-rulers-guides-adjust.png)
 **Note**  
 You must be in **Move** or **Anchor** mode to adjust a guide's position\.
 
@@ -51,6 +51,6 @@ You can change the color of all guides\.
 
 **To change guide color**
 
-1. Clear all selected UI elements\.
+1. Click in an empty area on the viewport or hierarchy pane so that no UI elements are selected, and you see the **UI Canvas** component in the **Properties** pane\.
 
-1. In the **Properties** panel, under **Editor settings**, click the **Guide color** and select a new color\.
+1. In the **UI Canvas** component, under **Editor settings**, click the **Guide color** and select a new color\.

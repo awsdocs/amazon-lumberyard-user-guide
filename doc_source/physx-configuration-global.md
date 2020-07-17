@@ -2,7 +2,7 @@
 
 On the **Global Configuration** tab, you can configure world settings and editor settings\.
 
-![\[PhysX Global Configuration tab\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-configuration-1.png)
+![\[PhysX Global Configuration tab\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-configuration-1.png)
 
 ## World Configuration<a name="physx-configuration-global-world"></a>
 
@@ -24,7 +24,7 @@ The following table describes the settings for **World Configuration**\.
 
 ## Editor Configuration<a name="physx-configuration-global-editor"></a>
 
-The following options relate to the **Debug Draw COM** \(center of mass\) option of the [PhysX Rigid Body Physics](component-physx-rigid-body-physics.md) component\.
+The following options relate to the **Debug Draw COM** \(center of mass\) option of the [PhysX Rigid Body](component-physx-rigid-body-physics.md) component\.
 
 
 ****  

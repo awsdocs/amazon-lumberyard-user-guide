@@ -6,7 +6,7 @@ Returns the moon's latitude in the sky\.
 + [Inputs](#get-moon-latitude-node-input)
 + [Outputs](#get-moon-latitude-node-output)
 
-![\[getmoonlatitude, getmoonlatitudenode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-get-moon-latitude-node.png)
+![\[getmoonlatitude, getmoonlatitudenode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-get-moon-latitude-node.png)
 
 ## Inputs<a name="get-moon-latitude-node-input"></a>
 

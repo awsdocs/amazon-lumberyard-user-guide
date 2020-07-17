@@ -1,4 +1,4 @@
-# Creating Android and iOS Games<a name="mobile-support-intro"></a>
+# Create Android and iOS projects in Lumberyard<a name="mobile-support-intro"></a>
 
 You can use Lumberyard to build your games for Android devices and iOS devices that use the A8 GPUs\. Lumberyard includes two Android\-supported sample projects and four iOS\-supported sample projects that you can use to learn how to build assets, build shaders using the remote shader compiler, and build the Lumberyard runtime \(Android\) or iOS applications using the Lumberyard build tools\.
 
@@ -24,4 +24,3 @@ Lumberyard supports the following minimum specifications for Android and iOS:
 + [Adding IP Addresses to Allow Access to the Asset Processor and Remote Console](ios-android-adding-ip-addresses.md)
 + [Running the Shader Compiler on Amazon EC2](ios-android-running-shader-compiler-amazon-EC2.md)
 + [Using AWS Device Farm in Lumberyard Editor](ios-android-deployment-tool-device-farm-integration.md)
-+ [Using AppDetective to Test Your Game Build on the AWS Device Farm](ios-android-appdetective.md)

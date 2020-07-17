@@ -1,4 +1,4 @@
-# Working with the Event Bus \(EBus\) System<a name="ebus-intro"></a>
+# Working with the Event Bus \(EBus\) system<a name="ebus-intro"></a>
 
 Event buses \(EBuses\) are a general\-purpose communication system that Lumberyard uses to dispatch notifications and receive requests\. EBuses are configurable and support many different use cases\. 
 

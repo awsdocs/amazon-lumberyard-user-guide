@@ -11,13 +11,13 @@ The Level of Detail \(LOD\) system blends multiple particle emitters based on th
 1. Select **Add LOD**\.
 
    The LOD is a copy of the base particle emitter and has the same settings\. The LOD also applies to all parent or child particle emitters in the hierarchy that belong to the selected emitter\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-lod-1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-lod-1.png)
 
 ## Level of Detail Panel<a name="particle-lod-panel"></a>
 
 The **Level of Detail** panel appears when you add an LOD\. This panel shows the level of detail that you selected from the **View** menu in the **Particle Editor**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-lod-2.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-lod-2.png)
 
 
 ****  
@@ -33,7 +33,7 @@ The **Level of Detail** panel appears when you add an LOD\. This panel shows the
 
 Hide or display the **Level of Detail** panel by clicking **View**, **Hide Level of Detail** in the **Particle Editor**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-lod-5.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-lod-5.png)
 
 
 ****  
@@ -47,7 +47,7 @@ Hide or display the **Level of Detail** panel by clicking **View**, **Hide Level
 
 Manage your LOD levels in the list by clicking the drop\-down menu in the **Level of Detail** title bar\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-lod-4.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-lod-4.png)
 
 
 ****  
@@ -69,7 +69,7 @@ Each LOD level has its own panel in the LOD level list\. These panels show all r
 **Note**  
 The base particle emitter is shown if the camera distance is lower than the top LOD level\. This makes the base particle the starting LOD level\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-lod-3.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-lod-3.png)
 
 
 ****  

@@ -267,46 +267,6 @@ Group target is the most threatening target of the group\.
 | OnGroupTargetVisual |  |  | 
 | PerformingRole |  |  | 
 
-## Flow Graph Signals<a name="ai-scripting-signals-reference-flowgraph"></a>
-
-
-****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
-
-These are signals sent by corresponding Flow Graph nodes when they are activated\.
-
-
-****  
-
-| Name | Parameters | Description | 
-| --- | --- | --- | 
-| ACT\_AIMAT |  | AI:AIShootAt | 
-| ACT\_ALERTED |  | AI:AIAlertMe | 
-| ACT\_ANIM |  | AI:AIAnim | 
-| ACT\_ANIMEX |  | AI:AIAnimEx | 
-| ACT\_CHASETARGET |  | Vehicle:ChaseTarget | 
-| ACT\_DIALOG |  | AI:ReadabilityDialog \(also sent by Dialog System\) | 
-| ACT\_DIALOG\_OVER |  | Sent by Dialog System | 
-| ACT\_DUMMY |  |   | 
-| ACT\_DROP\_OBJECT |  | AI:AIDropObject | 
-| ACT\_ENTERVEHICLE |  | Vehicle:Enter | 
-| ACT\_EXECUTE |  | AI:AIExecute | 
-| ACT\_EXITVEHICLE |  | Vehicle:Exit, Vehicle:Unload | 
-| ACT\_FOLLOW |  | AI:AIFollow | 
-| ACT\_FOLLOWPATH |  | AI:AIFollowPath, AI:AIFollowPathSpeedStance, Vehicle:FollowPath | 
-| ACT\_GRAB\_OBJECT |  | AI:AIGrabObject | 
-| ACT\_GOTO |  | AI:AIGoto, AI:AIGotoSpeedStance, and the AI Debugger when you click the middle mouse button\. | 
-| ACT\_JOINFORMATION |  | AI:AIFormationJoin | 
-| ACT\_SHOOTAT |  | AI:AIShootAt | 
-| ACT\_USEOBJECT |  | AI:AIUseObject | 
-| ACT\_VEHICLESTICKPATH |  | Vehicle:StickPath | 
-| ACT\_WEAPONDRAW |  | AI:AIWeaponDraw | 
-| ACT\_WEAPONHOLSTER |  | AI:AIWeaponHolster | 
-| ACT\_WEAPONSELECT |  | AI:AIWeaponSelect | 
-
 ## Other Signals<a name="ai-scripting-signals-reference-other"></a>
 
 ### Forced Execute<a name="ai-scripting-signals-reference-other-forced-execute"></a>

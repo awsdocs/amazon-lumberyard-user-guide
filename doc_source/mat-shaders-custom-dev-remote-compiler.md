@@ -34,14 +34,13 @@ Ensure the server or computer that is running the remote shader compiler is in a
 
 ## Running the Remote Shader Compiler<a name="mat-shaders-custom-dev-remote-compiler-launch"></a>
 
-You can find the remote shader compiler in the following directories:
+You can find the remote shader compiler, **CrySCompileServer**, in the following directories:
 + PC – `lumberyard_version\dev\Tools\CrySCompileServer\x64\profile\`
-  + For Visual Studio 2017, use `CrySCompileServer_vc141x64.exe`\. 
-+ Mac – `lumberyard_version\dev\Tools\CrySCompileServer\osx\profile\CrySCompileServer`
++ Mac – `lumberyard_version\dev\Tools\CrySCompileServer\osx\profile\`
 
 A [configuration file](#mat-shaders-custom-dev-remote-compiler-config) is also available for configuring the TCP port that the server application will listen on\.
 
-You can launch the remote shader compiler by starting `CrySCompileServer_vc140_or_141x64.exe` manually\. However, usually it makes sense to set it up as a service, so that it always starts with the operating system\.
+You can launch the remote shader compiler by starting `CrySCompileServer.exe` manually\. However, usually it makes sense to set it up as a service, so that it always starts with the operating system\.
 
 Because requests for shaders are executed in parallel, you may notice significant delays in acquiring shaders at runtime\.
 
@@ -168,7 +167,7 @@ You can update `RC.exe` to look for assets in the `lumberyard_version\dev\cache\
 
 **Example**  
 
-![\[Specify the server directory instead of the PC directory.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/create-paks-server-assets.png)
+![\[Specify the server directory instead of the PC directory.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/materials/shaders/create-paks-server-assets.png)
 
 **To create paks for server assets**
 

@@ -231,7 +231,7 @@ Used for creating logic and behaviors for your game project\. You can create scr
 + Lua is a lightweight and embeddable scripting language\. You can use Lua to facilitate quick iteration of your game project\. Lua scripts have the file extension `.lua` or `.luac`, such as `myscriptexample.lua`\. You can add script functionality to your game entities with the **Lua Script** component\.
 
 **sequence**<a name="sequence"></a>  
-The content generated from the **Track View** for cutscenes or other canned animation triggers\.
+The content generated from the Track View for cutscenes or other canned animation triggers\.
 
 **shadow map**<a name="shadow_map"></a>  
 A technique for controlling how shadows are added to a scene\. You can use multiple, cascaded shadow maps to control how sun shadows look at varying distances\.

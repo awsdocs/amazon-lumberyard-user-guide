@@ -23,7 +23,7 @@ You can view logs for internal operations of Asset Processor\. If Asset Processo
    + **Source** – Where the log came from \(for example, Asset Processor\)
    + **Message** – The description of the log  
 **Example**    
-![\[View logs in Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-all-logs.png)
+![\[View logs in Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset_processor/logs.png)
 
 1. To create another log report, click **Add**\.
 
@@ -34,13 +34,13 @@ You can view logs for internal operations of Asset Processor\. If Asset Processo
    + **Show warnings** – Displays logs that have warnings\.
    + **Show errors** – Displays logs that have errors\.
    + **Show debug** – Displays logs that have debug issues\.  
-![\[Create a log tab in Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-processor-logging-tab.png)
+![\[Create a log tab in Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset_processor/create-logging-tab.png)
 
 1. Click **OK**\. Your log report appears as another tab in Asset Processor\.
 
 1. You can click **Copy all** and paste the raw logs into a text file\. 
 
-1. You can also click **Open log files** to open `lumberyard_version\dev\Bin64vc140_or_141\logs\JobLogs` directory\.
+1. You can also click **Open log files** to open `lumberyard_version\dev\Bin64vc141\logs\JobLogs` directory\.
 
 1. In a text editor, open the `example.log` file\.
 

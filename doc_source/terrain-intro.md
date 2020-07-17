@@ -4,7 +4,7 @@ You can add realistic elements such as mountains, valleys, lakes, rivers, and ro
 
 One of the primary tools used to first create a terrain is the Terrain Editor, as the following shows:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-editor.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain/terrain-editor.png)
 
 **Topics**
 + [Creating High Quality Terrain](terrain-high-quality.md)

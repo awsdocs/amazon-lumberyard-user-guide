@@ -8,11 +8,11 @@ To disable the effect, see [Disable Sharpen](disable-sharpen-node.md)\.
 + [Inputs](#enable-sharpen-note-input)
 + [Outputs](#enable-sharpen-node-output)
 
-![\[enablesharpennode, enablesharpen\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-enable-sharpen-node.png)
+![\[enablesharpennode, enablesharpen\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-enable-sharpen-node.png)
 
 **Example**  
 
-![\[Use the Enable Sharpen node to sharpen the game details.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/enable-sharpen-node-example.png)
+![\[Use the Enable Sharpen node to sharpen the game details.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/enable-sharpen-node-example.png)
 
 ## Inputs<a name="enable-sharpen-note-input"></a>
 

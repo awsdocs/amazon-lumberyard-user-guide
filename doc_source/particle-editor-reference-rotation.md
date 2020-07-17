@@ -2,7 +2,7 @@
 
 In the **Rotation** attribute, specify how to control the particle's rotation\.
 
-![\[Rotation attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor-rotation.png)
+![\[Rotation attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor-rotation.png)
 
 
 **Rotation Attribute Parameters**  

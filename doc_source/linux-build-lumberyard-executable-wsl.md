@@ -1,11 +1,7 @@
 # Setting up the Windows Subsystem for Linux to Deploy Your Amazon Lumberyard Linux Executable<a name="linux-build-lumberyard-executable-wsl"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Microsoft Windows Professional builds 14393\.0 and later provide the Windows Subsystem for Linux \(WSL\), an integrated Linux kernel and bash shell that you can use when developing Amazon Lumberyard games for Linux platforms\. This topic will walk you through the steps to set your Windows 10 development machine up to use it when building your game for Linux\.
 

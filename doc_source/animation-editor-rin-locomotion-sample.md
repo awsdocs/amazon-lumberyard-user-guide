@@ -1,11 +1,7 @@
 # Advanced\_RinLocomotion Sample<a name="animation-editor-rin-locomotion-sample"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 This sample level showcases the Rin character in a simplified environment and demonstrates how the **Animation Editor** uses actors, motion sets, and animation graphs to control character behavior\. Playable animations include idle, walk, run, turn, and multiple attacks\.
 
@@ -28,8 +24,8 @@ You can also use a controller connected to your computer:
 + To zoom out the camera, press the left trigger\.
 + To snap the camera to the back of the character, press the right joystick\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/advanced-rin-locomotion-sample-01.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/advanced-rin-locomotion-sample-01.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/advanced-rin-locomotion-sample-02.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/advanced-rin-locomotion-sample-02.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/advanced-rin-locomotion-sample-03.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/advanced-rin-locomotion-sample-03.png)

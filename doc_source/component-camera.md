@@ -1,17 +1,10 @@
 # Camera<a name="component-camera"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Camera** component allows an entity to be used as a camera\. To use the **Camera** component, you must first add a Camera Framework gem to your project\. For information, see [Camera Framework Gem](gems-system-gem-camera.md)\.
 
 ## Camera Component Properties<a name="component-camera-properties"></a>
 
-![\[Camera component properties in the Entity Inspector.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-camera-properties.png)
+![\[Camera component properties in the Entity Inspector.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-camera-properties.png)
 
 The **Camera** component has the following properties:
 
@@ -31,7 +24,7 @@ The **Camera** component has the following properties:
 
 Use the following request functions with the event bus \(EBus\) interface, `CameraRequestBus`, to communicate with other components of your game\.
 
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

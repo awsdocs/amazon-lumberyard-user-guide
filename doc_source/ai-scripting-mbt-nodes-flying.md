@@ -1,11 +1,7 @@
 # Flying Nodes<a name="ai-scripting-mbt-nodes-flying"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
 
 These nodes provide MBT functionality related to flying vehicles\.
 
@@ -69,7 +65,7 @@ The node SUCCEEDS if the angle between the AI agent's forward direction and its 
 
 ## Fly<a name="ai-scripting-mbt-nodes-flying-fly"></a>
 
-Allows an AI agent to fly around by following a path\. Paths should be assigned to the AI agent using Flow Graph\. 
+Allows an AI agent to fly around by following a path\.  
 
 ### Parameters<a name="ai-scripting-mbt-nodes-flying-fly-parameters"></a>
 
@@ -114,7 +110,7 @@ The node SUCCEEDS if the AI agent reached the end of the path\. The node FAILS i
 
 ### Lua table settings<a name="ai-scripting-mbt-nodes-flying-fly-luatable"></a>
 
-The following properties in the AI agent's Lua script table can override the default XML tags\. This will allow for changes to be made at runtime through \(Flow Graph\) scripting\.
+The following properties in the AI agent's Lua script table can override the default XML tags\. This will allow for changes to be made at runtime through scripting\.
 
 
 ****  

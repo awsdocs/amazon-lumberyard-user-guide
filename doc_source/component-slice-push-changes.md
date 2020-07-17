@@ -25,7 +25,7 @@ You can also right\-click the component property in the **Entity Inspector** and
 ![\[Save slice overrides for all slice instances.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared-modify-slice-push-change-overrides.png)
 
 1. To save multiple slice overrides, in the **Entity Outliner** or the viewport, select your entities, right\-click and then choose **Save slice overrides**, **Save slice overrides \(Advanced\)**\.  
-![\[Choose Advanced to save slice overrides for all slice instances.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/modify-slice-push-change-multiple-overrides.png)
+![\[Choose Advanced to save slice overrides for all slice instances.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/modify-slice-push-change-multiple-overrides.png)
 
 1. In **Save Slice Overrides – Advanced** dialog box, for **Property**, select the changes that you want and then select the target slices to which you want to save the overrides\. You can also select or deselect the following check boxes\.
    +  **Changed** – Overrides to existing entities\.

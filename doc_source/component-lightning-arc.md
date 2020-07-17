@@ -1,11 +1,7 @@
 # Lighting Arc<a name="component-lightning-arc"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Lightning Arc** component to create short arcs \(also called sparks\) between an emitter and a series of target entities\. When an arc is emitted, the arc jumps between the center of the entity to which the **Lightning Arc** component is attached and the center of the target entity\.
 
@@ -129,7 +125,7 @@ Variation in time between emitted arcs\. For more information, see [SetDelayVari
 
 Use the following request functions with the EBus interface to communicate with other components of your game\. You can use this EBus to communicate to an entity with a **Lightning Arc** component attached\. The EBus is available at game run time and editing and can be accessed from C\+\+, Lua, and the **Script Canvas** editor\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **Contents**
 + [Enable](#lightning-arc-ebus-enable)
@@ -772,7 +768,7 @@ end
 
 Use the following notification functions with the **Lightning Arc** component notification EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### OnSpark<a name="lightning-arc-component-notification-bus-on-spark"></a>
 

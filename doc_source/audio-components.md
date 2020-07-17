@@ -1,12 +1,5 @@
 # Audio Components<a name="audio-components"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 Use the following audio components to add and configure sounds in your level:
 + [**Audio Area Environment**](component-audio-area-environment.md) – Enables entities that are moving around and throughout a shape to have environment effects applied to any sounds that they trigger\. You must also add a shape component to use the audio area environment component\.
 + [**Audio Environment**](component-audio-environment.md) – Provides access to features of the Audio Translation Layer \(ATL\) environments\. Environments are used to apply environmental effects such as reverb or echo\.

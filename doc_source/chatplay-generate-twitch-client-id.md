@@ -17,13 +17,13 @@ Generate a client ID by following the instructions below\.
 1. Go to the [Twitch Dev site](https://dev.twitch.tv/) and log in to your account\.
 
 1. Under **My Applications**, choose **Register an App**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/twitch-client-id-dev-site.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay/twitch-client-id-dev-site.png)
 
 1. On the **Dashboard**, under **Developer Applications**, choose **Register Your Application**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/twitch-client-id-register-app-dashboard.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay/twitch-client-id-register-app-dashboard.png)
 
 1. On the **Register Your Application** page, complete the form and choose **Register**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/twitch-client-id-register-application-page.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay/twitch-client-id-register-application-page.png)
 
 1. Note the generated client ID that you will use to set your console variables\.
 

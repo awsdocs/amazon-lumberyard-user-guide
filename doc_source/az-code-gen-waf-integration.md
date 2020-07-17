@@ -1,15 +1,11 @@
 # AZ Code Generator Integration with Waf<a name="az-code-gen-waf-integration"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| AZ Code Generator is in preview release and is subject to change\. | 
+AZ Code Generator is in preview release and is subject to change\.
 
 AZ Code Generator is fully accessible for any Waf target as the feature `az_code_gen`\. The `dev\Tools\Build\waf-<version_number>\lmbrwaflib\az_code_generator.py` file contains the core of the Waf integration code\. It includes the `az_code_gen` feature that can be used by any `wscript` file\.
 
-The minimum required information is a list of the files to pass into the code generator and at least one template driver\. This list feeds the code generator one file at a time and invokes the templates specified by the driver\. The files output from the driver are added as dependencies of the build task\. Output files also have the option to be reinjected back into the C\+\+ build for compilation\. Output file paths are automatically added as include paths both for the current target build and as `export_header` entries\. This allows written source code to reference the generated source code from both internal and external targets\.
+The minimum required information is a list of the files to pass into the code generator and at least one template driver\. This list feeds the code generator one file at a time and invokes the templates specified by the driver\. The files output from the driver are added as dependencies of the build task\. Output files also have the option to be reinjected back into the C\+\+ build for compilation\. Output file paths are automatically added as include paths both for the current target build and as `export_header` entries\.
 
 **Topics**
 + [Basic Integration](#az-code-gen-waf-integration-basic)

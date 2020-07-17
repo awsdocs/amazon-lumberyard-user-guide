@@ -1,11 +1,7 @@
 # Testing the Windows Client to Linux Server Connection<a name="linux-test-windows-client-linux-server-connection"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Lumberyard supports compiling and deploying the Windows client for a multiplayer project on a Linux dedicated server\. You must have completed the following:
 + [Compiled the assets on a Windows computer](linux-compile-assets-on-windows.md)\.
@@ -58,6 +54,7 @@ Once the Lumberyard executable is ready, you can test the connection between the
 
    1. Double\-click the `MultiplayerSampleLauncher.exe` file in the following directory:
       + For Visual Studio 2017: `lumberyard_version\dev\Bin64vc141\`
+      + For Visual Studio 2019: `lumberyard_version\dev\Bin64vc142\`
 
    1. After the launcher loads, open the console by pressing the accent grave key **`** and enter the following command: 
 

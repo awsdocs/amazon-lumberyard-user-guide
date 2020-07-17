@@ -34,6 +34,8 @@ Wwise uses the name of your project to create a directory with the same name\. H
 
 1. Rename the project directory you created in step 4 to **wwise\_project**\.
 
+1. Create another directory next to `wwise_project` called **wwise**, if it doesn't exist already\. This is where your Wwise soundbanks will be generated\.
+
 1. Open Wwise again\.
 
 1. Click **Open Other**\.

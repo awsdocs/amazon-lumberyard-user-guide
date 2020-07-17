@@ -19,30 +19,30 @@ Raycast queries are the most common scene query\. A raycast query takes a point 
 **Example**  
 The raycast query intersects the pentagon only\.  
 
-![\[Raycast query example in PhysX world.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-raycast-shape-cast-queries-2.png)
+![\[Raycast query example in PhysX world.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-raycast-shape-cast-queries-2.png)
 
 To perform a raycast query, use the `WorldRequestBus`\.
 
-**Example Raycast Closest**  
+**Example RayCast Closest**  
 
 ```
-Physics::RaycastRequest request;
-Physics::RaycastHit result;
+Physics::RayCastRequest request;
+Physics::RayCastHit result;
 WorldRequestBus::BroadcastResult(result, &WorldRequests::RayCast, request);
 ```
 
 You can also retrieve objects that intersect with the ray by using the multiple version\.
 
-**Example Raycast Multiple**  
+**Example RayCast Multiple**  
 
 ```
-Physics::RaycastRequest request;
-vector<Physics::RaycastHit> results;
+Physics::RayCastRequest request;
+vector<Physics::RayCastHit> results;
 WorldRequestBus::BroadcastResult(result, &WorldRequests::RayCastMultiple, request);
 ```
 
 **Note**  
-You can specify the maximum number of hits that can be collected from a `RaycastMultiple` query\. You can specify the **Raycast Buffer Size** property in the **PhysX Configuration** window\. For more information, see [World Configuration](physx-configuration-global.md#physx-configuration-global-world)\.
+You can specify the maximum number of hits that can be collected from a `RayCastMultiple` query\. You can specify the **RayCast Buffer Size** property in the **PhysX Configuration** window\. For more information, see [World Configuration](physx-configuration-global.md#physx-configuration-global-world)\.
 
 The following tables describe the properties for the `RayCastRequest` and `RayCastHit` objects\.
 
@@ -77,30 +77,30 @@ A shapecast query is similar to a raycast query except that a shapecast query ta
 **Example**  
 The shapecast query is in the shape of a sphere and intersects with the rectangle and pentagon entities\.  
 
-![\[Shapecast query example in PhysX.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-raycast-shape-cast-queries-3.png)
+![\[Shapecast query example in PhysX.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-raycast-shape-cast-queries-3.png)
 
 To perform a shapecast query, use the `WorldRequestBus`\.
 
-**Example Shapecast Closest**  
+**Example ShapeCast Closest**  
 
 ```
-Physics::ShapecastRequest request;
-Physics::RaycastHit result;
+Physics::ShapeCastRequest request;
+Physics::RayCastHit result;
 WorldRequestBus::BroadcastResult(result, &WorldRequests::ShapeCast, request);
 ```
 
 Similar to raycasting, there is a multiple version for retrieving all objects that intersect with the volume\.
 
-**Example Shapecast Multiple**  
+**Example ShapeCast Multiple**  
 
 ```
-Physics::ShapecastRequest request;
-vector<Physics::RaycastHit> results;
+Physics::ShapeCastRequest request;
+vector<Physics::RayCastHit> results;
 WorldRequestBus::BroadcastResult(results, &WorldRequests::ShapeCastMultiple, request);
 ```
 
 **Note**  
-You can specify the maximum number of hits that can be collected from a `ShapecastMultiple` query\. You can specify the **Shapecast Buffer Size** value in the **PhysX Configuration** window\. For more information, see [World Configuration](physx-configuration-global.md#physx-configuration-global-world)\.
+You can specify the maximum number of hits that can be collected from a `ShapeCastMultiple` query\. You can specify the **Shapecast Buffer Size** value in the **PhysX Configuration** window\. For more information, see [World Configuration](physx-configuration-global.md#physx-configuration-global-world)\.
 
 
 **ShapeCastRequest Properties**  
@@ -122,7 +122,7 @@ Overlap queries are simpler, as they don't take a direction or distance\. Overla
 **Example**  
 The overlap query is a sphere shape that intersects with both entities\.   
 
-![\[Overlap query example in PhysX.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-raycast-shape-cast-queries-4.png)
+![\[Overlap query example in PhysX.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-raycast-shape-cast-queries-4.png)
 
 **Example Overlap Closest**  
 

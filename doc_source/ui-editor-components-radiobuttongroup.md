@@ -2,7 +2,7 @@
 
 You can use the **RadioButtonGroup** component to manage radio buttons\. This component handles selecting and clearing the radio buttons in the group when appropriate\. It also ensures that only one radio button is selected at one time\. You typically use this component on an element with children radio buttons, which are part of the radio button group\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-components-radiobuttongroup.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-components-radiobuttongroup.png)
 
 To see in\-game examples of completed canvases with the **RadioButtonGroup** component, open the level UiFeatures in the project SamplesProject\. Press **Ctrl\+G** to play the game, and then choose **Components**, **Interactable Components**, **RadioButton**\. You can view examples of different behaviors, default settings, and groups for radio buttons Press **Esc** to exit the game\.
 
@@ -20,5 +20,4 @@ In the **Properties** pane of the [**UI Editor**](ui-editor-using.md), expand **
 **Settings**, **Allow uncheck**  
 Select to enable the clearing or unchecking of selected radio buttons\.  
 **Actions**, **Change**  
-Enter a text string\. This string is sent as an action on the UI canvas when the radio button group has any state changes\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.
+Enter a text string\. This string is sent as an action on the UI canvas when the radio button group has any state changes\.

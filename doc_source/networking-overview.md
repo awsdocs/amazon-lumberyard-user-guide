@@ -11,7 +11,7 @@ Lumberyard enables multiplayer functionality through the following software laye
 
 These layers are illustrated in the following diagram\.
 
-![\[Lumberyard network system layers\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/networking-overview.png)
+![\[Lumberyard network system layers\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/networking/networking-overview.png)
 
 ## NetBinding<a name="networking-overview-netbinding"></a>
 

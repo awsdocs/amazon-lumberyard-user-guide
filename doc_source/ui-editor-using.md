@@ -22,9 +22,10 @@ You can tear away and redock the **Hierarchy** pane, the **Properties** pane, th
 **To open the UI Editor**
 + In Lumberyard Editor, choose **Tools** and then **UI Editor**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-using1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-using1.png)
 
 **Topics**
 + [Toolbar](ui-editor-toolbar.md)
 + [Rulers and Guides](ui-editor-rulers-guides.md)
++ [Asset Drag and Drop](ui-editor-asset-drag-and-drop.md)
 + [Sprite Editor](ui-editor-sprite-editor.md)

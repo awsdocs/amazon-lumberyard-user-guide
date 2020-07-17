@@ -41,6 +41,6 @@ You must receive approval from Twitch for the launcher application to use your a
 
 1. Run the **Lumberyard Setup Assistant** to verify that the Twitch Commerce SDK is correctly detected\. For more information, see [Running Lumberyard Setup Assistant](lumberyard-launcher-using.md)\.
 
-1. After you have the Twitch Commerce SDK, use the **Project Configurator** to enable the Twitch gem for your project\. The HttpRequestor gem is a dependency for the Twitch Commerce SDK and will be enabled automatically\. For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+1. After you have the Twitch Commerce SDK, use the **Project Configurator** to enable the Twitch gem for your project\. The HttpRequestor gem is a dependency for the Twitch Commerce SDK and will be enabled automatically\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 1. Run the **Lumberyard Setup Assistant** again to verify that the Twitch Commerce SDK and Twitch gem are correctly detected\. For more information, see [Running Lumberyard Setup Assistant](lumberyard-launcher-using.md)\.

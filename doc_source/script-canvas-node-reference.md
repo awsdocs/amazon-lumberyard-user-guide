@@ -1,12 +1,5 @@
 # Script Canvas Node Reference<a name="script-canvas-node-reference"></a>
 
-
-****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 This reference includes the various types of **Script Canvas** editor nodes, their uses, and their inputs and outputs\.
 
 **Tip**  
@@ -24,4 +17,4 @@ Some nodes are hidden from the default **Script Canvas** editor view\.
 1. In the **Script Canvas** editor, choose **Edit**, **Settings**, **Global Preferences**\.
 
 1. In the **Global Preferences** window, choose **Show nodes excluded from preview**\.  
-![\[Global Preferences window in the Script Canvas editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/script-canvas-global-preferences-show-nodes.png)
+![\[Global Preferences window in the Script Canvas editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/script-canvas-global-preferences-show-nodes.png)

@@ -6,7 +6,7 @@ Returns a material parameter as a color value\.
 + [Inputs](#material-get-param-color-node-input)
 + [Outputs](#material-get-param-color-node-output)
 
-![\[getparamcolornode, getparamcolormaterial, getcolorparam\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-get-param-color-node.png)
+![\[getparamcolornode, getparamcolormaterial, getcolorparam\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-get-param-color-node.png)
 
 ## Inputs<a name="material-get-param-color-node-input"></a>
 

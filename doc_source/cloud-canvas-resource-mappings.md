@@ -55,8 +55,6 @@ In general, you should not have to access the low level mappings\. Both ScriptCa
 
  AWS flow nodes that define `TableName` \(DynamoDB\), `FunctionName` \(Lambda\), `QueueName` \(Amazon SQS\), `TopicARN` \(Amazon SNS\), or `BucketName` \(Amazon S3\) ports work with mappings\. Set the port to a value like *\{resource\-group\}*\.*\{resource\}* where *\{resource\-group\}* is the name of the resource group that defines the resource, and where *\{resource\}* is the name of the resource that appears in the *Resources* section of the resource group's `resource-template.json` file\.
 
-For detailed information on the Cloud Canvas flow graph nodes, see the [Legacy Cloud Canvas Flow Graph Node Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/cloud-canvas-fg-node-intro.html)\.
-
 ## Using Mappings in Lambda Functions<a name="cloud-canvas-using-mappings-in-lambda-functions"></a>
 
  Lambda function resources defined as part of a resource group often need to access other resources defined by that resource group\. To do this, the function code needs a way to map a friendly resource name to the actual resource name used in AWS API calls\. The `LambdaConfiguration` resource provides a way to such mappings, as well as other settings, to the lambda code\. For more information, see [LambdaConfiguration](cloud-canvas-custom-resources.md#cloud-canvas-custom-resources-lambda-configuration)\.

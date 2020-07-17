@@ -144,12 +144,9 @@ You must modify certain configuration files to allow your iOS app to connect to 
 
    1. Save the file\.
 
-1. On your shader compiler host computer, launch the shader compiler from one of the following directories:
+1. On your shader compiler host computer, launch `CrySCompileServer` from one of the following directories:
    + On Windows: `lumberyard_version\dev\Tools\CrySCompileServer\x64\profile\`
    + On macOS: `lumberyard_version/dev/Tools/CrySCompileServer/osx/profile/`
-
-   Choose the appropriate shader compiler version\.
-   + For Visual Studio 2017, launch `CrySCompileServer_vc141x64`\.
 
 ## Step 6: Build Code from a Command Line<a name="ios-build-code-from-command-line"></a>
 

@@ -33,13 +33,13 @@ For information on creating a builder for custom assets, see [Creating a Custom 
 
 You can use the AZ Code Generator command line utility to generate boilerplate code when the structure of the intended code is known in advance\. AZ Code Generator generates source code \(or any data or text\) from source code that is specially tagged\. 
 
-For more information, see [Automating Boilerplate with AZ Code Generator](az-code-gen-intro.md)\.
+For more information, see [Automating boilerplate with AZ Code Generator](az-code-gen-intro.md)\.
 
 ## Building<a name="lumberyard-programming-concepts-building"></a>
 
 You can build your Lumberyard projects in *profile* mode, *debug* mode, or *release* mode\.
 
-For more information, see [Creating Game Builds](game-build-intro.md)\. 
+For more information, see [Building Lumberyard projects](game-build-intro.md)\. 
 
 ## Cloud Canvas<a name="lumberyard-programming-concepts-cloud-canvas"></a>
 
@@ -61,7 +61,7 @@ Components commonly use EBuses in two ways: to dispatch events from a `notificat
 
 To interact with the engine or other components in Lumberyard, include the component or system's EBus or API header in your code\. Then make calls to the exposed EBuses\. With this approach you can replace engine level system APIs with implementations that you define in a gem\. For example, you could replace Lumberyard's audio system with your own EBus handler\. This would give you complete control over audio without having to recompile the engine\.
 
-For information about EBuses, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For information about EBuses, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 For information about using EBuses in Lua, see [Using EBuses in Lua](lua-scripting-ces-using-ebuses.md)\.
 

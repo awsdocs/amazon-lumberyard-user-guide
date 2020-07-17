@@ -1,12 +1,5 @@
 # Audio Area Environment<a name="component-audio-area-environment"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 Using the **Audio Area Environment** component, you can apply environment effects to sounds that an entity triggers\. You must also add a shape component to use the audio area environment component\.
 
 ## Audio Area Environment Properties<a name="component-audio-area-environment-properties"></a>

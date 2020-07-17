@@ -2,7 +2,7 @@
 
 Sets color correction parameters\. You can use this node to specify the CMYK, brightness, contrast, saturation, and hue in a scene\. Most color correction properties aren't updated smoothly, so it's recommended that you hide stronger color correction changes with cuts or fading between scenes\.
 
-You can also apply color correction in the **Track View**\. See [Color Correction Node](cinematics-track-view-nodes-color-correction.md)\.
+You can also apply color correction in the Track View\. See [Color Correction Node](cinematics-track-view-nodes-color-correction.md)\.
 
 To disable the effect, see [Disable Color Correction](disable-color-correction-node.md)\.
 
@@ -10,12 +10,12 @@ To disable the effect, see [Disable Color Correction](disable-color-correction-n
 + [Inputs](#enable-color-correction-node-input)
 + [Outputs](#enable-color-correction-node-output)
 
-![\[enableeffectcorrection\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-enable-color-correction-node.png)
+![\[enableeffectcorrection\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-enable-color-correction-node.png)
 
 **Example**  
 In the following example, the **Saturation** value is `2.0`\.  
 
-![\[Use the Enable Color Correction node to change colors for your screen.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/enable-color-correcton-node-example.png)
+![\[Use the Enable Color Correction node to change colors for your screen.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/enable-color-correcton-node-example.png)
 
 ## Inputs<a name="enable-color-correction-node-input"></a>
 

@@ -2,7 +2,7 @@
 
 The **Vegetation Layer Spawner** component uses `Vegetation::SpawnerRequestBus` and `Vegetation::AreaInfoBus` interfaces\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 

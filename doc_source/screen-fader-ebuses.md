@@ -2,7 +2,7 @@
 
 Provides the Lua scripting equivalent to the **[Screen Fader](screen-fader-node.md)** node in **Script Canvas**\. 
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **Contents**
 + [ScreenFaderRequestBus FadeOut](#screen-fader-request-bus-fade-out)

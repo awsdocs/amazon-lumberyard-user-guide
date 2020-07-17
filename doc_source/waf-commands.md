@@ -37,7 +37,7 @@ Capabilities Available, [x] enabled  - [ ] disabled:
 [ ] compileios - Compile for iOS devices
 Successfully executed
 [INFO] Configure "win_x64_vs2017 - [debug, profile, performance, release, debug_dedicated, profile_dedicated, performance_dedicated, release_dedicated]"
-
+[INFO] Configure "win_x64_vs2019 - [debug, profile, performance, release, debug_dedicated, profile_dedicated, performance_dedicated, release_dedicated]"
 
 [WAF] 'configure' finished successfully (10.335s)
 [WAF] Executing 'generate_uber_files' in 'd:\ws\lyengine\dev\BinTemp'
@@ -51,7 +51,9 @@ The configure command uses the settings defined in the `user_settings.options` f
 lmbr_waf show_option_dialog
 ```
 
-If you set the option to generate a Visual Studio solution to **true**, a solution file is created in the directory specified in the `user_settings.option` file\. If you do not modify the `user_settings.option` file, the Visual Studio solution is in `lumberyard_version/Solutions/LumberyardSDK.sln` by default\.
+By default, whenever the configure command is run, Visual Studio solution and project files are created in the `dev\Solutions` directory\. The name of the solution file includes the version of Visual Studio for which it has been generated, such as `LumberyardSDK_vs2017.sln`\. You can change this behavior, the solution directory, and the solution name in the `user_settings.options` file\.
+
+You can also generate the solution files manually by running the command lmbr\_waf msvs, or the version\-specific lmbr\_waf msvs\_*2017*\.
 
 ## Build Configuration<a name="build-configuration"></a>
 
@@ -83,7 +85,7 @@ Combining the clean\_\* and build\_\* commands is the equivalent of performing a
 **Configure command options**  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/waf-commands.html)
 
-You can set the command options at build time\. These options override the values set in the `user_settings.option` file\. For more information, see [Project Configurator](waf-user-options-and-settings.md#waf-files-user-settings)\.
+You can set the command options at build time\. These options override the values set in the `user_settings.options` file\. For more information, see [Project Configurator](waf-user-options-and-settings.md#waf-files-user-settings)\.
 
 Only modules that support each project configuration are built from the project spec\. If a module is defined in the spec that only can be built in debug or profile, building in performance mode excludes that project from compilation\.<a name="build-parameters"></a>
 
@@ -102,10 +104,10 @@ Only modules that support each project configuration are built from the project 
 
 | Spec | Platform | Configuration | Description | 
 | --- | --- | --- | --- | 
-| all | win\_x64\_vs2017, darwin\_x64 | Debug, profile, performance, release | Configuration to build the engine, editor, plugins, and tools | 
-| game\_and\_engine | win\_x64\_vs2017, darwin\_x64, linux\_x64 | Debug, profile, performance, release | Configuration to build the engine and game project | 
-| dcc\_plugins | win\_x64\_vs2017 | Debug, profile | Configuration to build tools for the asset pipeline | 
-| resource\_compiler | win\_x64\_vs2017 | Debug, profile | Configuration to build the Resource Compiler only | 
+| all | win\_x64\_vs2017, win\_x64\_vs2019, darwin\_x64 | Debug, profile, performance, release | Configuration to build the engine, editor, plugins, and tools | 
+| game\_and\_engine | win\_x64\_vs2017, win\_x64\_vs2019, darwin\_x64, linux\_x64 | Debug, profile, performance, release | Configuration to build the engine and game project | 
+| dcc\_plugins | win\_x64\_vs2017, win\_x64\_vs2019 | Debug, profile | Configuration to build tools for the asset pipeline | 
+| resource\_compiler | win\_x64\_vs2017, win\_x64\_vs2019 | Debug, profile | Configuration to build the Resource Compiler only | 
 
 
 **Build configuration options**  

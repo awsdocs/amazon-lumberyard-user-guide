@@ -1,6 +1,6 @@
 # Cloud Gem Framework and Resource Manager Versioning<a name="cloud-canvas-cgf-rm-versioning"></a>
 
-In Lumberyard version 1\.10, Cloud Canvas introduces a versioning system that makes it easier to update a project from one version of the Cloud Gem Framework and the **Cloud Canvas Resource Manager** to another\. The versioning system has the following advantages:
+Lumberyard offers a versioning system that makes it easier to update a project from one version of the Cloud Gem Framework and the **Cloud Canvas Resource Manager** to another\. The versioning system has the following advantages:
 + Cloud gems can have separate versions\.
 + Cloud gems can specify the version of Lumberyard that they work with\.
 + The resource manager and Cloud Gem Framework are implemented in directory structures that support versioning\.

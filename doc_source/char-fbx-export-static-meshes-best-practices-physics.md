@@ -5,15 +5,15 @@ A physics proxy is a mesh that encapsulates physics geometry, such as hit detect
 You can create a physics proxy for your static mesh \(`.cgf` file\) with one of the following methods\.
 
 **Note**  
-These methods work with the legacy CryPhysics feature\. To create physics proxies for the new PhysX system, see [Exporting a PxMesh Asset](physx-export-physx-mesh-asset.md)\.
+These methods work with the legacy CryPhysics feature\. To create physics proxies for the new PhysX system, see [Export PhysX collider mesh assets](physx-export-physx-mesh-asset.md)\.
 
-## Manually Creating Physics Proxies with the **FBX Settings**<a name="manually-creating-physics-meshes-with-the-fbx-settings"></a>
+## Manually Creating Physics Proxies with the FBX Settings<a name="manually-creating-physics-meshes-with-the-fbx-settings"></a>
 
-**To create a physics proxy modifier with the ****FBX Settings**** tool**
+**To create a physics proxy modifier with the **FBX Settings** tool**
 
 1. In the **Asset Browser**, right\-click the `.fbx` file to create a physics proxy for and then choose **Edit Settings**\.
 
-1. In the ****FBX Settings**** tool, on the **Meshes** tab, click **Add Modifier** and then choose **CryPhysics Proxy**\.  
+1. In the **FBX Settings** tool, on the **Meshes** tab, click **Add Modifier** and then choose **CryPhysics Proxy**\.  
 ![\[FBX Settings for CryPhysics Proxy.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/char-fbx-export-static-meshes.png)
 
 1. Next to **Physics meshes**, click the ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/hierarchy-icon.png) icon, select the meshes to use for the physics proxies and then click **Select**\.
@@ -42,7 +42,7 @@ Instead of manually creating a physics proxy, you can use [soft naming conventio
 
 1. In the **Asset Browser**, right\-click the `filename_phys.fbx` file and then choose **Edit Settings**\.
 
-1. In the ****FBX Settings**** tool, on the **Meshes** tab, you can view this physics proxy modifier\. 
+1. In the **FBX Settings** tool, on the **Meshes** tab, you can view this physics proxy modifier\. 
 
 Asset Processor also automatically deselects the mesh that is used as the physics proxy for the **Select meshes** parameter\. This prevents the physics mesh from rendering as a static mesh\.
 

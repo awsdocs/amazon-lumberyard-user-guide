@@ -8,7 +8,7 @@ To enable the effect, see [Enable Ghosting](enable-ghosting-node.md)\.
 + [Inputs](#disable-ghosting-note-input)
 + [Outputs](#disable-ghosting-node-output)
 
-![\[disableghosting, disableghostingnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-disable-ghosting-node.png)
+![\[disableghosting, disableghostingnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-disable-ghosting-node.png)
 
 ## Inputs<a name="disable-ghosting-note-input"></a>
 

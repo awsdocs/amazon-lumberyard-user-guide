@@ -1,11 +1,7 @@
 # Profiler Tutorial<a name="profiler-using"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| Profiler is in preview release and is subject to change\.  | 
+Profiler is in preview release and is subject to change\. 
 
 You can register an application in GridHub and use Profiler to capture, inspect, play back, and export the data that you collect\.
 

@@ -25,7 +25,7 @@ physx_Debug 1
 You can specify the following values:
 + `1` – Enable debug visualizations\. By default, this value enables the collision shapes and edges for your PhysX entities\. 
 + `2` – Enables all configuration options\. This enables all the available visualization options\. 
-+ `3` – Toggles the proximity based collider visualization\. This value applies only to mesh colliders\. See [Creating Mesh Colliders](component-physx-collider.md#creating-mesh-colliders)\. 
++ `3` – Toggles the proximity based collider visualization\. This value applies only to mesh colliders\. See [Physics asset colliders](component-physx-collider.md#physics-asset-colliders)\. 
 + `0` – Disables debug visualizations\.
 
 Toggles a visual culling box frame\.
@@ -71,7 +71,7 @@ You must enable the ImGui gem to access this tool\. For more information, see [E
 
 1. Click **PhysX Debug**\.   
 **Example**    
-![\[PhysX Debug menu in gameplay mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-debugger-imgui-tool.png)
+![\[PhysX Debug menu in gameplay mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx-debugger-imgui-tool.png)
 
 1. You can make the following changes\.  
 ****    

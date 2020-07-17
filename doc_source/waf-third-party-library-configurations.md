@@ -192,6 +192,7 @@ Static third\-party library configuration files declare header include paths, li
                 "lz4.lib"
             ]
         },
+        "win_x64_vs2019": "@win_x64_vs2017", 
         ...
 ```
 
@@ -310,23 +311,23 @@ In the `platform` section, the shared library definitions for `import`, `shared`
 
 Some different target platforms are binary compatible\. In these cases, you do not have to declare a copy of an existing configuration section\. Instead, you can use the platform attribute string alias `@<platform_name>` instead of another attribute dictionary\.
 
-In the following example, the `win_x64_vs2017` and `win_x64_vs2015` platforms are binary compatible, so the alias `@win_x64_vs2015` is used\.
+In the following example, the `win_x64_vs2017` and `win_x64_vs2019` platforms are binary compatible, so the alias `@win_x64_vs2017` is used\.
 
 ```
 "platform": {
-    "win_x64_vs2015": {
+    "win_x64_vs2017": {
         "libpath_debug": [
-            "build/win_x64/vc140/debug"
+            "build/win_x64/vc141/debug"
         ],
         "libpath_release": [
-            "build/win_x64/vc140/release"
+            "build/win_x64/vc141/release"
         ],
         "lib": [
             "foo.lib"
         ]
     },
-    "win_x64_vs2017": "@win_x64_vs2015",
-…
+    "win_x64_vs2019": "@win_x64_vs2017",
+...
 ```
 
 ### Aliasing Paths<a name="waf-third-party-library-configurations-aliasing-paths"></a>

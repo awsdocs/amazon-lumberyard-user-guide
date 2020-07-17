@@ -21,6 +21,6 @@ You first subdivide the texture layer, then change the individual tile resolutio
 1. In Lumberyard Editor, click **Game**, **Terrain**, **Export/Import Megaterrain Texture**\.
 
 1. In **Terrain Texture**, click a tile whose resolution you want to change\. Then click **Change tile resolution**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-texture-tiles-resolution.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain/terrain-texture-tiles-resolution.png)
 
 1. Choose a new resolution and then click **OK**\. Click **Close**\.

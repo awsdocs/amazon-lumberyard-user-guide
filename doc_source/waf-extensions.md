@@ -56,6 +56,9 @@ Modify the settings in the Windows registry under the following key:
 
 1. Save your changes\.
 
+**Note**  
+Installing, reinstalling, or upgrading Visual Studio may cause the Incredibuild Agent to lose its settings or require an update\. After modifying Visual Studio, be sure to confirm your Incredibuild Agent is active\.
+
 ## Compiling with QT<a name="waf-extensions-qt"></a>
 
 Waf supports compiling QT5 `.moc` Meta\-Object\-Compiler files\. To enable or disable compiling of particular files, add the `qt5` feature to your Waf Module \(wscript\) file and then add the list of files to be compiled\.

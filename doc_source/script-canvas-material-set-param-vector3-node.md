@@ -6,7 +6,7 @@ Sets a material parameter with a **Vector3** value\.
 + [Inputs](#script-canvas-material-set-param-vector3-node-input)
 + [Outputs](#script-canvas-material-set-param-vector3-node-output)
 
-![\[set param vector3, setparamvector3\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-param-vector3-node.png)
+![\[set param vector3, setparamvector3\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-set-param-vector3-node.png)
 
 ## Inputs<a name="script-canvas-material-set-param-vector3-node-input"></a>
 

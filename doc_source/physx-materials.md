@@ -1,113 +1,128 @@
-# Working with PhysX Materials<a name="physx-materials"></a>
+# Physics materials<a name="physx-materials"></a>
 
-Materials customize how an object reacts when it hits a surface and control qualities like friction and bounciness\. In Lumberyard, you specify materials for each collider\.
+Physics materials define how a PhysX collider reacts to collisions through properties like friction and restitution \(bounce\)\. In Lumberyard, you specify physics materials for each PhysX collider and store them inside a physics material library that you create with the **Asset Editor**\. One library can store all the physics materials for a project or separate libraries can be made for different physics material types\. 
 
-In Lumberyard, you store materials inside a material library that you create using the **Asset Editor**\. You can create one library with all materials for a project or separate libraries for different material types like terrain and gameplay objects\. 
-
-**Note**  
-Having one library makes it easier to see all the materials and their properties in a project\. 
+**Tip**  
+Having one library makes it easier to see all the physics materials and their properties in a project\. 
 
 **Topics**
-+ [Creating a Material and Assigning it to a Collider](#physx-materials-creating-a-material-and-assigning-it-to-a-collider)
-+ [Assigning Materials to the Faces of a Mesh](#physx-materials-assigning-materials-to-the-faces-of-a-mesh)
-+ [**Using Materials with the Terrain**](#physx-materials-using-materials-with-the-terrain)
++ [Physics material properties](#physics-material-properties)
++ [Create a physics material](#create-a-physics-material)
++ [Assign a physics material library](#assign-a-physics-material-library)
++ [Assign a physics material](#Assign-a-physics-material-collider)
++ [Assign physics materials per face](#assign-physics-materials-per-face)
++ [**Terrain physics materials**](#terrain-physics-materials)
 
-## Creating a Material and Assigning it to a Collider<a name="physx-materials-creating-a-material-and-assigning-it-to-a-collider"></a>
+## Physics material properties<a name="physics-material-properties"></a>
 
-The following summary outlines the steps for working with materials in Lumberyard:
+![\[Physics material interface.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-A-1.24.png)
 
-1. Create a material library\.
+****Surface Type****  
+Name of the physics material\. 
 
-1. Create one or more materials for the library\.
+****Dynamic Friction****  
+The friction coefficient when the PhysX collider is moving\.   
+**0\.0**: No friction\. 
 
-1. Assign the library to a collider\.
+****Static Friction****  
+The friction coefficient when the PhysX collider is still\.   
+**0\.0**: No friction\. 
 
-1. Select a specific material from the library for the collider\.
+****Restitution****  
+The energy that the PhysX collider retains on collision \(bounce\)\.   
+**0\.0**: No bounce\.   
+**1\.0**: Maximum bounce\. 
 
-In this topic, the example creates a material library file in the **Starter Game** project called `MaterialLibrary.physmaterial`\.
+****Friction combine****  
+Define how physics material frictions are combined between PhysX colliders when colliding\.   
+**Average**: The average of the materials in contact\. This is the default value\.   
+**Minimum**: The smaller value of the materials in contact\.   
+**Maximum**: The larger of the values of the materials in contact\.   
+**Multiply**: The product of the values of the materials in contact\. 
 
-**To create a material and assign it to a collider**
+****Restitution combine****  
+Define how physics material restitutions are combined between PhysX colliders when colliding\.   
+**Average**: The average of the materials in contact\. This is the default value\.   
+**Minimum**: The smaller value of the materials in contact\.   
+**Maximum**: The larger of the values of the materials in contact\.   
+**Multiply**: The product of the values of the materials in contact\. 
 
-1. In Lumberyard Editor, choose **Tools**, **Asset Editor**, **File**, **New**, **Physics Material**\.  
-![\[Choose Physics Material in the Asset Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-1.png)
+****Debug Color****  
+The display color of the physics material in debug view\. 
 
-1. Navigate to the directory where you want to save the library\. The library is saved with the file extension `.physmaterial`\. The default save location is `lumberyard_version\dev\game_project\`\.
-
-1. In the **Edit Asset** window, for **Materials**, click the plus \(**\+**\) icon to add a material \(a child element\) to the new library\.  
-![\[Adding a child element to a material library.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-2.png)
-
-1. You can specify the following options for the new material\.  
-![\[Specifying option values for the material.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-3.png)  
-****    
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/physx-materials.html)
 **Note**  
-When materials collide, the **Friction combine** and **Restitution combine** define the value of applied friction and restitution using the following order\.  
+When materials collide, the **Friction combine** and **Restitution combine** define the value of applied friction and restitution using the following order\.   
 **Average**
 **Minimum**
 **Multiply**
 **Maximum**
 
-1. Save your changes to the asset\.
+## Create a physics material<a name="create-a-physics-material"></a>
 
-1. In the Lumberyard Editor viewport, [create](creating-entity.md) or select the entity that will use the material that you created\.
+Physics materials define the physical properties of PhysX colliders\. To create physics materials, you first create a physics material library\. 
 
-1. In the **Entity Inspector**, click **Add Component**, and then add the **PhysX Collider** component to the entity\.
+**To create a physics material**
 
-1. In the **PhysX Collider** component, next to **Material Library**, click the **Browse** \(**\.\.\.**\) icon\.  
-![\[Choose the ... icon to navigate to a material library.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-4.png)
+1. Choose Asset Editor from the **Tools** menu\. 
 
-1. In the **Pick Physics Material** dialog box, choose the library that you created, and then click **OK**\.  
-![\[Choose the material library that you created.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-5.png)
+1. In the Asset Editor, choose **New**, **Physics Material** from the **File** menu to create a new physics material library\.   
+![\[Create a physics material library in the Asset Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-B-1.24.png)
 
-1. In the **PhysX Collider** component, for **Entire Object**, choose the material that you created\.  
-![\[Choose a material that you created.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-6.png)
+1. Create a physics material in the library by clicking the **\+** on the right\.   
+![\[Create a physics material library in the Asset Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-C-1.24.png)
 
-The material that you created is now assigned to the collider that you chose\.
-
-## Assigning Materials to the Faces of a Mesh<a name="physx-materials-assigning-materials-to-the-faces-of-a-mesh"></a>
-
-You can assign more than one material to faces of a single mesh\. To mark up faces on the mesh, you can use placeholder rendering materials in Maya\. This strategy offers the following advantages:
-+ Familiar tools to paint materials on a mesh\.
-+ Simple textures for visualization\.
-
-The following sample walkthrough exports a house as a single mesh and assigns different materials for the windows, porch, walls, and door\.
-
-**To assign materials to the faces of a mesh**
-
-1. In Maya Hypershade, create four placeholder materials and give them the following names:
-   + **door**
-   + **walls**
-   + **porch\_concrete**
-   + **windows\_glass**
-
-   Lumberyard uses a soft naming convention for materials\. For example, Lumberyard automatically creates a **road** slot for Maya material called **road\_dirt** and automatically attempts to assign the **dirt** material from the selected material library\. For more information, see [FBX Soft Naming Conventions](char-fbx-importer-soft-naming.md)\.
+1. Name the physics material by editing the **Surface Type** property\. Set the material properties as desired\. 
 **Note**  
-Lumberyard recognizes names without an underscore \(\_\) as slot names\.
+You can add additional physics materials to the library by repeating the preceding two steps\. 
 
-1. Paint the materials on the mesh faces and export the result as an `.fbx` file\.
+1. Choose **Save As** from the **File** menu in the Asset Editor to save the library and physics material\. 
 
-1. In Lumberyard Editor, [create an entity](creating-entity.md)\.
+## Assign a physics material library<a name="assign-a-physics-material-library"></a>
 
-1. In the **Entity Inspector**, add a **[PhysX Collider](component-physx-collider.md)** component to the entity\.
+Physics materials can be assigned to entire PhysX colliders, or on a per\-face basis if the PhysX mesh is a triangle mesh\. To assign a material, you first assign the library containing the desired physics material\. 
 
-1. In the **PhysX Collider** component, for **Shape**, choose **PhysicsAsset**\.
+**To assign a physics material library**
 
-1. [Export](physx-export-physx-mesh-asset.md) a `.pxmesh` file as a static object\. To make the mesh a static object, ensure that the **Export Mesh As Convex** check box in the ****FBX Settings**** tool is cleared\.  
-![\[Clear the Export Mesh as Convex option in the Fbx Settings tool.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-7.png)
+1. Your project has a default physics material library\. When new PhysX collider components are added to entities, the default physics material library is assigned to the collider\. To change the default physics material library, choose **PhysX Configuration** from the **Tools** menu\. In the **Global Configuration** tab, click the **\.\.\.** button to the right of **Default Physics Material Library** to change the default library\.   
+![\[PhysX Configuration, default physics material library.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-D-1.24.png)
+**Note**  
+The default physics material library cannot be removed\. If the default physics material library is deleted or invalid, a new library named `SurfaceTypeMaterialLibrary` is created automatically when the editor is opened\. 
 
-1. Select the generated `.pxmesh` file for the collision\.
+1. Newly added **PhysX Collider** components have the default physics material library assigned\. A default physics material library assignment appears in gray text in the component properties\. To change the physics material library assigned to a collider, click the **\.\.\.** button to the right of **Physics Material \- Library** in the **PhysX Collider** component properties\. To reset to the default physics material library, click the **x** button to the right of **Physics Material \- Library** in the **PhysX Collider** component properties\.   
+![\[PhysX Collider, setting the physics material library.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-E-1.24.png)
+**Note**  
+Use this method to set the physics material library on any component that has a **Physics Material \- Library** property, including **PhysX Collider**, **PhysX Ragdoll**, **PhysX Character Controller**, and **Terrain Texture Layers**\. 
 
-1. Follow the steps in [Creating a Material and Assigning it to a Collider](#physx-materials-creating-a-material-and-assigning-it-to-a-collider) to assign a physics material library and materials to the collider\.  
-![\[Assigning materials to imported material slots in the PhysX Collider component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-8.png)
+## Assign a physics material<a name="Assign-a-physics-material-collider"></a>
 
-   The **Material** section now shows the **walls**, **windows**, **door**, and **porch** slots that you exported from the `.fbx` file and the materials that you assigned to them\.
+When the **Physics Asset** shape is selected, and **Physics Materials from Mesh** is enabled, the physics material for this collider is automatically set based on the surface type in the mesh's material\. To manually set the physics material, uncheck the **Physics Materials from Mesh** property and select the physics material from the **Mesh Surfaces \- Entire object** property list to assign it\. 
 
-## **Using Materials with the Terrain**<a name="physx-materials-using-materials-with-the-terrain"></a>
+![\[PhysX Collider, setting the physics material.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-F-1.24.png)
 
-By default, terrain is assigned with the default material\. Use the **[Terrain Texture Layers](terrain-texture-layers-intro.md)** editor to assign materials to different surface types\.
+**Warning**  
+There is a known issue where switching physics material libraries between colliders such as **Ragdoll PhysX** components will not update the physics material list to the newly assigned physics material library\. To update the physics material list, click on another collider, then back on the initial collider\. 
 
-![\[Surface ID and Material Library properties in the Terrain Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-materials-9.png)
+## Assign physics materials per face<a name="assign-physics-materials-per-face"></a>
+
+Static entities that have PhysX collider triangle mesh assets can have physics materials assigned per face\. You define physics material placement by assigning placeholder materials to the faces of the triangle collision mesh in a content creation application\. The names of placeholder materials become physics material properties of the collider component\. 
+
+For more information on creating PhysX collider mesh assets, see [Export PhysX collider mesh assets](physx-export-physx-mesh-asset.md)\.
 
 **Note**  
-For terrain materials to work properly, you must have a **[PhysX Terrain](component-physx-terrain.md)** component in your scene\. If you modify material properties on layers without a **PhysX Terrain** component in a scene, a warning appears in the console window, and your changes are not saved\.
-To ensure the engine generates a unique surface ID that can be later assigned with the physics material, you must change material on the layer\. If multiple layers share the same surface ID, they can be assigned only one physics material\.
+You can use the names of the placeholder materials to automate material assignment in Lumberyard by using an `_` in the placeholder material name\. The FBX exporter parses placeholder material names found on PhysX collider mesh assets as `PropertyName_PhysicsMaterialName`\.   
+A placeholder material named `Road` creates a physics material property named **Road** on the collider component under **Mesh Surfaces**\. 
+A placeholder material named `Road_Dirt` creates a physics material property named **Road** and attempts to assign the physics material named **Dirt** to the **Road** property, assuming that the assigned physics material library contains a physics material named **Dirt**\. 
+
+In the example below, the PhysX collider mesh asset has two placeholder materials, *Mud* and *Grass*\. The FBX exporter creates physics material properties using the placeholder material names, and corresponding physics materials are assigned from the physics material library\. 
+
+![\[PhysX Collider, per face physics materials.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-G-1.24.png)
+
+## **Terrain physics materials**<a name="terrain-physics-materials"></a>
+
+Terrain is assigned the default physics material\. Use the **[Terrain Texture Layers](terrain-texture-layers-intro.md)** editor to assign materials to different surface types\. 
+
+![\[Surface ID and Material Library properties in the Terrain Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx/physx/ui-physx-material-H-1.24.png)
+
+**Note**  
+To add terrain physics materials, you must have a **[PhysX Terrain](component-physx-terrain.md)** component in your scene\.
+To ensure that the engine generates a unique surface ID that can be assigned with the physics material, you must change the layer's material\. If multiple layers share the same surface ID, they must have the same physics material assigned\.

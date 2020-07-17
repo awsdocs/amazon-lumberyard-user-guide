@@ -1,15 +1,8 @@
 # Simple State<a name="component-simple-state"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Simple State** component provides a simple state machine\. Each state is represented by a name and zero or more entities\. The entities are activated upon entering the state and deactivated upon exiting it\. A simple state component may be in NullState, which means no state is active\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-simple-state.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-simple-state.png)
 
 ## Simple State Component Properties<a name="component-simple-state-properties"></a>
 
@@ -37,7 +30,7 @@ List of the entities referenced by this state\.
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### SetState<a name="simple-state-ebus-setstate"></a>
 
@@ -50,7 +43,7 @@ Sets the active state to the named state\.
 
 Use the following notification functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### OnStateChanged<a name="simple-state-ebus-onstatechanged"></a>
 

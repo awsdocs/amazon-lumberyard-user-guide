@@ -63,7 +63,7 @@ In the **Asset Browser**, right\-click an asset to display a context menu\. The 
 + **Open in Explorer** – Opens the asset in Windows Explorer\.
 + **Copy Name To Clipboard** – Copies the asset name\.
 + **Copy Path To Clipboard** – Copies the path of the asset\.
-+ **Edit Texture Settings** – Opens the asset in the **Texture Settings Editor**\. For more information, see [**Texture Settings Editor**](texture-settings-editor.md)\.
++ **Edit Texture Settings** – Opens the asset in the Texture Settings Editor\. For more information, see [Texture Settings Editor](texture-settings-editor.md)\.
 
 **Note**  
 You can also open some files in their respective Lumberyard tool, such as the **Lua Editor** for `.lua` files\.  
@@ -71,7 +71,7 @@ You can also open some files in their respective Lumberyard tool, such as the **
 ![\[Right-click context menu for assets in the Asset Browser\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-browser-intro-right-click-context.png)
 
 **FBX Files**  
-Some files, such as `.fbx` files, have an additional **Edit Settings** option, which opens the ****FBX Settings**** tool\. For more information, see [Working with the **FBX Settings** Tool](char-fbx-importer.md)\.
+Some files, such as `.fbx` files, have an additional **Edit Settings** option, which opens the **FBX Settings** tool\. For more information, see [Working with the FBX Settings Tool](char-fbx-importer.md)\.
 
 ![\[Right-click context menu for an .fbx file in the Asset Browser.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-browser-intro-right-click-context-fbx-tool.png)
 

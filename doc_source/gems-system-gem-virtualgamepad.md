@@ -28,13 +28,13 @@ You can configure the virtual gamepad's behavior in the **UI Editor**\.
 
 1. For each component, select an **Input Channel**\.
 
-![\[Input Channel selection for the VirtualGamepadButton\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems-system-gem-virtualgamepad-2.png)
+![\[Input Channel selection for the VirtualGamepadButton\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems/gems-system-gem-virtualgamepad-2.png)
 
 For more information about input in Lumberyard, see [Input in Amazon Lumberyard](input-intro.md)\.
 
 To modify the list of available virtual gamepad input channels, use the Project Configurator to edit the virtual gamepad's system component \. For more information, see [Configuring Advanced Settings](configurator-advanced.md)\.
 
-![\[Use the Project Configurator to modify the list of available virtual gamepad input channels.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems-system-gem-virtualgamepad-3.png)
+![\[Use the Project Configurator to modify the list of available virtual gamepad input channels.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems/gems-system-gem-virtualgamepad-3.png)
 
 ## Virtual Gamepad Component Properties<a name="gems-system-gem-virtualgamepad-properties"></a>
 
@@ -43,12 +43,12 @@ The Virtual Gamepad gem features two components that you can use to customize in
 ****VirtualGamepadButton****  
 **VirtualGamepadButton** has one property, **Input Channel**\. Select the appropriate input\.  
 
-![\[Input Channel selection for the VirtualGamepadButton.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems-system-gem-virtualgamepad-properties-1.png)
+![\[Input Channel selection for the VirtualGamepadButton.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems/gems-system-gem-virtualgamepad-properties-1.png)
 
 ****VirtualGamepadThumbstick****  
 **VirtualGamepadThumbstick** has the following properties:  
 
-![\[VirutalGamepadThumbStick component properties\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems-system-gem-virtualgamepad-properties-2.png)  
+![\[VirutalGamepadThumbStick component properties\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems/gems-system-gem-virtualgamepad-properties-2.png)  
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-gem-virtualgamepad.html)
 

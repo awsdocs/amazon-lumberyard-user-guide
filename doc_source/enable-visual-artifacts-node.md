@@ -8,7 +8,7 @@ To disable the effect, see [Disable Visual Artifacts](disable-visual-artifacts-n
 + [Inputs](#enable-visual-artifacts-note-input)
 + [Outputs](#enable-visual-artifacts-node-output)
 
-![\[enablevisualartifacts, enablevisualartifactsnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-enable-visual-artifacts-node.png)
+![\[enablevisualartifacts, enablevisualartifactsnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-enable-visual-artifacts-node.png)
 
 ## Inputs<a name="enable-visual-artifacts-note-input"></a>
 

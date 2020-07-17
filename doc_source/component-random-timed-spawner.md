@@ -1,11 +1,7 @@
 # Random Timed Spawner<a name="component-random-timed-spawner"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Random Timed Spawner** component to spawn a specified dynamic slice\. The component spawns the slice at a specified interval \(and random interval variation\) to a random position inside of a specified volume\.
 
@@ -19,7 +15,7 @@ Currently, you can specify how entities spawn in random positions with the follo
 + Normal distribution
 + Uniform Real distribution
 
-The **Random Timed Spawner** component is part of the LmbrCentral gem\. For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+The **Random Timed Spawner** component is part of the LmbrCentral gem\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 **Example**  
 The following **Random Timed Spawner** component has the distribution type, Uniform Real\.
@@ -69,7 +65,7 @@ Valid values: \-∞ to ∞
 
 You can use this EBus to communicate to an entity with a **Random Timed Spawner** component attached\. The EBus is available at game run time and editing and can be accessed from C\+\+, Lua, and the **Script Canvas** editor\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### Enable<a name="random-timed-spawner-ebus-enabled"></a>
 

@@ -11,7 +11,7 @@ To disable the effect, see [Disable Volumetric Scattering](disable-volumetric-sc
 + [Inputs](#enable-volumetric-scattering-note-input)
 + [Outputs](#enable-volumetric-scattering-node-output)
 
-![\[enablevolumetricscatttering, enablevolumetricscatteringnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-enable-volumetric-scattering-node.png)
+![\[enablevolumetricscatttering, enablevolumetricscatteringnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-enable-volumetric-scattering-node.png)
 
 ## Inputs<a name="enable-volumetric-scattering-note-input"></a>
 

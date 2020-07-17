@@ -1,12 +1,5 @@
 # Audio Trigger<a name="component-audio-trigger"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Audio Trigger** component provides basic play and stop features so that you can set up [Audio Translation Layer \(ATL\)](audio-default-controls.md) play and stop triggers that can be executed on demand\. With an audio trigger, you can also enable the player to run or stop audio triggers by name on entities\.
 
 ## Audio Trigger Properties<a name="component-audio-trigger-properties"></a>
@@ -32,7 +25,7 @@ Select this option to run upon component activation the audio **'play'** trigger
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### Play<a name="audio-ebus-play"></a>
 
@@ -116,7 +109,7 @@ Yes
 
 Use the following response functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### OnTriggerFinished<a name="audio-ebus-ontrigger"></a>
 

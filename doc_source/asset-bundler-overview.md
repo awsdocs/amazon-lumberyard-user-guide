@@ -8,7 +8,7 @@ To use the Asset Bundler, your game project must meet the following criteria:
 + You have Lumberyard version 1\.22 or later installed\.
 + You have game project in Lumberyard version 1\.22 or later\. This is the project that you want to generate asset bundles for\.
 + The assets that you are bundling have been processed by the [Asset Processor](asset-pipeline-processor.md)\.
-+ You have Visual Studio 2017 \(any edition\) installed and configured for C\+\+ development\.
++ You have Visual Studio 2017 or Visual Studio 2019 \(any edition\) installed and configured for C\+\+ development\.
 
 ## Why use the Asset Bundler?<a name="related-services"></a>
 
@@ -41,8 +41,8 @@ With those product dependency relationships in place, the Asset Bundler examines
 The Asset Bundler runs whenever the Asset Processor starts, which includes any time you launch Lumberyard\. You can also run it from the command line with the `AssetBundlerBatch` command\. For more information on the latter, read the [Asset Bundler Command Line Reference](asset-bundler-command-line-reference.md)\.
 
 To get started using the Asset Bundler, read the following tutorials:
-+ [Work with Asset Bundling and the Lumberyard Starter Game](asset-bundler-starter-game.md)\. This tutorial uses the Starter Game packaged with Lumberyard and walks you through the general asset bundling process\. 
-+ [Creating Basic Asset Bundles](asset-bundler-tutorial-simple.md)\. This tutorial covers the most simple case for asset bundling and release, using a single seed\. Once you've worked through this topic, read the extended tutorials for [multiple packages](asset-bundler-tutorial-multiple-bundles.md) and [delta patches](asset-bundler-tutorial-content-patches.md)\. 
++ [Work with Asset Bundling and the Lumberyard Starter Game](asset-bundler-tutorial-release.md)\. This tutorial uses the Starter Game packaged with Lumberyard and walks you through the general asset bundling process\. 
++ [Creating Basic Asset Bundles](asset-bundler-tutorial-release.md)\. This tutorial covers the most simple case for asset bundling and release, using a single seed\. Once you've worked through this topic, read the extended tutorials for [multiple packages](asset-bundler-tutorial-multiple-bundles.md) and [delta patches](asset-bundler-tutorial-content-patches.md)\. 
 
 ## Why define product dependencies?<a name="why-use-product-dependencies"></a>
 
@@ -138,8 +138,8 @@ The following table provides some examples of the artifacts generated and used i
 
 ## Additional Resources<a name="asset-bundler-overview-resources"></a>
 + [Asset Bundler Concepts and Terms](asset-bundler-concepts.md)
-+ [Work with Asset Bundling and the Lumberyard Starter Game](asset-bundler-starter-game.md)
-+ [Creating Basic Asset Bundles](asset-bundler-tutorial-simple.md)
++ [Work with Asset Bundling and the Lumberyard Starter Game](asset-bundler-tutorial-release.md)
++ [Creating Basic Asset Bundles](asset-bundler-tutorial-release.md)
 + [Creating Multiple Asset Bundles](asset-bundler-tutorial-multiple-bundles.md)
 + [Creating Content Patch Bundles](asset-bundler-tutorial-content-patches.md)
 + [Migrating to the New Asset Bundler](asset-bundler-migrating.md)

@@ -1,16 +1,16 @@
 # Exposing Custom Components to Track View for Animation<a name="component-entity-system-track-view"></a>
 
-To include custom components in cinematic cut scenes and movies rendered to disk, you must expose animatable component properties to Lumberyard’s **Track View** and **Entity Inspector**\. To expose a custom component and its properties, you must perform three steps:
+To include custom components in cinematic cut scenes and movies rendered to disk, you must expose animatable component properties to Lumberyard’s Track View and **Entity Inspector**\. To expose a custom component and its properties, you must perform three steps:
 
 1. Create getter and setter methods for the animated property on one of the component’s request event buses\.
 
 1. Implement the getter and setter request handlers in your component\.
 
-1. Reflect your component to the edit context and the behavior context\. Edit context reflection exposes your component in **Entity Inspector**, and behavior context reflection exposes it in the **Track View**\.
+1. Reflect your component to the edit context and the behavior context\. Edit context reflection exposes your component in **Entity Inspector**, and behavior context reflection exposes it in the Track View\.
 
 ## Exposing a Custom Component: Example<a name="component-entity-system-track-view-example"></a>
 
-The following example assumes that a custom component called `ImaginaryTargetComponent` has been created\. The component has a `Vector3` property called `ImaginaryPosition` that you want to animate in **Track View**\. A request bus called `ImaginaryTargetComponentBus` has also been created for the component\. This example assumes that you are familiar with programming event buses and component handlers for them\. For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md) and [Creating a Component](component-entity-system-create-component.md)\.
+The following example assumes that a custom component called `ImaginaryTargetComponent` has been created\. The component has a `Vector3` property called `ImaginaryPosition` that you want to animate in **Track View**\. A request bus called `ImaginaryTargetComponentBus` has also been created for the component\. This example assumes that you are familiar with programming event buses and component handlers for them\. For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md) and [Creating a Component](component-entity-system-create-component.md)\.
 
 **To expose a custom component to Track View**
 
@@ -133,7 +133,7 @@ The following example assumes that a custom component called `ImaginaryTargetCom
    ```
 
    **Track View** then uses a color track for the property, as the following image shows\.  
-![\[Color picker in Track View\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-entity-system-pg-track-view-unit-attributes.png)
+![\[Color picker in Track View\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/entity_system/component-entity-system-pg-track-view-unit-attributes.png)
 
    Other units can be found in the file `dev\Code\Framework\AZCore\AZCore\Serialization\EditContextConstants.inl`\. As of Lumberyard release 1\.8, these units are the following\.
 
@@ -146,12 +146,12 @@ The following example assumes that a custom component called `ImaginaryTargetCom
 
 ## Viewing the Result<a name="component-entity-system-track-view-viewing-the-result"></a>
 
-Now you can view how the example component and property appear in the **Entity Inspector** and the **Track View**\.
+Now you can view how the example component and property appear in the **Entity Inspector** and the Track View\.
 
 In the following **Entity Inspector** image, `EditContext` reflection has exposed the **ImaginaryTarget** component and its **Imaginary Target Pos** property\.
 
-![\[ImaginaryTarget component in Entity Inspector\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/exposing-custom-components-to-track-view-for-animation-entity-inspector.jpg)
+![\[ImaginaryTarget component in Entity Inspector\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/entity_system/exposing-custom-components-to-track-view-for-animation-entity-inspector.jpg)
 
 In the following **Track View** image, `BehaviorContext` reflection has exposed the **ImaginaryTarget** component and the **ImaginaryPosition** track from the corresponding virtual property\.
 
-![\[ImaginaryTarget component in the Track View\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/exposing-custom-components-to-track-view-for-animation-track-view.jpg)
+![\[ImaginaryTarget component in the Track View\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/entity_system/exposing-custom-components-to-track-view-for-animation-track-view.jpg)

@@ -10,12 +10,9 @@ For more information, see [Creating Gameplay with Script Canvas](script-canvas-i
 A powerful, fast, lightweight, embeddable scripting language\. Lua facilitates quick iteration in your game project because you can run your changes immediately without needing to recompile your source code\.  
 For more information, see [Writing Lua Scripts](lua-scripting-intro.md)\.
 
-Lumberyard's functionality is exposed to Script Canvas and Lua by the behavior context\.
-
-For more information, see [Behavior Context](component-entity-system-reflection-behavior-context.md)\.
+Lumberyard's functionality is exposed to Script Canvas and Lua by the behavior context\. For more information, see [Behavior Context](component-entity-system-reflection-behavior-context.md)\.
 
 **Topics**
 + [Creating Gameplay with Script Canvas](script-canvas-intro.md)
 + [Writing Lua Scripts](lua-scripting-intro.md)
 + [Using Script Events](script-events.md)
-+ [Scripting in Amazon Lumberyard: Questions and Answers](scripting-questions-and-answers.md)

@@ -247,7 +247,7 @@ def build(bld):
     if platform == 'project_generator':
         uploader_file_list.append('game_crash_uploader_win.waf_files')
         uploader_file_list.append('game_crash_uploader_unimplemented.waf_files')
-    elif platform in ['win_x64_vs2015', 'win_x64_vs2017']:
+    elif platform in ['win_x64_vs2017', 'win_x64_vs2019']:
         uploader_file_list.append('game_crash_uploader_win.waf_files')
     else:
         uploader_file_list.append('game_crash_uploader_unimplemented.waf_files')

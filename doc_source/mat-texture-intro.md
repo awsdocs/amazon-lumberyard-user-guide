@@ -12,7 +12,7 @@ Textures used in Lumberyard are usually created with Adobe Photoshop or other DC
 
 **Topics**
 + [Texture Map Types](mat-texture-types.md)
-+ [**Texture Settings Editor**](texture-settings-editor.md)
++ [Texture Settings Editor](texture-settings-editor.md)
 + [Texture Best Practices](mat-texture-best-practices.md)
 + [Working with Diffuse Maps](mat-maps-diffuse.md)
 + [Working with Normal Maps](mat-maps-normal-intro.md)

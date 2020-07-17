@@ -9,7 +9,7 @@ An actor is an entity that you create for characters in your game\. You can then
 The entity in the Lumberyard Editor viewport has an **Actor** component attached\.  
 
 ![\[You can add an Actor component to an entity to create a character for your game.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terms/example-actor-entity-and-component.png)
-For more information, see [Creating and Animating Characters](char-intro.md)\.
+For more information, see [Create and animate characters](char-intro.md)\.
 
 **Asset Builder API**  
 The Asset Builder API is an interface for creating custom types of assets\. With the Asset Builder API, you create a custom asset, and register the asset in the asset pipeline\. Asset Processor processes the asset like any other file \(for example, `.tif` file to a `.dds` file\), so that you can use it in Lumberyard\. The Asset Builder API lets you leverage all the benefits of the asset pipeline, such as Asset Processor and the **Asset Browser**\.  
@@ -21,8 +21,8 @@ This utility is a background service that monitors changes to your source files 
 **Example Importing Assets**  
 When you import assets into your game project, Asset Processor automatically detects the change and processes them\.  
 
-![\[You can import assets for your game with Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-importing.png)
-For more information, see [Working with the Asset Pipeline and Asset Files](asset-pipeline-intro.md)\.
+![\[You can import assets for your game with Asset Processor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assets/pipeline/asset-pipeline-importing.png)
+For more information, see [Working with the Asset Pipeline and asset files](asset-pipeline-intro.md)\.
 
 **AZ Code Generator**  
 This command line utility accepts a tagged source code file and creates a text, data, or code file\. AZ Code Generator parses through a list of existing C\+\+ source files and/or header files and generates the intermediate data in JSON format\. It passes the intermediate data to a series of templates, which provide the format for the code that is generated\.   
@@ -30,8 +30,8 @@ For example, you can use the AZ Code Generator feature to create a component tha
 
 **Example AZ Code Generator Process**  
 
-![\[You can create your own components with the AZ Code Generator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/az-code-gen-workflow.png)
-For more information, see [Automating Boilerplate with AZ Code Generator](az-code-gen-intro.md)\.
+![\[You can create your own components with the AZ Code Generator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/iimages/codegen/az-code-gen-workflow.png)
+For more information, see [Automating boilerplate with AZ Code Generator](az-code-gen-intro.md)\.
 
 **Behavior Context**  
 You can use the [Behavior Context](component-entity-system-reflection-behavior-context.md) to reflect runtime code to make it accessible to scripting languages like Lua or scripting environments like Lumberyard's **Script Canvas** editor\. The behavior context provides bindings that invoke runtime C\+\+ code\.
@@ -46,13 +46,13 @@ An entity is a game object with a unique ID and a container\. An entity contains
 **Example Entities and Components**  
 You can see entities in the **Entity Outliner** and the components attached to that entity in the **Entity Inspector**\.  
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-entity-inspector.png)
-For more information about entities and components, see [Working with Component Entities](component-intro.md)\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/entity_system/component-entity-inspector.png)
+For more information about entities and components, see [Working with component entities](component-intro.md)\.
 
 **Event Bus System**  
 Event buses \(EBuses\) are a general\-purpose communication system that Lumberyard uses to dispatch notifications and receive requests\. EBuses are configurable and support many different use cases\. For example, you can use EBuses to notify other parts of the engine about an event, such as changes to a component's configuration\.   
 You can use the event bus system by adding a component to an entity, as a call in C\+\+, or by including the API header\.   
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **GameLift**  
 Amazon GameLift is an AWS service that you can use to host server\-based games, scale servers up and down, allow players to connect, and provide matchmaking services\. You can enable the GameLift gem for Lumberyard\.   

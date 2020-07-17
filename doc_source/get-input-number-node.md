@@ -9,7 +9,7 @@ You can use this node with all substance data types: `Float1` through `Float4` a
 + [Inputs](#get-input-number-node-input)
 + [Outputs](#get-input-number-node-output)
 
-![\[GetInputNumber gets the numeric value for a procedural material's parameter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-get-input-number-node.png)
+![\[GetInputNumber gets the numeric value for a procedural material's parameter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-get-input-number-node.png)
 
 ## Inputs<a name="get-input-number-node-input"></a>
 

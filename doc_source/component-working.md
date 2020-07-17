@@ -1,12 +1,5 @@
 # Working with Components<a name="component-working"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 You can use the component entity system tools to create entities and add components to them\. Before you can work with components, you must [create an entity](creating-entity.md)\.
 
 **Topics**

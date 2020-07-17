@@ -5,13 +5,13 @@ The **Curve Editor** displays animations as function curves\. Each track's curve
 **To open the **Curve Editor****
 
 1. Do one of the following:
-   + In the **Track View**, choose **View**, **Curve Editor**\.
-   + In the **View** toolbar, choose the **Curve Editor** icon ![\[Curve editor button\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-curve-icon-track-view-editor.png)\.
+   + In the Track View, choose **View**, **Curve Editor**\.
+   + In the **View** toolbar, choose the **Curve Editor** icon ![\[Curve editor button\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics/cinematics-curve-icon-track-view-editor.png)\.
 
 1. Select a keyframe in the timeline to view it in the **Curve Editor**\.
 
 **Note**  
-You can have the **Track View** and **Curve Editor** open simultaneously if you prefer to access both tools\.
+You can have the Track View and **Curve Editor** open simultaneously if you prefer to access both tools\.
 
 A curve has the following three parts:
 
@@ -21,7 +21,7 @@ A curve has the following three parts:
 
 1. Tangent handles for the keys\.
 
-![\[Elements of a curve in Track View for the Curve Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-track-view-editor-curves.png)
+![\[Elements of a curve in Track View for the Curve Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics/cinematics-track-view-editor-curves.png)
 
 **To edit elements in a curve**
 

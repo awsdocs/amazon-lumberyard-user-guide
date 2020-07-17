@@ -1,11 +1,7 @@
 # Actor<a name="component-actor"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Actor** component to create characters for your game\. After you import your character files from your DCC tool into Lumberyard, you can create an entity and add the **Actor** component to it\. For example, you must use an **Actor** component to create a controllable character for your game\.
 
@@ -20,7 +16,7 @@ For the **Actor** component to work properly, you must also add one of the follo
 
 ## Actor Component Properties<a name="component-actor-properties"></a>
 
-![\[Actor component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor_component_properties.png)
+![\[Actor component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/actor_component_properties.png)
 
 The **Actor** component has the following properties\.
 

@@ -1,15 +1,8 @@
 # Audio Environment<a name="component-audio-environment"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Audio Environment** component provides access to features of the [Audio Translation Layer \(ATL\)](audio-default-controls.md) environments\. Environments are used to apply environmental effects such as reverb or echo\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-audio-environment1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/audio/component-audio-environment1.png)
 
 ## Audio Environment Properties<a name="component-audio-environment-properties"></a>
 
@@ -22,7 +15,7 @@ Enter the name of the audio environment to use by default when setting amounts\.
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### SetAmount<a name="environ-audio-ebus-setamount"></a>
 

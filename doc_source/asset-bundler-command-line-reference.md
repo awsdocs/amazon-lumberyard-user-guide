@@ -39,7 +39,7 @@ See the [Asset Bundler Concepts and Terms](asset-bundler-concepts.md) or [Glossa
  The format for `AssetBundlerBatch` commands is: 
 
 ```
-   AssetBundlerBatch command --parameterWithArgs arg1,arg2 --flagParameter ...
+AssetBundlerBatch command --parameterWithArgs arg1,arg2 --flagParameter ...
 ```
 
  The `AssetBundlerBatch` executable is contained in the `dev\Bin64HostPlatform` folder of your project\. For example, when building on PC with Visual Studio 2017, the asset processor is located at `dev\Bin64vc141`\. 
@@ -58,7 +58,9 @@ The elements in this example invocation break down to:
  An example command is: 
 
 ```
-   Bin64vc141\AssetBundlerBatch seeds --seedFileList MyProject\AssetBundling\SeedLists\AllDependencies.seed --addPlatformToSeeds --platform ios,pc
+Bin64vc141\AssetBundlerBatch seeds --seedFileList MyProject\AssetBundling\SeedLists\AllDependencies.seed ^
+    --addPlatformToSeeds ^
+    --platform ios,pc
 ```
 
 ### Options<a name="asset-bundler-command-line-reference-general-options"></a>
@@ -138,21 +140,23 @@ This command requires an existing cache of assets for each provided platform\. T
  Create the seed list `testFile.seed` if it doesn't exist, and adds the `asset1.pak` and `asset2.pak` assets as seeds for the `PC` platform:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe seeds --seedListFile testFile.seed --addSeed cache\asset_path\asset1.pak,cache\asset_path\asset2.pak --platform pc
+ Bin64vc141\AssetBundlerBatch.exe seeds --seedListFile testFile.seed ^
+    --addSeed cache\asset_path\asset1.pak,cache\asset_path\asset2.pak ^
+    --platform pc
 ```
 
 **Example Add platforms**  
  Add the `ios` and `es3` platforms for all seeds in the `testFile.seed` seed list:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe seeds --seedListFile testFile.seed --addPlatformToSeeds --platform ios,es3
+Bin64vc141\AssetBundlerBatch.exe seeds --seedListFile testFile.seed --addPlatformToSeeds --platform ios,es3
 ```
 
 **Example Display seed list contents**  
  Show the contents of the `testFile.seed` file, including the absolute and relative paths of all assets used as seeds:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe seeds --seedListFile testFile.seed --print
+Bin64vc141\AssetBundlerBatch.exe seeds --seedListFile testFile.seed --print
 ```
 
 ## Asset Lists \- `assetLists`<a name="asset-bundler-command-line-reference-assetlists"></a>
@@ -182,8 +186,18 @@ The asset list files generated are named based on the value of this argument and
 *Required:* No
 
 **\-\-addDefaultSeedListFiles**  
- Automatically include the seed lists for the Lumberyard Engine and all enabled Gems\. This argument can be used along with other arguments that provide seeds\.  
+ Automatically include the default seed lists for the Lumberyard Engine, default project, and all enabled Gems\. As paths relative to `lumberyard_dev`, the files that define default assets are:   
++  **Engine** – `Engine\Engine_Dependencies.xml` 
++  **Gems** – `Gems\gem_name\Assets\gem_name_Dependencies.xml` 
++  **Project** – `project_name\project_name_Dependencies.xml` 
+By default, the project dependencies includes pre\-loaded particle libraries and game\-wide audio, excluding level\-specific audio\.  
+This argument can be used along with other arguments that provide seeds\.  
 *Type:* Flag  
+*Required:* No
+
+**\-\-skip**  
+A list of assets to ignore\. This can include both seed assets and any dependencies that were picked up by the asset processor\. The argument value is a comma\-separated list of cache\-relative paths to assets that have already been pre\-processed\.  
+*Type:* Multi\-value argument  
 *Required:* No
 
 **\-\-platform**  
@@ -226,35 +240,38 @@ Generate a file that contains additional information about asset inclusion for d
  Display which asset lists would be generated from the seed lists for the Lumberyard Engine and enabled Gems for a project's default platforms:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe assetLists --addDefaultSeedListFiles --print
+Bin64vc141\AssetBundlerBatch.exe assetLists --addDefaultSeedListFiles --print
 ```
 
 **Example Display asset lists for default platforms**  
  Use an input asset list and the project's default platforms to display that asset list's contents:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile assetListFile.assetlist --print
+Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile assetListFile.assetlist --print
 ```
 
 **Example Create an asset list and debug file from a seed list**  
  Generate an asset list `testList_pc.assetlist` and debug information `testList_pc.assetlistdebug` from the `testFile.seed` seed list:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile testList.assetlist --seedListFile testFile.seed --platform pc --generateDebugFile
+Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile testList.assetlist ^
+    --seedListFile testFile.seed ^
+    --platform pc ^
+    --generateDebugFile
 ```
 
 **Example Display asset list contents for a platform**  
  Display the contents of the `testList_pc.assetlist` file:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile testList.assetlist --platform pc --print
+Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile testList.assetlist --platform pc --print
 ```
 
 **Example Regenerate asset lists from a seed list**  
 Regenerate all asset lists from the `testFile.seed` seed list, overwriting the `testList_pc.assetlist` file if it exists:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile testList.assetlist --seedListFile testFile.seed --allowOverwrites
+Bin64vc141\AssetBundlerBatch.exe assetLists --assetListFile testList.assetlist --seedListFile testFile.seed --allowOverwrites
 ```
 
 ## Comparison rules \- `comparisonRules`<a name="asset-bundler-command-line-reference-comparisonrules"></a>
@@ -275,7 +292,9 @@ The `comparisonRules` command is used to generate comparison rules files\. Compa
 + *2* or *intersection*: Intersection
 + *3* or *complement*: Complement
 + *4* or *filePattern*: FilePattern
++ *5* or *intersectionCount*: IntersectionCount
  For more information about how each of these rules operate on input files, see [Amazon Lumberyard Asset List Comparison Operations](asset-bundler-list-operations.md)\.   
+ The `intersectionCount` comparison type can't be combined with any other comparison type as part of a rule list\. 
 *Type:* Multi\-value argument  
 *Required:* Yes
 
@@ -302,7 +321,10 @@ The `comparisonRules` command is used to generate comparison rules files\. Compa
  Generate a comparison rules file which produces a delta comparison, and then filters the results to include only XML files:   
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe comparisonRules --comparisonRulesFile deltaFilterXML.rules --comparisonType delta,filePattern --filePatternType 0 --filePattern "*xml"
+Bin64vc141\AssetBundlerBatch.exe comparisonRules --comparisonRulesFile deltaFilterXML.rules ^
+     --comparisonType delta,filePattern ^
+     --filePatternType 0 ^
+     --filePattern "*xml"
 ```
 
 ## Comparisons \- `compare`<a name="asset-bundler-command-line-reference-compare"></a>
@@ -324,7 +346,9 @@ The comparison types to apply to the input files\. The first `--comparisonType` 
 + *2* or *intersection*: Intersection
 + *3* or *complement*: Complement
 + *4* or *filePattern*: FilePattern
++ *5* or *intersectionCount*: IntersectionCount
  For more information about how each of these rules operate on input files, see [Amazon Lumberyard Asset List Comparison Operations](asset-bundler-list-operations.md)\.   
+ The `intersectionCount` comparison type can't be combined with any other comparison type\. 
 *Type:* Multi\-value argument  
 *Required:* Yes
 
@@ -346,7 +370,7 @@ The comparison types to apply to the input files\. The first `--comparisonType` 
 *Required:* No
 
 **\-\-secondAssetListFile**  
- The files to use as the second set of inputs for comparisons which require a second input file\. Currently this is all comparison types except for `FilePattern`\.   
+ The files to use as the second set of inputs for comparisons which require a second input file\. This arugment isn't used for the `FilePattern` or `IntersectionCount` comparison types\.   
 *Type:* Multi\-value argument\. The number of parameters for the `--secondAssetListFile` argument must match the number of non\-`FilePattern` arguments to the `--comparisonType` argument\.   
 *Required:* No
 
@@ -373,14 +397,30 @@ The comparison types to apply to the input files\. The first `--comparisonType` 
  Generate a new asset list `deltaAssetList.assetlist` by taking the files which appear in either `firstAssetList_pc.assetlist` and `secondAssetList_pc.assetlist`, but not both:   
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe compare --comparisonType delta --firstAssetFile firstAssetList_pc.assetlist --secondAssetFile secondAssetList_pc.assetlist --output deltaAssetList.assetlist
+Bin64vc141\AssetBundlerBatch.exe compare --comparisonType delta ^
+     --firstAssetFile firstAssetList_pc.assetlist ^
+     --secondAssetFile secondAssetList_pc.assetlist ^
+     --output deltaAssetList.assetlist
 ```
 
 **Example Compare based on file path matching**  
  Generate a new asset list `filePatternAssetList.assetlist` that contains only XML files from the `assetList_pc.assetlist` file:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe compare --comparisonType filePattern --filePatternType 0 --filePattern "*.xml" --firstAssetFile assetList_pc.assetlist --output filePatternAssetList.assetlist
+Bin64vc141\AssetBundlerBatch.exe compare --comparisonType filePattern ^
+    --filePatternType 0 ^
+    --filePattern "*.xml" ^
+    --firstAssetFile assetList_pc.assetlist ^
+    --output filePatternAssetList.assetlist
+```
+
+**Example Count intersection across multiple asset lists**  
+Use `intersectionCount` on `engine_pc.assetlist`, `game_pc.assetlist`, and `patch_pc.assetlist` to print out assets which appear 2 times or more between any of these asset lists:  
+
+```
+Bin64vc141\AssetBundlerBatch.exe compare --comparisonType intersectionCount ^
+    --firstAssetFile engine_pc.assetlist,game_pc.assetlist,patch_pc.assetlist ^
+    --print
 ```
 
 ## Bundle settings \- `bundleSettings`<a name="asset-bundler-command-line-reference-bundlesettings"></a>
@@ -432,7 +472,10 @@ The comparison types to apply to the input files\. The first `--comparisonType` 
  Create a bundler settings file `defaults_pc.bundlesettings` for PC with the maximum bundle size set to 1024MB and the `allAssets_pc.assetlist` asset list as its input:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe bundleSettings --bundleSettingsFile defaults.bundlesettings --maxSize 1024 --assetListFile allAssets.assetlist --platforms pc
+Bin64vc141\AssetBundlerBatch.exe bundleSettings --bundleSettingsFile defaults.bundlesettings ^
+    --maxSize 1024 ^
+    --assetListFile allAssets.assetlist ^
+    --platforms pc
 ```
 
 ## Asset bundles \- `bundles`<a name="asset-bundler-command-line-reference-bundles"></a>
@@ -484,14 +527,14 @@ The bundle format version to use in generation\. The only allowed value is `1`\.
  Create a `assets_pc.pak` bundle for PC, using the `defaults_pc.bundlesettings` file:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe bundles --outputBundlePath assets.pak --bundleSettingsFile defaults.bundlesettings --platform pc
+Bin64vc141\AssetBundlerBatch.exe bundles --outputBundlePath assets.pak --bundleSettingsFile defaults.bundlesettings --platform pc
 ```
 
 **Example Create bundles for all platforms**  
 Create bundles for all of a project's enabled platforms, using the `allAssets_pc.assetlist`, `allAssets_ios.assetlist`, and `allAssets_es3.assetlist` files:  
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe bundles --outputBundlePath assets.pak --maxSize 512 --assetListFile allAssets.assetlist
+Bin64vc141\AssetBundlerBatch.exe bundles --outputBundlePath assets.pak --maxSize 512 --assetListFile allAssets.assetlist
 ```
 
 ## Bundle from seed \- `bundleSeed`<a name="asset-bundler-command-line-reference-bundleseed"></a>
@@ -541,5 +584,5 @@ The bundle format version to use in generation\. The only allowed value is `1`\.
  Regenerate the bundle `processed.pak` for the `example.cgf` asset and all of its dependencies, with a maximum size of 512MB\.   
 
 ```
-     Bin64vc141\AssetBundlerBatch.exe bundleSeed --addSeed example.cgf --outputBundlePath processed.pak --maxSize 512 --allowOverwrites 
+Bin64vc141\AssetBundlerBatch.exe bundleSeed --addSeed example.cgf --outputBundlePath processed.pak --maxSize 512 --allowOverwrites
 ```

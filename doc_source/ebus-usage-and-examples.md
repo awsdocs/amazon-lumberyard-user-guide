@@ -130,7 +130,7 @@ void MyHandler::Activate()
 
 You can call `BusConnect()` at any time and from any thread\.
 
-If your EBus is addressed, connect to the EBus by passing the EBus ID to `BusConnect()`\. To listen on all addresses, call `BusConnect()` without passing in an ID\.
+If your EBus is addressed, connect to the EBus by passing the EBus ID to `BusConnect()`\. 
 
 ```
 // connect to the EBus at address 5.

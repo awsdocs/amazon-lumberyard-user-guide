@@ -1,11 +1,7 @@
 # High Quality Shadow<a name="component-high-quality-shadow"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **High Quality Shadow** component to give an entity its own shadow map that is a higher resolution than you could achieve with a global shadow map\. This component applies to light from the sun and helps provide crisp, well\-defined shadows\. You can use this on main characters or prominent elements to improve their appearance\. 
 

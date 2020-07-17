@@ -47,7 +47,7 @@ To use the cleanup tool, you must complete the following:
   For more information, see [Step 2: Create an IAM User to Administer the Cloud Canvas Project](cloud-canvas-tutorial.md#cloud-canvas-tutorial-create-iam-admin) and [Step 4: Add Administrator Credentials to Lumberyard](cloud-canvas-tutorial.md#cloud-canvas-tutorial-enter-admin-creds) in the [Cloud Canvas tutorial](cloud-canvas-tutorial.md)\.
 + Install the [AWS CLI](https://aws.amazon.com/cli/), [configure](https://docs.aws.amazon.com/cli/latest/reference/configure/index.html) it with an admininstrator IAM profile, and set it to your preferred region\.
 
-  For instructions on how to install the AWS CLI on Windows, see [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)\. The AWS CLI requires Python\.
+  For instructions on how to install the AWS CLI on Windows, see [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)\. The AWS CLI requires Python\. You may use the version of Python distributed as part of Lumberyard, provided that it's available in your system's `PATH`\.
 + Use Cloud Canvas Resource Manager or the `lmbr_aws` tool to create a Cloud Canvas project stack\. 
 **Note**  
 If you are using a fresh installation of Lumberyard and need to clean up resources before you can create a project stack, perform the following steps\.  
@@ -217,7 +217,7 @@ To use the AWS CLI, you must complete the following:
   For more information, see [Step 2: Create an IAM User to Administer the Cloud Canvas Project](cloud-canvas-tutorial.md#cloud-canvas-tutorial-create-iam-admin) and [Step 4: Add Administrator Credentials to Lumberyard](cloud-canvas-tutorial.md#cloud-canvas-tutorial-enter-admin-creds) in the [Cloud Canvas tutorial](cloud-canvas-tutorial.md)\.
 + Install the [AWS CLI](https://aws.amazon.com/cli/), [configure](https://docs.aws.amazon.com/cli/latest/reference/configure/index.html) it with an admininstrator IAM profile, and set it to your preferred region\.
 
-  For instructions on how to install the AWS CLI on Windows, Linux, macOS, or Unix, see [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)\. The AWS CLI requires Python\.
+  For instructions on how to install the AWS CLI on Windows, Linux, macOS, or Unix, see [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)\. The AWS CLI requires Python\. You may use the version of Python distributed as part of Lumberyard, provided that it's available in your system's `PATH`\.
 
 ### Creating Script Files for Batch Deletion<a name="cloud-canvas-administration-aws-resource-cleanup-creating-script-files-for-batch-deletion"></a>
 

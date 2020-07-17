@@ -1,4 +1,4 @@
-# Creating and Customizing Game User Interfaces<a name="ui-editor-intro"></a>
+# Creating and Customizing Project User Interfaces<a name="ui-editor-intro"></a>
 
 You can use the **UI Editor** to create and customize various parts of the game user interface, such as images, text, buttons, menus, scroll boxes, and heads\-up displays \(HUDs\)\. For a tutorial about UI creation for games, see [Lumberyard Tutorials](https://gamedev.amazon.com/forums/tutorials)\.
 

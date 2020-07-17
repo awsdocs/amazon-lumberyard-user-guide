@@ -6,6 +6,30 @@ Controls scroll bar characteristics\.
 
 Services messages for the `UiScrollBarComponent`\.
 
+### GetAutoFadeDelay<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-getautofadedelay"></a>
+
+Returns the fade delay in seconds\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+float GetAutoFadeDelay()
+```
+
+### GetAutoFadeSpeed<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-getautofadespeed"></a>
+
+Returns the fade speed in seconds\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+float GetAutoFadeSpeed()
+```
+
 ### GetHandleEntity<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-gethandleentity"></a>
 
 Returns the handle entity\.
@@ -34,6 +58,54 @@ Returns the minimum size of the handle in pixels\.
 
 ```
 float GetMinHandlePixelSize()
+```
+
+### IsAutoFadeEnabled<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-isautofadeenabled"></a>
+
+Returns whether auto fade is enabled\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+bool IsAutoFadeEnabled()
+```
+
+### SetAutoFadeDelay<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-setautofadedelay"></a>
+
+Sets the fade delay in seconds\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+void SetAutoFadeDelay(float delay)
+```
+
+### SetAutoFadeEnabled<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-setautofadeenabled"></a>
+
+Sets whether auto fade is enabled\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+void SetAutoFadeEnabled(bool isEnabled)
+```
+
+### SetAutoFadeSpeed<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-setautofadespeed"></a>
+
+Sets the fade speed in seconds\.
+
+**Minimum Lumberyard Version: **1\.24
+
+**Syntax**
+
+```
+void SetAutoFadeSpeed(float speed)
 ```
 
 ### SetHandleEntity<a name="lua-scripting-ces-api-ui-uiscrollbarcomponent-uiscrollbarbus-sethandleentity"></a>

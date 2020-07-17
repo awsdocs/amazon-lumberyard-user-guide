@@ -1,6 +1,6 @@
 # Track View Editor Toolbars<a name="cinematics-track-view-editor-toolbars"></a>
 
-See the following main sections of the **Track View**:
+See the following main sections of the Track View:
 
 1. **Main toolbar** – Tools to create and modify sequences and the tracks in a sequence\. The main toolbar includes the **Sequence/Node**, **View**, **Play**, **Keys**, and **Tracks** toolbars\. To add or remove toolbars, right\-click the main toolbar and select your preferred options\. 
 
@@ -15,6 +15,6 @@ See the following main sections of the **Track View**:
    For more information, see [Using Animation Curves](cinematics-track-view-editor-animation-curves.md)\.
 
 **Note**  
-You can pause over buttons in the **Track View** to view their descriptions\.
+You can pause over buttons in the Track View to view their descriptions\.
 
-![\[Track View toolbar.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics-trackview-editor.png)
+![\[Track View toolbar.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cinematics/cinematics-trackview-editor.png)

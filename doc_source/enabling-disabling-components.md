@@ -11,10 +11,10 @@ You can disable the components that you don't want and reenable them later\. Dis
 1. In the **Entity Inspector**, under **Add Component**, right\-click the component that is associated with the entity\.
 
 1. Choose **Disable component** to disable the component\.  
-![\[You can disable a component on an entity.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-context-menu-disabling.png)
+![\[You can disable a component on an entity.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-context-menu-disabling.png)
 
    Disabled components are dimmed with stripes\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-disabled.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-disabled.png)
 
 1. To reenable a disabled component, right\-click the component and choose **Enable component**\.  
-![\[You can re-enable a disabled component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-enabled.png)
+![\[You can re-enable a disabled component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-enabled.png)

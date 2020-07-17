@@ -6,7 +6,7 @@ For information about the `RoadsandRiversGeometryRequestsBus`, see [RoadsAndRive
 
 Use the following request functions with the `RoadsAndRiversGeometryRequestsBus` to communicate with other components of your game\.
 
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

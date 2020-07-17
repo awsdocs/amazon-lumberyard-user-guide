@@ -1,8 +1,8 @@
 # Animation Editor File Types<a name="char-animation-editor-file-types"></a>
 
-When you import `.fbx` files from your DCC to Lumberyard Editor, Asset Processor creates files that you use in the **Animation Editor**\. The following example shows how the file types are created and modified\. For more information about processing files for character and animations, see [Working with the **FBX Settings** Tool](char-fbx-importer.md)\.
+When you import `.fbx` files from your DCC to Lumberyard Editor, Asset Processor creates files that you use in the **Animation Editor**\. The following example shows how the file types are created and modified\. For more information about processing files for character and animations, see [Working with the FBX Settings Tool](char-fbx-importer.md)\.
 
-![\[See an overview of how Animation Editor files are created and processed in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-asset-processor-files.png)
+![\[See an overview of how Animation Editor files are created and processed in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-asset-processor-files.png)
 
 The following are file types used in the **Animation Editor**:
 
@@ -13,7 +13,7 @@ When you import `.fbx` files into Lumberyard, Asset Processor generates the foll
 + `.motion` files are created when the `.fbx` file with a bone has at least one keyframe\. If your `.fbx` file has animation keyframes, a `.motion` file is created\. Your `.motion` files contain the animations that are added to your motion set before you build your animation graph\.
 + `.mtl` files are created when the `.fbx` file has at least one material, which is the case for most DCC tools\. If you make changes to the material in the **Material Editor**, the `.mtl` file is no longer a child of the `.fbx` file and the `.mtl` file is a sibling in the source directory of the `.fbx` file\. You can make other changes to the `.mtl` file with a text editor or the **Material Editor**\.
 
-When a `.motion` file is created, an `.actor` file is also created\. The `.actor` file that you want to use in the **Animation Editor** is generally the skinned mesh in the bind pose that you export from your DCC\. Keep track of your skinned mesh that you want to use as your `.actor` file in the **Animation Editor**\. You can go to the ****FBX Settings**** tool and delete the actor files that you don't need\.
+When a `.motion` file is created, an `.actor` file is also created\. The `.actor` file that you want to use in the **Animation Editor** is generally the skinned mesh in the bind pose that you export from your DCC\. Keep track of your skinned mesh that you want to use as your `.actor` file in the **Animation Editor**\. You can go to the **FBX Settings** tool and delete the actor files that you don't need\.
 
 ## File Types Required for Animation Graphs<a name="file-types-required-for-animation-graphs"></a>
 

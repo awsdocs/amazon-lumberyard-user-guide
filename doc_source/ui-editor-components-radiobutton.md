@@ -4,7 +4,7 @@ You can use the **RadioButton** component to make an element behave like a radio
 
 Use this component in conjunction with the **RadioButtonGroup** component\. The **RadioButtonGroup** component handles selecting and clearing the radio buttons in the group and makes sure that only one radio button is ever selected\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-components-radiobutton.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-components-radiobutton.png)
 
 To see in\-game examples of completed canvases with the **RadioButton** component, open the level UiFeatures in the project SamplesProject\. Press **Ctrl\+G** to play the game, and then choose **Components**, **Interactable Components**, **RadioButton**\. You can view examples of different behaviors, default settings, and groups for radio buttons Press **Esc** to exit the game\.
 
@@ -26,10 +26,7 @@ Select an element from the list to specify the group the radio button belongs to
 Select the box to change the initial state of the radio button\.  
 **Actions**, **Change**  
 Enter a text string\. This string is sent as an action on the UI canvas when the radio button has any state changes\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.  
 **Actions**, **On**  
 Enter a text string\. This string is sent as an action on the UI canvas when the radio button state changes to on \(selected\)\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.  
 **Actions**, **Off**  
-Enter a text string\. This string is sent as an action on the UI canvas when the radio button state changes to off \(cleared\)\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.
+Enter a text string\. This string is sent as an action on the UI canvas when the radio button state changes to off \(cleared\)\.

@@ -27,7 +27,7 @@ Each game project must explicitly list the gems that it uses\. When [Using the W
 
 ## Gems Built as AZ Modules<a name="az-module-gems-as-az-modules"></a>
 
-Beginning with Lumberyard 1\.5, all gems that ship with Lumberyard are built as AZ modules\. When you build a gem as an AZ module, the gem uses the initialization functions expected by the AZ framework\. An AZ module gem has public interfaces that are [event buses](ebus-intro.md) and is better integrated with the new [component entity system](component-intro.md)\. Although legacy gems are still supported, it is highly recommended that you use gems based on AZ modules going forward\. For information on migrating a legacy gem, see [Migrating Your Gems](gems-system-migrating.md)\.
+All gems that ship with Lumberyard are built as AZ modules\. When you build a gem as an AZ module, the gem uses the initialization functions expected by the AZ framework\. An AZ module gem has public interfaces that are [event buses](ebus-intro.md) and is better integrated with the new [component entity system](component-intro.md)\.
 
 When you use the Project Configurator to enable or disable a gem, Lumberyard updates the [application descriptor file](az-module-system-entities-configuring.md#az-module-system-entities-configuring-app-descriptor-files) accordingly to ensure it references all AZ modules\. If you edit the `dev\<project_asset_directory>\gems.json` list of gems by hand, you can use the following command to bring the application descriptor file up to date: 
 
@@ -43,4 +43,4 @@ Gems from Lumberyard 1\.4 and earlier \(legacy gems\) all have a `GemFormatVersi
 
 A gem may also have an API version number like `0.1.0`\. This is independent of the `GemFormatVersion`\. The API version alerts your users to API changes\. If the API version number changes, then users of the gem may need to make changes to their code\. For example, the Rain gem will stay at version `0.1.0` until its API changes\. If you were using the Rain gem from Lumberyard 1\.4, you can still use the Rain gem from Lumberyard 1\.5 without changing any of your data or code\. 
 
-For more information about gems, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+For more information about gems, see [Add modular features and assets with Gems](gems-system-gems.md)\.

@@ -1,112 +1,27 @@
 # Navigation<a name="component-navigation"></a>
 
+The **Navigation** component provides path\-finding and path\-following functionality for AI movement, typically on a navigation mesh\. 
 
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
-Use the **Navigation** component on an AI entity for pathfinding and pathfollowing functionality\. The **Navigation** component supports AI and other game logic by accepting navigation commands and dispatching movement requests\. 
+![\[AI can use navigation to move along a path, typically on a navigation mesh.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-navigation-path.png)
 
 **Topics**
-+ [Example: Navigation Procedure](#component-navigation-example)
 + [Navigation Component Properties](#component-navigation-properties)
-+ [EBus Request Bus Interface](#component-navigation-ebusrequest)
-+ [EBus Notification Bus Interface](#component-navigation-ebusnotification)
-
-## Example: Navigation Procedure<a name="component-navigation-example"></a>
-
-The following example demonstrates how you can use the **Navigation** component\. You can find the assets used in this procedure in the [Starter Game Sample](sample-level-starter-game.md) project\.
-
-**To use the Navigation component**
-
-1. Create a [navigation area](component-nav-area.md)\.
-
-1. Create an entity named **box**, and then do the following:
-
-   1. Add a **[Mesh](component-static-mesh.md)** component to the entity\.
-
-   1. For its **Mesh asset**, select an object in the `StarterGame\Objects` directory\.
-
-   1. [Move](lumberyard-editor-toolbars.md#lumberyard-editor-toolbars-editmode) the object to a corner of your navigation area\.
-
-1. To add a character, in the **[Asset Browser](asset-browser-intro.md)**, in the `StarterGame\slices` directory, drag **playerslice\.slice** to your viewport and then move the character to a different corner of your navigation area\.
-
-1. In the **Entity Outliner**, expand **PlayerSlice** and select the **Jack** entity\.
-
-1. In the **Entity Inspector**, do the following: 
-
-   1. From the **AI** section, add a **Navigation** component to **Jack**\.
-
-   1. In the **Navigation** component's [**Agent Type**](component-nav-area.md#component-nav-area-properties-agent-types), ensure that **MediumSizedCharacters** is selected\.
-
-      This tells the navigation system that this character follows navigation paths as a medium\-sized character\.
-
-   1. From the **Scripting** section, add a [**Lua Script**](component-lua-script.md) component to **Jack**\.
-
-   1. For **Script**, add the following Lua script\. 
-**Note**  
-To create a Lua script, copy and paste the following text into a text file, and then change the `.txt` extension to `.lua`\. Place the file in your game project directory so that you can select it in your level\.
-
-      ```
-      local navigationmoversimplified =
-      {
-          -- Adds properties to the Entity Inspector for easy setup of initial values.
-          Properties =
-          {
-              -- This is the target toward which you'll move
-              MoveToEntity = {default=EntityId(), description="Entity to move to."},
-          }
-      }
-      
-      function navigationmoversimplified:OnActivate()
-      
-      	self.entityBus = EntityBus.Connect(self, self.Properties.MoveToEntity);
-          
-      end
-      
-      function navigationmoversimplified:OnEntityActivated(remoteEntity)
-      
-          -- Move!
-          self.requestId = NavigationComponentRequestBus.Event.FindPathToEntity(self.entityId, self.Properties.MoveToEntity)  
-          
-      end
-      
-      return navigationmoversimplified
-      ```
-
-   1. In the Lua Script's **MoveToEntity** property, click the target icon ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/picker.png) and in the **Entity Outliner**, select **box**\. The text **box** appears in the **MoveToEntity** box\. 
-
-      The script subscribes to the `OnEntityActivated` event for the remote entity specified \(in this case, the box\), and tells **Jack** character to move toward the remote entity when the remote entity is spawned\.
-
-1. Divide the navigation mesh into separate chunks, leaving a path between them\. To block the character from traveling to the box in a straight line, do
-
-    one of the following:
-   + [Create an exclusion area](component-nav-area.md#component-nav-area-exclusion)
-   + [Place a static object](component-nav-area.md#component-nav-area-static-entities)
-
-   The following example setup uses a static object\.  
-![\[Character, box, and obstacle setup for navigation\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-navigation-example.png)
-
-1. Press **Ctrl\+G** to play the game\. Without any player input, the **Jack** character should move toward the opening in the navigation mesh and then toward the box\. Press **Esc** to quit\.
-**Note**  
-If **Jack** moves too slowly, specify a higher value in the **Navigation** component's **Agent Speed** property to increase his speed\.
-
-1. You can also do the following:
-   + Make a complex path using exclusion areas, static objects, and [terrain modifications](terrain-intro.md)\.
-   + Modify the static object to block Jack's path completely\. Note that he does not move toward the target, because there isn't a path\.
++ [NavigationComponentRequestBus EBus Interface](#component-navigation-ebusrequest)
++ [NavigationComponentNotificationBus EBus Interface](#component-navigation-ebusnotification)
++ [Navigation Pathing Cvars](#component-navigation-cvars)
 
 ## Navigation Component Properties<a name="component-navigation-properties"></a>
 
 The **Navigation** component has the following properties:
+
+![\[Navigation component properties\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-navigation-properties.png)
 
 **Agent Type**  
 Specifies this AI's entity type for navigation purposes\. Defining the agent type determines which [navigation area](component-nav-area.md) the entity follows in a scenario where there are different navigation meshes for larger vehicles and smaller humanoid bots\. These agent types are defined in the `lumberyard_version\dev\your_project_name\Scripts\AI\Navigation.xml` file\.  
 To define an agent type on your navigation area, see the **[Navigation Area](component-nav-area.md)** component\.
 
 **Agent Speed**  
-Sets the speed of the agent while navigating\.  
+Sets the speed of the agent while navigating when using the Transform or Physics movement methods\.  
 Default value: `1`
 
 **Agent Radius**  
@@ -121,15 +36,22 @@ Default value: `0.25`
 Sets the minimum distance from the previously known location before an entity's new path is calculated\.  
 Default value: `1`
 
-**Move Physically**  
-Applies movement through physics\. You must add a **Character Physics** component to the entity for this functionality to work\. We recommend this method to apply movement to a character during pathfollowing because it handles uneven terrain and character limitations properly\. If deselected, movement applies directly to the entity's transform\.  
-Default value: `true`
+**Movement Method**  
+Sets the movement method to use when following a path\. This can be Transform, Physics, or Custom\.  
+Default value: `Transform`  
++ **Transform** – Move the entity that this component is on using the Transform bus\. This method ignores all physics so the object may go through walls and terrain\.
++ **Physics** – Move the entity using physics if the entity has a PhysX Rigid Body, PhysX Character Controller, Rigid Body Physics or Character Physics component\. If the entity does not have one of these valid physics components it will not move\.
++ **Custom** – Provide path updates and let the game logic move the entity however they want\. This method is useful when you want to move an animated entity that uses root motion\. By listening to the `OnTraversalPathUpdate` notification, you can move your entity toward the next point along a path\. Once the entity gets within the arrival distance threshold another `OnTraversalPathUpdate` notification with the next path position will be provided and so on until the end of the path is reached\.
 
-## EBus Request Bus Interface<a name="component-navigation-ebusrequest"></a>
+**Allow Vertical Navigation**  
+Set to true if you want to to allow the navigation agent to include the vertical velocity when navigating a path, or false if you just want the velocity to be constrained to the X and Y plane \(2D\)\. Vertical navigation can be used for flying entities or entities that move with the Transform method but must move vertically\. Enabling this property can also help prevent "stair stepping" for entities moving down ramps or steep terrain\.  
+Default value: `false`
+
+## NavigationComponentRequestBus EBus Interface<a name="component-navigation-ebusrequest"></a>
 
 Use the following request functions with the `NavigationComponentRequestBus` event bus \(EBus\) interface to communicate with other components of your game\.
 
-For more information about using the EBus interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the EBus interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### FindPath<a name="navigation-ebus-findpath"></a>
 
@@ -149,7 +71,20 @@ No
 Creates a pathfinding request to navigate toward the specified entity\.
 
 **Parameters**  
-`EntityId` – ID of the entity toward to which you want to navigate\.
+`EntityId` – ID of the entity toward which you want to navigate\.
+
+**Return**  
+A unique identifier for the pathfinding request\.
+
+**Scriptable**  
+Yes
+
+### FindPathToPosition<a name="navigation-ebus-findpathtoposition"></a>
+
+Creates a pathfinding request to navigate towards the specified world position\. Note that while this may seem like the obvious simple choice for pathing, it is often more useful to use FindPathToEntity with a dummy entity because then the pathing will automatically update if you move the dummy entity to a new location before pathing is complete\.
+
+**Parameters**  
+`Destination` – World position you want to navigate to\.
 
 **Return**  
 A unique identifier for the pathfinding request\.
@@ -159,7 +94,7 @@ Yes
 
 ### Stop<a name="navigation-ebus-stop"></a>
 
-Stops all pathfinding operations for the provided `requestId`\. Use the ID to ensure that the request you want to cancel is the request that is currently processing\. If the specified `requestId` is different from the ID of the current request, then the stop command is ignored\.
+Stops all pathfinding operations for the provided `requestId`\. Use the ID to ensure that the request you want to cancel is the request that is currently processing\. If the specified `requestId` is different from the ID of the current request, then the Stop command is ignored\.
 
 **Parameters**  
 `requestId` – ID of the request to cancel\.
@@ -170,18 +105,70 @@ None
 **Scriptable**  
 Yes
 
-## EBus Notification Bus Interface<a name="component-navigation-ebusnotification"></a>
+### GetAgentSpeed<a name="navigation-ebus-getagentspeed"></a>
+
+Returns the current AI Agent's speed\.
+
+**Parameters**  
+None
+
+**Return**  
+Returns the current agent's speed as a float\.
+
+**Scriptable**  
+Yes
+
+### SetAgentSpeed<a name="navigation-ebus-setagentspeed"></a>
+
+Updates the AI Agent's speed\.
+
+**Parameters**  
+`agentSpeed` – Specifies the new agent speed as a float\.
+
+**Return**  
+None
+
+**Scriptable**  
+Yes
+
+### GetAgentMovementMethod<a name="navigation-ebus-getagentmovementmethod"></a>
+
+Returns the current AI Agent's movement method\.
+
+**Parameters**  
+None
+
+**Return**  
+Returns the current agent's movement method\.
+
+**Scriptable**  
+Yes
+
+### SetAgentMovementMethod<a name="navigation-ebus-setagentmovementmethod"></a>
+
+Updates the AI Agent's movement method\.
+
+**Parameters**  
+`movementMethod` – Specifies the new agent movement method \(Transform, Physics or Custom\)\.
+
+**Return**  
+None
+
+**Scriptable**  
+Yes
+
+## NavigationComponentNotificationBus EBus Interface<a name="component-navigation-ebusnotification"></a>
 
 Use the following notification functions with the `NavigationComponentNotificationBus` event bus \(EBus\) interface to communicate with other components of your game\.
 
-For more information about using the EBus interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the EBus interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### OnSearchingForPath<a name="navigation-ebus-onsearchingforpath"></a>
 
-Indicates that the pathfinding request was sent to the navigation system\.
+Indicates that the pathfinding request has been submitted to the navigation system\.
 
 **Parameters**  
-`requestId` – ID of the path search request\.
+`requestId` – ID of the request for which the path is being searched\.
 
 **Return**  
 None
@@ -191,14 +178,14 @@ Yes
 
 ### OnPathFound<a name="navigation-ebus-onpathfound"></a>
 
-Indicates that a path was found for the indicated request\.
+Indicates that a path has been found for the indicated request\.
 
 **Parameters**  
-`requestID` – ID of the found request for the path search\.  
+`requestID` – ID of the request for which the path has been found\.  
 `currentPath` – The path calculated by the pathfinder\.
 
 **Return**  
-Flag that indicates whether or not to traverse this path\.
+Returns a boolean value indicating whether this path is to be traversed\.
 
 **Scriptable**  
 No
@@ -221,7 +208,23 @@ Yes
 Indicates that traversal for the indicated request is in progress\.
 
 **Parameters**  
-`requestId` – ID of the request for which traversal is in progress\.
+`requestId` – ID of the request for which traversal is in progress\.  
+`distanceRemaining` – Remaining distance in this path\.
+
+**Return**  
+None
+
+**Scriptable**  
+Yes
+
+### OnTraversalPathUpdate<a name="navigation-ebus-ontraversalpathupdate"></a>
+
+Indicates that the path for the traversal has updated\. If the `nextPathPosition` and `inflectionPosition` are equal, they represent the end of the path\.
+
+**Parameters**  
+`requestId` – ID of the request for which traversal is in progress\.  
+`nextPathPosition` – Furthest point on the path we can move to without colliding with anything\.  
+`inflectionPosition` – Next point on the path beyond `nextPathPosition` that deviates from a straight\-line path\.
 
 **Return**  
 None
@@ -234,8 +237,7 @@ Yes
 Indicates that traversal for the indicated request completed successfully\.
 
 **Parameters**  
-`requestId` – ID of the request for which traversal has completed\.  
-`distanceRemaining` – The remaining distance in the path\.
+`requestId` – ID of the request for which traversal has completed\.
 
 **Return**  
 None
@@ -245,7 +247,7 @@ Yes
 
 ### OnTraversalCancelled<a name="navigation-ebus-ontraversalcancelled"></a>
 
-Indicates that traversal for the indicated request was canceled before completing successfully\.
+Indicates that traversal for the indicated request was canceled before succesful completion\. A path request may be cancelled if no path could be found or if the request was stopped by the game\.
 
 **Parameters**  
 `requestId` – ID of the request for which traversal was canceled\.
@@ -255,3 +257,10 @@ None
 
 **Scriptable**  
 Yes
+
+## Navigation Pathing Cvars<a name="component-navigation-cvars"></a>
+
+**ai\_DrawPathFollower**  
+Enables PathFollower debug drawing, displaying agent paths and safe follow target\.  
+`0` – Off  
+`1` – On

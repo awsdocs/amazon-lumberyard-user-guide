@@ -9,9 +9,9 @@ Interested? Want to get started?
 + [ Kickstart your learning by watching tutorial videos](https://aws.amazon.com/lumberyard/gettingstarted/)
 + [Sign up for and participate in the Amazon Lumberyard forums](https://forums.awsgametech.com/)
 
-![\[Learn more about Lumberyard's systems and features in the Amazon Lumberyard User Guide.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/starter-game-introduction.png)
+![\[Learn more about Lumberyard's systems and features in the Amazon Lumberyard User Guide.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/starter-game-introduction-1.25.png)
 
-Image from Starter Game\. For more sample projects and levels, see [Using Lumberyard Sample Projects and Levels](sample-projects-levels-intro.md)\.
+Image from Starter Game\. For more sample projects and levels, see [Using Lumberyard sample projects and levels](sample-projects-levels-intro.md)\.
 
 ## Professional\-Grade AAA Engine<a name="lumberyard-aaa-engine"></a>
 
@@ -22,9 +22,9 @@ Lumberyard helps you build rich, engaging, world\-class games through its compre
 The visuals technology of Lumberyard can bring to life any virtual environment\. Your artists get a powerful toolbox to create high quality visual elements, such as physically based shaders, dynamic global illumination, particle effects, lifelike vegetation, real\-time dynamic water caustics, and volumetric fog\. They can also produce cinematic features like color grading, motion blur, depth of field, and integrated HDR lens flares\.
 
 For more information, see the following topics: 
-+ [Creating Levels and Adding Environment Effects](level-intro.md)
-+ [Adding Particle Effects](particle-intro.md)
-+ [Creating Screen Effects](rendering-graphics-screen-effects-intro.md)
++ [Creating levels and adding environment effects](level-intro.md)
++ [Adding particle effects](particle-intro.md)
++ [Create screen effects](rendering-graphics-screen-effects-intro.md)
 
 ### Asset Changes<a name="lumberyard-aaa-engine-asset-changes"></a>
 
@@ -37,14 +37,14 @@ For more information, see [Using Asset Processor](asset-pipeline-processor.md)\.
 The component entity system helps you compose complex entities out of simpler entities\. Content creators can drag and drop components to build behaviors, edit component settings live in the editor, and create Lua scripts to quickly change or extend an entity's behavior\. To build and iterate for complex scenes, entities can be grouped together into slices\. Those slices can in turn be used to create more complex slices, resulting in a fully cascading prefab system\. If you change a slice, you can share your changes to all the slice instances, or keep your changes exclusive to just that instance\.
 
 For more information, see the following topics:
-+ [Working with Component Entities](component-intro.md)
++ [Working with component entities](component-intro.md)
 + [Working with Slices](component-slices.md)
 
 ### Compelling Characters<a name="lumberyard-aaa-engine-characters"></a>
 
 Artists can use Lumberyard to create believable characters and high\-fidelity performances\. Lumberyard's character tool, Geppetto, combines animation, attachments, and physics simulations with blend shape, blend space, and animation layering\. Animators can use Lumberyard's animation tool, Mannequin, to bring characters and creatures to life with features that include animation sequencing, transitions, game logic procedures, ragdoll physics, and more\.
 
-For more information, see [Creating and Animating Characters](char-intro.md)\.
+For more information, see [Create and animate characters](char-intro.md)\.
 
 ### Robust Networking<a name="lumberyard-aaa-engine-networking"></a>
 
@@ -60,7 +60,7 @@ Real\-time gameplay editing helps you iterate on gameplay and immediately see yo
 
 Lumberyard's Modular Gems system gives you a library of prebuilt features with which you can start new projects or prototype ideas quickly\. Modular Gems offer increased control over which technologies to include in your game project\. Create your own modular Gems or use the Gems included with Lumberyard, such as weather effects, a boids\-based ambient creature system, lightning effects, a camera framework, and more\.
 
-For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 ### Wwise LTX<a name="lumberyard-aaa-engine-wwise-ltx"></a>
 

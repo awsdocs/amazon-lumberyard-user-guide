@@ -51,9 +51,6 @@ EBUS_EVENT_RESULT(requestSuccess,
 
 `manifestName(char*)` – Specifies the plaintext name of the manifest \(for example, `DynamicContentTest.json`\)\. The system handles `.pak` file and operating system naming conventions \(for example, `DynamicContentTest.shared.pak`\)\.
 
-**Note**  
-A legacy **RequestManifest** flow graph node exists, which calls the same EBus\.
-
 ### Manifest Received<a name="cloud-canvas-cloud-gem-dc-engineering-manifest-received"></a>
 
 The following EBus events are triggered when a manifest has been received successfully or unsuccessfully\.

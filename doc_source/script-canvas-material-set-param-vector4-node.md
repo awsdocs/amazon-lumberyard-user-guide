@@ -6,7 +6,7 @@ Sets a material parameter with a **Vector4** value\.
 + [Inputs](#script-canvas-material-set-param-vector4-node-input)
 + [Outputs](#script-canvas-material-set-param-vector4-node-output)
 
-![\[setparamvector4, setparamvector4node\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-param-vector4-node.png)
+![\[setparamvector4, setparamvector4node\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-set-param-vector4-node.png)
 
 ## Inputs<a name="script-canvas-material-set-param-vector4-node-input"></a>
 

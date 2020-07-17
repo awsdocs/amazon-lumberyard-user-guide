@@ -28,7 +28,4 @@ After you read through this tutorial on writing Lua scripts for the component en
 + For information on Lumberyard's built\-in Lua editor, see [Lua Editor](lua-editor-debugger.md)\.
 + For sample Lua [scripts](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#scripts), see the Lumberyard `\dev\SamplesProject\Scripts` directory and its subdirectories\.
 + For information about Lua API operations in Lumberyard, see the [Component Entity Lua API Reference](lua-api.md)\.
-+ For information about the Lumberyard EBus, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
-
-**Note**  
-Starting with Lumberyard 1\.8, Lua scripts use the new behavior context that replaces the legacy script context\. Scripts that were written before the integration of the behavior context no longer work in Lumberyard versions 1\.8 and later\. For information on updating code from legacy script context to the new behavior context, see the [migration notes for Lumberyard 1\.8](lumberyard-migrating-1-8.md)\. For information on the behavior context, see [Behavior Context](component-entity-system-reflection-behavior-context.md)\.
++ For information about the Lumberyard EBus, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.

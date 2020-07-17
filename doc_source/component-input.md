@@ -1,18 +1,11 @@
 # Input<a name="component-input"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 You can use the **Input** component to bind raw input to events in your game\. The **Input** component references an `.inputbindings` file, which binds a set of inputs \(such as from a mouse, keyboard, game controller, and so on\) to an event\. 
 
 For example, you can add the **Input** component to an entity and specify in the `.inputbindings` file that when you press the keyboard spacebar, the entity rotates\. 
 
 **Note**  
-To work with inputs, you must enable the [Input Management Framework](gems-system-gem-input.md) and the [Starting Point Input](gems-system-starting-point-input.md) gems\. For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+To work with inputs, you must enable the [Input Management Framework](gems-system-gem-input.md) and the [Starting Point Input](gems-system-starting-point-input.md) gems\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 **Topics**
 + [Input Properties](#component-input-configuration-properties)
@@ -21,7 +14,7 @@ To work with inputs, you must enable the [Input Management Framework](gems-syste
 
 ## Input Properties<a name="component-input-configuration-properties"></a>
 
-![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/input-component-properties.png)
+![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/input-component-properties.png)
 
 The **Input** component has the following properties\.
 

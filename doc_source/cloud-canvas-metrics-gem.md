@@ -14,7 +14,7 @@ The Game Metrics cloud gem is only supported in regions where FIFO is supported\
 **Example Overview**  
 The following illustrates how AWS services process game events so that you can view them in the Cloud Gem Portal\.  
 
-![\[Create gameplay events with the Metrics Sample level to send them to the Cloud Gem Portal.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-gem-metrics-work-flow-with-aws-services-example.png)
+![\[Create gameplay events with the Metrics Sample level to send them to the Cloud Gem Portal.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-gem-metrics-work-flow-with-aws-services-example.png)
 
 When events are generated from your game, the following occurs:
 
@@ -42,7 +42,7 @@ The Game Metrics cloud gem includes the following default Athena partitions:
 | Partitions | Description | 
 | --- | --- | 
 |  `p_event_name`  | Name of the event\. | 
-|  `p_server_timestamp_strftime `  | Server time stamp \(UTC\) of the event in the Python format: '%Y%m%d%H0000'\. | 
+|  `p_server_timestamp_strftime `  | Server time stamp \(UTC\) of the event in the format %Y%m%d%H0000\. | 
 | p\_server\_timestamp\_year |  Year of the server time stamp \(UTC\)\.  | 
 | p\_server\_timestamp\_month |  Month of the server time stamp \(UTC\)\.  | 
 |  `p_server_timestamp_day`  |  Day of the server time stamp \(UTC\)\.  | 

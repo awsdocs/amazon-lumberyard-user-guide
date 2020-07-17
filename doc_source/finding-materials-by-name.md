@@ -12,4 +12,4 @@ You can specify material names to reference for nodes in the **Script Canvas** e
 **Example**  
 
    In the Samples Project, the material name for `logo_white.mtl` is `materials/gettingstartedmaterials/logo_white`\.  
-![\[Find material names in the Material Editor in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-material-editor-material-name.png)
+![\[Find material names in the Material Editor in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-material-editor-material-name.png)

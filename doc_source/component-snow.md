@@ -1,11 +1,7 @@
 # Snow<a name="component-snow"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Snow** component to create snowfall effects and create patches of snow and ice on the terrain\. You can add multiple **Snow** components to your entities in a level, but the level uses only one **Snow** component\. The last **Snow** component to activate takes priority and Lumberyard renders that component\.
 
@@ -48,7 +44,7 @@ You can edit snow effects only when the **AI/Physics** toggle is disabled\.
 
 ## Snow Component Properties<a name="component-snow-properties"></a>
 
-![\[Snow component properties to customize the snow effects in your level.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/snow-component-properties.png)
+![\[Snow component properties to customize the snow effects in your level.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/snow-component-properties.png)
 
 The **Snow** component has the following properties:
 
@@ -76,7 +72,7 @@ Use the following request functions with the EBus interface to communicate with 
 
 When set, the individual setters on this bus update the snow simulation immediately; this can cause some performance implications if you want to change multiple parameters\. To avoid this, you can set multiple parameters at once with [GetSnowOptions](#get-snow-options) and [SetSnowOptions](#set-snow-options)\.
 
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

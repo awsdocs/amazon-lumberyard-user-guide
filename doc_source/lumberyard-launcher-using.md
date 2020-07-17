@@ -10,7 +10,7 @@ Before you run Lumberyard Setup Assistant, verify the following:
 
 1. Open Lumberyard Setup Assistant with your preferred method:
    + From the desktop, double\-click the **Setup Assistant** icon
-   + Navigate to the `lumberyard_version\dev\Tools\LmbrSetup\Win` directory and double\-click `SetupAssistant.bat`
+   + Navigate to the `lumberyard_version\dev\Tools\LmbrSetup\Win` directory and double\-click `SetupAssistant.exe`
 
 1. In the **Custom Install** box, click **Customize**\.
 
@@ -25,7 +25,7 @@ Before you run Lumberyard Setup Assistant, verify the following:
    + **Compile for Android devices\***
    + **Setup for Linux Dedicated Server\***
 **Note**  
-In Lumberyard version 1\.23, if you intend to create new projects, the following options must be selected:  
+In Lumberyard version 1\.23 and later, if you intend to create new projects, the following options must be selected:  
 **Run your game project**
 **Run the Lumberyard Editor and tools** – Use Lumberyard Editor to create a game
 **Compile the game code**\* – Compile the game code to include any changes that you have made
@@ -35,15 +35,17 @@ In Lumberyard version 1\.23, if you intend to create new projects, the following
 
    You can also create, enable, and disable these capabilities from the command line\. For more information, see [Using Lumberyard Setup Assistant Batch](lumberyard-launcher-batch-using.md) and [Lmbr\.exe](lmbr-exe.md)\.
 
-1. Select **Visual Studio 2017**\.  
-![\[Use Lumberyard Setup Assistant to configure Lumberyard, and install software and plugins.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setup/ui-setup-assistant-1.22.png)
+1. Select **Visual Studio 2017**, **Visual Studio 2019**, or both\.  
+![\[Use Lumberyard Setup Assistant to configure Lumberyard, and install software and plugins.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setup/ui-setup-assistant-1.24.png)
 **Note**  
-For more information about Visual Studio for Lumberyard, see [Visual Studio](setting-up-system-requirements.md#lumberyard-visual-studio-requirement)\.
+Selecting a version of Visual Studio here will enable it as a build platform and enable a Visual Studio solution to be generated for that version\. For more information about build settings specific to Visual Studio, see [Waf User Options and Settings](waf-user-options-and-settings.md)\.
+**Note**  
+For more information about installing and configuring Visual Studio for Lumberyard, see [Developer tools](setting-up-system-requirements.md#lumberyard-visual-studio-requirement)\.
 
 1. Click **Next**\.
 
 1. Follow the instructions on each page\.
 
-1. When you have the required software and SDKs installed, click **Configure project** or **Launch Editor**\. For more information about configuring your project, see [Creating Lumberyard Game Projects](configurator-intro.md)\.
+1. When you have the required software and SDKs installed, click **Configure project** or **Launch Editor**\. For more information about configuring your project, see [Creating Lumberyard projects](configurator-intro.md)\.
 
 1. Log in your existing Amazon account or create an account to use the editor\.

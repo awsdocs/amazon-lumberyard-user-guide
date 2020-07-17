@@ -1,26 +1,13 @@
-# Using Lumberyard Sample Projects and Levels<a name="sample-projects-levels-intro"></a>
+# Using Lumberyard sample projects and levels<a name="sample-projects-levels-intro"></a>
 
 Lumberyard provides a variety of sample projects, levels, and assets, which are located in the `\lumberyard_version\dev` directory\. 
 
-Use the Project Configurator to set or change your default project\. For more information, see [Creating Lumberyard Game Projects](configurator-intro.md)\.
+Use the Project Configurator to set or change your default project\. For more information, see [Creating Lumberyard projects](configurator-intro.md)\.
 
 **Samples Project**  
 The Samples Project includes many sample levels that demonstrate various Lumberyard features, such as the [Fur Shader](shader-ref-fur.md), [Rin Locomotion](animation-editor-rin-locomotion-sample.md), [UI samples](ui-editor-components.md), and more\. For a complete list and descriptions of levels, see [Samples Project](sample-project-samples.md)\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/samples-sample-project-1.png)
-
-**Starter Game**  
-The Starter Game project contains the following:\.
-
-**Starter Game**  
-Demonstrates how Lumberyard systems work together to make a game\. The systems and features include the [component entity system](component-intro.md), [bipedal locomotion](char-intro.md), [voxel\-based global illumination](rendering-graphics-svogi.md), and the [time of day system](sky-tod-day-night-cycle.md)\.  
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/intro-2.png)
-
-**Getting Started Guide**  
-Contains 12 prebuilt level files, with each successive level building on the previous level\. Use these levels with the [Amazon Lumberyard Getting Started Guide](https://docs.aws.amazon.com/lumberyard/latest/gettingstartedguide/) to learn the basics of game making in Lumberyard\. You can use these levels to skip over parts of the tutorial or to verify your work as you step through the tutorial\. The levels also show the completed experience as it should behave based on the tutorial\.  
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/sample-projects-level-intro-gsg.png)
 
 **Multiplayer Sample**  
 You can use the Multiplayer Sample game to test the Lumberyard [GridMate](network-interest-manager-large-scale-worlds.md) networking features\.

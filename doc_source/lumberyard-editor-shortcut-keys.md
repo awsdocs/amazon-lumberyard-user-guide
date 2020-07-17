@@ -11,7 +11,6 @@ Lumberyard supports the following keyboard shortcuts\.
 | Ctrl\+S | Save the level | 
 | Ctrl\+Alt\+F | Restore the saved state | 
 | Ctrl\+Alt\+H | Save the current state | 
-| Ctrl\+Shift\+L | Load objects from the game directory | 
 | Ctrl\+Shift\+S | Save the selected object | 
 
 
@@ -93,7 +92,6 @@ Lumberyard supports the following keyboard shortcuts\.
 | F3 | Toggle the wireframe view | 
 | Alt\+middle mouse button | Rotate around the selected object | 
 | Alt\+right click | Zoom in and out | 
-| Ctrl\+Tab | Cycle the viewport perspective | 
 | Ctrl\+F1 \(or F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12\) | Save the viewport location | 
 | Shift\+F1 \(or F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12\) | Move to the saved viewport location | 
 | Shift\+Spacebar | Show or hide helpers | 

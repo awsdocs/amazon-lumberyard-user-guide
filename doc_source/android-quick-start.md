@@ -65,7 +65,7 @@ Use Lumberyard Setup Assistant to install the required third\-party software and
 
      See the following example,  
 **Example**    
-![\[Required software for Android in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-third-party-software.png)
+![\[Required software for Android in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-third-party-software.png)
 
 1. Click **Next** until you reach the final page, and close Lumberyard Setup Assistant\.
 
@@ -107,4 +107,4 @@ Next, you must run Lumberyard Editor and the **Deployment Tool** so that the Sam
 
 1. Click **Deploy to local device**\. The code builds and deploys to your device, as shown in the following example\.  
 **Example**    
-![\[Deploying to the local Android device from Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-quick-start-log.png)
+![\[Deploying to the local Android device from Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-quick-start-log.png)

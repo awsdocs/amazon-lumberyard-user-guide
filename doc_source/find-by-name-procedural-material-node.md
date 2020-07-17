@@ -6,7 +6,7 @@ Finds a procedural material by the substance file name and graph name\. All subs
 + [Inputs](#find-by-name-procedural-material-node-input)
 + [Outputs](#find-by-name-procedural-material-node-output)
 
-![\[FindByName finds substance and graph names for procedural materials.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-find-by-name-procedural-material-node.png)
+![\[FindByName finds substance and graph names for procedural materials.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-find-by-name-procedural-material-node.png)
 
 **To find the substance name for a procedural material**
 
@@ -16,7 +16,7 @@ Finds a procedural material by the substance file name and graph name\. All subs
 **Example**  
 
    The substance material path is `materials/substance/brickwall_04.sbsar` and the graph name is `BrickWall_04`\.  
-![\[Finding the substance material name and graph name in the Substance Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-find-by-name-procedural-material-node-2.png)
+![\[Finding the substance material name and graph name in the Substance Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-find-by-name-procedural-material-node-2.png)
 
 1. Copy the substance material path and in the **Find by Name** node, do the following:
 

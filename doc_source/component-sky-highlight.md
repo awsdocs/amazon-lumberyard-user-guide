@@ -1,11 +1,7 @@
 # Sky Highlight<a name="component-sky-highlight"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 The **Sky Highlight** component creates large bursts of light in the sky\. You can use this component with the **[Lightning](component-lightning.md)** component to simulate the sky lighting up when a bolt of lightning flashes\.
 
@@ -17,7 +13,7 @@ You can add multiple **Sky Highlight** components to your entities in a level, b
 **Example**  
 The following is a sky highlight effect in the distance\.  
 
-![\[Add the Sky Highlight component to your entity to enable flashes of light in the sky, such lightning.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/sky-highlight-component-example.png)
+![\[Add the Sky Highlight component to your entity to enable flashes of light in the sky, such lightning.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/sky-highlight-component-example.png)
 
 **Contents**
 + [Sky Highlight Component Properties](#component-sky-highlight-properties)
@@ -65,7 +61,7 @@ Valid values: `0` to `100`
 
 You can use this EBus to communicate to an entity with a **Sky Highlight** component attached\. The EBus is available at game run time and editing and can be accessed from C\+\+, Lua, and the **Script Canvas** editor\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### Enable<a name="sky-highlight-ebus-enabled"></a>
 

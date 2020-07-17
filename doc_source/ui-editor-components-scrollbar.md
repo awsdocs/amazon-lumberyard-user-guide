@@ -11,11 +11,15 @@ To view these same canvases in the **UI Editor**, navigate to the `\Gems\LyShine
 
 This is a horizontal scroll bar:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/horizontal-scrollbar.gif)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/horizontal-scrollbar.gif)
 
 This is an image within a scroll box with both a horizontal and a vertical scroll bar:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scrollbar-scrollbox.gif)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/scrollbar-scrollbox.gif)
+
+In Lumberyard version 1\.24 and later, the scroll bar can also fade automatically when not in use:
+
+![\[Example of auto fade scroll bar.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-scrollbar-autofade.gif)
 
 You can add a prefabricated horizontal or vertical scroll bar element\. When you do this, a handle is automatically created and nested in your **Hierarchy** pane\.
 
@@ -46,7 +50,11 @@ Enter the size of the handle relative to the scroll bar \(**0\.0** to **1\.0**\)
 Enter the minimum size of the handle in pixels\.  
 **Actions**, **Change**  
 Enter a text string\. This string is sent as an action on the UI canvas when the scroll bar changes values\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.  
 **Actions**, **End Change**  
 Enter a text string\. This string is sent as an action on the UI canvas when the scroll bar has finished changing values\.  
-You can listen for this action in the flow graph using the [UI:Canvas:ActionListener Node](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-ui-canvas.html)\.
+**Fade**, **Auto Fade When Not In Use** \(v1\.24 and later\)  
+Select the check box to enable the scrollbar to fade to transparency after it is not used for a set amount of time\. Specify the delay time in **Fade Delay**\.  
+**Fade**, **Fade Delay** \(v1\.24 and later\)  
+Enter the delay in seconds before the scrollbar begins fading to transparency\. Requires **Auto Fade When Not In Use** to be checked\.  
+**Fade**, **Fade Speed** \(v1\.24 and later\)  
+Enter the time in seconds that it will take for the scrollbar to completely fade to transparency\. Requires **Auto Fade When Not In Use** to be checked\.

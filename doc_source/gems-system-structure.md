@@ -175,7 +175,7 @@ JSON list of all test files for a gem, in the same format as `gemname.waf_files`
 **Include/GemName**  
 Directory contains headers that define the gem's public API\.  
 Other gems can include this directory\. It should not contain implementations nor anything other than virtual function definitions\. The gem template provides a default `GemNameBus.h` that contains a `GemNameRequestBus` interface, which defines public functionality\.   
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **Source**  
 Directory that contains the following generated files:  

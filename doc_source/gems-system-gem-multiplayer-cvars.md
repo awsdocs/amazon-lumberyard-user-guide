@@ -2,6 +2,8 @@
 
 For convenience, the Multiplayer Gem provides the following console variable commands that you can use to test features or configurations\.
 
+## Client CVars<a name="gems-system-gem-multiplayer-cvars-client"></a>
+
 **mphost <port number>**  
 Creates a `GridSession` using the `LANSessionService` on the local machine\. The optional port number determines the port on which the grid session runs\.
 
@@ -84,5 +86,25 @@ Specifies the GameLift player ID associated with the client\.
 **gamelift\_stop\_client**  
 Stops the `GameLiftSessionService` and terminates the current `GridSession`, if one is connected\.
 
+**gamelift\_queue\_name**  
+Specifies GameLift queue to use for this client when creating or joining a game session\.
+
+**gamelift\_matchmaking\_config\_name**  
+Specifies GameLift FlexMatch matchmaking configuration to use for this client when being placed in a game session\.
+
 **sv\_port *<local\_port>***  
 Sets the local UDP port that initializes the socket\. The default port is 30090\. To use the ephemeral port, set the port to 0\. This is useful if you want to connect to a server on the same computer as the client\.
+
+## Server CVars<a name="gems-system-gem-multiplayer-cvars-server"></a>
+
+**gamelift\_flexmatch\_enable**  
+Configures the server process to enable custom matchmaking backfill for FlexMatch\.
+
+**gamelift\_flexmatch\_onplayerremoved\_enable**  
+Configures the server process to start matchmaking backfill on players removed and if an empty slot is available\.
+
+**gamelift\_flexmatch\_minimumplayersessioncount**  
+Configuration used to terminate game session if player count falls below the set amount\.
+
+**gamelift\_flexmatch\_start\_delay**  
+Delay to add to start matchmaking backfill on new game session create\.

@@ -2,7 +2,7 @@
 
 The **Particle Editor** provides a context menu with the following options for you to manage your particle libraries\. Right\-click a library name to access the context menu\.
 
-![\[Manage Particle Editor libraries.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor-library-using.png)
+![\[Manage Particle Editor libraries.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor-library-using.png)
 
 
 ****  

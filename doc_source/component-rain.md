@@ -1,11 +1,7 @@
 # Rain<a name="component-rain"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Rain** component to create rain effects, puddles, and ripples on the terrain\. You can add multiple **Rain** components to your entities in a level, but the level uses only one of the **Rain** components\. The last **Rain** component to activate takes priority and Lumberyard renders that component\.
 
@@ -48,7 +44,7 @@ You can edit rain effects only when the **AI/Physics** toggle is disabled\.
 
 ## Rain Component Properties<a name="component-rain-properties"></a>
 
-![\[Rain component properties to customize the rain effects in your level.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/rain-component-properties.png)
+![\[Rain component properties to customize the rain effects in your level.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/rain-component-properties.png)
 
 The **Rain** component has the following properties:
 
@@ -79,7 +75,7 @@ Use the following request functions with the EBus interface to communicate with 
 
 When set, the individual setters on this bus update the rain simulation immediately\. This can cause performance implications if you want to change multiple parameters\. To avoid this, you can set multiple parameters at once with [GetRainOptions](#get-rain-options) and [SetRainOptions](#set-rain-options)\.
 
-For more information , see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information , see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

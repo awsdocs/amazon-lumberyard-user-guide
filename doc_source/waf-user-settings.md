@@ -90,7 +90,7 @@ def out_folder_linux64(ctx, section_name, option_name, value):
     if not ctx.is_option_true('console_mode'):
         return ctx.gui_get_attribute(section_name, option_name, value)
          
-    return _get_string_value(ctx, 'Linux x64 Output Folder', value
+    return _get_string_value(ctx, 'Linux x64 Output Folder', value)
 ```
 
 ## Validator Function<a name="waf-user-settings-validator"></a>
@@ -105,7 +105,6 @@ Follow these guidelines:
 In the example below of a validator function, we make sure not to trigger the duplicate check \(for example with a list like "SamplesProject,SamplesProject,SamplesProject"\) or provide a list that won't be accepted \(for example with a list like "ASDJASUIDIASJDA"\)\.
 
 ```
-###############################################################################
 @register_verify_attribute_callback
 def verify_enabled_game_projects(ctx, option_name, value):
     """ Configure all Game Projects which should be included in Visual Studio """
@@ -144,7 +143,6 @@ Follow these guidelines:
 The example below is for a hinter function\.
 
 ```
-###############################################################################
 @register_hint_attribute_callback
 def hint_enabled_game_projects(ctx, section_name, option_name, value):
     """ Hint list of specs for projection generation """

@@ -7,10 +7,10 @@ Your game communicates all actions, events, and parameters to the audio system w
 
 The **Audio Controls Editor** has three areas:
 
-1. [ATL Controls Pane](audio-atl-editor-atl-controls.md) – Heirarchical view of controls that exist in your project\. The displayed icon designates the type of control\.
+1. [ATL Controls Pane](audio-atl-editor-atl-controls.md) – Hierarchical view of controls that exist in your project\. The displayed icon designates the type of control\.
 
 1. [Inspector Pane](audio-atl-editor-inspector.md) – Properties for the control selected in the **ATL Controls** pane\.
 
 1. [Wwise Controls Pane](audio-atl-editor-middleware.md) – Controls created in the audio middleware authoring application, such as Wwise or Wwise LTX Authoring Tool\.
 
-![\[Audio Controls Editor (ACE) panes: ATL Controls pane, Inspector pane, and Wwise Controls pane.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/audio_controls_browser_main.png)
+![\[Audio Controls Editor (ACE) panes: ATL Controls pane, Inspector pane, and Wwise Controls pane.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/audio/audio_controls_browser_main.png)

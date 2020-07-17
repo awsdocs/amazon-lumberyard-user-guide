@@ -1,12 +1,5 @@
 # Audio Switch<a name="component-audio-switch"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Audio Switch** component provides basic [Audio Translation Layer \(ATL\)](audio-default-controls.md) switch functionality\. With switches \(and switch states\), you can specify the state of an entity\. The audio middleware interprets states, modifies the behavior of sounds, and plays the appropriate sounds\.
 
 ## Audio Switch Properties<a name="component-audio-switch-properties"></a>
@@ -23,7 +16,7 @@ Enter the name of the audio switch state to use by default\. Use the [Audio Cont
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### SetState<a name="switch-audio-ebus-setstate"></a>
 

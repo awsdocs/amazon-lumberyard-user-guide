@@ -1,11 +1,7 @@
 # Geom Cache<a name="component-geom-cache"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 The **Geometry Cache** component renders mesh data and can play vertex\-based animations from [Alembic](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/char-export-maya-lumberyard-tools-alembic-cache.html) files\. With this, you can simulate highly complex geometry effects that might otherwise be unachievable\.
 
@@ -42,7 +38,7 @@ Use the following parameters to customize your geometry cache\.
 
 This EBus is used to communicate to an entity with a **Geometry Cache** component\. This is available at runtime and at edit time and can be accessed from C\+\+, Lua and ScriptCanvas\. Some functionality may be restricted to C\+\+ exclusively\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 **GeometryCacheComponentRequests**  
@@ -77,7 +73,7 @@ For more information about using the event bus \(EBus\) interface, see [Working 
 
 This EBus is used to react to events that take place in the **Geometry Cache** component\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 **GeometryCacheComponentNotifications**  

@@ -1,11 +1,7 @@
 # Working with the Viewport Interaction Model<a name="working-with-viewport-interaction-model"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is experimental and is missing some core functionality\. | 
+This feature is experimental and is missing some core functionality\.
 
 The new Viewport Interaction Model replaces the old interaction model in the viewport\. This feature combines free and local selection so that you can more easily select, move, and modify entities in the viewport\. With the Viewport Interaction Model, you can create custom reference spaces to move your entities\. With custom reference spaces, you can move your selected entities in relation to the reference that you specified\. The Viewport Interaction Model also unifies entity and component manipulators so that you can interact with entities and components in the same way\. Gizmos are deprecated\.
 

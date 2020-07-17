@@ -1,11 +1,7 @@
 # Polygon Prism Shape<a name="component-polygon-prism"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 You can use the **Polygon Prism Shape** component to define a volume\. A right polygonal prism is a 3D prism made from two translated polygons connected by rectangles\. The **Polygon Prism Shape** component is defined by one polygon and a height property\. All vertices lie on the local plane, where z = `0`\. The polygon is defined in the xy\-plane of the entity\. All vertices are in the local space of the entity\. You can use the **Polygon Prism Shape** component with the **[Trigger Area](component-triggerarea.md)** component to create a volume for the trigger area bounds\.
 
@@ -20,7 +16,7 @@ The **Polygon Prism Shape** component supports only simple polygons\. It can't h
 
 ## Polygon Prism Shape Component Properties<a name="component-polygon-prism-properties"></a>
 
-![\[The Polygon Prism Shape component properties in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-component-properties.png)
+![\[The Polygon Prism Shape component properties in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-component-properties.png)
 
 The **Polygon Prism Shape** component has the following properties\.
 
@@ -37,7 +33,7 @@ The **Polygon Prism Shape** component has the following properties\.
 
 By default, when you add the **Polygon Prism Shape** component to an entity, the component has four vertices\.
 
-![\[Default Polygon Prism Shape component with four vertices.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-1.png)
+![\[Default Polygon Prism Shape component with four vertices.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-1.png)
 
 ## Working with Polygon Prism Components<a name="working-with-polygon-prism-components"></a>
 
@@ -48,7 +44,7 @@ Each vertex has one planar and two linear manipulators\. Combined, these are cal
   + In the **Polygon Prism Shape** component property window, change the vertex values\.
   + Select a vertex\. In the translation manipulator, click and drag the green or red arrow to a position\.
 
-![\[Select a vertex and a translation manipulator appears.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-2.png)
+![\[Select a vertex and a translation manipulator appears.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-2.png)
 
 **Note**  
 The manipulators follow the grid snap setting that you can configure in the Lumberyard Editor toolbar\.
@@ -58,14 +54,14 @@ You can use the blue arrow in the center of the volume to change the height\.<a 
 **To change the height of the polygon prism**
 + Drag the blue arrow to change the height of the polygon prism\.
 
-![\[Change the height of the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-3.png)
+![\[Change the height of the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-3.png)
 
 **Note**  
 If the entity is scaled, the manipulators continue to behave correctly, but the scaling must be uniform so that the x, y, and z scale values match\.
 
 **To select multiple vertices**
 + Press **Shift** and select the vertices\. Selected vertices appear yellow\.  
-![\[Select multiple vertices for the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-4.png)
+![\[Select multiple vertices for the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-4.png)
 
 **Note**  
 Currently, you can't click and draw a box around the vertices to select them\.
@@ -83,26 +79,26 @@ You can also add vertices to the polygon prism\.
 **To add a vertex to the polygon prism**
 
 1. Pause on a line and hold **Ctrl**\. A preview appears where you can add a vertex\.  
-![\[Add vertices to the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-5.png)
+![\[Add vertices to the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-5.png)
 
 1. Click to add the vertex to the polygon prism\.  
-![\[A yellow box appears when you add the vertex to the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-6.png)
+![\[A yellow box appears when you add the vertex to the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-6.png)
 
 You can also delete vertices from the polygon prism\.
 
 **To delete a vertex from a polygon prism**
 
 1. Hold **Alt** and pause on a vertex\. The vertex appears gray\.  
-![\[Delete a vertex from the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-7.png)
+![\[Delete a vertex from the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-7.png)
 
 1. Click the vertex to remove it from the polygon prism\. You can also select a vertex and press **Delete**\.  
-![\[The vertex is removed from the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/polygon-prism-shape-component-8.png)
+![\[The vertex is removed from the polygon prism.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/polygon-prism-shape-component-8.png)
 
 ## EBus Request Bus Interface<a name="component-polygon-prism-ebus-request"></a>
 
 Use the following request functions with the `PolygonPrismShapeComponentRequestBus` EBus interface to communicate with other components of your game\. The **Polygon Prism Shape** component also uses `VertexContainer` functions\. For more information, see [Vertex Containers](component-vertex-container.md)\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

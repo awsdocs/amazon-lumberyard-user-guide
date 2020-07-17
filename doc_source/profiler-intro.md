@@ -1,11 +1,7 @@
 # Profiler<a name="profiler-intro"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| Profiler is in preview release and is subject to change\.  | 
+Profiler is in preview release and is subject to change\. 
 
 Profiler is a Lumberyard tool that can capture, save, and analyze network, CPU, and VRAM usage statistics\. You can used the saved data to analyze network usage frame by frame, fix problems in the use of network bandwidth, and optimize the performance of your game\. 
 

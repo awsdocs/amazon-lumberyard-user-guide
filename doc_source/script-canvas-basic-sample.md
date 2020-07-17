@@ -1,12 +1,5 @@
 # Script Canvas Basic Sample<a name="script-canvas-basic-sample"></a>
 
-
-****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The Script Canvas Basic Sample contains a collection of five Script Canvas scripts that demonstrate the following gameplay functions:
 + Basic player controller
 + Ballistic projectile
@@ -14,7 +7,7 @@ The Script Canvas Basic Sample contains a collection of five Script Canvas scrip
 + Light that toggles based on a trigger volume
 + Flickering light
 
-![\[Use the Script Canvas Basic Sample level to get started with gameplay functions.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/tank3.png)
+![\[Use the Script Canvas Basic Sample level to get started with gameplay functions.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/tank3.png)
 
 **To see the Script Canvas graphs**
 

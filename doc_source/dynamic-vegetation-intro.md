@@ -1,6 +1,6 @@
-# Dynamic Vegetation<a name="dynamic-vegetation-intro"></a>
+# Dynamic vegetation<a name="dynamic-vegetation-intro"></a>
 
-The dynamic vegetation system uses vegetation components to customize vegetation coverage for worlds of any size\. To use the dynamic vegetation system, you must enable the Vegetation gem for your game project\.  
+ The dynamic vegetation system uses vegetation components to customize vegetation coverage for worlds of any size\. To use the dynamic vegetation system, you must enable the **Vegetation** gem for your game project\. 
 
 For more information, see [Enabling Gems](gems-system-using-project-configurator.md)\.
 

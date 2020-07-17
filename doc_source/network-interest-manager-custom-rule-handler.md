@@ -23,7 +23,7 @@ namespace GridMate
         virtual ~BaseRulesHandler() { };
  
         /**
-        *  Ticked by interest manager to retrieve new matches or mismatches of interests.
+        *  Ticked by InterestManager to retrieve new matches or mismatches of interests.
         */
         virtual void Update() = 0;
  
@@ -44,7 +44,7 @@ namespace GridMate
         virtual void OnRulesHandlerUnregistered(InterestManager* manager) = 0;
  
         /**
-        *  Returns the interest mananger that this handler is bound to, or nullptr if it's unbound.
+        *  Returns the InterestMananger that this handler is bound to, or nullptr if it's unbound.
         */
         virtual InterestManager* GetManager() = 0;
  
@@ -56,7 +56,7 @@ namespace GridMate
 } // namespace GridMate
 ```
 
-Of interest is the method `GetLastResult`, which returns `InterestMatchResult`\. `InterestMatchResult` is essentially an unordered map between replicas and a list of the peers on which the replicas should be present\. If a peer is not on the list for a replica and has the replica's proxy, interest manager removes the replica's proxy\. The following code shows the declaration of the `InterestMatchResult` class\.
+Of interest is the method `GetLastResult`, which returns `InterestMatchResult`\. `InterestMatchResult` is essentially an unordered map between replicas and a list of the peers on which the replicas should be present\. If a peer is not on the list for a replica and has the replica's proxy, the interest manager removes the replica's proxy\. The following code shows the declaration of the `InterestMatchResult` class\.
 
 ```
 // dev\Code\Framework\GridMate\GridMate\Replica\Interest\InterestDefs.h

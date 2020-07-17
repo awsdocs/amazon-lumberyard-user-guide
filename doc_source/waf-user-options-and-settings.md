@@ -6,7 +6,9 @@ In Lumberyard, the Waf options for configure and build time operations in are de
   + `common.android.json` – Options for Android\.
   + `platform.darwin_x64.json` – Options for macOS\.
   + `platform.ios.json` – Options for iOS\.
+  + `common.win_msvc.json` – Windows options for Microsoft Visual Studio\.
   + `platform.win_x64_vs2017.json` – Windows options for Microsoft Visual Studio 2017\.
+  + `platform.win_x64_vs2019.json` – Windows options for Microsoft Visual Studio 2019\.
 + **user\_settings\.options** – Use this file to override default values defined in the `default_settings.json` file and platform\-specific settings files\.
 
 **Topics**
@@ -97,9 +99,9 @@ The settings listed can be modified in the file directly, or through the **Lumbe
 lmbr_waf show_option_dialog
 ```
 
-![\[Waf settings dialog box.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/waf-settings-dialog.png)
+![\[Waf settings dialog box.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/waf/waf-settings-dialog.png)
 
-The tables in the following sections describe the options available for override in the `user_settings.option` file\. To override any setting, you can use the **Override Parameter** for the attribute\. For more information, see [Overriding user\_settings\.options Changes](#waf-user-options-and-settings-user-settings-options-file-overriding)\.
+The tables in the following sections describe the options available for override in the `user_settings.options` file\. To override any setting, you can use the **Override Parameter** for the attribute\. For more information, see [Overriding user\_settings\.options Changes](#waf-user-options-and-settings-user-settings-options-file-overriding)\.
 
 **Topics**
 + [default\_settings\.json Options](#waf-files-user-settings-default-settings-json-file-options)
@@ -165,7 +167,7 @@ The following tables describe the options defined in the `default_settings.json`
 | --- | --- | --- | --- | 
 | auto\_update\_incredibuild\_settings | \-\-auto\-update\-incredibuild\-settings | Automatically attempts to update the registry for IncrediBuild, if needed\. These registry updates are required to configure IncrediBuild to work properly with the Waf build system\. | False | 
 | incredibuild\_max\_cores | \-\-incredibuild\-max\-cores | Control the number of processes spawned by IncrediBuild\. | 128 | 
-| incredibuild\_profile | \-\-incredibuild\-profile | The IncrediBuild configuration value to load for IncrediBuild builds\. | Tools/build/waf\-1\.7\.13/profile\.xml | 
+| incredibuild\_profile | \-\-incredibuild\-profile | The IncrediBuild configuration value to load for IncrediBuild builds\. If left blank, this value is generated automatically\. |  | 
 | use\_incredibuild |  \-i \-\-use\-incredibuild  |  Use IncrediBuild if available\.  Windows PC builds require at a minimum the Make and Build tools package\. Android builds additionally require the Dev Tools Acceleration package\.  | False | 
 
 
@@ -194,11 +196,9 @@ The following tables describe the options defined in the `default_settings.json`
 | Attribute | Override Parameter | Description | Default | 
 | --- | --- | --- | --- | 
 | default\_project | \-\-visual\-studio\-solution\-default\-project | The Visual Studio default project if not set in the solution user options \(\.suo \) file\. | Editor | 
-| generate\_vs\_projects\_automatically | \-\-generate\-vs\-projects\-automatically | Automatically generates Visual Studio projects and solutions\. | True | 
-| msvs\_version | \-\-msvs\-version | Version of the Visual Studio solution to generate\. | 15 | 
+| msvs\_version | \-\-msvs\-version | Version of the Visual Studio solution to generate when creating a new project with Project Configurator\. | 15 | 
 | specs\_to\_include\_in\_project\_generation | \-\-specs\-to\-include\-in\-project\-generation | List of Waf [spec files](waf-files-spec-file.md) to include in the Visual Studio solution generation\. | all, game, game\_and\_engine | 
 | visual\_studio\_solution\_folder | \-\-visual\-studio\-solution\-folder | Name of the directory in which the generated Visual Studio solution should be stored\. | Solutions | 
-| visual\_studio\_solution\_name | \-\-visual\-studio\-solution\-name | Name of the generated Visual Studio solution\. | LumberyardSDK | 
 
 ### Output Folder Options<a name="waf-files-user-settings-output-folder-options"></a>
 
@@ -214,8 +214,8 @@ The output path attributes in the Output Folder table can have configuration\-ba
 | out\_folder\_android\_armv8\_clang | \-\-output\-folder\-android\-armv8\-clang | The base output folder name for the android\_armv8\_clang platform\. | BinAndroidArmv8Clang | 
 | out\_folder\_ios | \-\-output\-folder\-ios | Absolute or relative iOS target platform build output path\.  | BinIos | 
 | output\_folder\_darwin\_x64 | \-\-output\-darwin\-x64 | Absolute or relative macOS \(Darwin\) target platform build output path\. | BinMac64 | 
-| out\_folder\_win\_x64\_clang | \-\-output\-folder\-win64\-clang | The base output folder name for the win\_x64\_clang platform\. | Bin64clang | 
 | out\_folder\_win\_x64\_vs2017 | \-\-output\-folder\-win64\-vs2017 | The base output folder name for the win\_x64\_vs2017 platform\. | Bin64vc141 | 
+| out\_folder\_win\_x64\_vs2019 | \-\-output\-folder\-win64\-vs2019 | The base output folder name for the win\_x64\_vs2019 platform\. | Bin64vc142 | 
 
 The following name extensions are appended to the output folder based on the target platform builds\. These configuration extension options are autogenerated by Waf\. The default values are defined in the `lumberyard_installation\dev\_WAF_\settings\build_configurations.json` file\.
 
@@ -232,6 +232,19 @@ The following name extensions are appended to the output folder based on the tar
 ### Platform\-Specific Options<a name="waf-files-user-settings-platform-specific-options"></a>
 
 Specific settings for Android, iOS, macOS, and Windows are defined in files located in the `lumberyard_version\dev\_WAF_\settings\platforms\` directory as noted\.
+
+#### All Platforms<a name="waf-files-user-settings-platform-specific-options-platforms"></a>
+
+The following settings define whether or not a platform is enabled to build\. The default value comes from the value of the `enabled` key found in each platform\-specific file in the `lumberyard_version\dev\_WAF_\settings\platforms\` directory\.
+
+
+**Enable Platform**  
+
+| Attribute | Override Parameter | Description | Default | 
+| --- | --- | --- | --- | 
+| enable\_android\_armv8\_clang | \-\-enable\-android\-armv8\-clang | Enable the android\_armv8\_clang platform to build\. | True | 
+| enable\_win\_x64\_vs2017 | \-\-enable\-win64\-vs2017 | Enable the win\_x64\_vs2017 platform to build\. | True | 
+| enable\_win\_x64\_vs2019 | \-\-enable\-win64\-vs2019 | Enable the win\_x64\_vs2019 platform to build\. | True | 
 
 #### Android<a name="waf-files-user-settings-platform-specific-options-android"></a>
 
@@ -307,16 +320,39 @@ The following settings for macOS are defined in the `lumberyard_version\dev\_WAF
 | mac\_project\_name | \-\-mac\-project\-name | Name of the generated project\. | LumberyardSDK  | 
 | mac\_project\_folder | \-\-mac\-project\-folder | Name of the directory in which the generated macOS projects should be stored\. | Solutions | 
 
-#### Windows Options<a name="waf-files-user-settings-platform-specific-options-windows"></a>
+#### Windows<a name="waf-files-user-settings-platform-specific-options-windows"></a>
 
-The following settings for Windows are defined in the `lumberyard_version\dev\_WAF_\settings\platforms\platform.win_x64_vs2017.json` file\.
+The following settings for Visual Studio are defined in the `lumberyard_version\dev\_WAF_\settings\platforms\common.win_msvc.json` file\.
 
 
-**Windows Options**  
+**Visual Studio Options**  
 
 | Attribute | Override Parameter | Description | Default | 
 | --- | --- | --- | --- | 
-| win\_enable\_clang\_for\_windows | \-\-win\-enable\-clang\-for\-windows | Enables building and configuring with Clang for Windows\. |  | 
+| generate\_vs\_solution\_automatically | \-\-generate\-vs\-solution\-automatically | Automatically generate Visual Studio solutions during every configure\. | True | 
+
+The following settings for Visual Studio 2017 are defined in the `lumberyard_version\dev\_WAF_\settings\platforms\platform.win_x64_vs2017.json` file\.
+
+
+**Visual Studio 2017 Options**  
+
+| Attribute | Override Parameter | Description | Default | 
+| --- | --- | --- | --- | 
+| generate\_vs2017\_projects\_automatically | \-\-generate\-vs2017\-projects\-automatically | Automatically generate Visual Studio 2017 projects and solutions during every configure if the Windows VS2017 platform is enabled\. | True | 
+| vs2017\_solution\_name | \-\-vs2017\-solution\-name | The name of the generated Visual Studio 2017 solution\. | LumberyardSDK\_vs2017 | 
 | win\_vs2017\_vcvarsall\_args | \-\-win\-vs2017\-vcvarsall\-args | Additional arguments to pass to the vcvarsall\.bat file\. |  | 
 | win\_vs2017\_vswhere\_args | \-\-win\-vs2017\-vswhere\-args | The arguments to pass to vswhere when locating Visual Studio 2017 executables\. The default maximum is up to but not including the next major version of Visual Studio\. The default minimum is the last known ABI incompatibility for Lumberyard builds\. | \-version \[15\.9\.28307\.770,16\.0\) | 
 | win\_vs2017\_winkit | \-\-win\-vs2017\-winkit | The windows kit that Visual Studio 2017 builds Windows targets against\. |  | 
+
+The following settings for Visual Studio 2019 are defined in the `lumberyard_version\dev\_WAF_\settings\platforms\platform.win_x64_vs2019.json` file\.
+
+
+**Visual Studio 2019 Options**  
+
+| Attribute | Override Parameter | Description | Default | 
+| --- | --- | --- | --- | 
+| generate\_vs2019\_projects\_automatically | \-\-generate\-vs2019\-projects\-automatically | Automatically generate Visual Studio 2019 projects and solutions during every configure if the Windows VS2019 platform is enabled\. | True | 
+| vs2019\_solution\_name | \-\-vs2019\-solution\-name | The name of the generated Visual Studio 2019 solution\. | LumberyardSDK\_vs2019 | 
+| win\_vs2019\_vcvarsall\_args | \-\-win\-vs2019\-vcvarsall\-args | Additional arguments to pass to the vcvarsall\.bat file\. |  | 
+| win\_vs2019\_vswhere\_args | \-\-win\-vs2019\-vswhere\-args | The arguments to pass to vswhere when locating Visual Studio 2019 executables\. The default maximum is up to but not including the next major version of Visual Studio\. The default minimum is the last known ABI incompatibility for Lumberyard builds\. | \-version \[16\.2\.29230\.47,17\.0\) | 
+| win\_vs2019\_winkit | \-\-win\-vs2019\-winkit | The windows kit that Visual Studio 2019 builds Windows targets against\. |  | 

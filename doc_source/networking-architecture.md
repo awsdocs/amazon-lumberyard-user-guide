@@ -16,7 +16,7 @@
 
  The following diagram shows the major components of the GridMate architecture and their relationships\. 
 
-![\[GridMate architecture\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/network-architecture-gridmate.jpg)
+![\[GridMate architecture\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/networking/network-architecture-gridmate.jpg)
 
 For more information, see the following pages\.
 + [Carrier](network-carrier.md)

@@ -1,12 +1,5 @@
 # Area Light<a name="component-area-light"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 Use the **Area Light** component on an entity to light an area\.
 
 The **Area Light** component has the following settings:
@@ -104,7 +97,7 @@ Animation start offset from **0** to **1**\. A value of **0\.1** is 10% into the
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### SetLightState<a name="light-ebus-setlightstate"></a>
 
@@ -162,7 +155,7 @@ Yes
 
 Use the following notification functions with the EBus interface to communicate with other components of your game\.
 
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### LightTurnedOn<a name="light-ebus-lightturnedon"></a>
 

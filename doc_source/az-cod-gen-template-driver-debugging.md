@@ -1,11 +1,7 @@
 # Template Driver Debugging<a name="az-cod-gen-template-driver-debugging"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| AZ Code Generator is in preview release and is subject to change\. | 
+AZ Code Generator is in preview release and is subject to change\.
 
 Because template drivers are run from the AZ Code Generator executable using Python, you can't debug them directly\. However, you can debug your driver and template code \(and even Jinja2 itself\) by using the `debug.py` file included with AZ Code Generator\. 
 

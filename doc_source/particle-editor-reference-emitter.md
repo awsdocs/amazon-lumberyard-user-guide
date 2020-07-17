@@ -2,7 +2,7 @@
 
 In the **Emitter** attribute, specify how to control the location and spawning attributes of the particle and emitter shape\. The parameters are updated based on the type that you select\. 
 
-![\[Emitter attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor-emitter.png)
+![\[Emitter attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor-emitter.png)
 
 
 **Emitter Attribute Parameters**  

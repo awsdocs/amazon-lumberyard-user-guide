@@ -83,7 +83,7 @@ Resources are specified in the template as follows:
             "Ref": "ConfigurationKey"
         },
         "FunctionName": "<lambda-folder-name>",
-        "Runtime": "python2.7",
+        "Runtime": "python3.7",
         "ServiceToken": {
             "Fn::GetAtt": [
                 "ProjectResourceHandler",

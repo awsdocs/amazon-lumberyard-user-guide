@@ -4,7 +4,7 @@ Lumberyard supports [Allegorithmic Substance](https://www.allegorithmic.com/) fo
 
 You can use the Allegorithmic Substance Designer to author procedural materials and then import them into Lumberyard Editor\. You can then use the **Script Canvas** editor or Lua to modify the procedural material's textures at runtime\. 
 
-To enable this feature, you must enable the Allegorithmic Substance gem\. For more information, see [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
+To enable this feature, you must enable the Allegorithmic Substance gem\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 
 For more information, see [Working with Substances](mat-substances.md) and [Lumberyard Substance Integration](https://aws.amazon.com/blogs/gametech/lumberyard-substance-integration)\.
 
@@ -30,7 +30,7 @@ The Allegorithmic Substance gem includes a sample procedural material named `bri
 
 See the following example script to enable this effect\.
 
-![\[Example Script Canvas script that shows the erosion for a brick wall.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-procedural-material-example.png)
+![\[Example Script Canvas script that shows the erosion for a brick wall.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-procedural-material-example.png)
 
 1. The **Find by Name and Index** node \(1\) retrieves the `brickWall_04` procedural material and sends the material to all **Set Input Number** nodes \(3, 4, 6, 7\)\.
 

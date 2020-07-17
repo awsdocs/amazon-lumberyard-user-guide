@@ -2,7 +2,7 @@
 
 Use the motions pane to add and manage motion files in a motion set\.
 
-![\[View and manage motions in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/animation-editor-motions-user-interface.png)
+![\[View and manage motions in the Animation Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-motions-user-interface.png)
 
 In the **Motions** pane, you can do the following:
 

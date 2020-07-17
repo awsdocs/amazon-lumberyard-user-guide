@@ -8,7 +8,7 @@ For more information, see [Creating Static Skyboxes](sky-skyboxes-intro.md)\.
 + [Input](#set-sky-box-material-input)
 + [Outputs](#set-sky-box-material-output)
 
-![\[sky box material, setskyboxmaterial, setskyboymaterialnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/environment-set-skybox-material.png)
+![\[sky box material, setskyboxmaterial, setskyboymaterialnode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/environment-set-skybox-material.png)
 
 ## Input<a name="set-sky-box-material-input"></a>
 

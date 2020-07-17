@@ -1,8 +1,8 @@
-# PhysX Rigid Body Physics<a name="component-physx-rigid-body-physics"></a>
+# PhysX Rigid Body<a name="component-physx-rigid-body-physics"></a>
 
-The **PhysX Rigid Body Physics** component defines the entity as a rigid object\. This means the entity is solid and can move and collide with other PhysX entities\. For example, you can add the **PhysX Rigid Body Physics** to the entity to create a moving and solid entity, such as a projectile\.
+The **PhysX Rigid Body** component defines the entity as a rigid object\. This means the entity is solid and can move and collide with other PhysX entities\. For example, you can add the **PhysX Rigid Body** to the entity to create a moving and solid entity, such as a projectile\.
 
-You can specify two main modes for a **PhysX Rigid Body Physics** component\.
+You can specify two main modes for a **PhysX Rigid Body** component\.
 
 **Dynamic**  
 Dynamic rigid bodies will be fully simulated by Lumberyard and respond to collision events with other rigid bodies\. Lumberyard will apply forces to two dynamic objects that collide, which results in a realistic physics simulation\. The simulation will also apply a gravity force to rigid bodies in dynamic mode\. You can disable this feature for each rigid body on the component\. Dynamic rigid bodies should be used for semi\-realistic objects like a rolling barrel or a projectile that falls under gravity\.  
@@ -13,21 +13,21 @@ Kinematic rigid bodies are not fully simulated like dynamic rigid bodies\. You c
 Forces and gravity have no effect on a kinematic body\. Use this feature for objects such as moving platforms, doors, or anything that doesn't need to be fully simulated by physics\.
 
 **Note**  
-You should always add the **PhysX Rigid Body Physics** component to the top level of an entity hierarchy\. If you add the component to a child entity, this can cause conflicts with the entity's world transform and result in undefined behavior\.
+You should always add the **PhysX Rigid Body** component to the top level of an entity hierarchy\. If you add the component to a child entity, this can cause conflicts with the entity's world transform and result in undefined behavior\.
 
-The **PhysX Rigid Body Physics** components requires the [PhysX](gems-system-gem-physx.md) gem\.
+The **PhysX Rigid Body** components requires the [PhysX](gems-system-gem-physx.md) gem\.
 
-For more information, see [Simulating Physics Behavior with the PhysX System](physx-intro.md)\.
+For more information, see [Simulating physics behavior with the PhysX system](physx-intro.md)\.
 
 **Topics**
-+ [PhysX Rigid Body Physics Properties](#component-physx-rigid-body-physics-properties)
++ [PhysX Rigid Body Properties](#component-physx-rigid-body-physics-properties)
 + [Creating a Dynamic PhysX Entity](#example-creating-dynamic-game-entity)
 
-## PhysX Rigid Body Physics Properties<a name="component-physx-rigid-body-physics-properties"></a>
+## PhysX Rigid Body Properties<a name="component-physx-rigid-body-physics-properties"></a>
 
-![\[PhysX Rigid Body Physics component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-physx-rigid-body-1.png)
+![\[PhysX Rigid Body component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/physx/component-physx-rigid-body-1.png)
 
-The **PhysX Rigid Body Physics** component has the following properties\.
+The **PhysX Rigid Body** component has the following properties\.
 
 
 | Property | Description | 
@@ -62,14 +62,14 @@ A PhysX entity that is dynamic can move and collide with other entities\.
 
 1. Add the **PhysX Collider** component to the entity\.
 
-1. Add the **PhysX Rigid Body Physics** component to the entity\.
+1. Add the **PhysX Rigid Body** component to the entity\.
 
 1. Create another entity for your PhysX terrain\. For more information, see the **[PhysX Terrain](component-physx-terrain.md)** component\.
 
 1. Press **Ctrl\+G** to enter gameplay mode\.  
 **Example**  
 
-   The entity has a **PhysX Collider** component and a **PhysX Rigid Body Physics** component attached\. Because the object is dynamic, it falls and then collides with the **PhysX Terrain** component\.  
-![\[Animated example of a dynamic entity falling to the terrain and bouncing around.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-creating-dynamic-object-1.gif)
+   The entity has a **PhysX Collider** component and a **PhysX Rigid Body** component attached\. Because the object is dynamic, it falls and then collides with the **PhysX Terrain** component\.  
+![\[Animated example of a dynamic entity falling to the terrain and bouncing around.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared/physx-creating-dynamic-object-1.gif)
 **Note**  
 For the **[Transform](component-transform.md)** component, clear the **Static** property\. This ensures that the mesh moves with the physics\. 

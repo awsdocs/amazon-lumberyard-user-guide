@@ -2,7 +2,7 @@
 
 You can use soft naming conventions when authoring assets in your digital content creation \(DCC\) tools, such as Autodesk 3ds Max or Maya\. Soft naming conventions are prefixes or suffixes that you add to either your scene's DCC node or the `.fbx` file name\. In Lumberyard, Asset Processor recognizes these soft naming conventions and then applies an action based on the specified soft naming convention\.
 
-Lumberyard provides soft naming conventions as a convenience for content creators to automate steps that are typically done manually in the ****FBX Settings**** tool\. Depending on the soft naming conventions that you specify, Asset Processor automatically adds those modifiers to the scene settings\. 
+Lumberyard provides soft naming conventions as a convenience for content creators to automate steps that are typically done manually in the **FBX Settings** tool\. Depending on the soft naming conventions that you specify, Asset Processor automatically adds those modifiers to the scene settings\. 
 
 **Contents**
 + [Viewing Soft Naming Conventions](#viewing-the-fbx-soft-naming-convention)
@@ -12,7 +12,7 @@ Lumberyard provides soft naming conventions as a convenience for content creator
 + [Moving FBX Files Between Projects](#moving-fbx-files-between-project)
 
 **Note**  
-The Scene Processing gem is required to use the ****FBX Settings**** tool\. This gem is enabled by default\.
+The Scene Processing gem is required to use the **FBX Settings** tool\. This gem is enabled by default\.
 
 The following table lists current soft naming conventions and the actions that are applied\.
 
@@ -157,7 +157,7 @@ Soft naming conventions are project\-specific\. As a result, different projects 
 
 **To process the FBX file the same way between projects**
 
-1. In the ****FBX Settings**** tool, open the `.fbx` file to move\. 
+1. In the **FBX Settings** tool, open the `.fbx` file to move\. 
 
 1. Click **Update** at least once\. This creates a manifest \(`.fbx.assetinfo`\) file\.
 

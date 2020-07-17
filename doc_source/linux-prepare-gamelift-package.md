@@ -1,11 +1,7 @@
 # Preparing the GameLift Package<a name="linux-prepare-gamelift-package"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Lumberyard supports compiling and deploying the Windows client for a multiplayer project on a Linux dedicated server\. You must have completed the following:
 + [Compiled the assets on a Windows computer](linux-compile-assets-on-windows.md)\.

@@ -2,7 +2,7 @@
 
 You can use Lua bindings to interact programmatically with head\-mounted display \(HMD\) devices that provide Virtual Reality \(VR\) experiences\.
 
-For general information on configuring your Lumberyard game project for VR, see [Creating Virtual Reality Games in Lumberyard](virtual-reality.md)\.
+For general information on configuring your Lumberyard game project for VR, see [Create virtual reality projects in Lumberyard](virtual-reality.md)\.
 
 ## Global Functions<a name="lua-scripting-ref-vr-global-functions"></a>
 

@@ -1,11 +1,7 @@
 # Component Entity Lua API Reference<a name="lua-api"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This documentation is preliminary and subject to change\.  | 
+This documentation is preliminary and subject to change\. 
 
 You can use the Lua API calls in this reference for scripting the component entity system in Lumberyard\. For a tutorial on writing Lua scripts in Lumberyard, see [Writing Lua Scripts](lua-scripting-intro.md)\. For Lua scripting functions that load and unload canvases in Lumberyard Editor, see the [UI Lua Reference](lua-scripting-ces-api-ui.md)\.
 
@@ -1145,7 +1141,7 @@ void OnTriggerFinished(const Audio::TAudioControlID triggerID)
 | --- | --- | --- | 
 |  triggerID  |  Audio::TAudioControlID  | The ID of the trigger\. | 
 
-## FloatGameplayNotificationBus \(`AZ::`GameplayNotificationBus<float>\)<a name="lua-api-floatgameplaynotificationbus-"></a>
+## FloatGameplayNotificationBus \(AZ::GameplayNotificationBus<float>\)<a name="lua-api-floatgameplaynotificationbus-"></a>
 
 This version of the `GameplayNotificationBus` EBus interface handles float\-based gameplay notifications\.
 
@@ -1157,7 +1153,7 @@ Event sent when the specified `GameplayEventAction` has occurred\.
 
 Event sent when the given `GameplayEventAction` has failed\.
 
-## Vector3GameplayNotificationBus \(`AZ::GameplayNotificationBus<AZ::Vector3>`\)<a name="lua-api-vector3gameplaynotificationbus"></a>
+## Vector3GameplayNotificationBus<a name="lua-api-vector3gameplaynotificationbus"></a>
 
 This version of the `GameplayNotificationBus` EBus interface handles Vector3\-based gameplay notifications\.
 
@@ -1169,7 +1165,7 @@ Event sent when the given `GameplayEventAction` has occurred\.
 
 Event sent when the given `GameplayEventAction` has failed\.
 
-## StringGameplayNotificationBus \(`AZ::`GameplayNotificationBus<const AZStd`::`string>\)<a name="lua-api-stringgameplaynotificationbus"></a>
+## StringGameplayNotificationBus \(AZ::GameplayNotificationBus<const AZStd:wq::string>\)<a name="lua-api-stringgameplaynotificationbus"></a>
 
 This version of the `GameplayNotificationBus` EBus interface handles string\-based gameplay notifications\.
 

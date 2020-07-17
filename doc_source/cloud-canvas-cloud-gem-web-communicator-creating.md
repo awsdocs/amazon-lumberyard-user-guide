@@ -92,7 +92,7 @@ To broadcast a message, use the *\_\_send\_communicator\_broadcast* function and
 def __send_communicator_broadcast(message):
     interface_url = cgf_lambda_settings.get_service_url("CloudGemWebCommunicator_sendmessage_1_0_0")
     if not interface_url:
-        print 'Messaging interface not found'
+        print('Messaging interface not found')
         return
 
     client = cgf_service_client.for_url(interface_url, verbose=True, session=boto3._get_default_session())
@@ -107,7 +107,7 @@ To send a message directly to a client, use the *\_\_send\_communicator\_direct*
 def __send_communicator_direct(message, client_id):
     interface_url = cgf_lambda_settings.get_service_url("CloudGemWebCommunicator_sendmessage_1_0_0")
     if not interface_url:
-        print 'Messaging interface not found'
+        print('Messaging interface not found')
         return
 
     client = cgf_service_client.for_url(interface_url, verbose=True, session=boto3._get_default_session())

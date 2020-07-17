@@ -1,15 +1,8 @@
 # Programmer's Guide to Entities and Components<a name="component-entity-system-pg-intro"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 This guide provides engine and game programmers with examples and best practices for creating and reflecting custom Lumberyard components in C\+\+\. 
 
-For information on using the component entity system in Lumberyard Editor, see [Working with Component Entities](component-intro.md)\. 
+For information on using the component entity system in Lumberyard Editor, see [Working with component entities](component-intro.md)\. 
 
 For C\+\+ API reference documentation on the component entity system, see the [Amazon Lumberyard C\+\+ API Reference](https://docs.aws.amazon.com/lumberyard/latest/apireference/)\.
 

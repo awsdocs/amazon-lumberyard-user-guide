@@ -1,23 +1,31 @@
 # Debugging Issues<a name="debugging-intro"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
 
 Lumberyard provides the following built\-in debugging and profiling tools that you can use to locate and fix performance issues\.
 + [Character skeleton debugging](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/char-model-debugging.html) – Use the `p_draw_helpers` console variable to debug character skeleton issues\.
 + [Cinematics debugging](cinematics-debugging.md) – Debug cinematics issues\.
-+ [Flow Graph debugging](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-debugging-intro.html) – Use the Flow Graph debugger and console variables to debug flow graph issues\.
 + [Mannequin debugging](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/mannequin-debugging-intro.html) – Debug Mannequin system issues\.
 + [Particle debugging](particle-debugging.md) – Debug particles\.
 + [Vegetation debugging](vegetation-debugging.md) – Debug vegetation objects\.
 
 **Topics**
++ [Crash logging](#debugging-crash-logging)
 + [Using Console Debug Views](#debugging-debug-views)
 + [Using the `sys_asserts` Console Variable \(CVAR\)](debugging-using-asserts.md)
+
+## Crash logging<a name="debugging-crash-logging"></a>
+
+ Logging and reporting for crashes that occur in the Lumberyard Editor or your Lumberyard game can be turned on by modifying the `sys_dump_type` console variable\. The type of crash log information generated depends on the value: 
++ `0` – Disable crash reporting\.
++ `1` – Generate a stack trace on crash
++ `2` – Generate a stack trace and limited variable information\.
++ `3` – Full crash dump of the stack trace, variable information, and all memory\.
+
+ Crash logs are written to the `Cache\project_name\platform\user\log\error.log` file\. 
+
+ By default, only the call stack for the main thread is in a crash dump\. In order to get the stack trace of auxiliary threads, set the `sys_dump_aux_threads` console variable to `1`\. 
 
 ## Using Console Debug Views<a name="debugging-debug-views"></a>
 
@@ -38,9 +46,10 @@ The viewport window displays debugging information by default when you are in ga
 ### Using DebugDraw Console Variables<a name="debugging-debug-views-debugdraw"></a>
 
 Use the following console variables and values to display information about your level\.
++ `e_DebugDrawLodMinTriangles 1000` – Do not draw debug text for objects with less than 1000 triangles\.
 + `e_DebugDraw 1` – Displays the name of the `.cgf` used, polycount, and LOD\.
 + `e_DebugDraw 2` – Displays a color\-coded polygon count\.
-+ `e_DebugDraw 3` – Displays a color\-coded LOD count\. Flashing color indicates no LOD information\.
++ `e_DebugDraw 3` – Displays a color\-coded LOD count\. Flashing color indicates a single LOD\.
 + `e_DebugDraw 4` – Displays object texture memory usage\.
 + `e_DebugDraw 5` – Displays a color\-coded number of render materials\.
 + `e_DebugDraw 6` – Displays ambient color\.
@@ -59,6 +68,9 @@ Use the following console variables and values to display information about your
 + `e_DebugDraw 20` – Displays object instant texture memory usage\.
 + `e_DebugDraw 21` – Displays animated object distance to camera\.
 + `e_DebugDraw 22` – Display object's current LOD vertex count\.
++ `e_DebugDraw 23` – Display object in red if it is casting a shadow\.
++ `e_DebugDraw 24` – Display objects with 0 LOD with red text\.
++ `e_DebugDraw 25` – Display objects with 0 LOD with red text and objects with 1 LOD with blue text\.
 
 ### Using GBuffer Console Variables<a name="debugging-debug-views-gbuffer"></a>
 

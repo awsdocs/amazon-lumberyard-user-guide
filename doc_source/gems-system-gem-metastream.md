@@ -58,7 +58,7 @@ Stops the embedded HTTP server
 
 ## Exposing Data through Metastream<a name="gems-system-metastream-expose-data"></a>
 
-Metastream exposes data through the C\+\+ API or the `Metastream:CacheData` flow graph node\.
+Metastream exposes data through the C\+\+ API\.
 
 ### C\+\+ API<a name="gems-system-metastream-expose-data-cplusplus-api"></a>
 
@@ -272,68 +272,6 @@ MetastreamRequestBus.Broadcast.AddArrayToObject(table, objectName, key, arrayNam
 MetastreamRequestBus.Broadcast.AddObjectToObject(table, objectName, key, objectName);
 ```
 
-### Exposing Data through Flow Graph<a name="gems-system-metastream-expose-data-flow-graph"></a>
-
-
-****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
-
-#### Metastream:HTTPServer Node<a name="metastream-flow-node-httpserver"></a>
-
-The `Metastream:HTTPServer` node controls the embedded HTTP server:\.
-
-##### Node Inputs<a name="gems-system-metastream-fg-input"></a>
-
-**Start**  
-Starts the embedded HTTP server\.
-
-**Stop**  
-Stops the embedded HTTP server\.
-
-##### Node Outputs<a name="gems-system-metastream-fg-output"></a>
-
-**Out**  
-Triggers an output when the server start or stop is finished\.
-
-**Error**  
-Triggers an output of `true` if an error occurs\.  
-Type: Bool
-
-#### Metastream:CacheData Node<a name="metastream-flow-node-cachedata"></a>
-
-The `Metastream:CacheData` node exposes in\-game data using the flow graph\.
-
-##### Node Inputs<a name="gems-system-metastream-fg-cachedata-input"></a>
-
-**Activate**  
-Writes or updates the key\-value pair in the specified table and exposes it through Metastream\.  
-Type: Any
-
-**Table**  
-Writes the key\-value pair to the specified table\.  
-Type: String
-
-**Key**  
-Identifies the value\.  
-Type: String
-
-**Value**  
-Writes the value to Metastream and automatically converts the value to meet JSON compliance\.  
-Type: Any
-
-##### Node Outputs<a name="gems-system-metastream-fg-cachedata-output"></a>
-
-**Out**  
-Triggers an output when the data is successfully written to Metastream\.  
-Type: Any
-
-**Error**  
-Signals with `true` if an error occurred\.  
-Type: Bool
-
 ## Accessing Data through the HTTP API<a name="gems-system-metastream-data-http-api"></a>
 
 You can access game data that has been exposed through Metastream by using the HTTP API Get requests\. You can then use JavaScript to work with the data\.
@@ -365,27 +303,3 @@ Data requests are returned in the following format:
 | /data?table=table\_name | \{ "keys": \[ "key1", "key2", \.\.\. \] \} | 
 | /data?table=table\_name&key=key\_name | \{ "key\_name": value \} | 
 | /data?table=table\_name&key=keys\_list | <pre>{<br />  "key1": value1,<br />  "key2": value2,<br />  ...<br />}</pre> | 
-
-## Using the Metastream Sample<a name="gems-system-metastream-sample"></a>
-
-Located in the `\dev\SamplesProject\Levels\Samples\Metastream_Sample` directory, the Metastream sample level demonstrates how to expose data through the flow graph\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/metastream_sample_level.png)
-
-In conjunction with the sample level, the Metastream sample HTML file \(located in the `\dev\Gems\Metastream\Files` directory\) shows how to use the data to create a simple, dynamic overlay\. These overlays can provide a more engaging experience for viewers without creating visual clutter on a broadcaster's game screen\.
-
-The following is the flow graph from the Metastream sample level\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems-system-gem-metastream-fgsample.png)
-
-The sample overlay file `metastream_sample.html`" \(located in `dev/Gems/Metastream/Files`\) is shown here rendered in Chrome\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems-system-gem-metastream-sampleoverlay.png)
-
-The position and direction of the yellow pin update dynamically to represent the position and orientation of the chicken in the sample level\. The following example shows the overlay rendered on top of the game stream\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems-system-gem-metastream-sampleoverlay2.png)
-
-The following example from Amazon Game Studios' game Breakaway shows an overlay with stats from the two leaders in a match\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/metastream_breakaway_overlay_example.png)

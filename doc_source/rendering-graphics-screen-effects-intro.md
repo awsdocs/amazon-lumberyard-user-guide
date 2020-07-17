@@ -1,4 +1,4 @@
-# Creating Screen Effects<a name="rendering-graphics-screen-effects-intro"></a>
+# Create screen effects<a name="rendering-graphics-screen-effects-intro"></a>
 
 Lumberyard's rendering technology starts with a modern, physically\-based shading core that renders materials based on real world physical parameters \(such as base color, metallicity, smoothness, and specularity\), allowing you to achieve realistic results using the same physically\-based parameters used in the highest end film rendering pipelines\.
 
@@ -9,6 +9,7 @@ Lumberyard's rendering engine is tightly integrated with Lumberyard Editor, so t
 The Lumberyard rendering technology is designed to take maximum advantage of today's high\-end PC and console operating systems, while maintaining compatibility with older hardware by scaling down graphical features and fidelity without compromising the core visual elements of your scene\.
 
 **Topics**
++ [Working with camera screen effects](rendering-graphics-cameras.md)
 + [Temporal Antialiasing and Supersampling](graphics-rendering-anti-aliasing.md)
 + [Voxel\-based Global Illumination \(SVOGI\)](rendering-graphics-svogi.md)
 + [Fog Systems](rendering-graphics-fog-intro.md)

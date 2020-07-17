@@ -1,11 +1,7 @@
 # Using Profiler for VRAM<a name="profiler-vram"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| Profiler is in preview release and is subject to change\.  | 
+Profiler is in preview release and is subject to change\. 
 
 You can use the video memory profiler \(VRAM profiler\) to determine which resources are contributing most to runtime VRAM usage in your game\. 
 

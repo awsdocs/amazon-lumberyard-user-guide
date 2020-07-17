@@ -1,12 +1,5 @@
 # Audio Listener<a name="component-audio-listener"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 With the **Audio Listener** component, you can place a virtual microphone in the environment\. An audio listener acts as a sink for sound sources in the virtual world, and 3D audio rendering is processed with respect to the listener's world transform\. You can specify the audio listener's position and rotation independently\.
 
 ## Audio Listener Properties<a name="component-audio-listener-properties"></a>
@@ -41,7 +34,7 @@ Only one audio listener is supported in a game\. You can add the **Audio Listene
 
 Use the following request functions with the EBus interface to communicate with other components of your game\.
 
-For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the Event Bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### SetRotationEntity<a name="audio-listener-ebus-setrotationentity"></a>
 

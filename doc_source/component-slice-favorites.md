@@ -15,11 +15,11 @@ Your slice favorites appear in the **Slice Favorites** panel, where you can reor
 
 **To open the **Slice Favorites** panel, do one of the following**
 + In the **Entity Outliner**, right\-click to open the context menu, and choose **Slice favorites**, **Manage favorites**\.  
-![\[Right-click to expose the context menu, and then choose Manage favorites.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-slice-favorites-panel.png)
+![\[Right-click to expose the context menu, and then choose Manage favorites.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-slice-favorites-panel.png)
 + In Lumberyard Editor, choose **Tools**, **Other**, **Slice Favorites**\.
 
   The **Slice Favorites** panel appears in its default location, above the **Entity Inspector**\.  
-![\[The Slice Favorites panel is displayed above the Entity Inspector.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-slice-favorites-panel2.png)
+![\[The Slice Favorites panel is displayed above the Entity Inspector.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-slice-favorites-panel2.png)
 
 ## Flagging a Slice as a Favorite<a name="flagging-slice-as-favorite"></a>
 
@@ -50,7 +50,7 @@ Select one or more slices or folders to drag them into other folders or to reord
 **Add a folder**  
 Right\-click the **Slice Favorites** panel and choose **Add folder**\.  
 
-![\[Right-click in the Slice Favorites panel to add a folder.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-slice-favorites-add-folder.png)
+![\[Right-click in the Slice Favorites panel to add a folder.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-slice-favorites-add-folder.png)
 
 **Rename a folder**  
 Right\-click a folder in the **Slice Favorites** panel and choose **Rename**\.
@@ -62,7 +62,7 @@ Renaming a slice changes its display name in the **Slice Favorites** panel, but 
 **Import favorites from an XML file**  
 Right\-click the **Slice Favorites** panel and choose **Import slice favorites**\.  
 
-![\[Right-click the Slice Favorites panel to import slice favorites.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-slice-favorites-import-export.png)
+![\[Right-click the Slice Favorites panel to import slice favorites.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-slice-favorites-import-export.png)
 
 **Export favorites to an XML file**  
 Right\-click the **Slice Favorites** panel and choose **Export slice favorites**, and then select or create an XML to export\.
@@ -71,5 +71,5 @@ Right\-click the **Slice Favorites** panel and choose **Export slice favorites**
 
 **To instantiate a slice favorite, do one of the following:**
 + Right\-click the viewport or **Entity Outliner**, choose **Slice favorites**, and then navigate to the slice you want to instantiate\.  
-![\[Right-click in the viewport or Entity Outliner to instantiate a slice favorite.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-slice-favorites-instantiate.png)
+![\[Right-click in the viewport or Entity Outliner to instantiate a slice favorite.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-slice-favorites-instantiate.png)
 + Drag a slice from the **Favorite Slices** panel into the viewport or the **Entity Outliner**\.

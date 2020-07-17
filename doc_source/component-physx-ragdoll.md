@@ -4,10 +4,7 @@ You can use the **PhysX Ragdoll** component to create a physical representation 
 
 The **PhysX Ragdoll** component requires the [PhysX Characters](gems-system-gem-physx-characters.md) gem\.
 
-**Important**  
-To simulate the **PhysX Ragdoll** component, you must have an entity with the **[PhysX Terrain](component-physx-terrain.md)** component attached in the level\.
-
-For more information about the PhysX system, see [Simulating Physics Behavior with the PhysX System](physx-intro.md)\.
+For more information about the PhysX system, see [Simulating physics behavior with the PhysX system](physx-intro.md)\.
 
 ## Using the PhysX Ragdoll Component<a name="physx-ragdoll-using-the-component"></a>
 
@@ -23,7 +20,7 @@ You use the PhysX system and the **Animation Editor** to create a ragdoll\.
 
 ## PhysX Ragdoll Component Properties<a name="physx-ragdoll-component-properties"></a>
 
-![\[PhysX Ragdoll component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/physx-ragdoll-component-properties.png)
+![\[PhysX Ragdoll component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/physx/physx-ragdoll-component-properties.png)
 
 
 ****  

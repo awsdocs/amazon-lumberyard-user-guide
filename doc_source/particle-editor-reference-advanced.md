@@ -2,7 +2,7 @@
 
 In the **Advanced** attribute, specify advanced appearance and optimization settings\.
 
-![\[Advanced attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor-advanced.png)
+![\[Advanced attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor-advanced.png)
 
 
 **Advanced Attribute Parameters**  

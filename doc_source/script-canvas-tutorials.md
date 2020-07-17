@@ -1,12 +1,5 @@
 # Script Canvas Tutorials<a name="script-canvas-tutorials"></a>
 
-
-****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 Use the following **Script Canvas** tutorials to learn about the Lumberyard visual scripting system\.
 
 ## Prerequisites<a name="prerequisites-for-script-canvas-tutorial"></a>

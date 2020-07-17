@@ -9,7 +9,7 @@ You can also use the **Lumberyard Deployment Tool** to get your game running on 
 1. Choose **File**, **Open**, and select your level\.
 
 1. Choose **File**, **Project Settings**, and choose **Deploy to device**\.  
-![\[Use the deployment tool in the Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-deployment-tool-example.png)
+![\[Use the deployment tool in the Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-deployment-tool-example.png)
 
 1. In the **Deployment Tool** window, select the following\.
    + For **Target Platform**, select **Android ARMv8**\.
@@ -17,4 +17,4 @@ You can also use the **Lumberyard Deployment Tool** to get your game running on 
 
 1. Click **Deploy to local device**\. The code builds and deploys to your device, as shown in the following example\.  
 **Example**    
-![\[Deploying to the local Android device from Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-quick-start-log.png)
+![\[Deploying to the local Android device from Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-quick-start-log.png)

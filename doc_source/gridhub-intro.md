@@ -1,11 +1,7 @@
 # Using GridHub<a name="gridhub-intro"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| GridHub is in preview release and is subject to change\.  | 
+GridHub is in preview release and is subject to change\. 
 
 GridHub is Lumberyard's connection hub for debugging\. GridHub acts as a central hub through which specified local clients connect with each other and exchange information\. When you run the Lumberyard diagnostic and debugging tools `Profiler.exe` or `LuaIDE.exe` \(located in the `\dev\Bin64` directory\), GridHub launches as a background process in Windows and enables their functionality\. For more information about Profiler, see [Profiler](profiler-intro.md)\.
 

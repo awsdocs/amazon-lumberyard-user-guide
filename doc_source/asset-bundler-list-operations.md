@@ -4,6 +4,7 @@ Asset list comparisons are rules provided to the `AssetBundlerBatch.exe` tool to
 + [Delta Comparison Operation](#asset-bundler-list-operations-delta)
 + [Union Comparison Operation](#asset-bundler-list-operations-union)
 + [Intersection Comparison Operation](#asset-bundler-list-operations-intersection)
++ [Intersection Count Comparison Operation](#asset-bundler-list-operations-intersectioncount)
 + [Complement Comparison Operation](#asset-bundler-list-operations-complement)
 + [File Pattern Comparison Operation](#asset-bundler-list-operations-filepattern)
 
@@ -13,7 +14,7 @@ While the comparison operations use terms from set theory, they are not exactly 
 
 ## Asset List Delta Comparison Operation<a name="asset-bundler-list-operations-delta"></a>
 
-This operation takes two asset list files to create an asset list for a bundle with only the assets that you need to ship in your release bundle\. Use this operation to create bundles for incremental updates, such as delta patches for levels\. To use this operation, runAssetBundler\.exe with a `--comparisonType` argument value of `0` or `delta`\.
+This operation takes two asset list files to create an asset list for a bundle with only the assets that you need to ship in your release bundle\. Use this operation to create bundles for incremental updates, such as delta patches for levels\. To use this operation, run AssetBundlerBatch\.exe with a `--comparisonType` argument value of `0` or `delta`\.
 
 To perform a delta comparison operation, open a command prompt, and run the following command:
 
@@ -31,7 +32,7 @@ The following diagram shows the delta comparison operation\.
 
 ## Asset List Union Comparison Operation<a name="asset-bundler-list-operations-union"></a>
 
-This operation takes two asset list files to create an asset list for a bundle that combines all the assets from both lists\. It includes only the modified version of a file in the output asset list, not the original from the first asset list\. Use this operation when you have two bundles that no longer need to be separate and should be combined into a single bundle\. To use this operation, runAssetBundler\.exe with a `--comparisonType` argument value of `1` or `union`\.
+This operation takes two asset list files to create an asset list for a bundle that combines all the assets from both lists\. It includes only the modified version of a file in the output asset list, not the original from the first asset list\. Use this operation when you have two bundles that no longer need to be separate and should be combined into a single bundle\. To use this operation, run AssetBundlerBatch\.exe with a `--comparisonType` argument value of `1` or `union`\.
 
 To perform a union comparison operation, open a command prompt, and run the following command:
 
@@ -49,7 +50,7 @@ The following diagram shows the union comparison operation\.
 
 ## Asset List Intersection Comparison Operation<a name="asset-bundler-list-operations-intersection"></a>
 
-This operation takes two asset list files to create a bundle asset list with only items that are in both asset lists\. To use this operation, runAssetBundler\.exe with a `--comparisonType` argument value of `2` or `intersection`\.
+This operation takes two asset list files to create a bundle asset list with only items that are in both asset lists\. To use this operation, run AssetBundlerBatch\.exe with a `--comparisonType` argument value of `2` or `intersection`\.
 
 To perform an intersection comparison operation, open a command prompt and run the following command:
 
@@ -65,9 +66,27 @@ The following diagram shows the intersection comparison operation\.
 
 ![\[Diagram showing the inputs and results of a intersection comparison operation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assetbundler/intersection-comparison-operator.png)
 
+## Asset List Intersection Count Comparison Operation<a name="asset-bundler-list-operations-intersectioncount"></a>
+
+This operation takes any number of asset files to create a bundle asset list with only items that appear a given number of times across all of the asset lists\. This comparison type can't be used as part of a series of comparison rules, and requires the use of the `--intersectionCount` argument\. To use this operation, run AssetBundlerBatch\.exe with the `--comparisonType` value of `5` or `intersectionCount`\.
+
+To perform an intersection count comparison operation, open a command prompt and run the following command:
+
+```
+AssetBundlerBatch.exe intersectionCount ^
+--comparisonType intersectionCount ^
+--intersectionCount 3 ^
+--firstAssetFile firstAssetList_pc.assetlist,secondAssetList_pc.assetlist,thirdAssetList_pc.assetlist ^
+--output intersectionCountAssetList.assetlist
+```
+
+The following diagram shows the intersection comparison operation\.
+
+![\[Diagram showing the inputs and results of a intersection count comparison operation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assetbundler/intersection-comparison-count-operator.png)
+
 ## Asset List Complement Comparison Operation<a name="asset-bundler-list-operations-complement"></a>
 
-This operation takes two asset list files to create a bundle asset list with each item in the second asset list that is not in the first list\. It works like the delta comparison, except that it does not check the file hash and will not include modified versions of a file that is in both lists\. To use this operation, runAssetBundler\.exe with a `--comparisonType` argument value of `3` or `complement`\.
+This operation takes two asset list files to create a bundle asset list with each item in the second asset list that is not in the first list\. It works like the delta comparison, except that it does not check the file hash and will not include modified versions of a file that is in both lists\. To use this operation, run AssetBundlerBatch\.exe with a `--comparisonType` argument value of `3` or `complement`\.
 
 To perform a complement comparison operation, open a command prompt, and run the following command:
 
@@ -81,11 +100,11 @@ AssetBundlerBatch.exe compare ^
 
 The following diagram shows the intersection comparison operation\.
 
-![\[Diagram showing the inputs and results of a intersection comparison operation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assetbundler/compliment-comparison-operator.png)
+![\[Diagram showing the inputs and results of a intersection comparison operation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assetbundler/complement-comparison-operator.png)
 
 ## Asset List File Pattern Operation<a name="asset-bundler-list-operations-filepattern"></a>
 
-This operation takes an asset list file, and a file pattern to apply\. Any files that match this pattern in the asset list will be included in the output asset list\. To use this operation, runAssetBundler\.exe with a `--comparisonType` argument value of `4` or `filepattern`\.
+This operation takes an asset list file, and a file pattern to apply\. Any files that match this pattern in the asset list will be included in the output asset list\. To use this operation, run AssetBundlerBatch\.exe with a `--comparisonType` argument value of `4` or `filepattern`\.
 
 To perform a file pattern comparison operation, open a command prompt and run the following command:
 
@@ -118,7 +137,7 @@ The following diagram shows the comparison process and the outputs for this exam
 
 To complete the procedures in this tutorial, make sure that you have the following set up:
 + An installed and configured installation of Amazon Lumberyard v1\.22 or later\. [Download the latest version of Amazon Lumberyard](https://aws.amazon.com/lumberyard/downloads/)\.
-+ A Lumberyard game project ready to build and compile\. You can use the StarterGame sample if you don't have a game project\. [Learn more about the StarterGame Sample](sample-level-starter-game.md)\.
++ A Lumberyard game project ready to build and compile\. You can use the Starter Game sample if you don't have a game project\. [Learn more about the Starter Game sample project\.](sample-level-starter-game.md)\.
 
 ### Setup<a name="how-to-perform-list-comparisons-setup"></a>
 

@@ -2,7 +2,7 @@
 
 The **PhysX Terrain** component exports and saves the terrain as an asset that loads at runtime\. The **PhysX Terrain** component is required for games in which physics interacts with the terrain\. For example, you can create a terrain collider so that your entities can interact with it, such as a barrel that falls to the ground and then rolls to a stop\.
 
-For more information about using PhysX components, see [Simulating Physics Behavior with the PhysX System](physx-intro.md)\.
+For more information about using PhysX components, see [Simulating physics behavior with the PhysX system](physx-intro.md)\.
 
 **Topics**
 + [PhysX Terrain Component Properties](#physx-terrain-component-properties)
@@ -10,7 +10,7 @@ For more information about using PhysX components, see [Simulating Physics Behav
 
 ## PhysX Terrain Component Properties<a name="physx-terrain-component-properties"></a>
 
-![\[PhysX Terrain component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/phsx-terrain-component-properties.png)
+![\[PhysX Terrain component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/physx/phsx-terrain-component-properties.png)
 
 
 | Property | Description | 

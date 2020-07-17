@@ -12,7 +12,7 @@ In addition, ensure that all shaders are compiled before triggering an update or
 
 Cached shadow cascades are centered around the rendering camera by default, and automatically recenter and update once the camera gets close to the cascade border\.
 
-You can override this automated placement by using the **Environment:RecomputeStaticShadows** flow graph node, which takes the world space **Min** and **Max** input positions of the bounding area for the first cached cascade\. Bounding boxes for subsequent cached cascades are scaled versions of the preceding cascades and are based on the **NextCascadeScale** input multiplier\. The **Trigger** input causes an update of all cached shadow cascades\.
+You can override this automated placement by using the **Recompute Static Shadows** Script Canvas node, which takes the world space **Min** and **Max** input positions of the bounding area for the first cached cascade\. Bounding boxes for subsequent cached cascades are scaled versions of the preceding cascades and are based on the **NextCascadeScale** input multiplier\. The **Trigger** input causes an update of all cached shadow cascades\.
 
 **Note**  
 To keep you informed, a warning message appears in the console each time a cached shadow cascade is updated\.

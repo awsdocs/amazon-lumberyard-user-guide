@@ -10,7 +10,7 @@ As part of Asset Processing, the Asset Processor generates and stores product an
 + [Asset Processor Interface](asset-pipeline-processor-ui.md)
 + [Enabling Asset Processor's Faster Scanning Mode](asset-processor-faster-scanning.md)
 + [Importing Assets into Lumberyard](asset-pipeline-importing.md)
-+ [Working with the **FBX Settings** Tool](char-fbx-importer.md)
++ [Working with the FBX Settings Tool](char-fbx-importer.md)
 + [Using Resource Compiler](asset-pipeline-rc.md)
 + [Debugging Asset Processor](asset-processor-debugging.md)
 
@@ -30,7 +30,7 @@ Use a unique cache directory\. Do not share the cache directory with a Windows s
 
  You can open the Asset Processor options from the notification area on the taskbar\.
 
-![\[Right-click the Asset Processor icon in your notification area on the taskbar, and then choose Show.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset-pipeline-processor-options.png)
+![\[Right-click the Asset Processor icon in your notification area on the taskbar, and then choose Show.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assets/pipeline/asset-pipeline-processor-options.png)
 
 You don't need to close Asset Processor when you get the latest updates from source control\. You can start Lumberyard Editor while Asset Processor is still processing your assets\.
 

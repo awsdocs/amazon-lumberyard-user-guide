@@ -20,7 +20,7 @@ You can adjust the **SimulatedObject** node to change its animation during runti
 **Example**  
 
    Your parameter should look like the following\.  
-![\[Create a stiffness parameter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/simulated-objects-25.png)
+![\[Create a stiffness parameter.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/simulated-objects-25.png)
 
 1. Click **Create**\.
 
@@ -32,7 +32,7 @@ You can adjust the **SimulatedObject** node to change its animation during runti
 **Example**  
 
    Your parameters should look like the following\.  
-![\[Create your parameters for your anim graph.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/simulated-objects-26.png)
+![\[Create your parameters for your anim graph.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/simulated-objects-26.png)
 
 1. In the **Anim Graph** grid, right\-click and choose **Create Node**, **Sources**, **Parameters**\.
 
@@ -40,7 +40,7 @@ You can adjust the **SimulatedObject** node to change its animation during runti
 **Example**  
 
    Your graph should look like the following\.  
-![\[Connect the Parameters0 node to the SimulationObject0 node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/simulated-objects-27.png)
+![\[Connect the Parameters0 node to the SimulationObject0 node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/simulated-objects-27.png)
 
 1. Pay the anim graph and adjust the sliders for the **Parameters** to view your changes\.
 

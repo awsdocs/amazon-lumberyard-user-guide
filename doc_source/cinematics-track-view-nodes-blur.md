@@ -2,9 +2,9 @@
 
 You can use the **Radial Blur** node to blur the animation radially outward from a center point\. 
 
-**To add a Radial Blur node in the **Track View****
+**To add a Radial Blur node in the Track View**
 
-1. In the **Track View**, right\-click the sequence \(top node\) or the **Director** node in the tree as applicable, and then choose **Add Radial Blur Node**\.
+1. In the Track View, right\-click the sequence \(top node\) or the **Director** node in the tree as applicable, and then choose **Add Radial Blur Node**\.
 
 1. For each of the keys in the following list, click the applicable key listed under the **RadialBlur** node\.
 

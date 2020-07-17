@@ -1,11 +1,7 @@
 # Using Tags with Animation Graphs<a name="animation-editor-using-tags"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 In the **Animation Editor**, you use tags to describe the current state of your character and control the transition between different states\. Tags are Boolean flags that are either active \(enabled\) or inactive \(disabled\)\. Some examples of tags are Happy, Holding Sword, and Left Leg Injured\. 
 
@@ -18,7 +14,7 @@ Tags are represented by animation graph parameters\. When you define a parameter
 1. In Lumberyard Editor, choose **Tools**, **Animation Editor**\.
 
 1. In the **Animation Editor**, in the **Parameters** pane, click the **\+** button\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/anim-graph-parameters-pane.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/anim-graph-parameters-pane.png)
 
 1. In the **Create Parameter** dialog box, do the following:
 
@@ -29,7 +25,7 @@ Tags are represented by animation graph parameters\. When you define a parameter
    1. For **Description**, enter an optional description for your tag\.
 
    1. For **Default**, select the check box to enable the tag\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/anim-graph-create-parameter-dialog-box.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/anim-graph-create-parameter-dialog-box.png)
 
 1. Click **Create**\.
 
@@ -37,13 +33,13 @@ Tags are represented by animation graph parameters\. When you define a parameter
 
 Use tag conditions to enable the state machine to change the active state\. For example, you can choose a specific jump animation based on the active tag\. To transition to Awesome Jump, you would enable the Freaky, Awesome, and Happy tags\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/anim-graph-tag-conditions-example.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/anim-graph-tag-conditions-example.png)
 
 You can also use tags in combination with wildcard transitions to choose a specific state that other states can access\. Wildcard transitions are transitions that can originate from any node\. In the preceding example, the arrow to the left of **Idle** represents the wildcard transition\. This means you can transition from any state to the **Idle** state, as long as the condition for the wildcard transition is met\.
 
 Tag conditions have two attributes: test function and tags\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/anim-graph-tag-conditions-attributes.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/anim-graph-tag-conditions-attributes.png)
 
 **Test Function**  
 Specifies the tag status to pass the condition\.
@@ -59,7 +55,7 @@ Specifies the tags that the condition checks for\.
 
 To add a tag to a condition, select the transition line between your nodes\. In the **Attributes** pane, select the values that you want to use\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/anim-graph-tag-conditions-values.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/anim-graph-tag-conditions-values.png)
 
 **Note**  
 You can only choose from tags that are available in the **Parameters** pane\. For more information, see [Adding Tags](#animation-editor-adding-tags)\.

@@ -1,11 +1,7 @@
 # Using the Menu Bar<a name="lumberyard-editor-menus"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
+This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
 
 The main menu bar in Lumberyard Editor provides access to the features and tools to design, run, and deploy your game, as well as, work with external tools and find online information\. To access the available features and tools, you can use the menu, the buttons on the toolbars, or the keyboard\. You can pause on the buttons to see tool tips\. Some editors and tools have keyboard shortcuts\. For a comprehensive list, see [Using Keyboard Shortcuts](lumberyard-editor-shortcut-keys.md)\.
 
@@ -150,7 +146,7 @@ In the **Game** menu, you can add and test enhancements to your game project\.
 | Game Menu Item | Description | 
 | --- | --- | 
 | Play Game | Switch to game mode \(runtime\)\. To return to edit mode, press Esc\. | 
-| Enable Physics/AI | Toggle physics and AI in your level to use the PhysX system if the event bus and handlers are not specified\. For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\. | 
+| Enable Physics/AI | Toggle physics and AI in your level to use the PhysX system if the event bus and handlers are not specified\. For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\. | 
 | Export to Engine | Export the level data to a level\.pak file in order to play the level in game mode\. | 
 | Export Selected Objects | Save the selected geometry to an \.obj or \.fbx file to make it available for use with other entities\. | 
 | Export Occlusion Mesh | Save the occlusion mesh for application to other entities\. | 

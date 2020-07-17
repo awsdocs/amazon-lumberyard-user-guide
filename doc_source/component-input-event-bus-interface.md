@@ -17,7 +17,7 @@ You can find example Lua scripts and code in the `lumberyard_version\dev\Gems\St
 
 Use the following notification functions with the event notification bus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### <a name="component-input-event-notification-input"></a>
 
@@ -67,7 +67,7 @@ return held
 
 Use the following functions with the input request bus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

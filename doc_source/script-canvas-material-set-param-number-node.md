@@ -6,7 +6,7 @@ Sets a material parameter with a number value\.
 + [Inputs](#script-canvas-material-set-param-number-node-input)
 + [Outputs](#script-canvas-material-set-param-number-node-output)
 
-![\[setparamnumbernode, setparamnumber\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-set-param-number-node.png)
+![\[setparamnumbernode, setparamnumber\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-set-param-number-node.png)
 
 ## Inputs<a name="script-canvas-material-set-param-number-node-input"></a>
 

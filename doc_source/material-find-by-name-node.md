@@ -20,7 +20,7 @@ In some cases, you might need to store the material for later use\. For more inf
 + [Inputs](#material-find-by-name-node-input)
 + [Outputs](#material-find-by-name-node-output)
 
-![\[findbymaterialname, findbymaterialnamdenode, findbynamenode, findbyname\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-find-by-name-node.png)
+![\[findbymaterialname, findbymaterialnamdenode, findbynamenode, findbyname\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-find-by-name-node.png)
 
 ## Inputs<a name="material-find-by-name-node-input"></a>
 

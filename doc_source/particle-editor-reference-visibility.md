@@ -2,7 +2,7 @@
 
 In the **Visibility** attribute, specify how to control the particle's visibility\.
 
-![\[Visibility attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-editor-visibility.png)
+![\[Visibility attributes in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-editor-visibility.png)
 
 
 **Visibility Attribute Parameters**  

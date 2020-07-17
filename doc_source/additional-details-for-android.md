@@ -142,13 +142,13 @@ During the install process for Visual Studio, you must select **Visual C\+\+ Mob
 
 1. Select **Visual C\+\+ Mobile Development**\.
 
-1. After the installation is complete, navigate to `lumberyard_version/dev/Solutions` and open the `LumberyardSDK_vc140.sln` file\.
+1. After the installation is complete, navigate to `lumberyard_version/dev/Solutions` and open the `LumberyardSDK_vs2017.sln` file\.
 
 1.  After the file loads, select ARM as your target from the dropdown menu at the top of the editor\.  
-![\[Select ARM in Visual Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-build-your-code-arm.png)
+![\[Select ARM in Visual Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-build-your-code-arm.png)
 
 1. Set your startup project to the Android launcher\.  
-![\[Set your startup project to the Android launcher in Visual Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-build-your-code-android-build-your-code-launcher.png)
+![\[Set your startup project to the Android launcher in Visual Studio.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-build-your-code-android-build-your-code-launcher.png)
 
 1. Build using the standard Visual Studio shortcuts, such as **Ctrl\+Shift\+B**, or use the dropdown menus\.
 
@@ -172,7 +172,7 @@ You must open another instance of Visual Studio to debug your APK and follow the
 
      Your configuration should look similar to the following example\.  
 **Example**    
-![\[Set up debugging in Visual Studio for your Android app.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/android-debug-your-app-visual-studio.png)
+![\[Set up debugging in Visual Studio for your Android app.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/mobile/android/android-debug-your-app-visual-studio.png)
 
 1. To open code files, choose **File**, **Open**\.
 

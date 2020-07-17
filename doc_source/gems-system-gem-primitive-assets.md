@@ -10,4 +10,4 @@ You can add the primitive objects to your game project by doing either of the fo
 
 For more information, see [Creating a Game Project in Lumberyard](configurator-projects.md#creating-a-game-project)\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/project-template-default-simple-level.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/gems/project-template-default-simple-level.png)

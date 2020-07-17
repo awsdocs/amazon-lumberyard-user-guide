@@ -6,7 +6,7 @@ Loads a time of day preset `XML` file `file_name.xml` and then updates the sky\.
 + [Inputs](#load-definition-file-input)
 + [Outputs](#load-definition-file-output)
 
-![\[loaddefinitionfile, timeofdaypresetfile, loadtimeofdayfile\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-load-definition-file-node.png)
+![\[loaddefinitionfile, timeofdaypresetfile, loadtimeofdayfile\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-load-definition-file-node.png)
 
 ## Inputs<a name="load-definition-file-input"></a>
 

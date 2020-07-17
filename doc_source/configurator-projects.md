@@ -1,11 +1,7 @@
 # Creating and Switching Game Projects<a name="configurator-projects"></a>
 
-
 ****  
-
-|  | 
-| --- |
-| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
+This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
 Use the Project Configurator to create and change the settings that affect building and editing of a game project\. You can use the Project Configurator to do the following:
 + Create a game project
@@ -33,7 +29,7 @@ The **Empty** template has the minimum features required for the editor to load 
 ### Default Template<a name="project-configurator-default-template"></a>
 
 The **Default** template builds on the **Empty** template and enables the following gems to provide basic features for game development:
-+ **Amazon GameLift** – Provides flow graph nodes for using this service and creating game sessions
++ **Amazon GameLift** – Provides capabilities to use this service and create game sessions
 + **Camera** – Includes a basic camera component for runtime rendering
 + **ChatPlay** – Includes the interface for triggering events based on Twitch chat activity
 + **Cloud Canvas** – Provides visual scripting capabilities to power your game backend with AWS services
@@ -79,7 +75,7 @@ In Lumberyard version 1\.23, if you intend to create new projects, the following
 **Compile the engine and asset pipeline**\* – Compile the engine code and asset pipeline to include any changes that you have made
 **Compile the Lumberyard Editor and tools**\* – Compile Lumberyard tools to include any changes that you have made
 \*If you select any of these options, you may need to perform additional tasks, such as installing Microsoft Visual Studio\. If so, these tasks display on the **Install software** and **Required SDKs** pages\. Follow the instructions in Lumberyard Setup Assistant to obtain the software and third\-party SDKs that aren't installed\.  
-![\[Create a new game project with Project Configurator and Lumberyard Setup Assistant.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setup/ui-create-new-project-A-1.22.png)
+![\[Create a new game project with Project Configurator and Lumberyard Setup Assistant.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/configurator/setup/ui-create-new-project-A-1.25.png)
 
 1. In the **Create a new project** window, do the following:
 
@@ -90,7 +86,7 @@ In Lumberyard version 1\.23, if you intend to create new projects, the following
    1. Choose one of the following: **Default** or **Empty**\.
 
    1. Click **Create project**\.  
-![\[Create a new project in the Project Configurator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setup/ui-create-new-project-B-1.22.png)
+![\[Create a new project in the Project Configurator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/configurator/setup/ui-create-new-project-B-1.22.png)
 
 1. When your project is created, click **Continue**\.
 
@@ -112,7 +108,7 @@ If you selected **Code & Assets** gems, you must build your project\.
 **Note**  
 In Lumberyard version 1\.23, the initial build time for a new project can be lengthy\. It can take approximately one hour on higher end systems\.
 
-      For more information, see [Building Your Game Project](building-your-lumberyard-game-project.md)\.
+      For more information, see [Building Lumberyard projects](game-build-intro.md)\.
 
 1. Close the Project Configurator\.
 
@@ -120,6 +116,7 @@ In Lumberyard version 1\.23, the initial build time for a new project can be len
    + Open Lumberyard Setup Assistant and, on the **Summary** page, click **Launch editor**
    + Start `Editor.exe` from one of the following directories:
      + For Visual Studio 2017: `lumberyard_version\dev\Bin64vc141`
+     + For Visual Studio 2019: `lumberyard_version\dev\Bin64vc142`
 
 ------
 #### [ Command Line ]
@@ -154,7 +151,7 @@ When you create a game project from a command line, you can enter `lmbr` for a l
 
 1. Build the game project\. 
 
-   For more information, see [Building Your Game Project](building-your-lumberyard-game-project.md)\.
+   For more information, see [Building Lumberyard projects](game-build-intro.md)\.
 
 ------
 
@@ -169,11 +166,11 @@ Use the Project Configurator to set default game project that opens in Lumberyar
    + Open the Lumberyard Project Configurator, located at `lumberyard-version\dev\Bin64BuildPlatform\ProjectConfigurator.exe`\. For example, when using Visual Studio 2017 as your build platform, the Project Configurator is located at `lumberyard-version\dev\Bin64vc141\ProjectConfigurator.exe`\.
 
 1. On the **Summary** page, select the project and click **Set as default**\.  
-![\[Choose a new default project in the Project Configurator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setup/ui-set-default-project-1.22.png)
+![\[Choose a new default project in the Project Configurator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/configurator/setup/ui-set-default-project-1.25.png)
 
 1. \(Optional\) Click **Enable Gems** and select the additional features and assets that you want available to design your game\. If you select a gem labeled with **Code & Assets**, you must build your project from a command line\. 
 
-   For more information, see [Building Your Game Project](building-your-lumberyard-game-project.md)\.
+   For more information, see [Building Lumberyard projects](game-build-intro.md)\.
 
 1. \(Optional\) Choose **Advanced Settings** and verify that the **System entity** and **Memory** settings are appropriate for your project\.
 
@@ -182,6 +179,7 @@ Use the Project Configurator to set default game project that opens in Lumberyar
 1. After setting the default project, open Lumberyard Editor with your preferred method:
    + From the desktop, double\-click the Lumberyard Editor icon
    + For Visual Studio 2017, navigate to the `lumberyard_version\dev\Bin64vc141` directory and double\-click `Editor.exe`
+   + For Visual Studio 2019, navigate to the `lumberyard_version\dev\Bin64vc142` directory and double\-click `Editor.exe`
 
    After the first launch and each time you change projects, Asset Processor runs in the background\. Asset Processor manages your assets and project files\. While Lumberyard Editor opens, you can see messages appear with status information\. 
 
@@ -199,7 +197,7 @@ When you switch projects, you can specify the following:
 **To switch game projects**
 
 1. In Lumberyard Editor, choose **File**, **Project Settings**, **Switch Projects**\.  
-![\[Switch projects option on the Project Settings sub menu of the File menu in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/setup/ui-editor-switch-project-1.22.png)
+![\[Switch projects option on the Project Settings sub menu of the File menu in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/configurator/setup/ui-editor-switch-project-1.22.png)
 
 1. You must close Lumberyard Editor before you can open the Project Configurator\. In the dialog box, choose **Save**\.
 

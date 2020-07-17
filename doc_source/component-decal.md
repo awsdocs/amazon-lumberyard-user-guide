@@ -1,12 +1,5 @@
 # Decal<a name="component-decal"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 Use the **Decal** component to place a component on an entity\.
 
 ## Decal Component Properties<a name="component-decal-properties"></a>
@@ -56,7 +49,7 @@ Minimum spec for the decal to be active\.
 
 Use the following request function with the EBus interface to communicate with other components of your game\.
 
-For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the event bus \(EBus\) interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ### SetVisibility<a name="decal-ebus-setvisibility"></a>
 

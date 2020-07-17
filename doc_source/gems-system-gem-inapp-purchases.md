@@ -1,12 +1,5 @@
 # In\-App Purchases Gem<a name="gems-system-gem-inapp-purchases"></a>
 
-
-****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
-
 The In\-App Purchases Gem enables you to implement in\-app purchases in your Android and iOS games\. Platform\-specific information is handled by the provided API, allowing you to use a single implementation of the In\-App Purchases Gem for both Android and iOS\.
 
 **Note**  
@@ -22,77 +15,63 @@ EBUS_EVENT(InAppPurchases::InAppPurchasesRequestBus, Initialize);
 
 To use the API, include the `InAppPurchasesBus.h` header file\.
 
-You can also access the API through the flow graph\.
+You can also access the API through Script Canvas\.
 
 **Initialize**  
 Call this method first for all platforms\. This method handles all necessary setup before the API can be used\.  
-Parameters: None  
-Flow Graph node: None
+Parameters: None
 
 **QueryProductInfo**  
 Use this method when the product IDs are shipped with the game\. This method looks for a product ID file \(`product_ids.json` on Android or `product_ids.plist` on iOS\) and retrieves product details using the IDs that are specified in the file\.  
-Parameters: None  
-Flow Graph node: None
+Parameters: None
 
 **QueryProductInfoByIds**  
 Use this method to retrieve product details if the product IDs are provided at runtime, for example if they are retrieved from a server at runtime\.  
-Parameters: `AZStd::vector<AZStd::string>& productIds`  
-Flow Graph node: `InAppPurchases:QueryProductInfo`
+Parameters: `AZStd::vector<AZStd::string>& productIds`
 
 **QueryProductInfoById**  
 Use this method to retrieve product details if the product IDs are provided at runtime, for example if they are retrieved from a server at runtime\. Use this method to retrieve details for a single product only\.  
-Parameters: `AZStd::string& productId`  
-Flow Graph node: `InAppPurchases:QueryProductInfo`
+Parameters: `AZStd::string& productId`
 
 **QueryPurchasedProducts**  
 Use this method to query the Google Play Store for products that were already purchased by the signed\-in user\. On iOS, this method reads the receipt that is stored on the device and lists the items purchased by the signed\-in user\.  
-Parameters: None  
-Flow Graph node: `InAppPurchases:QueryPurchasedProducts`
+Parameters: None
 
 **RestorePurchasedProducts**  
 Use this method to restore purchases that were made by the user\. This applies to purchases made on a different device, where the current device does not have receipts stored locally\. This method is supported on iOS only\.  
-Parameters: None  
-Flow Graph node: None
+Parameters: None
 
 **ConsumePurchase**  
 Call this method for all purchases that are consumable, such as virtual currencies, health, and ammo\. This method requires the purchase token provided by the Google Play Store when the product was purchased\. This method is required and supported on Android only\.  
-Parameters: `AZStd::string& purchaseToken`  
-Flow Graph node: `InAppPurchases:ConsumePurchase`
+Parameters: `AZStd::string& purchaseToken`
 
 **FinishTransaction**  
 Call this method at the end of a transaction\. This method requires the transaction ID provided by the iOS App Store when the product was purchased\. It also accepts a boolean parameter to indicate whether or not to download content that is hosted on Apple servers\. If this method is not called, the transaction will be reported each time the game is restarted\. This method is required and supported on iOS only\.  
-Parameters: `AZStd::string& transactionId` \| `bool downloadHostedContent`  
-Flow Graph node: `InAppPurchases:FinishTransaction`
+Parameters: `AZStd::string& transactionId` \| `bool downloadHostedContent`
 
 **PurchaseProduct**  
 Use this method to request to purchase a product from the Google Play Store or the iOS App Store\. This method requires the product ID of the product being purchased\.  
-Parameters: `AZStd::string& productId`  
-Flow Graph node: `InAppPurchases:PurchaseProduct`
+Parameters: `AZStd::string& productId`
 
 **PurchaseProductWithDeveloperPayload**  
 Use this method to request to purchase a product from the Google Play Store or the iOS App Store\. This method requires the product ID of the product being purchased\. It accepts an additional parameter for the developer payload, which is used by Android to associate a purchase with a user account\. When you request purchased products, you can use the developer payload to determine if the signed\-in user made the purchase\. On iOS, the user account is used in fraud detection\.  
-Parameters: `AZStd::string& productId` \| `AZStd::string& developerPayload`  
-Flow Graph node: `InAppPurchases:PurchaseProduct`
+Parameters: `AZStd::string& productId` \| `AZStd::string& developerPayload`
 
 **GetCachedProductInfo**  
 Use this method to return product details that are stored in a cache each time there is a query for information\. The cache only stores product details that were retrieved during the previous call to `QueryProductInfo`/`QueryProductInfoByIds`/`QueryProductInfoById`\.  
-Parameters: None  
-Flow Graph node: None
+Parameters: None
 
 **GetCachedPurchasedProductInfo**  
 Use this method to return details for purchased products that are stored in a cache\. The cache only stores details for purchased products that were retrieved during the previous call to `QueryPurchasedProducts`\.  
-Parameters: None  
-Flow Graph node: None
+Parameters: None
 
 **ClearCachedProductDetails**  
 Use this method to clear the product details that were cached by the previous call to query product details\.  
-Parameters: None  
-Flow Graph node: None
+Parameters: None
 
 **ClearCachedPurchasedProductDetails**  
 Use this method to clear the details for purchased products that were cached by the previous call to query details for purchased products\.  
-Parameters: None  
-Flow Graph node: None
+Parameters: None
 
 ## Handling Responses to Queries and Purchases<a name="gem-inapp-purchases-responses-to-queries-purchases"></a>
 

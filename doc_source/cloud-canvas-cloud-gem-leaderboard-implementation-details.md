@@ -2,7 +2,7 @@
 
 An entity named `Leaderboard` contains the `CloudGemLeaderboardClientComponent`\.
 
-![\[CloudGemLeaderboardClientComponent\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud-canvas-cloud-gem-leaderboard-client-component.png)
+![\[CloudGemLeaderboardClientComponent\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-canvas-cloud-gem-leaderboard-client-component.png)
 
 The `CloudGemLeaderboardClientComponent` enables the gem's API to be called from other components on that entity and receives notifications for those calls\.
 

@@ -8,7 +8,7 @@ Lumberyard v1\.22 and later use a file tagging system to include or exclude file
 
 ## Creating File Tag Rules<a name="creating-file-tag-rules"></a>
 
-Use the Lumberyard Asset Editor to add custom file tag rules to either `blacklist.filetag` or `whitelist.filetag`, depending on whether you are excluding or including asset files\. Both of these `.filetag` files are located in the `dev\Engine` directory\. File tag rules consist of two required parts:
+Use the Lumberyard Asset Editor to add custom file tag rules to either `exclude.filetag` or `include.filetag`, depending on whether you are excluding or including asset files\. Both of these `.filetag` files are located in the `dev\Engine` directory\. File tag rules consist of two required parts:
 + A **File Pattern** that defines the files to match this rule\. Supported patterns include:
   + **Exact** \(for example, `readme.txt`\)
   + **Wildcard** \(for example, `*.cfxb`\)
@@ -24,7 +24,7 @@ Some file tags have designated uses within Lumberyard\. Various tools may requir
 
 1. In Lumberyard Editor, choose **Tools**, **Asset Editor**\.
 
-1. Choose **File**, **Open**, and select either `blacklist.filetag` or `whitelist.filetag` from the `Engine` directory\.
+1. Choose **File**, **Open**, and select either `exclude.filetag` or `include.filetag` from the `Engine` directory\.
 
 1. Open **Definition**, find the line labeled **File Tag Map**, and click on the '**\+**' button to add a new child element\.  
 ![\[Start a new file tag rule by adding a new element to the File Tag Map.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/assetbundler/asset-bundler-filetag-new-element.png)
@@ -50,13 +50,13 @@ You can use the C\+\+ FileTag API to write your own logic for determining whethe
        AZStd::vector<AZStd::string> tags{ "ignore", "shader" };
        
        bool shouldIgnore = false;
-       QueryFileTagsEventBus::EventResult(shouldIgnore, FileTagType::BlackList, &QueryFileTagsEventBus::Events::Match, szPath, tags);
+       QueryFileTagsEventBus::EventResult(shouldIgnore, FileTagType::exclude, &QueryFileTagsEventBus::Events::Match, szPath, tags);
        
        return shouldIgnore;
    }
 ```
 
 **Note**  
-In the previous example, it shows querying the `QueryFileTagsEventBus` on the ID `FileTagType::BlackList`\. This implies that this query is using the file tagging rules specified in the `blacklist.filetag` file\.
+In the previous example, it shows querying the `QueryFileTagsEventBus` on the ID `FileTagType::exclude`\. This implies that this query is using the file tagging rules specified in the `exclude.filetag` file\.
 
-You can find the FileTag API in the `dev\Code\Framework\AzFramework\AzFramework\FileTag` directory\. In that directory, `FileTag.h` declares the `Match` method that was used in the previous example\. There are other methods there, such as `GetTags`, which you can use to write more complex logic\. You may find it useful to work with the `BlackListFileComponent` helper class, found in `FileTagComponent.h`\. This component class automatically loads the default exclusion file for you, sets the file tag type to `FileTagType::BlackList`, and connects to the `QueryFileTagsEventBus` upon activation\.
+You can find the FileTag API in the `dev\Code\Framework\AzFramework\AzFramework\FileTag` directory\. In that directory, `FileTag.h` declares the `Match` method that was used in the previous example\. There are other methods there, such as `GetTags`, which you can use to write more complex logic\. You may find it useful to work with the `excludeFileComponent` helper class, found in `FileTagComponent.h`\. This component class automatically loads the default exclusion file for you, sets the file tag type to `FileTagType::exclude`, and connects to the `QueryFileTagsEventBus` upon activation\.

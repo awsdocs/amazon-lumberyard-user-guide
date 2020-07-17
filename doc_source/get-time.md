@@ -6,7 +6,7 @@ Returns the current time of day for the level\. Time values are specified as dec
 + [Inputs](#get-time-input)
 + [Outputs](#get-time-output)
 
-![\[gettime gettimenode, gettimeofdaynode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-get-time-node.png)
+![\[gettime gettimenode, gettimeofdaynode\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-get-time-node.png)
 
 ## Inputs<a name="get-time-input"></a>
 

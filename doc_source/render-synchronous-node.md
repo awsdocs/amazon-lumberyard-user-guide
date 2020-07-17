@@ -9,7 +9,7 @@ If the **Set Input <Type>** nodes don't modify a procedural material, which mean
 + [Inputs](#render-synchronous-node-input)
 + [Outputs](#render-synchronous-node-output)
 
-![\[RenderSynchronousNode generates the texture map for all materials with parameter changes.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scriptcanvasnodes/script-canvas-render-synchronous-node.png)
+![\[RenderSynchronousNode generates the texture map for all materials with parameter changes.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/scripting/script-canvas/scriptcanvasnodes/script-canvas-render-synchronous-node.png)
 
 ## Inputs<a name="render-synchronous-node-input"></a>
 

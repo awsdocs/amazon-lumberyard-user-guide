@@ -29,6 +29,6 @@ Unmodified properties inherit changes made to the source slice\. If you don't wa
 1. In the **Entity Inspector**, right\-click an unchanged component property\. 
 
 1. Choose **Force property override**\.  
-![\[Override changes for a property on a component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-slices-force-override-modification.png)
+![\[Override changes for a property on a component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-slices-force-override-modification.png)
 
    The property override appears orange to indicate that it no longer inherits modifications from the slice\.

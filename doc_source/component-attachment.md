@@ -1,17 +1,10 @@
 # Attachment<a name="component-attachment"></a>
 
-
-****  
-
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
 The **Attachment** component lets an entity attach to a bone on the skeleton of another entity\.
 
 ## Attachment Component Properties<a name="component-attachment-properties"></a>
 
-![\[Attachment component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/attachment-component-properties.png)
+![\[Attachment component properties.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/attachment-component-properties.png)
 
 The **Attachment** component has the following properties\.
 
@@ -32,7 +25,7 @@ The **Attachment** component has the following properties\.
 
 Use the following request functions with the event bus \(EBus\) interface to communicate with other components of your game\.
 
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  
@@ -47,7 +40,7 @@ For more information, see [Working with the Event Bus \(EBus\) System](ebus-intr
 
 Use the following notification functions with the EBus interface to communicate with other components of your game\. 
 
-For more information, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 
 ****  

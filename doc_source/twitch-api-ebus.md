@@ -2,7 +2,7 @@
 
 Calls that are made on the `TwitchRequestBus` return a unique `ReceiptID` object\. Because calls are made asynchronously, responses are not guaranteed to arrive in the same order as requested\. Each response type includes a `ReceiptID` object as a member\. To determine which response corresponds to a request, you can compare the `ReceiptID` instances from the requests to the `ReceiptID` instances in the responses\.
 
-For information about event buses that Lumberyard uses, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For information about event buses that Lumberyard uses, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 **Topics**
 + [General](twitch-api-ebus-general.md)

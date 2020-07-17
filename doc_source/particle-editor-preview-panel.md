@@ -2,7 +2,7 @@
 
 You can use the **Preview** panel in the **Particle Editor** to view the particle effects\.
 
-![\[Particle panel in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particle-preview-panel.png)
+![\[Particle panel in the Particle Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/particles/particle-preview-panel.png)
 
 This panel has the following features:
 

@@ -8,11 +8,11 @@ The following images show a terrain heightmap and the corresponding generated te
 
 **Example Terrain Heightmap**  
 
-![\[Create a terrain heightmap in Lumberyard\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-heightmap-create.png)
+![\[Create a terrain heightmap in Lumberyard\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain/terrain-heightmap-create.png)
 
 **Example Generated Terrain**  
 
-![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain-heightmap-create-2.png)
+![\[\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/terrain/terrain-heightmap-create-2.png)
 
 If you want to create the highest quality terrain heightmap for a 2K world, use the following settings:
 + 2K heightmap

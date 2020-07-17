@@ -7,7 +7,7 @@ You can run Waf using the following methods:
 + Waf\-generated, Visual Studio solution file\. Waf creates a Visual Studio solution file along with the projects specified in the selected project specs\. If more than one spec file includes the same project, only one project file is created to prevent duplicates\. Waf uses the project specs to determine the projects, project filters, and possible build configurations\. Waf uses the wscript files to identify individual project definitions\.
 
 **Note**  
-Waf requires Python 2\.7 or later\.
+Waf is compatible with the version of Python 3 that comes bundled with Lumberyard\.
 
 Lumberyard includes the [Project Configurator](configurator-intro.md), a standalone application that allows you to specify to Waf which game templates and assets \(Gems\) to include in the game build\.
 

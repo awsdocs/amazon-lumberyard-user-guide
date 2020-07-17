@@ -1,20 +1,27 @@
 # Video Playback<a name="component-videoplayback"></a>
 
+You can use the **Video Playback** component to play a video on an entity in your Lumberyard level\. For example, you can use a flat or plane entity to simulate a movie screen\. You add the video playback component to the entity and specify a video file to display\.
 
-****  
+You can also play a video on a level loading screen\. For more information, see [Defining Game and Level Load Screens](ui-editor-load-screens.md)\.
 
-|  | 
-| --- |
-| Component entity system is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
-
-You can use the **Video Playback** component to play a video file on an entity in your Lumberyard level\. For example, you can use a flat or plane entity to simulate a movie screen\. You add the **Video Playback** component to it and specify a video file to display\. You can use Script Canvas or Lua scripting to trigger the video to play, pause, or stop, depending on player actions\.
+You can use Script Canvas or Lua scripting to trigger the video to play, pause, or stop, depending on player actions\.
 
 ## Prerequisites<a name="prerequisites-video-playback-component"></a>
 
 To use the **Video Playback** component, you must do the following:
 + Install either FFmpeg or LibAV\.
-+ Enable the Video Playback gem for your game project\. See [Using Gems to Add Modular Features and Assets](gems-system-gems.md)\.
++ Enable the **Video Playback** gem for your game project\. See [Enabling Gems](gems-system-using-project-configurator.md)\.
 + Rebuild your game project\.
+
+**Important**  
+Two additional steps are required to use FFmpeg in the current Lumberyard release\.  
+ In the file, `\dev\Gems\VideoPlayback\Code\Source\decoder.h`, at line 32, insert the following preprocessor directive\.   
+
+   ```
+   #pragma warning(disable : 4996)
+   ```
+This preprocessor directive will disable compilation warnings associated with FFmpeg, which would otherwise be treated as errors\. 
+Once your project is compiled, you will need to manually copy the \.dll files from `\3rdParty\FFmpeg\3.2\bin\` to the build output folder `\dev\Bin64vc141_or_vc142` 
 
 You can also set your video to play in visual stereo \(not audio stereo\)\. To test this feature, you must use a virtual reality head mounted display \(HMD\)\.
 
@@ -27,7 +34,6 @@ Audio isn't currently supported with the **Video Playback** component, but you c
 + [Using the Video Playback Component](#component-videoplayback-instructions)
 + [Setting Up Stereo Video Playback](#component-videoplayback-stereo)
 + [Lua Bindings for Video Playback](#component-videoplayback-lua)
-+ [Setting Up Video Playback with Flow Graph](#component-videoplayback-flowgraph)
 
 ## Setting Up Video Playback<a name="component-videoplayback-setup"></a>
 
@@ -64,7 +70,7 @@ You must name the directory `3.2`, regardless of the FFmpeg version that you're 
    + `lib`
 
 1. Run Lumberyard Setup Assistant and, on the **Install optional SDKs** page, verify that Lumberyard detects FFmpeg\.  
-![\[Install FFmpeg for Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-setup-2.png)
+![\[Install FFmpeg for Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-videoplayback-setup-2.png)
 
 ### Installing LibAV<a name="install-libav"></a>
 
@@ -92,7 +98,7 @@ To open and extract `.7z` files, you must use a 7z application, such as 7\-Zip\.
    + `md5sum`
 
 1. Run Lumberyard Setup Assistant and on the **Install optional SDKs** page, verify that Lumberyard detects LibAV\.  
-![\[Install LibAV for Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-setup.png)
+![\[Install LibAV for Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-videoplayback-setup.png)
 
 ## Using the Video Playback Component<a name="component-videoplayback-instructions"></a>
 
@@ -125,14 +131,14 @@ The basic setup for the **Video Playback** component includes the following:
 1. Use the [Entity Inspector](component-entity-inspector.md) to add a **[Mesh](component-static-mesh.md)** component to your entity\.
 
 1. For the **Mesh** component, select a **Mesh asset**\. This is the asset that your video renders on\. A cube or plane is a good test mesh\.  
-![\[Mesh component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-mesh-component-properties.png)
+![\[Mesh component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-mesh-component-properties.png)
 
 1. Add the **Video Playback** component to the same entity\. 
 
 1.  In the **Video Playback** component, for **Video**, select the video to display\. 
 
 1. For **Texture name**, enter dollar sign \($\) and a name for your texture\. You can enter any name, but it must begin with a $ character to indicate that it's a render target\. For example, **$videotest** is a valid name, but **videotest** isn't\.   
-![\[Video Playback component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-videoname.png)
+![\[Video Playback component properties in Lumberyard Editor\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-videoplayback-videoname.png)
 
 1. For **Frame queue ahead count**, set the number of frames to buffer\.
 
@@ -142,36 +148,16 @@ The basic setup for the **Video Playback** component includes the following:
 
 1. Open the [Material Editor](mat-intro.md)\.
 
-1. To create a material\. click the**Add New Item** icon\. Enter a descriptive name, such as **myvideomaterial**\.  
-![\[Video Playback component material.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-material.png)
+1. To create a material\. click the **Add New Item** icon\. Enter a descriptive name, such as **myvideomaterial**\.  
+![\[Video Playback component material.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-videoplayback-material.png)
 
 1. Under **Texture Maps**, on the **Diffuse** line, enter the name of your video component's **Texture name** field\. You must include the $ character\.  
-![\[Diffuse property for the texture name.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-diffuse.png)
+![\[Diffuse property for the texture name.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-videoplayback-diffuse.png)
 
 1. Close the **Material Editor** and return to the [Entity Inspector](component-entity-inspector.md)\. In the **Mesh** component, for the **Material override** property, select the material that you created\.  
-![\[Select the material override in the Mesh component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-override.png)
+![\[Select the material override in the Mesh component.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-videoplayback-override.png)
 
- You can trigger the video to play at the start of your game using either flow graphs or Lua scripting\. The following procedure shows you how to create a simple flow graph to start playing the video when your game starts\. 
-
-
-****  
-
-|  | 
-| --- |
-| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Amazon Lumberyard Legacy Reference](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/)\. | 
-
-**To set up a flow graph to start your video**
-
-1.  In the viewport, right\-click on the static mesh/video playback entity\. Then click **Flowgraph**, **Add**\. Type a name for your new flow graph\. 
-
-1.  Drag a **Game:Start** node and a **VideoPlayback:Play** node onto your flow graph\. Connect the **output** port of the **Game:Start** node to the Activate port of the **VideoPlayback:Play** node\. 
-
-    Right\-click **Choose Entity** in the **VideoPlayback:Play** node and click **Assign graph entity**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-flowgraph.png)
-
-1.  To play the game and test your video playback, press **Ctrl G**\. 
-**Note**  
-Audio playback is not supported with this component\. You can trigger audio playback separately\.
+ You can trigger the video to play at the start of your game using Lua scripting\.
 
 ## Setting Up Stereo Video Playback<a name="component-videoplayback-stereo"></a>
 
@@ -187,7 +173,7 @@ To set up stereo video playback, follow the instructions in [Using the Video Pla
 
   All supported video files should have their stereo layout written into their metadata\. This, however, is not a requirement and may not have been inserted by your encoder\. If you would like to inject stereo metadata into your video, see [https://support\.google\.com/jump/answer/7044297?hl=en](https://support.google.com/jump/answer/7044297?hl=en)\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-stereo-layout.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-videoplayback-stereo-layout.png)
 
 When you enter game mode \(using **Ctrl G**\), you should see the left eye of your video play\. If you do not see this, try changing your **Stereo layout** setting\. 
 
@@ -262,17 +248,3 @@ Called when video playback is stopped by the user\. If the video reaches the end
 
 `Void OnPlaybackFinished()`  
 Called when all frames in the video are played\. This is not called if the user manually stops video playback\. If looping is enabled, this function is called every time the video loops\. 
-
-## Setting Up Video Playback with Flow Graph<a name="component-videoplayback-flowgraph"></a>
-
-Using the [Video Playback flow graph nodes](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/fg-node-ref-videoplayback.html), you can set up video playback actions that trigger based on certain actions\.
-
-In the following flow graph example, the **PlayPauseMovie** input event \(1\) plays or pauses the video on the attached graph entity\. The **StopMovie** input event \(2\) stops the movie\. 
-
-The **PlayPauseMovie** and **StopMovie** events each connect to an **IsPlaying** node \(3\), which checks whether the video should be played, paused, or stopped\.
-
-The **Play** node \(4\) sets **PlaybackSpeed** to **1** \(normal speed\) and enables the **Loop** setting \(Boolean value of **1**\), indicating that video looping is enabled\. The **Play** node \(4\) also triggers the video to play on **Game:Start** \(5\)\.
-
-The **PlaybackEvents** node \(6\) triggers the **Debug** nodes \(7\) to print to the console whenever the video plays, pauses, stops, and finishes\. 
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component-videoplayback-flow-graph.png)

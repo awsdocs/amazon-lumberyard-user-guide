@@ -5,12 +5,12 @@ Volumetric fog uses volume textures as a view\-frustum\-shaped [voxel](https://d
 **Example**  
 In the following example, volumetric fog is disabled\.  
 
-![\[Volumetric fog disabled\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/rendering-graphics-volumetric-fog-disabled.png)
+![\[Volumetric fog disabled\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/rendering/rendering-graphics-volumetric-fog-disabled.png)
 
 **Example**  
 In the following example, volumetric fog is enabled\.  
 
-![\[Volumetric fog enabled\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/rendering-graphics-volumetric-fog-enabled.png)
+![\[Volumetric fog enabled\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/rendering/rendering-graphics-volumetric-fog-enabled.png)
 
 You can add the **Fog Volume** component to an entity to create fog effects\. For more information, see the **[Fog Volume](component-fog-volume.md)** component\.
 

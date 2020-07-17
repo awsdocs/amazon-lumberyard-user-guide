@@ -2,7 +2,7 @@
 
 Use the following request function with the StereoRendererBus event bus \(EBus\) interface to communicate with other components of your game\.
 
-For more information about using the EBus interface, see [Working with the Event Bus \(EBus\) System](ebus-intro.md)\.
+For more information about using the EBus interface, see [Working with the Event Bus \(EBus\) system](ebus-intro.md)\.
 
 ## IsRenderingToHMD<a name="virtual-reality-ebus-isrenderingtohmd"></a>
 

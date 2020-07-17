@@ -32,6 +32,6 @@ To use this feature, you must type text strings in the **Actions** section of th
 
 For example, in the picture below, **EnablerChanged** is displayed whenever the **Enable Input** check box changes state \(from off to on, or on to off\)\. **EnablerOn** is displayed when the check box is selected, and **EnablerOff** is displayed when it is deselected\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/ui-editor-previewing-action-log.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/game_ui_editor/ui-editor-previewing-action-log.png)
 
 During **Preview**, Script Canvas and Lua scripts aren't active\. Actions taken in UI canvas **Preview** have no effect on anything outside of the canvas\.
