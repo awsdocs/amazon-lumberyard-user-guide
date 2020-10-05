@@ -258,16 +258,16 @@ At this point, you can choose either one of the next two steps to complete the t
    ```
    AssetBundlerBatch.exe compare ^
    --comparisonType intersection ^
-   --firstAssetFile includelist_pc.assetlist ^
+   --firstAssetFile include_pc.assetlist ^
    --secondAssetFile multistep_delta_pc.assetlist ^
-   --output multistep_includelist.assetlist ^
+   --output multistep_include.assetlist ^
    --print
    ```
 
    For this step, the file `do-not-add-me.txt` is removed because it isn't in the generated inclusion list, based on specified the intersection comparison \(`comparisonType 2`\)\. Your command output should look like this:
 
    ```
-   Printing assets from the comparison result {PATH TO YOUR LUMBERYARD ROOT HERE}\dev\multistep_whitelist_pc.assetlist.
+   Printing assets from the comparison result {PATH TO YOUR LUMBERYARD ROOT HERE}\dev\multistep_include_pc.assetlist.
    ------------------------------------------
    - filec.txt
    - filee.cfg
@@ -285,7 +285,7 @@ At this point, you can choose either one of the next two steps to complete the t
    --comparisonType filepattern ^
    --filePatternType 0 ^
    --filePattern *.txt ^
-   --firstAssetFile multistep_includelist_pc.assetlist ^
+   --firstAssetFile multistep_include_pc.assetlist ^
    --output multistep_filepattern.assetlist ^
    --print
    ```
@@ -315,7 +315,7 @@ AssetBundlerBatch.exe compare ^
 --comparisonType delta,intersection,filepattern ^
 --filePatternType 0 ^
 --filePattern *.txt ^
---firstAssetFile mygame_v1_pc.assetlist,includelist_pc.assetlist,$delta_include ^
+--firstAssetFile mygame_v1_pc.assetlist,include_pc.assetlist,$delta_include ^
 --secondAssetFile mygame_v2_pc.assetlist,$delta_all ^
 --output $delta_all,$delta_include,mygame_v1tov2_patch.assetlist ^
 --print
@@ -347,7 +347,7 @@ The previous example uses three comparison operations\. The first two comparison
 | Command Parameter | Step 1  | Step 2 | Step 3 | 
 | --- | --- | --- | --- | 
 | comparisonType | delta | intersection | filepattern | 
-| firstAssetFile | mygame\_v1\_pc\.assetlist | includelist\_pc\.assetlist \(temp file\) | $delta\_include | 
+| firstAssetFile | mygame\_v1\_pc\.assetlist | include\_pc\.assetlist \(temp file\) | $delta\_include | 
 | secondAssetFile | mygame\_v2\_pc\.assetlist | $delta\_all | N/A | 
 | filePatternType | N/A | N/A | Wildcard \(parameter value 0\) | 
 | filePattern | N/A | N/A | \*\.txt | 

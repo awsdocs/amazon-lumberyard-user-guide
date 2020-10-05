@@ -21,9 +21,9 @@ Required free disk space is dependent on the options that you select when instal
 
 ## Developer tools<a name="lumberyard-visual-studio-requirement"></a>
 
-You can use the Lumberyard Editor and tools without installing additional software\. To create new projects or use advanced development features in Lumberyard, you need a developer environment\. One of the following versions of Microsoft Visual Studio is required: 
-+  Microsoft Visual Studio 2019 version **16\.2\.4** or later\. 
-+  Microsoft Visual Studio 2017 version **15\.9\.14** or later\. 
+You can use the Lumberyard Editor and tools without installing additional software\. To create new projects or use advanced development features in Lumberyard, you need a developer environment that includes Microsoft Visual Studio\. The following versions are supported: 
++  Microsoft Visual Studio 2019 version **16\.2\.4** thru **version 16\.7\.x**\. 
++  Microsoft Visual Studio 2017 version **15\.9\.14** thru **version 15\.9\.x**\. 
 
 **Note**  
 The definitive source for the minimum version of Visual Studio for any particular release of Lumberyard is set in the file `dev\_WAF_\settings\platforms\platform.win_x64_vs2019.json`\. Look for the `vswhere-args` settings\. The minimum version is the first value in the `default_value` range\. 
@@ -40,8 +40,9 @@ The default Visual Studio installation might not include all of the features tha
 1. On the **Workloads** tab:
    + Select **Game development with C\+\+**\.
      + In the **Installation details** panel on the right, select at least one **Windows 10 SDK**\.
+   + Select **Desktop development with C\+\+**\.
 
-1. On the **Individual components** tab, under **Compilers, build tools, and runtime**, select the **VC\+\+ toolset** that corresponds to the installed version of Visual Studio: 
+1. On the **Individual components** tab, under **Compilers, build tools, and runtime**, make sure that a **VC\+\+ toolset** that corresponds to the installed version of Visual Studio has been selected: 
    + **Visual Studio 2017**: Select at least one version of the **VC\+\+ 2017 toolset**\. 
    + **Visual Studio 2019**: Select at least one version of the **MSVC v142 \- VS 2019 C\+\+ x64/x86 build tool**\. 
      + \(Optional\) To build with the Visual Studio 2017 toolset, select **MSVC v141 \- VS 2017 C\+\+ x64/x86 build tools**\. 

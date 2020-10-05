@@ -19,7 +19,7 @@ public:
 };
 ```
 
-You can also reflect native types and [POD structs](https://en.wikipedia.org/wiki/C%2B%2B_classes#POD-structs) for serialization by creating an `AZ_TYPE_INFO` specialization, as in the following code example:
+You can also reflect native types and [POD structs](https://en.wikipedia.org/wiki/C++_classes#POD-structs) for serialization by creating an `AZ_TYPE_INFO` specialization, as in the following code example:
 
 ```
 AZ_TYPE_INFO_SPECIALIZE(AZStd::chrono::system_clock::time_point, "{5C48FD59-7267-405D-9C06-1EA31379FE82}"); 
@@ -128,7 +128,7 @@ AZStd::unique_ptr<T>
 You can use the `IDataContainer` interface to serialize nontemplate types like `AZStd::any`\. This is because the type of element that is serialized is dependent on the type that is stored in the `AZStd::any` object\.
 
 **Stable Elements**  
-Elements are considered stable if their pointers do not change when other elements are added to or removed from a container\. Lumberyard's implementation of stable elements corresponds to the [C\+\+17](https://en.wikipedia.org/wiki/C%2B%2B17) rules for iterator invalidation as documented in section 26 of the [ISO/IEC 14882:2017\(E\)](https://www.iso.org/standard/68564.html) standard\. The elements in types like `AZStd::vector` are not stable because they are stored in a contiguous sequence\. When an element that is not at the end of the vector is removed, all elements after it in memory must shift to the left to keep the sequence contiguous\. Stable elements can be removed from a container without affecting other elements in the container\. You can use the `IsStableElements` function to determine the status of a container's elements\. If a container's elements are not stable, you must enumerate them in order for them to be serialized\.
+Elements are considered stable if their pointers do not change when other elements are added to or removed from a container\. Lumberyard's implementation of stable elements corresponds to the [C\+\+17](https://en.wikipedia.org/wiki/C++17) rules for iterator invalidation as documented in section 26 of the [ISO/IEC 14882:2017\(E\)](https://www.iso.org/standard/68564.html) standard\. The elements in types like `AZStd::vector` are not stable because they are stored in a contiguous sequence\. When an element that is not at the end of the vector is removed, all elements after it in memory must shift to the left to keep the sequence contiguous\. Stable elements can be removed from a container without affecting other elements in the container\. You can use the `IsStableElements` function to determine the status of a container's elements\. If a container's elements are not stable, you must enumerate them in order for them to be serialized\.
 
 The following code example shows how to set up serialization for a container that stores a dynamic sequence of homogenous elements\.
 

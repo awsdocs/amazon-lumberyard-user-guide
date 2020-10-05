@@ -1,7 +1,11 @@
 # Tube Shape<a name="component-tube-shape"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Create tube\-like volumes along a spline by using the **Tube Shape** component\. To create a tube shape, add the **[Spline](component-spline.md)** component to an entity to define its shape\. In the **Tube Shape** component, define a radius to control its volume\. You can specify a different tube radius at each vertex in the spline\.
 

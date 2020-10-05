@@ -1,7 +1,11 @@
 # Lightning<a name="component-lightning"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Lightning** component to create a single lightning bolt effect\. In Lumberyard Editor, you can add the **Lightning** component to entities and trigger them later from Lua or Script Canvas\. For best results, use the **Lightning** component as part of a dynamic slice along with a spawning system\. After the **Lightning** component finishes its effect, the entity is automatically destroyed\. This makes it easier for you to spawn entities with a **Lightning** component, without needing manually to manage the lifetime of each entity\.
 

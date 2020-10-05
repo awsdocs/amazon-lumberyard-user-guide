@@ -1,7 +1,11 @@
 # Polygon Prism Shape<a name="component-polygon-prism"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Polygon Prism Shape** component to define a volume\. A right polygonal prism is a 3D prism made from two translated polygons connected by rectangles\. The **Polygon Prism Shape** component is defined by one polygon and a height property\. All vertices lie on the local plane, where z = `0`\. The polygon is defined in the xy\-plane of the entity\. All vertices are in the local space of the entity\. You can use the **Polygon Prism Shape** component with the **[Trigger Area](component-triggerarea.md)** component to create a volume for the trigger area bounds\.
 

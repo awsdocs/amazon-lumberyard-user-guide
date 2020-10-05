@@ -1,7 +1,11 @@
 # Simulating physics behavior with the PhysX system<a name="physx-intro"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Lumberyard's PhysX system acts upon entities to create realistic physical effects such as collision detection and rigid body dynamics simulation\. To use the PhysX system, install the [PhysX SDK](https://developer.nvidia.com/gameworks-physx-overview) using the [Lumberyard Setup Assistant](lumberyard-launcher-using.md)\.
 

@@ -24,11 +24,9 @@ Add an action to a state to achieve a parameter value change that triggers after
 
 1. In the **Animation Editor**, open or create an animation graph\.
 
-1. Select a node\.  
-![\[Select a node.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/char-animation-editor-actions-node.png)
+1. Select a node\.
 
-1. In the **Attributes** panel, click **Add action** and then **Parameter Action**\.  
-![\[To add a Parameter Action, click Add action and then Parameter Action.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/char-animation-editor-actions-addaction-node.png)
+1. In the **Attributes** panel, click **Add action** and then **Parameter Action**\.
 
 1. In the **Attributes** panel, under **Parameter Action**, select a **Trigger Mode**\. You can select one of the following options:
    + **On Enter** – Executes a **State** action when the state is fully blended into the node and is no longer in transition
@@ -56,9 +54,9 @@ Add an action to a transition to achieve a parameter value change that triggers 
 1. In the **Attributes** panel, click **Add action** and then **Parameter Action**\.  
 ![\[To add a Parameter Action, click Add action and then Parameter Action.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/char-animation-editor-actions-addaction-transition.png)
 
-   The following options trigger the change on a servant graph but with different inputs to the servant graph's parameter:
-   + **Servant Parameter Action** – A constant value is provided
-   + **Symbolic Servant Parameter Action** – A user\-selected value is provided
+   The following options trigger the change on a follower graph but with different inputs to the follower graph's parameter:
+   + **Follower Parameter Action** – A constant value is provided
+   + **Symbolic Follower Parameter Action** – A user\-selected value is provided
 
 1. In the **Attributes** panel, under **Parameter Action**, select a **Trigger Mode**\. You can select one of the following options:
    + **On Enter** – Executes the action immediately upon starting a transition

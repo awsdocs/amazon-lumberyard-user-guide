@@ -8,7 +8,7 @@ The new Viewport Interaction Model replaces the old interaction model in the vie
 The Viewport Interaction Model provides the following benefits:
 + Improves the ability to select your preferred entity, especially for nested hierarchies or levels that have many entities\.
 + Prevents you from accidentally deselecting an entity\. The entity that you select is locked for editing\. 
-+ Adds keyboard and mouse actions that you can apply to your selected entities\. For example, you can freely switch from local to parent space to make changes to your selected entities\.
++ Adds keyboard and mouse actions that you can apply to your selected entities\. For example, you can freely switch between local, parent, and world space to make changes to your selected entities\.
 + Establishes an editing pattern that matches the Component Mode feature\. For more information, see [Editing Components in the Viewport](edit-mode-for-components.md)\.
 
 See the following concepts for the Viewport Interaction Model:

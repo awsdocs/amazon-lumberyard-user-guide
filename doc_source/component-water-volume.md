@@ -1,7 +1,11 @@
 # Water Volume<a name="component-water-volume"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Water Volume** component to add small and medium bodies of water to your level\. Use the following properties to adjust the water volume's physical attributes, aesthetic, and complex interactions\.
 

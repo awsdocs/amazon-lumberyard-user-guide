@@ -1,63 +1,89 @@
 # Testing the Windows Client to Linux Server Connection<a name="linux-test-windows-client-linux-server-connection"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
-Lumberyard supports compiling and deploying the Windows client for a multiplayer project on a Linux dedicated server\. You must have completed the following:
-+ [Compiled the assets on a Windows computer](linux-compile-assets-on-windows.md)\.
-+ [Built the Lumberyard executable for use on a Linux computer](linux-build-lumberyard-executable.md)\.
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
-Once the Lumberyard executable is ready, you can test the connection between the Windows client and the Linux server\.
+After you've [built the Windows client and Linux server](linux-build-lumberyard-executable.md), you should test the connection to make sure that everything is running smoothly\. This topic covers starting your server, getting connection information, running the remote console on Windows to manage your connection, and connecting your game client to the server\. 
 
-**To test the client and server connection**
+## Prerequisites<a name="linux-test-windows-client-linux-server-connection-prerequisites"></a>
 
-1. Start the Linux server:
+To test your server setup, complete the following tasks\.
++ Complete the steps in [Deploy a Lumberyard multiplayer project's server on Linux](linux-build-lumberyard-executable.md)\.
++ Get the *public* IP address \(not DNS name\) of your Linux server\.
++ Get the *public* IP address of your client machine\.
++  Allow outbound TCP connections on Windows 10 to your Linux server on port `4600`, and outbound UDP connections on port `33435`\. If you're not familiar with how to configure Windows firewall to allow outbound connections, see the [Microsoft Windows Firewall documentation](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/create-an-outbound-program-or-service-rule)\. 
++  Allow inbound TCP connections on Linux on port `4600`, and inbound UDP connections on port `33435`\. If you're using an Amazon EC2 instance, follow the instructions for [Authorizing inbound traffic on Linux](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)\. If you're running your own independent Linux server or using Windows Subsystem for Linux \(WSL\), read your distribution's instructions on configuring your firewall to allow the client connection\. 
 
-   1. In a terminal window, change directory to the `BinLinux64.Dedicated` directory\.
+**Important**  
+ There might be other considerations in your network environment that require additional setup – such as a corporate firewall, proxy, or VPN – that you should consult with your system administrator on as part of setting up for testing\. 
 
-      ```
-      $ cd BinLinux64.Dedicated
-      ```
+## Start the server<a name="linux-test-windows-client-linux-server-connection-start-server"></a>
 
-   1. The launcher requires that the current working directory contain the data and `multiplayergame` directory, which includes the `.pak` files\. Copy the assets from the `MultiplayerSample_pc_Paks_Dedicated` directory to the `BinLinux64.Dedicated` directory\.
+Before starting the client and after configuring the server to accept connections, start the dedicated server\.
 
-      ```
-      $ cp -r ../MultiplayerSample_pc_Paks_Dedicated/* ./
-      ```
+**To start the server**
 
-   1. Run the `MultiplayerSampleLauncher_Server`:
+1. In a terminal, navigate to the `absolute_path_to_unarchive_location/dev/BinLinux64.Dedicated` directory\.
 
-      ```
-      $ ./MultiplayerSampleLauncher_Server
-      ```
+1.  Copy the resources built on Windows to the build directory\. To function properly, the working directory that you launch the server from needs to contain configuration information for the project and the `multiplayersample` directory containing the `.pak` asset bundles\. 
 
-1. Start the remote console on your Windows computer:
+   ```
+   cp -r ../MultiplayerSample_pc_Paks_Dedicated/* ./
+   ```
 
-   1. Run the `RemoteConsole.exe` file \(located in the `lumberyard_version\dev\Tools\RemoteConsole` directory\)\.
+1.  Make sure that the correct project is bootstrapped\. Edit the `absolute_path_to_unarchive_location/dev/BinLinux64.Dedicated/bootstrap.cfg` file to ensure that the value of `sys_game_folder` is set to `MultiplayerSample`\. 
 
-   1. In the **Targets** window, for the **Custom Ip**, enter the server's IP address\.
+   ```
+   sys_game_folder=MultiplayerSample
+   ```
+**Note**  
+ You might see `^M` characters at the end of every line in the `bootstrap.cfg` file\. This indicates that the file uses Windows\-style line endings rather than Linux\-style ones\. This doesn't affect the ability of the Lumberyard dedicated server from loading the bootstrap file correctly, and you don't need to worry about preserving the line ending type when you edit the file\. 
 
-   1. For the **Custom Port**, enter the server's port\.
+1. Start the server\.
 
-      The Linux server echoes the chosen port, which appears in the last line, for example, *Remote console listening on: 4600*\. The server also echoes when the remote console is attached\. If you restart the server, the remote console is automatically reattached\.
+   ```
+   ./MultiplayerSampleLauncher_Server
+   ```
 
-   1. In the command line window, run the following command:
+## Configure the server remotely<a name="linux-test-windows-client-linux-server-connection-remote-console"></a>
 
-      ```
-      mphost
-      map multiplayersample
-      ```
+When the server is running, launch the remote console and set up the server to start hosting a game session\.
 
-1. Start the Windows client:
+1. Launch the Remote Console on your Windows 10 machine, located at `lumberyard_install_dir\dev\Tools\RemoteConsole\RemoteConsole.exe`\.
 
-   1. Edit the `bootstrap.cfg` file \(located in the `lumberyard_version\dev` directory\) to set `connect_to_remote` to **1**\.
+1. In the Remote Console, Select **Targets > PC**, and then edit the **Targets > Custom IP** setting to be the IP address for your Linux server\.  
+![\[The upper half of the Remote Console window. The menu bar displays the tabs "Tools","Toggles", "Sliders", "Targets", "Generic", "WF1", "MacrosOther", "GamePlays", "Maps". The "Targets" menu is surrounded by a red box. The Targets dropdown lists platforms "PC", "Xenia", "Provo" followed by a text input field for "Custom IP". The "PC" dropdown item is surrounded by a red box. The "Custom IP" text input field is surrounded by a red box.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/platforms/linux/remote-console-ipaddr.png)
 
-   1. Double\-click the `MultiplayerSampleLauncher.exe` file in the following directory:
-      + For Visual Studio 2017: `lumberyard_version\dev\Bin64vc141\`
-      + For Visual Studio 2019: `lumberyard_version\dev\Bin64vc142\`
+    If the connection to the dedicated server is successful, you see a green status light and the word **Connected** in the lower right corner of the window\. Make sure that the IP address and port, located in the lower left of the window, match up with the location of your server\. If you had an instance of the client already running, the remote console will attempt to connect to it first\.   
+![\[The status bar for the Remote Console Window. On the far left is the text "Target: PC" followed by an obfuscated host and the port "4600". On the far right is "Status:", a green circle indicator, and the word "Connected".\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/platforms/linux/remote-console-connected.png)
 
-   1. After the launcher loads, open the console by pressing the accent grave key **`** and enter the following command: 
+1. In the command line located at the bottom of the window, send commands to the server to start the multiplayer session and load a map\.
 
-      ```
-      mpjoin server_IP_address
-      ```
+   ```
+   mphost
+   map multiplayersample
+   ```
+
+1. Close the remote console\.
+
+## Connect from the client to the server<a name="linux-test-windows-client-linux-server-connection-connect-client"></a>
+
+Start the game client and connect to the multiplayer session\.
+
+1. Edit the `lumberyard_install_dir\dev\bootstrap.cfg` file and set `connect_to_remote` to `1`\.
+
+   ```
+   connect_to_remote=1
+   ```
+
+1. Launch the client\.
+   + For Visual Studio 2017: `lumberyard_install_dir\dev\Bin64vc141\`
+   + For Visual Studio 2019: `lumberyard_install_dir\dev\Bin64vc142\`
+
+1. In the client, press the ``` \(grave\) key to open the console and enter the command `mpjoin server_ip_address.`
+
+ If the connection to the game server was successful, you now have a game session running in your client\. Try out connecting other clients to the server using these same steps to continue testing with multiple players\! 

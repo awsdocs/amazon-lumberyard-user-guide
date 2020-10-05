@@ -1,7 +1,11 @@
 # Animation Editor User Interface<a name="animation-editor-user-interface"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 **Topics**
 + [Opening Animation Editor](#opening-animation-editor-)

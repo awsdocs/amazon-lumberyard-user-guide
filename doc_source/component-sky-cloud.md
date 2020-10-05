@@ -1,7 +1,11 @@
 # Sky Cloud<a name="component-sky-cloud"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The **Sky Cloud** component creates realistic and detailed cloud effects in your game levels\. To use the **Sky Cloud** component, you must enable the [**Sky Clouds**](gems-system-gem-cloud.md) gem in your project\. For more information, see [Add modular features and assets with Gems](gems-system-gems.md)\.
 

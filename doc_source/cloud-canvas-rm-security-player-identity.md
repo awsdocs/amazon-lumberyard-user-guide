@@ -45,20 +45,3 @@ The code that implements the authenticated login flow can be found in the `\dev\
 ### Configuring a Cognito Identity Provider \(Cognito User Pool\)<a name="cloud-canvas-rm-security-player-cognito-user-pool"></a>
 
 Cloud Canvas provides the [Custom::CognitoUserPool](cloud-canvas-custom-resources.md#cloud-canvas-custom-resources-cognito-identity-pool) resource for adding the Amazon Cognito user pools and linking them to a Amazon Cognito identity pool\. The [Player Account Cloud Gem](cloud-canvas-cloud-gem-player-account.md) uses this custom resource\. It also provides an EBus interface so that you can work with the user pool and the sample level that has an in\-game menu\.
-
-### Configuring External Identity Providers<a name="cloud-canvas-configuring-external-identity-providers"></a>
-
-Cloud Canvas does not automate the process of retrieving an auth code from an external identity provider\. This is your responsibility as a game developer\. After retrieving the auth code, make the following call:
-
-```
-EBUS_EVENT_RESULT(wasSuccess, CloudGemFramework::CloudCanvasPlayerIdentityBus, Login, const char* authProvider, const char* authCode)
-```
-
-External identity providers are configured using the `lmbr_aws` [login\-provider add](cloud-canvas-command-line.md#cloud-canvas-command-line-login-provider-add), [login\-provider update](cloud-canvas-command-line.md#cloud-canvas-command-line-login-provider-update), and [login\-provider remove](cloud-canvas-command-line.md#cloud-canvas-command-line-login-provider-remove) commands\. These commands save the configuration in a `/player-access/auth-settings.json` object in the project's configuration bucket so that the `PlayerAccessTokenExchange` Lambda function can access it\.
-
-**Note**  
-You must run `lmbr_aws project update` after running `login-provider add`, `login-provider update`, or `login-provider remove` so that the [PlayerAccessIdentityPool](cloud-canvas-resource-definitions.md#cloud-canvas-deployment-access-template-player-access-identity-pool-resource) resource configuration will be updated to reflect the change\.
-
-### Automatic Token Refresh<a name="cloud-canvas-token-refresh"></a>
-
-When using Amazon Cognito with external identity providers, it is necessary to periodically refresh the token from that provider and then get updated credentials for that token from Amazon Cognito\. Cloud Canvas performs this token refresh process automatically by using the `PlayerAccessTokenExchange` Lambda function\.

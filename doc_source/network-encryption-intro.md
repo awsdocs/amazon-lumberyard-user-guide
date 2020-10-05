@@ -26,9 +26,9 @@ GridMate uses the following single OpenSSL cipher for all encrypted connections:
 
 |  **Technology**  |  ** Role**  |  ** Description**  | 
 | --- | --- | --- | 
-|  ECDHE  |  Master key exchange  | [Ephemeral Elliptic Curve Diffie\-Hellman](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) anonymous key agreement protocol | 
+|  ECDHE  |  Key exchange  | [Ephemeral Elliptic Curve Diffie\-Hellman](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie-Hellman) anonymous key agreement protocol | 
 |  RSA  |  Peer authentication  | [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) algorithm used to authenticate client and server  | 
-|  AES256  |  Symmetric encryption cipher |  [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) that uses a 256\-bit master key | 
+|  AES256  |  Symmetric encryption cipher |  [Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) that uses a 256\-bit key | 
 |  GCM  |  [Block cipher mode of operation](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)  | [Galois/Counter Mode](https://en.wikipedia.org/wiki/Galois/Counter_Mode) authenticated encryption algorithm | 
 |  SHA384  |  Hashing algorithm  | [SHA\-2](https://en.wikipedia.org/wiki/SHA-2) with a 384\-bit digest size | 
 

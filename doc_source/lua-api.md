@@ -1091,11 +1091,11 @@ void KillTrigger(const char* triggerName)
 
 | Parameter | Type | Description | 
 | --- | --- | --- | 
-|  triggerName  |  char  | Specifies the name of the trigger to kill\. | 
+|  triggerName  |  char  | Specifies the name of the trigger to remove\. | 
 
 ### KillAllTriggers<a name="lua-api-audiotriggercomponentrequestbus-killalltriggers"></a>
 
-Forces a kill of triggers that are active on the underlying proxy\.
+Forces a removal of triggers that are active on the underlying proxy\.
 
 **Syntax**
 
@@ -1592,7 +1592,7 @@ RayCastHit RayCast(const AZ::Vector3& begin, const AZ::Vector3& direction, float
 |  begin  |  const AZ::Vector3&  | The origin of the ray | 
 |  direction  |  const AZ::Vector3&  | The direction for the ray to travel | 
 |  maxDistance  |  float  | The maximum distance the ray will travel | 
-|  maxHits  |  AZ::u32  | The maximum number of hits found before the search is aborted | 
+|  maxHits  |  AZ::u32  | The maximum number of hits to return from the search\. | 
 |  query  |  AZ::u32  | The entity types to hit\. See the PhysicalEntityTypes enum that follows\. | 
 
 **Returns:** A `RayCastHit` struct\. For details, see the code listing that follows\.

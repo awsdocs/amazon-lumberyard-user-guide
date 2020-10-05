@@ -1,7 +1,11 @@
 # Fog Volume<a name="component-fog-volume"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Fog Volume** component to create fog effects in your game\. For more information, see [Volumetric Fog](rendering-graphics-fog-volumetric.md)\.
 

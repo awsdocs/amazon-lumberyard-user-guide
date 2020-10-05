@@ -19,7 +19,7 @@ When you select a group of entities, the Viewport Interaction Model follows the 
 
 1. Press and hold **Ctrl** and click and drag the rotation manipulator\.
 
-1. Press **Shift** to toggle from local to parent space\. The manipulator appears in the middle of your selection \(becoming its parent\)\.
+1. Press **Shift** to change from custom to world space\.
 
 1. Use the manipulator to modify the entities\.  
 **Example**  
@@ -27,7 +27,7 @@ When you select a group of entities, the Viewport Interaction Model follows the 
    In the following example, three entities are selected\. Because the manipulator defaults to the common parent of the group, the manipulator default to the world space\. The entities move in relation to the parent \(the manipulator\)\.   
 ![\[Manipulate a group of entities using world space in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/viewportinteractionmodel/viewport-selection-model-6.gif)
 
-1. Press and hold **Alt** and click a target entity\. This selects a reference space\. 
+1. Press and hold **Ctrl** and **Alt** and click a target entity\. This selects a reference space\. 
 
 1. Use the manipulator to modify the entities\.  
 **Example**  

@@ -1,7 +1,11 @@
 # Build and bundle assets for release in Lumberyard<a name="asset-bundler-tutorial-release"></a>
 
+
 ****  
-This tutorial is out of date for the new Starter Game project that shipped as part of Lumberyard 1\.25\. We're working to revise it and provide better, more comprehensive instructions\. 
+
+|  | 
+| --- |
+| This tutorial is out of date for the new Starter Game project that shipped as part of Lumberyard 1\.25\. We're working to revise it and provide better, more comprehensive instructions\.  | 
 
  This tutorial guides you through the process of building the code and assets to release a Lumberyard project, using the [Starter Game sample project](sample-level-starter-game.md)\. You'll learn how to:
 + Create a release build of your game's executable\.

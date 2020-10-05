@@ -1,7 +1,11 @@
 # Creating and Simulating a PhysX Ragdoll<a name="animation-editor-creating-and-simulating-physx-ragdoll"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 A ragdoll is a physical representation of a character in the animation system that you can use to simulate behavior, such as hit reactions and character death\. The physical representation consists of a hierarchy of rigid bodies with simple shapes that are connected by joints\. The animation system and the PhysX system work together to simulate the realistic behaviors\. While the ragdoll setup occurs in the animation system, the PhysX system is responsible for how a character moves based on environmental interactions and external forces\. For example, you can set up your ragdoll so that the character will rotate as it collapses when you apply force to the character's outer shoulder area\.
 

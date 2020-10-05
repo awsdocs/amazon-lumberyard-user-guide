@@ -1,7 +1,11 @@
 # Customizing EMotion FX Objects<a name="animation-editor-customizing-emotionfx-objects"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The EMotion FX API supports registering custom object types, including state machine nodes, blend tree nodes, transitions, and conditions\. You can define custom object types in your game code or a custom gem\. This allows you to have granular control of the Lumberyard animation system\.
 

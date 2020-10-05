@@ -181,7 +181,7 @@ In this example, if there are no handlers connected to the EBus, the `result` va
 
 ## Return Values from Multiple Handlers<a name="ebus-usage-and-examples-multiple"></a>
 
-In certain cases you might have to aggregate the return value of a function when there are multiple handlers\. For example, suppose you want to send a message to all handlers that asks whether any one handler objects to shutting down an application\. If any one handler returns true, you should abort the shutdown\. The following would not suffice: 
+In certain cases you might have to aggregate the return value of a function when there are multiple handlers\. For example, suppose you want to send a message to all handlers that asks whether any one handler objects to shutting down an application\. If any one handler returns true, you should stop the shutdown\. The following would not suffice: 
 
 ```
 // Counterexample: returnValue contains only the result of the final handler.

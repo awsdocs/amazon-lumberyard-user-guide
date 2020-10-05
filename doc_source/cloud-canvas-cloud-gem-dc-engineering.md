@@ -95,3 +95,43 @@ The following table lists the calls for the client\.
 | Client API Call | Description | 
 | --- | --- | 
 | /client/content POST | Request presigned URLs for a list of files\. Returns the URLs or a failure message\. | 
+
+## Use AMazon CloudFront<a name="cloud-canvas-cloud-gem-dc-engineering-cloudfront"></a>
+
+Amazon CloudFront is a fast content delivery network \(CDN\) service that can extend S3 to securely deliver data to customers with low latency and high transfer speeds at an additional cost\. You can take advantage of it when using the DynamicContent gem\. To learn more about Amazon CloudFront, read [the Amazon CloudFront documentation](https://aws.amazon.com/cloudfront/)\.
+
+### Enable the CloudFront extension<a name="cloud-canvas-cloud-gem-dc-engineering-cloudfront-enable"></a>
+
+To enable the Amazon CloudFront feature, add deployment tag `content-distribution` when you create a deployment with **CloudGemDynamicContent** enabled:
+
+lmbr\_aws deployment create \-\-deployment \{deployment\_name\} \-\-tags content\-distribution
+
+To learn how to create a project stack and deployment stack using CloudCanvas command line, read [Using the Cloud Canvas Command Line](https://docs.aws.amazon.com/lumberyard/latest/userguide/cloud-canvas-command-line.html)\.
+
+Using this deployment tag will add a few more AWS resources to your deployment stack including a Amazon CloudFront distribution and an S3 bucket\. All of the signed URLs from the DynamicContent gem will be created using Amazon CloudFront automatically after the feature is enabled\.
+
+### Create and upload CloudFront key pairs<a name="cloud-canvas-cloud-gem-dc-engineering-cloudfront-upload"></a>
+
+Each AWS account that you use to create Amazon CloudFront signed URLs or signed cookies—your trusted signers—must have its own Amazon CloudFront key pair, and the key pair must be active\. This is required for using Amazon CloudFront with the DynamicContent gem\. Readthe AWS document [Creating Amazon CloudFront Key Pairs for Your Trusted Signers](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html#private-content-creating-cloudfront-key-pairs) to learn how to create your own key pairs\. 
+
+**Note that IAM users can't create Amazon CloudFront key pairs\. You must log in using root credentials to create key pairs\. To learn more about the root credentials, read [The AWS Account Root User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)\.**
+
+After you have created and downloaded the key pairs, upload your private key using the following CLI command:
+
+lmbr\_aws dynamic\-content upload\-cf\-key \-\-key\-path \{path\_to\_private\_key\} \-\-deployment\-name \{deployment\_to\_use\}
+
+The expected name format for your private key is `pk-<accountkey>.pem`\. Your key will be securely stored in an S3 bucket called `AccessBucket`\.
+
+### Invalidate files from CloudFront edge caches<a name="cloud-canvas-cloud-gem-dc-engineering-cloudfront-invalidate"></a>
+
+By default, Amazon CloudFront caches a response from Amazon S3 for 24 hours\. If your request lands at an edge location that served the Amazon S3 response within 24 hours, Amazon CloudFront uses the cached response even if you updated the content in Amazon S3\. In this case, you may get outdated content after uploading the same named files\.
+
+When updating your content you can invalidate the cache for files being update by adding the `--invalidate-existing-files` argument to your CLI command:
+
+lmbr\_aws dynamic\-content upload\-manifest\-content \-\-manifest\-path \{path\_to\_manifest\} \-\-deployment\-name \{deployment\_to\_use\} \-\-staging\-status \{staging\_status\} \-\-invalidate\-existing\-files
+
+You can also invalidate the cached response for a specific file using the following CLI command:
+
+lmbr\_aws dynamic\-content invalidate\-file \-\-file\-path \{file\_name\_in\_s3\_bucket\} \-\-caller\-reference \{unique\_identity\}
+
+`--caller-reference` requires a value that you specify to uniquely identify an invalidation request\. Amazon CloudFront uses the value to prevent you from accidentally resubmitting an identical request\. If you make a second invalidation request with the same value for caller reference, and if the rest of the request is the same, Amazon CloudFront doesn't create a new invalidation request\.

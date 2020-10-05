@@ -12,7 +12,7 @@ The Asset Bundler relies on accurate and complete product dependency information
    + [Using the Missing Dependency Scanner](asset-bundler-missing-dependency-scanner.md)
    + [Resolving Missing Assets](asset-bundler-assets-resolving.md)
 
-1. Update your custom asset builders to output product dependencies\. Be sure to add false positive results to the blacklist using the file tagging system\.
+1. Update your custom asset builders to output product dependencies\. Be sure to add false positive results to the exclusion list using the file tagging system\.
    + [Implement the Callback for ProcessJobFunction](asset-builder-custom.md#asset-builder-custom-create-builder-class-processjob-callback)
    + [Using the File Tagging System to Include or Exclude Assets](asset-bundler-file-tagging.md)
 

@@ -1,7 +1,11 @@
 # Getting Started with the Animation Editor<a name="animation-editor-quick-start"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 See the following procedures to get started with the **Animation Editor**\. 
 

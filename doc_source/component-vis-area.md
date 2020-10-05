@@ -1,7 +1,11 @@
 # VisArea<a name="component-vis-area"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 A *vis area* \(visible area\) is a shape object that helps you manage visibility and culling in a scene\. When a camera is in a visible area, the camera can see only other objects that are also in the visible area\. You can use the **VisArea** component to define indoor areas and manage overdraw\. Objects are inside a visible area only if their center is inside the area\.
 

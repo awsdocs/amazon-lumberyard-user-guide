@@ -1,13 +1,17 @@
-# Add Cloth Colliders to Characters<a name="char_animation_add_cloth_colliders"></a>
+# Add Cloth Colliders to actors<a name="char_animation_add_cloth_colliders"></a>
+
 
 ****  
-This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
 
-Applying cloth simulation to your characters adds realism and dynamism in their every movement\. Adding cloth colliders to your characters greatly enhances the effect\. Cloth colliders can prevent cloth from penetrating into the geometry of the character\. To add cloth colliders, you must enable the NVIDIA Cloth Gem\. 
+|  | 
+| --- |
+| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
+
+Applying cloth simulation to actors adds realism and dynamism in their every movement\. Adding cloth colliders greatly enhances the effect\. Cloth colliders can prevent cloth from penetrating into the meshes of the actor\. To add cloth colliders, you must enable the NVIDIA Cloth Gem\. 
 
 For more information, see the [NVIDIA Cloth Gem documentation](gems-system-gem-nv-physx-cloth.md)\. 
 
-## Add Cloth Colliders to a Character<a name="component-cloth-collider-character"></a>
+## Add Cloth Colliders to an actor<a name="component-cloth-collider-character"></a>
 
 1. In Lumberyard Editor, choose **Tools**, **Animation Editor**\. 
 

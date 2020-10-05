@@ -1,7 +1,11 @@
 # AnimGraph<a name="component-animgraph"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **AnimGraph** component to add an animation graph and motion set to your character\. Add this component to the [Actor](component-actor.md) component to control character behavior from an animation graph\. For single motions, see the [Simple Motion](component-simple-motion.md) component\.
 

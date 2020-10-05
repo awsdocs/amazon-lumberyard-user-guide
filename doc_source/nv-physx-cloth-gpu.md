@@ -1,7 +1,11 @@
 # GPU cloth simulation with NVIDIA CUDA<a name="nv-physx-cloth-gpu"></a>
 
+
 ****  
-This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
 
 NVIDIA Cloth Gem has support for **NVIDIA CUDA** on PC\. With CUDA enabled for cloth, the simulation is computed on the GPU instead of the CPU\. This allows you to use all the computational power of the GPU to run more complex cloth instances, inlarger numbers\. This also leaves the CPU free to do other tasks\. 
 

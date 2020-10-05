@@ -27,11 +27,11 @@ The following table shows the list of configurable properties\.
 | --- | --- | --- | 
 | maxdimension | 4096 | The maximum width and height of the output texture atlas\. | 
 | padding | 1 | The minimum number of extra pixels around each texture in the texture atlas\. For compression purposes, the edge pixels of each texture are duplicated\. The amount of duplication is determined by the calculation image\_size \+ padding rounded up to the nearest compression unit of four\. | 
-| poweroftwo | false | Whether the width and height of the output texture atlas is a power of two\. If [PVRTC](https://en.wikipedia.org/wiki/PVRTC) compression is used for iOS, the output texture is a power of two regardless of this setting\. | 
+| poweroftwo | false |  Whether the width and height of the output texture atlas is a power of two\. If [PVRTC](https://en.wikipedia.org/wiki/PVRTC) compression is used for iOS, the output texture is a power of two regardless of this setting\. | 
 | square | false |  Whether the width and height of the output texture atlas is the same\. If PVRTC compression is used for iOS, the output texture is a square regardless of this setting\.  | 
 | unusedcolor | \#3CB371FF | The color for the unused space in the output texture atlas\. | 
 | whitetexture | true | Whether to include a white texture with a path name of WhiteTexture in the output texture atlas\. | 
-| presetname | TextureAtlas | The preset to use for image processing\. The TextureAtlas preset uses compression for all operating systems and devices except iOS\. Compression isn't performed on iOS because the PVRTC compression that it uses has square and power of two restrictions on output texture dimensions\. | 
+| presetname | TextureAtlas |  The preset to use for image processing\. If TextureAtlas is used as the `presetname`, either explicitly or by default, images will be compressed\. This compression can lead to loss of image quality\.  | 
 
 When you assign property values, note the following:
 + Whitespace is allowed\.

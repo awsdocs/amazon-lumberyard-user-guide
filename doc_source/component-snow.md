@@ -1,7 +1,11 @@
 # Snow<a name="component-snow"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Snow** component to create snowfall effects and create patches of snow and ice on the terrain\. You can add multiple **Snow** components to your entities in a level, but the level uses only one **Snow** component\. The last **Snow** component to activate takes priority and Lumberyard renders that component\.
 

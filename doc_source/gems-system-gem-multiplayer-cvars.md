@@ -103,8 +103,5 @@ Configures the server process to enable custom matchmaking backfill for FlexMatc
 **gamelift\_flexmatch\_onplayerremoved\_enable**  
 Configures the server process to start matchmaking backfill on players removed and if an empty slot is available\.
 
-**gamelift\_flexmatch\_minimumplayersessioncount**  
-Configuration used to terminate game session if player count falls below the set amount\.
-
 **gamelift\_flexmatch\_start\_delay**  
 Delay to add to start matchmaking backfill on new game session create\.

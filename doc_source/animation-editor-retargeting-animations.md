@@ -1,7 +1,11 @@
 # Retargeting Motions<a name="animation-editor-retargeting-animations"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Use the Animation Editor to retarget motions from one actor to another actor\. This lets you reuse motions that you've created for an actor, and to quickly prototype motions on other actors while you wait for new ones to be created\. The retarget feature is also important to ensure that actors are scaled appropriately\. Without this feature, the retargeted actor stretches and scales to the size of the original actor for which the motion was recorded\. With this feature, the retargeted actor retains its size\.
 

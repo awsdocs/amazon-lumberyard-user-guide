@@ -116,7 +116,7 @@ To use the remote shader compiler, you must do the following:
 + Connect the remote shader compiler host computer and iOS device to the same network and configure any firewalls to allow traffic through port 61453\.
 + Set up the system configuration file \(`system_ios_ios.cfg`\) for the mobile device to connect to the remote shader compiler on your computer\.
 
-You can use a whitelist to specify the IP addresses that are allowed to connect to your remote shader compiler\. For information, see [Creating a Whitelist for the Remote Shader Compiler](mat-shaders-custom-dev-remote-compiler.md#mat-shaders-custom-dev-remote-compiler-whitelist)\.
+You can use an allow list to specify the IP addresses that are allowed to connect to your remote shader compiler\. For information, see [Creating an allow list for the Remote Shader Compiler](mat-shaders-custom-dev-remote-compiler.md#mat-shaders-custom-dev-remote-compiler-allow)\.
 
 ### Enabling a Connection Between the iOS App and the Remote Shader Compiler<a name="ios-enable-connection-between-app-and-shader-compiler"></a>
 

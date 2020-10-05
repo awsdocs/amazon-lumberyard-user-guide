@@ -27,12 +27,6 @@ Compile the Lumberyard Editor and tools
 1. Build your game project in profiling mode:
 
    ```
-   lmbr_waf build_win_x64_vs2017_profile -p game
-   ```
-**Note**  
-If you selected **Compile the engine and asset pipeline** when setting up Lumberyard, you should also build the engine and rebuild it whenever you make a code change:  
-
-   ```
    lmbr_waf build_win_x64_vs2017_profile -p game_and_engine
    ```
 

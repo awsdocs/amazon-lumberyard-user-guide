@@ -1,7 +1,11 @@
 # Sky Highlight<a name="component-sky-highlight"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The **Sky Highlight** component creates large bursts of light in the sky\. You can use this component with the **[Lightning](component-lightning.md)** component to simulate the sky lighting up when a bolt of lightning flashes\.
 

@@ -1,7 +1,11 @@
 # Customizing State Machine Routing with Sparse Motion Sets<a name="animation-editor-customizing-state-machines-with-sparse-motion-sets"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You might run into a case where you have different characters that don't have the exact same motions as the character for which you created the animation graph\. Instead of duplicating large parts or creating new animation graphs for different characters, you can share the same animation graph for all your characters\.
 

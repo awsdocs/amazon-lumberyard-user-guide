@@ -20,7 +20,7 @@ To enable network synchronization for a component, you must do the following:
 
 ## Synchronizing an Entity with a NetBindingComponent<a name="network-synchronizing-netbindingcomponent"></a>
 
-Because a special `NetBindingComponent` is responsible for the actual binding process, entities that need to be synchronized must have a `NetBindingComponent` added to them\. When a game enters a multiplayer session, the `NetBindingComponent` collects replica chunks from the `NetBindable` instances on the entity and adds them to a [Replica](network-replicas-replica.md) master\. A special `NetBindingChunk` captures and stores spawning and other binding information for the entity\. `NetBindingComponent` instances activated during a multiplayer session automatically start the binding process\.
+Because a special `NetBindingComponent` is responsible for the actual binding process, entities that need to be synchronized must have a `NetBindingComponent` added to them\. When a game enters a multiplayer session, the `NetBindingComponent` collects replica chunks from the `NetBindable` instances on the entity and adds them to a [Replica](network-replicas-replica.md) primary\. A special `NetBindingChunk` captures and stores spawning and other binding information for the entity\. `NetBindingComponent` instances activated during a multiplayer session automatically start the binding process\.
 
 ## Binding Process on Remote Nodes<a name="network-synchronizing-binding-process-remote"></a>
 
@@ -36,7 +36,7 @@ A `NetBindingComponent` must exist for an entity to be bound to the network\. Th
 
 ## Entity IDs<a name="network-synchronizing-entity-ids"></a>
 
-In Lumberyard, every entity has a unique ID so that it can be referenced in the game\. Entity IDs are 64\-bit strings generated using an algorithm that ensures uniqueness across computing devices\. To reduce binding complexity, the net binding system spawns entities to be bound to proxy replicas using the same ID as the master\.
+In Lumberyard, every entity has a unique ID so that it can be referenced in the game\. Entity IDs are 64\-bit strings generated using an algorithm that ensures uniqueness across computing devices\. To reduce binding complexity, the net binding system spawns entities to be bound to proxy replicas using the same ID as the primary\.
 
 The following diagram shows how the net binding system binds an entity to the network and spawns an entity\. It does this with the same ID that it binds to a proxy replica\.
 

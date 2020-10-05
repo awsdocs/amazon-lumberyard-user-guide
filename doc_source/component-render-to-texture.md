@@ -1,7 +1,11 @@
 # Render to Texture<a name="component-render-to-texture"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Render to Texture** component to render the scene from a specific camera to a texture\. You can use this feature to create rear\-view mirrors, security camera screens, and draw 3D models in the viewport\. 
 

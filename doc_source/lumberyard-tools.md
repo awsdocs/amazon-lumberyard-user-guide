@@ -1,7 +1,11 @@
 # Lumberyard Editors and Tools<a name="lumberyard-tools"></a>
 
+
 ****  
-This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\.
+
+|  | 
+| --- |
+| This topic references tools and features that are [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy)\. If you want to use legacy tools in Lumberyard Editor, disable the [CryEntity Removal gem](https://docs.aws.amazon.com/lumberyard/latest/userguide/gems-system-cryentity-removal-gem.html) using the [Project Configurator](https://docs.aws.amazon.com/lumberyard/latest/userguide/configurator-intro.html) or the [command line](https://docs.aws.amazon.com/lumberyard/latest/userguide/lmbr-exe.html)\. To learn more about legacy features, see the [Lumberyard Legacy Reference](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf)\. | 
 
 Lumberyard provides the following suite of applications, editors, and tools for game development\.
 
@@ -17,7 +21,7 @@ Runs in the background when you launch Lumberyard Editor, monitoring input direc
 [Audio Controls Editor](audio-atl-editor.md)  
 Manages audio translation layer \(ATL\) controls and events for the audio system\.
 
-[Geppetto](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/char-editor.html) \(Legacy\)  
+[Animation Editor](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/char-editor.html) \(Legacy\)  
 Manages character animations, attachments, and physics simulations along with blendspace and animation layering\.
 
 [Console](console-intro.md)  
@@ -52,9 +56,6 @@ Acts as the main workspace editor and game viewport; loads the **Rollup Bar** an
 
 [Lumberyard Setup Assistant](lumberyard-launcher-intro.md)  
 Ensures that you have the necessary runtime software and SDKs installed to successfully run Lumberyard\.
-
-[Mannequin Editor](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/mannequin-editor.html)  
-Manages the high\-level character Mannequin system and includes the **FragmentID Editor**, **Fragment Editor**, **Tag Definition Editor**, **Transition Editor**, **Sequence Previewer**, **Animation Database Editor**, and **Context Editor**\.
 
 [Material Editor](mat-intro.md)  
 Applies final material setup, texture mapping, and shader parameters\.

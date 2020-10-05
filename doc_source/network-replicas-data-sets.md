@@ -105,7 +105,7 @@ GridMate::DataSet<float, HalfMarshaler> m_data;
 
 ### Example 3<a name="network-replicas-data-sets-example-3"></a>
 
-The following example creates a `DataSet` object that stores an `s32` value using the default marshaler for `s32`\. Whenever the `DataSet` value changes, the `DataSetHandler` function is called on the `MyReplicaChunk` instance\. This is true for both master and proxy nodes; the event is triggered on local data changes for the master and upon received data changes for the proxies\.
+The following example creates a `DataSet` object that stores an `s32` value using the default marshaler for `s32`\. Whenever the `DataSet` value changes, the `DataSetHandler` function is called on the `MyReplicaChunk` instance\. This is true for both primary and proxy nodes; the event is triggered on local data changes for the primary and upon received data changes for the proxies\.
 
 ```
 class MyReplicaChunk : public GridMate::ReplicaChunk

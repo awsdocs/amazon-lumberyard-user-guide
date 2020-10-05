@@ -91,7 +91,7 @@ Because `AZ::Interface` uses `AZ::Environment` variables across DLL boundaries, 
 ***Thread safety is your responsibility***\. Using `AZ::Interface<T>`does not make threads safe\.
 
 **Vs\. AZ::Event**  
-`[AZ::Event](az-event.md)` is a publish/subscribe \(pub/sub\) event handler that can be used when you want to subscribe to notifications from another component on the same thread\. `AZ::Interface`, on the other hand, is a replacement for singletons, when you want to invoke methods on a core system like the renderer or the console\. 
+`AZ::Event` is a publish/subscribe \(pub/sub\) event handler that can be used when you want to subscribe to notifications from another component on the same thread\. `AZ::Interface`, on the other hand, is a replacement for singletons, when you want to invoke methods on a core system like the renderer or the console\. 
 
 ## Converting from an EBus implementation<a name="az-interface-convert-ebus"></a>
 

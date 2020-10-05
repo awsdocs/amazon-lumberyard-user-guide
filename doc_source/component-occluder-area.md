@@ -1,7 +1,11 @@
 # OccluderArea<a name="component-occluder-area"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **OccluderArea** component to create a custom\-shaped occlusion plane with four vertices\. This is useful if you don't want Lumberyard to render everything that is behind the **OccluderArea** component\. This can result in better performance in areas where automatic occlusion doesn't work well\. For example, if you have many objects behind a wall, you can add an occluder area behind the wall so that those objects don't appear\.
 

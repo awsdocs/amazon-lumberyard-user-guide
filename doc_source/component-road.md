@@ -1,7 +1,11 @@
 # Road<a name="component-road"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Use the **Road** component to create paths in Lumberyard Editor\. You can create roads that follow the curvature of existing terrain by applying a texture over the terrain texture\. You can also use the **Align heightmap** feature with the **Road** component to shape the terrain to the height and curvature of the road you placed\.
 

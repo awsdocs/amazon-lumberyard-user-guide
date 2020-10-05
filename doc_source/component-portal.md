@@ -1,7 +1,11 @@
 # Portal<a name="component-portal"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Use the **Portal** component to create efficient indoor areas with the **[VisArea](component-vis-area.md)** component\. You can use portals to specify areas where you can look out of a visible area and see beyond it, such as windows or doors between visible areas\.
 

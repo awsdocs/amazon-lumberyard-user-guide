@@ -7,3 +7,4 @@ Cloud Canvas Resource Manager provides a robust set of features for securing you
 + [Cloud Canvas Built\-In Roles and Policies](cloud-canvas-built-in-roles-and-policies.md)
 + [Player Identity](cloud-canvas-rm-security-player-identity.md)
 + [Using the Cloud Canvas Command Line to Manage Roles and Permissions](cloud-canvas-rm-security-lmbr-aws.md)
++ [Improve Security with a Custom Domain Name](cloud-canvas-setup-custom-domain-name.md)

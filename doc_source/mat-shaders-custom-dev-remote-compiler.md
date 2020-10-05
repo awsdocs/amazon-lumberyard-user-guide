@@ -80,11 +80,11 @@ SCMailAddress = RemoteShaderCompiler@your_company.tld
 PrintWarnings = 1
 ```
 
-### Creating a Whitelist for the Remote Shader Compiler<a name="mat-shaders-custom-dev-remote-compiler-whitelist"></a>
+### Creating an allow list for the Remote Shader Compiler<a name="mat-shaders-custom-dev-remote-compiler-allow"></a>
 
-You can use a whitelist to specify the IP addresses that are allowed to connect to your remote shader compiler\. If a computer has an IP address that is not in the whitelist, the remote shader compiler provides a message that an invalid computer tried to connect and then closes the connection\. This prevents data from being read or sent to an invalid connection\.
+You can use an allow list to specify the IP addresses that are allowed to connect to your remote shader compiler\. If a computer has an IP address that is not in the allow list, the remote shader compiler provides a message that an invalid computer tried to connect and then closes the connection\. This prevents data from being read or sent to an invalid connection\.
 
-**To create a whitelist for the remote shader compiler**
+**To create an allow list for the remote shader compiler**
 
 1. Create or edit the `config.ini` in the same directory as the remote shader compiler executable\.
 
@@ -95,7 +95,7 @@ You can use a whitelist to specify the IP addresses that are allowed to connect 
 To specify multiple IP addresses, specify a comma\-delineated list\. Do not include white space or empty lines\.
 
 **Example**  
-The following allows computers or devices with IP addresses matching the whitelist to connect to the remote shader compiler\.   
+The following allows computers or devices with IP addresses matching the allow list to connect to the remote shader compiler\.   
 
 ```
 white_list=10.53.180.37,10.53.104.220

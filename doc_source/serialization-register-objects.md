@@ -16,14 +16,23 @@ AZ::ComponentApplicationBus::BroadcastResult(serializeContext, &AZ::ComponentApp
 
 Classes are registered on a serialization context with the `AZ::SerializeContext::Class<T>()` method, using the type `T` to determine which class to register\. In order to be serialized, the class **must** be a specialization of `AzTypeInfo` registered with the `AZ_TYPE_INFO_SPECIALIZE()` macro, or have RTTI information set with the `AZ_RTTI` macro\. The `AZ::SerializeContext::Class<T>()` method returns an `AZ::SerializeContext::ClassBuilder` object, which is used to store version and field information for the class\. 
 
+### `AZ::SerializeContext::ClassBuilder`<a name="serialization-register-objects-classes-classbuilder"></a>
 
-**AZ::SerializeContext::ClassBuilder**  
+`Version(unsigned int version, VersionConverter converter = nullptr)`  
+Sets version information for the serialization\.  
++  `version` – The version of the class\. Whenever the internal structure of the class changes, the version should be updated\. 
++  `converter` – Converter function which translates older versions of the class to the provided `version`\. 
 
-|  |  | 
-| --- |--- |
-| <pre>Version(unsigned int version,<br />    VersionConverter converter = nullptr)</pre> | Sets version information for the serialization\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-register-objects.html)  | 
-|  <pre>template<class ClassType, class FieldType><br />Field(const char* name,<br />    FieldType ClassType::* address,<br />    AZStd::initializer_list<AttributePair> attrbuteIds = {})</pre>  | Tags a field in a class for storage\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-register-objects.html) | 
-|  <pre>template<class ClassType, class BaseType, class FieldType><br />FieldFromBase(const char* name,<br />    FieldType BaseType:* address)</pre>  | Create a field from a base class member\. This can be used if you want to serialize a base class member without registering and serializing a whole base class, to decouple the serialized class from its base\.[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-register-objects.html) | 
+`template<class ClassType, class FieldType> Field(const char* name, FieldType ClassType::* address, AZStd::initializer_list<AttributePair> attrbuteIds = {})`  
+Tags a field in a class for storage\.  
++ `name` \- The name to store the field as\. Field names for the same class must be unique\. Matching the member name isn't required\.
++ `address` \- The address of the field to store, as a pointer to member or offset from the start of an instance of `ClassType`\. If a pointer to member is used, all type information is inferred\.
++ `attributeIds` \- Associate other attribute objects with this field\.
+
+`template<class ClassType, class BaseType, class FieldType> FieldFromBase(const char* name, FieldType BaseType:* address)`  
+Create a field from a base class member\. This can be used if you want to serialize a base class member without registering and serializing a whole base class, to decouple the serialized class from its base\.  
++ `name` \- The name to store the field as\. Field names for the same class must be unique\. Matching the member name isn't required\.
++ `address` \- The address of the field to store, as a pointer to member or offset from the start of an instance of `BaseType`\. If a pointer to member is used, all type information is inferred\.
 
 **Example Registering a class for serialization**  
 The following is an example from the Lumberyard Asset Processor code, demonstrating how a class can be registered for serialization\.  
@@ -46,13 +55,17 @@ if (AZ::SerializeContext* serializeContext = azrtti_cast<AZ::SerializeContext*>(
 
 Enums are registered on a serialization context with the `AZ::SerializeContext::Enum<T>()` method, using the type `T` to determine which enum to register\. In order to be serialized, the enum **must** be a specialization of the `AzTypeInfo` using the `AZ_TYPE_INFO_SPECIALIZE()` macro\. The `AZ::SerializeContext::Enum<T>()` method returns an `AZ::SerializeContext::EnumBuilder` object, which is used to store version and value information for the enum\. 
 
+### `AZ::SerializeContext::EnumBuilder`<a name="serialization-register-objects-enums-enumbuilder"></a>
 
-**AZ::SerializeContext::EnumBuilder**  
+`Version(unsigned int version, VersionConverter converter = nullptr)`  
+Sets version information for the serialization\.  
++  `version` – The version of the enum\. Unlike classes, this doesn't need to change whenever an enum's definition is updated, and is mostly for conversion purposes\. 
++  `converter` – Converter function which translates older versions of the enum to the provided `version`\. 
 
-|  |  | 
-| --- |--- |
-|  <pre>Version(unsigned int version,<br />    VersionConverter converter = nullptr)</pre>  | Sets version information for the serialization\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-register-objects.html)  | 
-|  <pre>template<class EnumType><br />Value(const char* name,<br />    EnumType value)</pre>  | Tags an enum value for serialization as part of the enum's information\.[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-register-objects.html) | 
+`template<class EnumType> Value(const char* name, EnumType value)`  
+Tags an enum value for serialization as part of the enum's information\.  
++ `name` \- The name to store the value as\. Field names for the same enum must be unique\. Matching the internal value name isn't required\.
++ `value` \- The associated value to store for the enum\. If this is a value associated with the enum, all type information is inferred\.
 
 **Important**  
  If you're serializing a member from a class with an enum type, that enum **must** be registered with the serializer\. 

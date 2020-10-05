@@ -1,7 +1,11 @@
 # Creating and Visualizing Blend Spaces<a name="animation-editor-blend-spaces"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Blend spaces are a collection of sample motions that are organized spatially according to their coordinates\. The visual representation is a graph with xy\-axes for the coordinates\. The xy\-axes can represent values such as move speed, travel direction, turn angle, and so on\. Each motion is represented by a point \(white dot\) in the graph or blend space\.
 

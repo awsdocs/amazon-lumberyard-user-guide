@@ -53,7 +53,7 @@ local ExampleScript = {
     NetRPCs =
     {
         RPCNoParam = {
-            OnMaster = <function> -- The function to be called on the Master Script.
+            OnMaster = <function> -- The function to be called on the Primary Script.
                                   -- The function should return a bool value that 
                                   -- indicates whether or not proxy components can 
                                   -- execute the RPC on themselves. Required.

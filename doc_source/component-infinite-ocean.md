@@ -1,7 +1,11 @@
 # Infinite Ocean<a name="component-infinite-ocean"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Infinite Ocean** component to add an ocean surface to your level\. The ocean expands to the horizon, no matter where the camera moves in the environment\. 
 + Ocean simulation is based on a fast Fourier transform \(FFT\) noise\-based gradient, normal, and height maps, and mixes multiple frequencies and scale for ambient waves\.

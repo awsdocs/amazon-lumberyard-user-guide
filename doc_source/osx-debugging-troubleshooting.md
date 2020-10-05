@@ -1,7 +1,11 @@
 # macOS Debugging and Troubleshooting<a name="osx-debugging-troubleshooting"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Lumberyard provides full access to the source code, which allows you to debug your macOS application using Xcode without additional Lumberyard\-specific steps to follow\. For information about debugging and profiling your macOS application, see [Debugging](https://developer.apple.com/support/debugging/) in the official Apple developer documentation\.
 

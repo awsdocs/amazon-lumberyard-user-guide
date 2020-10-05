@@ -1,7 +1,11 @@
 # Creating Multiple Asset Bundles<a name="asset-bundler-tutorial-multiple-bundles"></a>
 
+
 ****  
-This tutorial is out of date for the new Starter Game project that shipped as part of Lumberyard 1\.25\. We're working to revise it and provide better, more comprehensive instructions\. 
+
+|  | 
+| --- |
+| This tutorial is out of date for the new Starter Game project that shipped as part of Lumberyard 1\.25\. We're working to revise it and provide better, more comprehensive instructions\.  | 
 
 The [Build and bundle assets for release in Lumberyard](asset-bundler-tutorial-release.md) tutorial gets you started with using the asset bundling system to produce a game release\. However, it doesn't represent what most games require\. In this tutorial, you learn the bundling process for a common use case: Games that download additional content after the player launches the game\. The tutorial shows you how to create a release build with multiple game levels in separate asset bundles that have the contents of the base game removed\.
 

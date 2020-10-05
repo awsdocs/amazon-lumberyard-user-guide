@@ -1,98 +1,101 @@
-# Building the Lumberyard Executable for Linux<a name="linux-build-lumberyard-executable"></a>
+# Deploy a Lumberyard multiplayer project's server on Linux<a name="linux-build-lumberyard-executable"></a>
+
 
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
 
-After compiling the assets on a Windows computer, you must build the Lumberyard executable for a Linux computer\. Your Linux executable and compiled game assets must be packaged as the tar archive format \(\.tar\) for transfer to a Linux environment\. To create a Linux deployment package, run the **MultiplayerSample\_LinuxPacker\.bat** file \(located in the **\\dev** directory\) as Administrator\.
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
-When you create the TAR file with the MultiplayerSample\_LinuxPacker\.bat script, it will be given a name based on the current date and time\. While you can name it what you like, keeping the format below is also a best practice, especially if you may be managing multiple packaged versions of your game on the Linux machine\. These instructions assume the following format:
+ To distribute your Lumberyard project's server onto Linux, you need to have access to a Windows 10 computer to perform your first build, which generates the client executable and assets that the server uses\. After your build is complete, bundle up the assets and code for distribution, building, and hosting on your Linux server\. This topic walks you through the steps to perform the Windows 10 client build, get the files onto your Linux host, and then build the Linux server application\. 
 
-```
-YYYY-MM-DD_HH-MM-SS.tar
-```
+ Currently, the only officially supported Linux distribution is Ubuntu 18\.04 LTS\. To verify that you're running the correct distribution on your Linux host, run the **lsb\_release \-a** command\. If you're on the correct distribution, you should see `Ubuntu 18.04` in the output\. 
 
-**Copy your TAR file to a Linux platform for deployment**
+ These instructions are for building the **MultiplayerSample** project that's included in the Lumberyard distribution\. When you build and distribute your project, edit the scripts referenced in this topic where needed to reference your project's name and contents instead\. 
 
-You will need a Linux environment to complete these steps\. You can create a Linux VM or install a Linux distro on a separate machine, or create a VM on your desktop or in the cloud\. For this guidance, we assume you are using the Ubuntu Linux distro, version 18\.04 LTS or later\. \(AWS' Elastic Compute Cloud VM service provides this as the standard Linux AMI\. [Read more about it here](https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/)\.\)
+## Bundle the assets and source on Windows<a name="linux-build-lumberyard-executable-package"></a>
 
-If you are running Windows 10 Professional build 14393\.0 or later, you can use the Windows Subsystem for Linux \(WSL\)\. [Read more about setting it up for the deployment of your Lumberyard game executable here](linux-build-lumberyard-executable-wsl.md)\.
+To create a Linux server for your project, you first have to build the assets on Windows and bundle them for distribution to the server\. This distribution also includes all of the source code and tools that you need to generate a server build, so you don't need to install Lumberyard on your Linux host\. 
 
-1. Once you have a Linux machine or WSL running, connect to it\. From the shell, run the following command to verify the version:
+**To package the assets and source on Windows**
 
-   ```
-   lsb_release -a
-   ```
+1. Open a console and navigate to the `lumberyard_install\dev` directory\.
 
-   The output must indicate a version of Ubuntu that is 18\.04 or later, such as:
+1. Open `bootstrap.cfg` and set the value of `sys_game_folder` to `MultiplayerSample`\.
 
    ```
-   No LSB modules are available.
-   Distributor ID: Ubuntu
-   Description:    Ubuntu 18.04.3 LTS
-   Release:        18.04
-   Codename:       bionic
+   sys_game_folder=MultiplayerSample
    ```
 
-1. Copy the tarball you created on your Windows machine to a location on the Linux machine\. You can use WinSCP, FTP, or other methods to copy the TAR archive over\. If you are running Linux on a local partition, mount it and copy the files over directly\. If you are using Windows Subsystem for Linux, you can skip to Step 2\.
-
-**To build the Lumberyard executable for Linux**
-
-1. Once you have copied the \.tar file to the Linux machine, open a command line window on your Linux computer \(or use bash if you are running Linux on your local computer\), change to the directory where you placed it, and enter the following command to unpack it:
+1.  Build the project assets for the multiplayer server\. 
 
    ```
+   BuildMultiplayerSample_Paks_PC_dedicated.bat
+   ```
+
+1.  Bundle the packaged assets together into a tape archive \(`.tar`\) file for distribution to a Linux host\. This requires Python, which is distributed with Lumberyard: 
+
+   ```
+   Tools\Python\version\windows\python.exe Tools\LmbrSetup\Linux\archiver.py
+   ```
+
+    This tool generates a file based on the current timestamp, located at `BinTemp\unix_archives\YYYY-MM-DD_HH-mm-ss.tar` 
+**Note**  
+ This archive file is uncompressed and is quite large\. Before distributing it to a remote Linux host, you might want to compress it with LZMA, bzip2, or gzip\. 
+
+1.  Copy the created archive over to your Linux host\. You can use SFTP, SCP, or any other method that you would normally use to achieve this\. For instructions on copying to an Amazon EC2 instance using SCP, see [Transfer files to your Linux instance using WinSCP](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html#Transfer_WinSCP)\. 
+
+    If you're running Windows 10, you can use the Windows Subsystem for Linux \(WSL\) to test a deployment\. See Microsoft's instructions on [installing WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and [initializing a distribution](https://docs.microsoft.com/en-us/windows/wsl/initialize-distro) to get set up with WSL\. You can access the file directly from the WSL mount points for your Windows drives\. The drives are available from within a WSL terminal at `/mnt/drive_letter`\. To avoid performance problems when running the dedicated server under WSL, copy the archive into WSL's file system before continuing\. 
+
+## Compile the dedicated server on Linux<a name="linux-build-lumberyard-executable-compile"></a>
+
+1.  When the packaged assets and source are copied to your Linux host, extract them so that you can build the dedicated server\.
+
+   ```
+   cd your_upload_path
    tar -xvf YYYY-MM-DD_HH-mm-ss.tar
    ```
-
-1. Enter the following command to navigate to the `MultiplayerSample/dev` directory:
-
-   ```
-   cd ~/MultiplayerSample/dev
-   ```
-
-1. \(Optional\) Enter the following command to verify that you are using the supported versions of the dependencies:
-
-   ```
-   sudo sh Tools/LmbrSetup/Linux/setup.sh
-   ```
-
-1. Enter the following command to configure your environment:
-
-   ```
-   sh lmbr_waf.sh configure --3rdpartypath absolute_path_to_3rdParty folder --bootstrap-tool-param "--enablecapability compileengine --enablecapability compilegame" --update-settings True
-   ```  
-**Example command for Multiplayer Sample**  
-
-   ```
-   sh lmbr_waf.sh configure --3rdpartypath ~/MultiplayerSample/3rdParty/ --bootstrap-tool-param "--enablecapability compileengine --enablecapability compilegame" --update-settings True
-   ```
-
-1. Edit the `system_linux_pc.cfg` file to set `log_RemoteConsoleAllowedAddresses` to your IP address\. The file is located in the `lumberyard_version/dev/MultiplayerSample_pc_Paks_Dedicated` directory\.
-
-1. Enter the following command to build other builder assistant tool binaries\. This is required only if you are using a non\-release build\.
-
-   ```
-   sh lmbr_waf.sh build_linux_x64_profile -p host_tools
-   ```
-
-1. Enter the following command to build the Lumberyard executable for Linux:
-
-   ```
-   sh lmbr_waf.sh build_linux_x64_profile_dedicated -p game_and_engine
-   ```
-
-   The executable appears in the `BinLinux64.Dedicated` directory\.
-
 **Note**  
-To build debug or release targets, replace *profile* with **debug** or **release** in the same commands\.  
+ If you compressed your archive in an earlier step, add a decompression argument to `tar`:   
+Compressed with **LZMA**: **tar \-xJvf *YYYY\-MM\-DD\_HH\-mm\-ss*\.tar\.xz**
+Compressed with **bzip2**: **tar \-xyvf *YYYY\-MM\-DD\_HH\-mm\-ss*\.tar\.bz2**
+Compressed with **gzip**: **tar \-xzvf *YYYY\-MM\-DD\_HH\-mm\-ss*\.tar\.gz**
 
-```
-sh lmbr_waf.sh build_linux_x64_debug -p host_tools
-sh lmbr_waf.sh build_linux_x64_debug_dedicated -p game_and_engine
-```
-The executable appears in the `BinLinux64.Debug` directory\.  
+1. With the archive unpacked, change to the project's `dev` directory:
 
-```
-sh lmbr_waf.sh build_linux_x64_release -p host_tools
-sh lmbr_waf.sh build_linux_x64_release_dedicated -p game_and_engine
-```
-The executable appears in the `BinLinux64.Release` directory\.
+   ```
+   cd MultiplayerSample/dev
+   ```
+
+1. Check that your Linux host has the correct dependencies installed and update them if needed:
+
+   ```
+   sudo ./Tools/LmbrSetup/Linux/setup.sh
+   ```
+
+    While setting up your environment, this script might prompt you for input to confirm adding a package repository \(PPA\) or install a package\. If you need to automate server setup, edit this script to make sure there are no user prompts\.
+
+1. Configure the Lumberyard build environment that's bundled as part of the distribution:
+
+   ```
+   ./lmbr_waf.sh configure --3rdpartypath absolute_path_to_unarchive_location/MultiplayerSample/3rdParty \
+       --bootstrap-tool-param "--enablecapability compileengine --enablecapability compilegame" \
+       --update-settings True
+   ```
+
+1. Edit the `MultiplayerSample_pc_Paks_Dedicated/system_linux_pc.cfg` file\. Set the `log_RemoteConsoleAllowedAddresses` value to a comma\-separated list of the IP addresses that Windows clients will connect from\.
+
+1. \(For non\-release builds only\) Build the builder assistant tool binaries\.
+
+   ```
+   ./lmbr_waf.sh --3rdpartypath absolute_path_to_unarchive_location/3rdParty/ build_linux_x64_profile -p host_tools
+   ```
+
+1.  Build the dedicated server: 
+
+   ```
+   ./lmbr_waf.sh --3rdpartypath absolute_path_to_unarchive_location/MultiplayerSample/3rdParty \
+       build_linux_x64_profile_dedicated -p game_and_engine
+   ```
+**Note**  
+ To create a different type of build, such as a debug or release, change *profile* to the appropriate build type\. For all of the available Linux server build types, see [Waf Commands and Options](waf-commands.md)\. 

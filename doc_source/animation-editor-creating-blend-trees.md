@@ -1,7 +1,11 @@
 # Creating Blend Trees<a name="animation-editor-creating-blend-trees"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 In the **Animation Editor**, an animation graph consists of nodes and connections that define transitions and the way that data is passed between nodes\. The **Animation Editor** supports state machines and blend trees\. For more information about state machines, see [About State Machines](char-animation-editor-concepts-and-terms.md#understanding-state-machines)\.
 

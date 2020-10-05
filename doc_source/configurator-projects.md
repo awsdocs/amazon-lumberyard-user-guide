@@ -1,7 +1,11 @@
 # Creating and Switching Game Projects<a name="configurator-projects"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Use the Project Configurator to create and change the settings that affect building and editing of a game project\. You can use the Project Configurator to do the following:
 + Create a game project

@@ -15,7 +15,7 @@ These layers are illustrated in the following diagram\.
 
 ## NetBinding<a name="networking-overview-netbinding"></a>
 
-The network binding API of the AzFramework library provides a way for components to synchronize their state over the network\. The API is implemented on top of GridMate replicas\. A special `NetBindingComponent` is responsible for the actual binding process, so entities that need to be synchronized need to have a `NetBindingComponent` added to them\. When a game enters a multiplayer session, the `NetBindingComponent` collects replica chunks from the `NetBindables` on the entity, and adds them to a replica master\. 
+The network binding API of the AzFramework library provides a way for components to synchronize their state over the network\. The API is implemented on top of GridMate replicas\. A special `NetBindingComponent` is responsible for the actual binding process, so entities that need to be synchronized need to have a `NetBindingComponent` added to them\. When a game enters a multiplayer session, the `NetBindingComponent` collects replica chunks from the `NetBindables` on the entity, and adds them to a replica primary\. 
 
 ## GridMate<a name="networking-overview-gridmate"></a>
 
@@ -23,7 +23,7 @@ GridMate is a library that enables you to easily add online features to your gam
 
 ### Replica<a name="networking-overview-replica"></a>
 
-GridMate uses a single\-master replication model\. For each replica, one node in the session owns the master copy, and everyone else has a proxy copy\. Replicas can be individually migrated from node to node at any time\.
+GridMate uses a single\-primary replication model\. For each replica, one node in the session owns the primary copy, and everyone else has a proxy copy\. Replicas can be individually migrated from node to node at any time\.
 
 At the core of GridMate's replication model is the replica\. Replicas, along with the chunks, datasets and RPCs that make up the replica, provide a mechanism for capturing and propagating the game state\. Replicas also serve as the point of interaction for external game systems\. Replicas can be owned by any node in the network and can be migrated to whichever node that can process them most efficiently\.
 

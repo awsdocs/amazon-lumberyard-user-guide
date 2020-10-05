@@ -1,7 +1,11 @@
 # White Box Gem<a name="gem-white-box"></a>
 
+
 ****  
-This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
 
 The White Box Gem provides two tools implemented as components; the **White Box** component, and the **White Box Collision** component\. You can use the **White Box** component to quickly sketch proxy geometry for your entities\. Use the **White Box Collision** component with the **White Box** component to provide a collision surface for PhysX simulations\. 
 

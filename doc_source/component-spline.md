@@ -1,7 +1,11 @@
 # Spline<a name="component-spline"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can create lines and curves in Lumberyard Editor by using the **Spline** component, 
 
@@ -14,7 +18,7 @@ A spline is a curve that connects two or more specific points\. This is useful i
 
 ## Spline Properties<a name="component-spline-properties"></a>
 
-![\[Example Spline component with the Component Mode option.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/componentmode/using-component-mode-3.png)
+![\[Example Spline component with the Component Mode option.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/using-component-mode-3.png)
 
 The **Spline** component has the following properties\.
 

@@ -1,7 +1,11 @@
 # Lua Editor<a name="lua-editor-debugger"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Lumberyard Lua Editor \(Lua IDE\) offers an intuitive integrated development environment \(IDE\) that makes it easy to author, debug, and edit Lua scripts when you create or extend your game\. Lua Editor is a standalone application, but can be opened directly from Lumberyard Editor\.
 
@@ -41,6 +45,8 @@ Connection is facilitated by [Using GridHub](gridhub-intro.md), which is Lumbery
 
 1. In the Lua Editor toolbar, click **Target: None**, and then click **Editor\(*ID*\)** to connect to Lumberyard Editor\.  
 ![\[Target selector\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lua-editor-debugger-target-editor.png)
+**Note**  
+You may need to expand the Lua Editor window to see the buttons on the Lua Editor toolbar for the next few steps\.
 
 1. In the Lua Editor toolbar, leave **Context** setting at **Default** for the debugging context\. The default setting is good for debugging component entity scripts such as the one in this tutorial\. The **Cry** context option is for debugging legacy scripts such as those associated with Cry entities or the Game SDK\.  
 ![\[Context selector\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lua-editor-debugger-context-choose.png)
@@ -60,7 +66,7 @@ The class reference feature is active only for the default context and component
 
 1. In Lua Editor, single\-click or double\-click one or more line numbers in the `lightflicker.lua` script to set one or more breakpoints\. As you add breakpoints, the line number and script path for each are added to the **Breakpoints** window\.
 
-1. In Lumberyard Editor, press **Ctrl\+G** to run the game, or click **AI/Physics** at the bottom of the viewport to enable game simulation and run scripts\. Lua Editor opens with a yellow marker stopped on the first breakpoint that it encounters\.  
+1. In Lumberyard Editor, press **Ctrl\+G** to run the game, or click the **Simulate** icon at the bottom of the viewport to enable game simulation and run scripts\. Lua Editor opens with a yellow marker stopped on the first breakpoint that it encounters\.  
 ![\[Debugger stopped on breakpoint\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lua-editor-debugger-stopped-on-breakpoint.png)
 
    When execution is halted at a breakpoint, more information becomes available in the **Lua Locals**, **Stack**, and **Watched Variables** panes\.
@@ -76,8 +82,7 @@ The class reference feature is active only for the default context and component
 For greater convenience, you can float or dock these windows\.
 
 1. To detach from debugging, click **Debugging**\.  
-![\[Click to detach from debugging\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lua-editor-debugger-detach-icon.png)  
-![\[Debugging off\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lua-editor-debugger-debugging-off.png)
+![\[Click to detach from debugging\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lua-editor-debugger-detach-icon.png)
 
 1. In Lumberyard Editor, Press **Esc** to stop the game\.
 

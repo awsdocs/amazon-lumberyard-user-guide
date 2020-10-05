@@ -30,7 +30,7 @@ For example, you can use the AZ Code Generator feature to create a component tha
 
 **Example AZ Code Generator Process**  
 
-![\[You can create your own components with the AZ Code Generator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/iimages/codegen/az-code-gen-workflow.png)
+![\[You can create your own components with the AZ Code Generator.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/az-code-gen-workflow.png)
 For more information, see [Automating boilerplate with AZ Code Generator](az-code-gen-intro.md)\.
 
 **Behavior Context**  

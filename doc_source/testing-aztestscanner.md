@@ -64,7 +64,7 @@ lmbr_test.cmd scan --dir Bin64vc141.Debug.Test --only CrySystem.dll --integ
 ```
 
 **Note**  
-For best results, run integration tests on a single library or use a whitelist\. Scanning the full build might take hours to complete\.
+For best results, run integration tests on a single library or use an allow list \. Scanning the full build might take hours to complete\.
 
 
 ****  
@@ -81,8 +81,8 @@ For best results, run integration tests on a single library or use a whitelist\.
 | \-\-bootstrap\-config | No | Path to a JSON configuration file for bootstrapping applications required by libraries\. | 
 | \-\-limit, \-n | No | Sets a limit for the maximum number of modules to scan\. | 
 | \-\-only, \-o | No | Sets a filter to run tests on only the specified library or executable name\. | 
-| \-\-whitelist\-file | No | Path to a new line\-delimited file used for whitelisting\. The new line\-delimited file allows for regular expressions when matching\. | 
-| \-\-blacklist\-file | No | Path to a new line\-delimited file used for blacklisting\. The blacklist takes precedence over the whitelist\. The new line\-delimited file allows for regular expressions when matching\. | 
+| \-\-whitelist\-file | No | Path to a new line\-delimited file used as an inclusion list\. The new line\-delimited file allows for regular expressions when matching\. | 
+| \-\-blacklist\-file | No | Path to a new line\-delimited file used as an exclusion list\. The exclusion list takes precedence over the inclusion list\. The new line\-delimited file allows for regular expressions when matching\. | 
 | \-\-exe | No | If set, causes the scanner to call executables for testing\. \(The default is to test only libraries\.\) | 
 
 The scanner also accepts additional parameters that are passed to the testing framework\. For Lumberyard, GoogleTest, and GoogleMock for C\+\+ are used for unit testing\. You can enter parameters in the scanner command line as shown in the following example:
@@ -99,7 +99,7 @@ The scanner can also be called as a chained command using Waf\. This means that 
 lmbr_waf.bat build_win_x64_vs2017_debug_test -p all run_tests
 ```
 
-The `run_tests` command automatically points to the `\Bin64vc141.Debug.Test` folder to scan\. It also uses the `all` option for whitelisting\. The build step does not require the use of `run_tests`; it always matches the last build\. You can also send all of the scanner parameters through using `--test-params`:
+The `run_tests` command automatically points to the `\Bin64vc141.Debug.Test` folder to scan\. It also uses the `all` option for inclusion\. The build step does not require the use of `run_tests`; it always matches the last build\. You can also send all of the scanner parameters through using `--test-params`:
 
 ```
 // Run tests on the last build with additional parameters (use quotes to capture as string)
@@ -112,11 +112,11 @@ You can also use the `--target` flag to build and test just one module:
 lmbr_waf.bat build_win_x64_vs2017_debug_test -p all --target CrySystem run_tests
 ```
 
-### Whitelisting and Blacklisting<a name="testing-aztestscanner-whitelisting-blacklisting"></a>
+### Including and excluding to filter tests<a name="testing-aztestscanner-include-exclude"></a>
 
-The test scanner includes the ability to use whitelist and blacklist files to filter out libraries and executables that you do not want to test\. Both whitelisting and blacklisting are off by default unless the scanner finds a default whitelist or blacklist file, respectively\. In all cases, modules that are blacklisted are never tested even if they are included in the whitelist\. 
+The test scanner includes the ability to use include and exclude files to filter out libraries and executables that you do not want to test\. By default, all found tests are run\. In all cases, modules that are excluded are never tested even if they are part of the inclusion list\. 
 
-Both whitelisting and blacklisting use a new line\-delimited text file for defining what modules to scan\. Each line is treated as a regular expression for matching, allowing for easy filtering by modules with similar names or in the same directory\. Here is an example file:
+Both include and exclude lists use a new line\-delimited text file for defining what modules to scan\. Each line is treated as a regular expression for matching, allowing for easy filtering by modules with similar names or in the same directory\. Here is an example file:
 
 ```
 # List files directly (remember to escape backslashes in regex)
@@ -133,13 +133,13 @@ EditorPlugins\\.*
 To run the scanner using text files, use the following example:
 
 ```
-lmbr_test.cmd scan --dir Bin64vc141.Test --whitelist-file my_whitelist.txt --blacklist-file my_blacklist.txt
+lmbr_test.cmd scan --dir Bin64vc141.Test --whitelist-file my_include_list.txt --blacklist-file my_exclude_list.txt
 ```
 
-You can specify as many whitelists or blacklists as you need\. The patterns in each file are combined into one set\. For example:
+You can specify as many inclusion and exclusion lists as you need\. The patterns in each file are combined into one set\. For example:
 
 ```
-lmbr_test.cmd scan --dir Bin64vc141.Test --whitelist-file whitelist1.txt --whitelist-file whitelist2.txt
+lmbr_test.cmd scan --dir Bin64vc141.Test --whitelist-file include1.txt --whitelist-file include2.txt
 ```
 
-To set a default whitelist that is always included, create a text file called `lmbr_test_whitelist.txt`\. Place the text file in the root directory of the build \(where `lmbr_test.cmd` is\)\. The default blacklist is similarly called `lmbr_test_blacklist.txt`\. A default blacklist is provided with the build to capture known libraries that do not need to be scanned\.
+To set a default include list, create a text file called `lmbr_test_whitelist.txt`\. Place the text file in the root directory of the build \(where `lmbr_test.cmd` is\)\. The default exclude list is similarly called `lmbr_test_blacklist.txt`\. A default exclude list is provided with the build to capture known libraries that do not need to be scanned\.

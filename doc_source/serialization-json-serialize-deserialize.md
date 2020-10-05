@@ -8,26 +8,50 @@
 
 Serialization into JSON is done with the `static AZ::JsonSerialization::Store()` method\. This method has several overloads, depending on how you want the object to be serialized and what information is available at the time of serialization\. By default, the global serialization context is used\.
 
+### `AZ::JsonSerialization::Store()` overloads<a name="serialization-json-serialize-store"></a>
 
-**AZ::JsonSerialization::Store\(\) overloads**  
+`template<typename T> static AZ::JsonSerializationResult::ResultCode AZ::JsonSerialization::Store(rapidjson::Value& output, rapidjson::Document::AllocatorType& allocator, const T& object, AZ::JsonSerializerSettings settings = AZ::JsonSerializerSettings{});`  
++ `output` – The RapidJSON document or value to write to\. Objects can be serialized at an arbitrary point in a JSON document by providing the appropriate value\.
++ `allocator` – The memory allocator used by RapidJSON\.
++  `object` – The object to serialize\. This object's class must be registered with the provided serialization context\. 
 
-|  |  | 
-| --- |--- |
-|  <pre>template<typename T><br />static AZ::JsonSerializationResult::ResultCode<br />AZ::JsonSerialization::Store(rapidjson::Value& output,<br />    rapidjson::Document::AllocatorType& allocator, <br />    const T& object, <br />    AZ::JsonSerializerSettings settings = AZ::JsonSerializerSettings{});</pre>  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-json-serialize-deserialize.html)  | 
-|  <pre>template<typename T><br />static AZ::JsonSerializationResult::ResultCode<br />AZ::JsonSerialization::Store(rapidjson::Value& output,<br />    rapidjson::Document::AllocatorType& allocator,<br />    const T& object,<br />    const T& defaultObject,<br />    AZ::JsonSerializerSettings settings = AZ::JsonSerializerSettings{});</pre>  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-json-serialize-deserialize.html) | 
-|  <pre>static AZ::JsonSerializationResult::ResultCode<br />AZ::JsonSerialization::Store(rapidjson::Value& output,<br />    rapidjson::Document::AllocatorType& allocator,<br />    const void* object,<br />    const void* defaultObject,<br />    const AZ::Uuid& objectType, <br />    AZ::JsonSerializerSettings settings = AZ::JsonSerializerSettings{});</pre>  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-json-serialize-deserialize.html) | 
+   When serializing, a second object of type `T` is created from the default constructor \(if possible\) to provide default values\. 
++ `settings` – Configuration for how to treat the serialization\. If not provided, the default settings are used\.
+
+`template<typename T> static AZ::JsonSerializationResult::ResultCode AZ::JsonSerialization::Store(rapidjson::Value& output, rapidjson::Document::AllocatorType& allocator, const T& object, const T& defaultObject, AZ::JsonSerializerSettings settings = AZ::JsonSerializerSettings{});`   
++ `output` – The RapidJSON document or value to write to\. Objects can be serialized at an arbitrary point in a JSON document by providing the appropriate value\.
++ `allocator` – The memory allocator used by RapidJSON\.
++  `object` – The object to serialize\. This object's class must be registered with the provided serialization context\.
++ `defaultObject` \- An object providing the values to treat as the defaults during serialization\. Any members of `object` with values that don't match `defaultObject` are guaranteed to be serialized\.
++ `settings` – Configuration for how to treat the serialization\. If not provided, the default settings are used, except that default values will be stored in the output\.
+
+`static AZ::JsonSerializationResult::ResultCode AZ::JsonSerialization::Store(rapidjson::Value& output, rapidjson::Document::AllocatorType& allocator, const void* object, const void* defaultObject, const AZ::Uuid& objectType, AZ::JsonSerializerSettings settings = AZ::JsonSerializerSettings{});`   
++ `output` – The RapidJSON document or value to write to\. Objects can be serialized at an arbitrary point in a JSON document by providing the appropriate value\.
++ `allocator` – The memory allocator used by RapidJSON\.
++  `object` – The object to serialize, as anonymous data\. 
++ `defaultObject` \- An object providing the values to treat as the defaults during serialization\. Any members of `object` with values that don't match `defaultObject` are guaranteed to be serialized\. If a null pointer is passed as the default object, a temporary default may be created during serialization\.
++ `objectType` \- The UUID registered with the Lumberyard runtime representing the class for the provided `object`\. The class represented by this UUID must be registered with the provided serialization context\. 
++ `settings` – Configuration for how to treat the serialization\. If not provided, the default settings are used, except that default values will be stored in the output provided `defaultObject` is not null\.
+
+### `AZ::JsonSerializerSettings`<a name="serialization-json-serialize-store-settings"></a>
 
 The behavior of the `AZ::JsonSerialization::Store()` methods can be controlled by setting an instance of `AZ::JsonSerializerSettings` as the `settings` argument\.
 
+`bool m_keepDefaults`  
+If `true`, then defaults are written to the JSON value when serialized\.  
+*Default*: `false`
 
-**AZ::JsonSerializerSettings**  
+`AZ::SerializeContext* m_serializeContext`  
+The serialization context to query for information about how to serialize the provided object\.  
+*Default*: The global seralization context retrieved from the `ComponentApplicationBus` event bus\.
 
-|  |  | 
-| --- |--- |
-| bool m\_keepDefaults | If true, then defaults are written to the JSON value when serialized\.*Default*: `false` | 
-| AZ::SerializeContext\* m\_serializeContext | The serialization context to query for information about how to serialize the provided object\.*Default*: The global seralization context retrieved from the `ComponentApplicationBus` event bus\. | 
-| AZ::JsonSerializationResult::JsonIssueCallback m\_reporting | Callback method invoked when an error is encountered during serialization\. This function has no access to the object being serialized or the JSON value being written to, but can be used for altering result codes\.*Default*: The default issue reporter, which logs warnings and errors encountered in serialization\. | 
-| AZ::JsonRegistrationContext\* m\_registrationContext | JSON registration context\. For examples of how to use a custom JSON context, see the source code\. *Default*: The global registration context retrieved from the event bus\.  | 
+`AZ::JsonSerializationResult::JsonIssueCallback m_reporting`  
+Callback method invoked when an error is encountered during serialization\. This function has no access to the object being serialized or the JSON value being written to, but can be used for altering result codes\.  
+*Default*: The default issue reporter, which logs warnings and errors encountered in serialization\.
+
+`AZ::JsonRegistrationContext* m_registrationContext`  
+JSON registration context\. For examples of how to use a custom JSON context, see the source code\.  
+*Default*: The global registration context retrieved from the event bus\.
 
 **Example Serialization example**  
 The following is a short example demonstrating how to serialize a simple class\. Details regarding registering the class with the serialization context are omitted\.  
@@ -64,25 +88,38 @@ AZ_TracePrintf("Serialization", "SerializableClass as Json:\n%s", buffer.GetStri
 
 Deserialization from JSON into an object is done with the `static AZ::JsonSerialization::Load()` method\. This method has two overloads \- one for use when an instance of the deserialized object type is available, and the other using `void*` and RTTI information\.
 
+### `AZ::JsonSerialization::Load()` overloads<a name="serialization-json-deserialize-load"></a>
 
-**AZ::JsonSerialization::Load\(\) overloads**  
+`template<typename T> static AZ::JsonSerializationResult::ResultCode AZ::JsonSerialization::Load(T& object, const rapidjson::Value& root, AZ::JsonDeserializerSettings settings = AZ::JsonDeserializerSettings{});`   
++ `object` \- The object to load data into\.
++ `root` \- The root of the JSON tree to deserialize from\. This is normally a full JSON document, but can be any JSON value that will deserialize correctly to type `T`\.
++ `settings` \- Configuration for how to treat deserialization\.
 
-|  |  | 
-| --- |--- |
-|  <pre>template<typename T><br />static AZ::JsonSerializationResult::ResultCode<br />AZ::JsonSerialization::Load(T& object,<br />    const rapidjson::Value& root,<br />    AZ::JsonDeserializerSettings settings = AZ::JsonDeserializerSettings{});</pre>  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-json-serialize-deserialize.html)  | 
-|  <pre>static AZ::JsonSerializationResult::ResultCode<br />AZ::JsonSerialization::Load(void* object,<br />    const AZ::Uuid& objectType,<br />    const rapidjson::Value& root,<br />    AZ::JsonDeserializerSettings settings = AZ::JsonDeserializerSettings{});</pre>  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/serialization-json-serialize-deserialize.html)  | 
+ `static AZ::JsonSerializationResult::ResultCode AZ::JsonSerialization::Load(void* object, const AZ::Uuid& objectType, const rapidjson::Value& root, AZ::JsonDeserializerSettings settings = AZ::JsonDeserializerSettings{});`   
++ `object` \- A pointer to memory allocated as an object matching the type registered for `objectType`\.
++ `objectType` \- The UUID registered with the Lumberyard runtime representing the class for the provided `object`\. The class represented by this UUID must be registered with the provided serialization context\.
++ `root` \- The root of the JSON tree to deserialize from\. This is normally a full JSON document, but can be any JSON value that will deserialize correctly to the type identified by `objectType`\.
++ `settings` \- Configuration for how to treat deserialization\.
+
+### `AZ::JsonDeserializerSettings`<a name="serialization-json-deserialize-load-settings"></a>
 
 The behavior of the `AZ::JsonSerialization::Load()` methods can be controlled by setting an instance of `AZ::JsonDeserializerSettings` as the `settings` argument\.
 
+`bool m_clearContainers`  
+If `true`, then container members of the target `object` to deserialize into are cleared before beginning deserialization\. This option has no effect for classes with a fixed layout\.  
+*Default*: `false`
 
-**AZ::JsonDeserializerSettings**  
+`AZ::SerializeContext* m_serializeContext`  
+The serialization context to query for information about how to deserialize to the object\.  
+*Default*: The global seralization context retrieved from the `ComponentApplicationBus` event bus\.
 
-|  |  | 
-| --- |--- |
-| bool m\_clearContainers | If true, then container members of the target object to deserialize into are cleared before beginning deserialization\. This option has no effect for classes with a fixed layout\. *Default*: `false`  | 
-| AZ::SerializeContext\* m\_serializeContext | The serialization context to query for information about how to deserialize to the object\.*Default*: The global seralization context retrieved from the `ComponentApplicationBus` event bus\. | 
-| AZ::JsonSerializationResult::JsonIssueCallback m\_reporting | Callback method invoked when an error is encountered during deserialization\. This function has no access to the object being serialized or the JSON value being written to, but can be used for altering result codes\.*Default*: The default issue reporter, which logs warnings and errors encountered in deserialization\. | 
-| AZ::JsonRegistrationContext\* m\_registrationContext | JSON registration context\. For examples of how to use a custom JSON context, see the source code\. *Default*: The global registration context retrieved from the event bus\.  | 
+`AZ::JsonSerializationResult::JsonIssueCallback m_reporting`  
+Callback method invoked when an error is encountered during deserialization\. This function has no access to the object being serialized or the JSON value being written to, but can be used for altering result codes\.  
+*Default*: The default issue reporter, which logs warnings and errors encountered in deserialization\.
+
+`AZ::JsonRegistrationContext* m_registrationContext`  
+JSON registration context\. For examples of how to use a custom JSON context, see the source code\.  
+*Default*: The global registration context retrieved from the event bus\.
 
 **Example Deserialization example**  
 The following is a short example demonstrating how to deserialize\. Details regarding how to load JSON data into memory and registering with the serialization context are omitted\.  
@@ -107,45 +144,83 @@ if (result.GetProcessing() == AZ::JsonSerializationResult::Processing::Halted)
 
  To write serialization results to a string, use the `AZ::JsonSerializationResult::ResultCode::AppendToString()` and `AZ::JsonSerializationResult::ResultCode::ToString()`, or `AZ::JsonSerializationResult::ResultCode::ToOSString()` methods\. 
 
+**Processing results**
 
-**Processing results**  
+`Completed`  
+Processing completed successfully\.
 
-|  |  | 
-| --- |--- |
-| Completed | Processing completed successfully\. | 
-| Altered | Processing completed after encountering an error\. Error recovery was performed, so the input and output will not necessarily match\. | 
-| PartialAlter | Processing completed after encountering multiple errors, and was able to perform error recovery by making multiple alterations\. | 
-| Halted | Processing failed and was unable to complete\. This indicates an unrecoverable error or other serious failure\. | 
+`Altered`  
+Processing completed after encountering an error\. Error recovery was performed, so the input and output will not necessarily match\.
 
+`PartialAlter`  
+Processing completed after encountering multiple errors, and was able to perform error recovery by making multiple alterations\.
 
-**Tasks**  
+`Halted`  
+Processing failed and was unable to complete\. This indicates an unrecoverable error or other serious failure\.
 
-|  |  | 
-| --- |--- |
-| RetrieveInfo | Retrieve information from the system, such as querying a serialization context\. | 
-| CreateDefault | Creation of a default instance to use to provide default values during processing\. | 
-| Convert | Type conversion between values\. | 
-| Clear | Clearing a field or value\. | 
-| ReadField | Reading a field from JSON to write to an object value\. | 
-| WriteValue | Writing from an object value to a JSON field\. | 
-| Merge | Merging two JSON values or documents together\. | 
-| CreatePatch | Creation of a patch to transform one JSON value to another\. | 
+**Tasks**
 
+`RetrieveInfo`  
+Retrieve information from the system, such as querying a serialization context\.
 
-**Outcomes**  
+`CreateDefault`  
+Creation of a default instance to use to provide default values during processing\.
 
-|  |  | 
-| --- |--- |
-| Success | The task completed successfully\. | 
-| Skipped | The task skipped a field or value\. | 
-| PartialSkip | The task skipped one or more fields while processing a JSON object or array\. | 
-| DefaultsUsed | Task completed using only default values\. | 
-| PartialDefaults | Task completed using defaults for some values\. | 
-| Unavailable | Task tried to use space which isn't available\. | 
-| Unsupported | An unsupported action was requested while performing the task\. | 
-| TypeMismatch | The source and target were unrelated, and no type conversion could be performed\. | 
-| TestFailed | A test check against a value failed\. | 
-| Missing | A required field or value was missing\. | 
-| Invalid | A field or element contained an invalid value\. | 
-| Unknown | Unknown information was encountered during the task\. | 
-| Catastrophic | An unidentifiable or unknown catastrophic error occurred during the task\. | 
+`Convert`  
+Type conversion between values\.
+
+`Clear`  
+Clearing a field or value\.
+
+`ReadField`  
+Reading a field from JSON to write to an object value\.
+
+`WriteValue`  
+Writing from an object value to a JSON field\.
+
+`Merge`  
+Merging two JSON values or documents together\.
+
+`CreatePatch`  
+Creation of a patch to transform one JSON value to another\.
+
+**Outcomes**
+
+`Success`  
+The task completed successfully\.
+
+`Skipped`  
+The task skipped a field or value\.
+
+`PartialSkip`  
+The task skipped one or more fields while processing a JSON object or array\.
+
+`DefaultsUsed`  
+Task completed using only default values\.
+
+`PartialDefaults`  
+Task completed using defaults for some values\.
+
+`Unavailable`  
+Task tried to use space which isn't available\.
+
+`Unsupported`  
+An unsupported action was requested while performing the task\.
+
+`TypeMismatch`  
+The source and target were unrelated, and no type conversion could be performed\.
+
+`TestFailed`  
+A test check against a value failed\.
+
+`Missing`  
+A required field or value was missing\.
+
+`Invalid`  
+A field or element contained an invalid value\.
+
+`Unknown`  
+Unknown information was encountered during the task\.
+
+`Catastrophic`  
+An unidentifiable or unknown catastrophic error occurred during the task\.

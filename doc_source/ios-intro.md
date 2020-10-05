@@ -4,6 +4,18 @@ You can use Lumberyard to create applications for [iOS devices](mobile-support-i
 
 Lumberyard includes four iOS\-supported sample projects that you can use to learn how to build assets for iOS games using Asset Processor, build shaders using the remote shader compiler, and build and deploy iOS apps using the Lumberyard build tools\. For more information, see [Using Lumberyard sample projects and levels](sample-projects-levels-intro.md)\.
 
+Lumberyard has the following minimum requirements for iOS:
+
+
+****  
+
+|  |  | 
+| --- |--- |
+| CPU | ARM v8 or newer | 
+| GPU | A8 or newerSupports Metal | 
+| OS | iOS 13 or newer | 
+| Example devices | iPhone 6 and newer | 
+
 ## Prerequisites<a name="ios-prerequisites"></a>
 
 To build apps for iOS devices, you must have the following:

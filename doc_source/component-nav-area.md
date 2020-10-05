@@ -33,12 +33,12 @@ You can use a **[Navigation Seed](component-nav-seed.md)** component to fine\-tu
 
 1. In Lumberyard Editor, choose **Game**, **AI**, **Show Navigation Areas**\.
 
-1. In Lumberyard Editor, choose **Game**, **AI**, **View Agent Type**, and then enable the agent type that you want to display\.  
-![\[Enable Show Navigation Areas and View Agent Type in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-nav-area-3.png)
+1. In Lumberyard Editor, choose **Game**, **AI**, **View Agent Type**, and then enable the agent type that you want to display\.
 
-1. In Lumberyard Editor, choose **Game**, **AI**, **Generate All AI**\.
+1. In Lumberyard Editor, choose **Game**, **AI**, **Continuous Update** to show changes in the navigation mesh as you modify the terrain or area\.  
+![\[Enable Show Navigation Areas, View Agent Type, and Continuous Update in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-nav-area-gameai-menu-items.png)
 
-   A navigation mesh is generated showing traversable areas in blue\. To enable continuous update, which shows changes in the navigation mesh as you modify the terrain or area, select **Game**, **AI**, **Continuous Update**\.
+   A navigation mesh shows traversable areas in blue\.
 
 **Topics**
 + [Navigation Area Component Properties](#component-nav-area-properties)
@@ -58,8 +58,6 @@ To define an agent type on your AI, see the [Navigation](component-navigation.md
 
 **Exclusion**  
 When selected, creates a subtractive navigation area\. This creates a cutout within an existing navigation mesh\. For more information, see [Creating Navigation Mesh Exclusion Areas](#component-nav-area-exclusion)\.
-
-![\[Enable Show Navigation Areas and View Agent Type in Lumberyard Editor.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/component-nav-area-3.png)
 
 ## Navigating Around Static Objects<a name="component-nav-area-static-entities"></a>
 

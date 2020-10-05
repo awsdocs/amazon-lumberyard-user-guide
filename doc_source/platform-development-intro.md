@@ -6,4 +6,4 @@
 + [Create Android and iOS projects in Lumberyard](mobile-support-intro.md)
 + [Create virtual reality projects in Lumberyard](virtual-reality.md)
 + [Create macOS projects in Lumberyard](osx-intro.md)
-+ [Creating Lumberyard dedicated servers for Linux](linux-intro.md)
++ [Creating Lumberyard Executables for Linux](linux-intro.md)

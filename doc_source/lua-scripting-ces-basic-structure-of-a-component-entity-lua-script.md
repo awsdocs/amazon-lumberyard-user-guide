@@ -34,7 +34,7 @@ For each Lua script component, Lumberyard creates a table called the entity tabl
 The entity table then has the following properties and methods available to it:
 + A `Properties` table, copied from the script table's `Properties` table\. Default values are provided where appropriate\.
 + An `entityId` property, which contains an object of type `EntityId` that refers to the current entity\.
-+ An `IsMaster` function, callable by the script, to check whether the currently executing script is on the master node or a proxy node\. This function is available only if the script component is network enabled\.
++ An `IsMaster` function, callable by the script, to check whether the currently executing script is on the primary node or a proxy node\. This function is available only if the script component is network enabled\.
 
 ## Built\-in Types and Methods<a name="lua-scripting-ces-built-in-types-and-methods"></a>
 

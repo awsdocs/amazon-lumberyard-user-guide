@@ -1,7 +1,11 @@
 # Using the Cloud Gem Portal REST Explorer<a name="cloud-canvas-cloud-gem-portal-rest-explorer"></a>
 
+
 ****  
- The Cloud Gem Portal \(CGP\) is deprecated and will be removed in a future version of Lumberyard\. 
+
+|  | 
+| --- |
+|  The Cloud Gem Portal \(CGP\) is deprecated and will be removed in a future version of Lumberyard\.  | 
 
 Cloud gems that have a service URL defined in their context have a testing and troubleshooting **REST Explorer** tab on their Cloud Gem Portal page\. The **REST Explorer** tab exports the service API from the Amazon API Gateway host as a [swagger](https://swagger.io/specification/#swagger-object-14) JSON file\.
 

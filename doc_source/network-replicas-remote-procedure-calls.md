@@ -4,17 +4,17 @@ RPCs allow games to send events or requests to remote nodes through replicas\. T
 
 RPCs have the following characteristics:
 + RPC arguments can be of any type, as long as a valid marshaler is provided\.
-+ All RPC requests are routed to the master replica\.
-+ The RPC handler function in the master replica chooses whether to propagate the RPC to proxy replicas\.
++ All RPC requests are routed to the primary replica\.
++ The RPC handler function in the primary replica chooses whether to propagate the RPC to proxy replicas\.
 + RPCs are not kept in the history, and late\-joining clients might not receive RPCs requested before the client joined\.
 
 Like datasets, RPCs are declared as replica chunk members\. An RPC handler function is bound to the RPC as part of the declaration\. RPC requests are forwarded to the handler function along with the arguments and an `RpcContext` associated with the request\.
 
 The RPC handler function can perform additional checks before executing the request\. 
 
-The handler for an RPC returns a Boolean value to GridMate\. This value is used on the replica's master node to determine whether the RPC is propagated to all proxies\.
+The handler for an RPC returns a Boolean value to GridMate\. This value is used on the replica's primary node to determine whether the RPC is propagated to all proxies\.
 
-Remote procedure calls are always invoked first on the master node for the replica\. This is true whether the initial caller is a master or proxy\. The master node's RPC handler decides whether the RPC should be propagated to the proxy nodes based on the return value of the RPC handler\. The user returns `true` to mean "propagate to all replica proxies," and `false` to mean "only invoke this RPC on the master\."
+Remote procedure calls are always invoked first on the primary node for the replica\. This is true whether the initial caller is a primary or proxy\. The primary node's RPC handler decides whether the RPC should be propagated to the proxy nodes based on the return value of the RPC handler\. The user returns `true` to mean "propagate to all replica proxies," and `false` to mean "only invoke this RPC on the primary\."
 
 RPCs have a constructor that requires a string\. This is used for debugging and statistical purposes\. Any debugging or network monitoring exposes the given RPC name\. Using modern C\+\+, the name can also be specified inline, as in the following example\.
 

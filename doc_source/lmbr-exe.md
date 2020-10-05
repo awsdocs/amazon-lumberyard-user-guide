@@ -1,7 +1,11 @@
 # Managing Game Projects with Lmbr\.exe<a name="lmbr-exe"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 `Lmbr.exe` is a command\-line tool for managing capabilities, game projects, and Gems\.
 

@@ -1,7 +1,11 @@
 # Lighting Arc<a name="component-lightning-arc"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Lightning Arc** component to create short arcs \(also called sparks\) between an emitter and a series of target entities\. When an arc is emitted, the arc jumps between the center of the entity to which the **Lightning Arc** component is attached and the center of the target entity\.
 

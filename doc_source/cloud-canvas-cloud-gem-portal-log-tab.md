@@ -1,7 +1,11 @@
 # Using the Cloud Gem Portal to View Logs<a name="cloud-canvas-cloud-gem-portal-log-tab"></a>
 
+
 ****  
- The Cloud Gem Portal \(CGP\) is deprecated and will be removed in a future version of Lumberyard\. 
+
+|  | 
+| --- |
+|  The Cloud Gem Portal \(CGP\) is deprecated and will be removed in a future version of Lumberyard\.  | 
 
 You can view [Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/) for your cloud gems in the **Log** tab of the Cloud Gem Portal\. CloudWatch Logs is an AWS service that monitors log activity related to your application's use of cloud gems\. For example, you can view the [Player Account](cloud-canvas-cloud-gem-player-account.md) cloud gem logs related to a sign up failure\.
 

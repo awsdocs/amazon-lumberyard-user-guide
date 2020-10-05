@@ -35,7 +35,7 @@ If you get file errors during extraction about `AssetProcessor.exe`, `AssetProce
 
 1. On the **Welcome** page of the installer, click **Install**\.
 **Note**  
-In some situations, the Lumberyard Installer can hang and refuse to progress\. The only known remedy at this time is to forcibly terminate the installer through the Windows Task Manager and reboot, then retry the installation\.
+In some situations, the Lumberyard Installer can stop responding and refuse to progress\. The only known remedy at this time is to forcibly terminate the installer through the Windows Task Manager and reboot, then retry the installation\.
 
 1. Follow the instructions to complete your installation\.
 

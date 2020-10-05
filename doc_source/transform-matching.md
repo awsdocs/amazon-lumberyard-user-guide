@@ -9,7 +9,7 @@ Instead of manually copying values from one entity's position to another, you ca
 1. Press and hold **Ctrl** and press the middle mouse button on a target entity\. After the target is selected, the current selection transform matches that of the target\.  
 **Example**  
 
-   In the following example, the ditto feature shares an entity's transform with another entity\. Both entities have the same value\.  
+   In the following example, the ditto feature shares an entity's orientation with another entity\. Both entities have the same value\.  
 ![\[Share the transform data from one entity to another using the ditto feature in Lumberyard.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/viewportinteractionmodel/viewport-selection-model-13.gif)
 
    The following is a shortcut to use the ditto feature\.  
@@ -42,7 +42,7 @@ You can ditto a group of entities to local space so that you can modify entities
 
 1. In the viewport, select a group of entities\.
 
-1. Press and hold **Alt** and press the middle mouse button to select a target entity\. This sets the local space of each entity in the selected group to the target entity that you specified\.  
+1. Press and hold **Ctrl** and **Alt** and press the middle mouse button to select a target entity\. This sets the local space of each entity in the selected group to the target entity that you specified\.  
 **Example**  
 
    In the following example, select a group of entities and use the ditto feature to set them to the local space of the target entity\.  

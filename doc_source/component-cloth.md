@@ -1,12 +1,15 @@
 # Cloth<a name="component-cloth"></a>
 
+
 ****  
-This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
 
 The **Cloth** component treats the vertices of any mesh that it references as particles and applies physical properties, forces, and constraints to simulate the behavior of cloth\. You can add this component to any entity that has **Mesh** or **Actor** components\. 
 + [Cloth Component Properties](#component-cloth-properties) 
 + [Debug Visualization](#component-cloth-debug-visualization) 
-+ [Known Issues](#component-cloth-known-issues) 
 + [References](#component-cloth-references) 
 
 ## Cloth Component Properties<a name="component-cloth-properties"></a>
@@ -271,12 +274,6 @@ Draw the cloth colliders\.
 **0**: Disable collider display\.   
 **1**: Enable collider display\. 
 
-## Known Issues<a name="component-cloth-known-issues"></a>
-+ Cloth is currently supported only for Windows projects\. 
-+ Cloth Debug Visualisation does not display when running from Launchers\. 
-+ Cloth does not support levels of detail \(LODs\)\. 
-+ Cloth does not support scaled transforms\. 
-
 ## References<a name="component-cloth-references"></a>
 
  [Nvidia NvCloth Documentation](https://gameworksdocs.nvidia.com/NvCloth/1.1/index.html) 
@@ -284,7 +281,6 @@ Draw the cloth colliders\.
 **Topics**
 + [Cloth Component Properties](#component-cloth-properties)
 + [Debug Visualization](#component-cloth-debug-visualization)
-+ [Known Issues](#component-cloth-known-issues)
 + [References](#component-cloth-references)
 + [Cloth Simulation](tutorial-cloth-simulation.md)
 + [Create Cloth for Environments](tutorial-cloth-environment.md)

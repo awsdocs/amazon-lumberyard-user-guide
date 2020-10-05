@@ -42,7 +42,7 @@ For more information, see the following topics:
 
 ### Compelling Characters<a name="lumberyard-aaa-engine-characters"></a>
 
-Artists can use Lumberyard to create believable characters and high\-fidelity performances\. Lumberyard's character tool, Geppetto, combines animation, attachments, and physics simulations with blend shape, blend space, and animation layering\. Animators can use Lumberyard's animation tool, Mannequin, to bring characters and creatures to life with features that include animation sequencing, transitions, game logic procedures, ragdoll physics, and more\.
+Artists can use Lumberyard to create believable characters and high\-fidelity performances\. Lumberyard's character tool, Animation Editor, combines animation, attachments, and physics simulations with blend shape, blend space, and animation layering\.
 
 For more information, see [Create and animate characters](char-intro.md)\.
 

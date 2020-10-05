@@ -1,7 +1,11 @@
 # Random Timed Spawner<a name="component-random-timed-spawner"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Random Timed Spawner** component to spawn a specified dynamic slice\. The component spawns the slice at a specified interval \(and random interval variation\) to a random position inside of a specified volume\.
 

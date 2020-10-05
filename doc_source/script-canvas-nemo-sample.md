@@ -55,7 +55,8 @@ Now you are ready to download, configure, and build the sample project\.
 1. Run the version of the following command that corresponds to your version of Visual Studio\.
 
    ```
-   lmbr_waf build_win_x64_vs2017_profile -p game
+   lmbr_waf build_win_x64_vs2017_profile -p
+                       game_and_engine
    ```
 **Note**  
 Building the project takes some time\. 

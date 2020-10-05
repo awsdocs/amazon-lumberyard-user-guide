@@ -1,7 +1,11 @@
 # Rain<a name="component-rain"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use the **Rain** component to create rain effects, puddles, and ripples on the terrain\. You can add multiple **Rain** components to your entities in a level, but the level uses only one of the **Rain** components\. The last **Rain** component to activate takes priority and Lumberyard renders that component\.
 

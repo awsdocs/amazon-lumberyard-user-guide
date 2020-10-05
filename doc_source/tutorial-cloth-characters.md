@@ -1,7 +1,11 @@
 # Create Cloth for Characters<a name="tutorial-cloth-characters"></a>
 
+
 ****  
-This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
 
 To use **Cloth**, you must enable the NVIDIA Cloth Gem\. For more information, see the [NVIDIA Cloth Gem documentation](gems-system-gem-nv-physx-cloth.md)\. 
 
@@ -62,6 +66,10 @@ Create cloth by adding the **Cloth** component to an entity that has an **Actor*
    1. Adjust cloth properties to obtain the desired cloth behavior\. For more information, see [Cloth Component](component-cloth.md)\. 
 
    1. You can use the property **Animation Blending** to blend between cloth simulation and skinned animation\. 
+
+## Add cloth colliders to an actor<a name="add-char-cloth-colliders"></a>
+
+ You can add cloth colliders to an actor to prevent the cloth form penetrating the actor's mesh during simulation\. Cloth colliders are added to actors in **Animation Editor**\. For information on adding cloth colliders to an actor see [Add Cloth Colliders to actors](char_animation_add_cloth_colliders.md)\. 
 
 ## View the Cloth Simulation<a name="view-cloth-simulation"></a>
 

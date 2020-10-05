@@ -15,7 +15,7 @@ You can use Lumberyard to develop games for the following platforms:
 + For mobile devices, see [Create Android and iOS projects in Lumberyard](mobile-support-intro.md)\.
 + For macOS, see [Create macOS projects in Lumberyard](osx-intro.md)\.
 
-Lumberyard supports dedicated servers for Linux\. For more information, see [Creating Lumberyard dedicated servers for Linux](linux-intro.md)\.
+Lumberyard supports dedicated servers for Linux\. For more information, see [Creating Lumberyard Executables for Linux](linux-intro.md)\.
 
 **Topics**
 + [System requirements](setting-up-system-requirements.md)

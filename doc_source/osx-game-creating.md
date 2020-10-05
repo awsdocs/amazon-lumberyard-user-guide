@@ -1,7 +1,11 @@
 # Creating a Project for Your macOS Games<a name="osx-game-creating"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The topics in [Create macOS projects in Lumberyard](osx-intro.md) demonstrate how to use the Samples Project that is included with Lumberyard to build game assets, shaders, and macOS applications\. You can follow the same instructions to create a project for your own macOS game\.
 

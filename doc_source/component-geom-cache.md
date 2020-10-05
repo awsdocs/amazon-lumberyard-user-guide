@@ -1,7 +1,11 @@
 # Geom Cache<a name="component-geom-cache"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The **Geometry Cache** component renders mesh data and can play vertex\-based animations from [Alembic](https://docs.aws.amazon.com/lumberyard/latest/legacyreference/char-export-maya-lumberyard-tools-alembic-cache.html) files\. With this, you can simulate highly complex geometry effects that might otherwise be unachievable\.
 

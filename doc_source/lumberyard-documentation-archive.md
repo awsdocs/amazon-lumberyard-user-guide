@@ -32,3 +32,4 @@ Lumberyard documentation is available in PDF format for the following versions\.
 | 2020\-02\-14 \(1\.22\) | [Getting Started Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-gsg-1.22-2020-02-14.pdf) | [User Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-ug-1.22-2020-02-14.pdf) |  | 
 | 2020\-05\-14 \(1\.23\) | [Getting Started Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-gsg-1.23-2020-05-04.pdf) | [User Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-ug-1.23-2020-05-04.pdf) | [Legacy Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-legacy.pdf) | 
 | 2020\-06\-25 \(1\.24\) | [Welcome Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-wg-1.24.pdf) | [User Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-ug-1.24.pdf) |  | 
+| 2020\-10\-01 \(1\.25\) | [Welcome Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-wg-1.25.pdf) | [User Guide](https://d3bqhfbip4ze4a.cloudfront.net/lumberyard-ug-1.25.pdf) |  | 

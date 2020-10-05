@@ -16,7 +16,7 @@ For example:
         <Reaction faction- "Civilians" reaction="friendly"/>
         <Reaction faction- "Assassins" reaction="hostile"/>
     </Faction>
-    <Faction name="Civilians default="neutral"/>
+    <Faction name="Civilians" default="neutral"/>
     ...
 </Factions>
 ```

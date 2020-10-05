@@ -102,7 +102,7 @@ The following types are serialized to JSON arrays:
 + `AZStd::set` \- Values in the serialized array are sorted
 + `AZStd::unordered_set` \- Values in the serialized array are sorted
 
-Deserialization of a JSON array to a C\+\+ array, list, vector, set, pair, or tuple type is a direct element\-by\-element conversion\. The types of each array element are converted to the target container's value type according to the other JSON deserialization rules\. Missing elements map to the default for the container's value type, and additional elements are ignored\. Types other than JSON arrays will result in a conversion error when attmepting to deserialize to one of these C\+\+ types\.
+Deserialization of a JSON array to a C\+\+ array, list, vector, set, pair, or tuple type is a direct element\-by\-element conversion\. The types of each array element are converted to the target container's value type according to the other JSON deserialization rules\. Missing elements map to the default for the container's value type, and additional elements are ignored\. Types other than JSON arrays will result in a conversion error when attempting to deserialize to one of these C\+\+ types\.
 
 ### Map types<a name="serialization-json-data-types-containers-maps"></a>
 

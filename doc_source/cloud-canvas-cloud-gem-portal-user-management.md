@@ -1,7 +1,11 @@
 # User Management in the Cloud Gem Portal<a name="cloud-canvas-cloud-gem-portal-user-management"></a>
 
+
 ****  
- The Cloud Gem Portal \(CGP\) is deprecated and will be removed in a future version of Lumberyard\. 
+
+|  | 
+| --- |
+|  The Cloud Gem Portal \(CGP\) is deprecated and will be removed in a future version of Lumberyard\.  | 
 
 Starting in Lumberyard 1\.10, the Cloud Gem Portal authentication API requires all Cloud Gem Portal users to have a valid Cloud Gem Portal account to sign in\. You can use the new **User Administration** page in the Cloud Gem Portal for your project to create and manage these accounts\. User accounts can have one of two roles: **Portal Admin** or **User**\. Only users with the **Portal Admin** role can access the **User Administration** page and manage other users\. User names must be unique, and new users are required to change their password the first time that they sign in\.
 

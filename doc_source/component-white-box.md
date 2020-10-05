@@ -1,7 +1,11 @@
 # White Box component<a name="component-white-box"></a>
 
+
 ****  
-This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is an [experimental](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#experimental) release and is subject to change\.  | 
 
 The **White Box** component is a tool you can use to sketch 3D proxy meshes in Lumberyard Editor\. Add the **White Box** component to an entity, select a primitive shape to use as a basis for your proxy mesh, then enter edit mode to access the tools to quickly rough out a mesh for your entity\. 
 
@@ -74,6 +78,16 @@ In edit mode, you can quickly sketch meshes for your entities in Lumberyard Edit
 1. Drag the edge\.
 
 ![\[White Box move edge animation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/whitebox/white-box-move-edge-1.25.gif)
+
+**Move vertex**  
+
+1. Hover over a vertex\. The vertex will highlight\.
+
+1. Hold the left mouse button\.
+
+1. Drag the vertex along the edge guides\.
+
+![\[White Box move vertex animation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/whitebox/white-box-move-vertex-1.26.gif)
 
 ### Scale<a name="component-white-box-edit-scale"></a>
 
@@ -150,6 +164,16 @@ In edit mode, you can quickly sketch meshes for your entities in Lumberyard Edit
 1. Drag the polygon along its normal\.
 
 ![\[White Box extrude scale animation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/whitebox/white-box-extrude-scale-1.25.gif)
+
+### Flip edge<a name="component-white-box-flip-edge"></a>
+
+****Flip edge****  
+
+1. Hold **Ctrl \+ Shift** to show hidden edges\.
+
+1. Right click on a hidden edge to flip its orientation\.
+
+![\[White Box flip edge animation.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/component/whitebox/white-box-flip-edge-1.26.gif)
 
 ### Hide/Show edge<a name="component-white-box-hide-show-edge"></a>
 

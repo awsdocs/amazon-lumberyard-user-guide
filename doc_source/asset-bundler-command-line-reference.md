@@ -45,7 +45,7 @@ AssetBundlerBatch command --parameterWithArgs arg1,arg2 --flagParameter ...
  The `AssetBundlerBatch` executable is contained in the `dev\Bin64HostPlatform` folder of your project\. For example, when building on PC with Visual Studio 2017, the asset processor is located at `dev\Bin64vc141`\. 
 
 The elements in this example invocation break down to:
-+  `command` \- The command for the asset bundler to run\. Examples include `[seeds](#asset-bundler-command-line-reference-seeds)` and `[assetLists](#asset-bundler-command-line-reference-assetlists)`\. 
++  `command` \- The command for the asset bundler to run\. Examples include `seeds` and `assetLists`\. 
 +  `--parameterWithArgs` \- An argument which takes parameters\. If a parameter can take more than one argument, you can either separate arguments with a `,` character without using whitespace, or by giving the parameter multiple times: 
   + `--parameterWithArgs arg1,arg2`
   + `--parameterWithArgs="arg1,arg2"`

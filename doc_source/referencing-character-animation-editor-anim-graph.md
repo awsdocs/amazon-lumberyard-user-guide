@@ -75,7 +75,7 @@ See the following best practices for using referenced anim graphs:
 + **Minimize parameter count** – Keep the number of parameters in your referenced anim graphs minimal\. Using many parameters increases complexity\.
 + **Manage motion sets effectively** – To manage motion sets when you use referencing anim graphs, consider the following options:
   + Manage separate motion sets\. Each motion set contains the motions for one anim graph\.
-  + Create one large motion set for a master anim graph\. This motion set would hold motions for the master anim graph and for all motions used in any of the referenced anim graphs\.
+  + Create one large motion set for a leader anim graph\. This motion set would hold motions for the leader anim graph and for all motions used in any of the referenced anim graphs\.
 **Note**  
 Both options allow the referenced anim graph to be tested by itself\.
 

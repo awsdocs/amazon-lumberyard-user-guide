@@ -1,7 +1,11 @@
 # Using Tags with Animation Graphs<a name="animation-editor-using-tags"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 In the **Animation Editor**, you use tags to describe the current state of your character and control the transition between different states\. Tags are Boolean flags that are either active \(enabled\) or inactive \(disabled\)\. Some examples of tags are Happy, Holding Sword, and Left Leg Injured\. 
 

@@ -1,7 +1,11 @@
 # Editing Components in the Viewport<a name="edit-mode-for-components"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 When you're working with components, you can lock a single component for editing\. You can't edit any other components that are attached to the entity\. This feature prevents you from accidentally editing other components that are attached to the entity\. For example, if you have an entity with attached **Spline** and **Mesh** components, you can lock the **Spline** component, make your changes to the spline, and stop editing\.
 
@@ -35,7 +39,7 @@ For components that support this feature, the component is locked when you edit 
 ![\[Example Spline component in the viewport.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/componentmode/using-component-mode-1.png)
 
 1. In the viewport, double\-click the spline or, in the **Entity Inspector**, click **Edit**\.  
-![\[Example Spline component with the Component Mode option.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/componentmode/using-component-mode-3.png)  
+![\[Example Spline component with the Component Mode option.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/using-component-mode-3.png)  
 **Example**  
 
    The manipulator appears in the viewport\. The vertices turn red\. When you select a vertex, the manipulator appears\.  

@@ -13,7 +13,7 @@ Lumberyard consists of the following major systems that help you develop levels 
    
 + [Create and animate characters](char-intro.md)
 
-  The character animation system combines skeletal\-based deformation of meshes with morph\-based vertex deformation to facilitate complex animation\. You can create realistic character movements by playing and blending animation sequences, controlling facial expressions, and applying damage effects\. Characters can play scripted movements, employ AI navigation, or use the Mannequin system to play complex, fully interactive animation sequences, either alone or in concert with other characters\.
+  The character animation system combines skeletal\-based deformation of meshes with morph\-based vertex deformation to facilitate complex animation\. You can create realistic character movements by playing and blending animation sequences, controlling facial expressions, and applying damage effects\. Characters can play scripted movements, employ AI navigation\.
 
    
 + [Create cinematic sequences](cinematics-intro.md)
@@ -93,7 +93,7 @@ The following Lumberyard tools are outside of the main editor and are used for p
   You can use Lumberyard to build macOS applications\.
 
    
-+ [Creating Lumberyard dedicated servers for Linux](linux-intro.md)
++ [Creating Lumberyard Executables for Linux](linux-intro.md)
 
   Lumberyard supports compiling and deploying the Windows client for a multiplayer project on a Linux dedicated server\.
 

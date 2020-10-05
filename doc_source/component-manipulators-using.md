@@ -1,7 +1,11 @@
 # Using Manipulators<a name="component-manipulators-using"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 With manipulators, you can edit certain component properties directly in the viewport instead of the component's property window\. Manipulators help you visualize and achieve the results that you want for your components\. For example, you can add, move, and delete vertices on a **[Spline](component-spline.md)** component to create the exact curvature that you want for your level\.
 

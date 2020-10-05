@@ -42,7 +42,7 @@ Yes
 
 ### Stop<a name="audio-ebus-stop"></a>
 
-Runs the default **'stop'** trigger, if set\. If no **'stop'** trigger is set, kills the default **'play'** trigger\.
+Runs the default **'stop'** trigger, if set\. If no **'stop'** trigger is set, ends the default **'play'** trigger\.
 
 **Parameters**  
 None

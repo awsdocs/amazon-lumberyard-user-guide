@@ -32,7 +32,7 @@ For a Lumberyard component to share data on the network, it must include the `N
 1. Implement the `AzFramework::NetBindable` interfaces: 
 
    ```
-   // Called during network binding on the master. Implementations should create and return a new binding.
+   // Called during network binding on the primary. Implementations should create and return a new binding.
    virtual GridMate::ReplicaChunkPtr GetNetworkBinding() = 0;
    
    // Called during network binding on proxies.
@@ -44,7 +44,7 @@ For a Lumberyard component to share data on the network, it must include the `N
 
 **Notes**
 + If the `AZ_COMPONENT` definition change is missing, the `NetBindingComponent` does not recognize the component when it checks for components to add to the replica\.
-+ If the `SerializeContext` definition is missing, the master replica still functions correctly\. However, the proxy cannot match the IDs because it is not serialized as an `AzFramework::NetBindable` interface\.
++ If the `SerializeContext` definition is missing, the primary replica still functions correctly\. However, the proxy cannot match the IDs because it is not serialized as an `AzFramework::NetBindable` interface\.
 + Changes to these definitions require a re\-export of levels for the static IDs to match correctly\.
 
 ## Network Binding Function Details<a name="network-replicas-binding-details"></a>
@@ -53,7 +53,7 @@ The following functions are available for working with component entities on the
 
 ### GetNetworkBinding<a name="network-replicas-binding-details-get"></a>
 
-The component uses this function to create its `ReplicaChunk` and initialize any state it wants to synchronize across the session\. This function is called only on the master `ComponentEntity`\. The `ReplicaChunk` that is returned is automatically attached to the appropriate `Replica`\.
+The component uses this function to create its `ReplicaChunk` and initialize any state it wants to synchronize across the session\. This function is called only on the primary `ComponentEntity`\. The `ReplicaChunk` that is returned is automatically attached to the appropriate `Replica`\.
 
 ### SetNetworkBinding<a name="network-replicas-binding-details-set"></a>
 
@@ -61,7 +61,7 @@ This function passes a `ReplicaChunk` to the component and initializes the inter
 
 ### UnbindFromNetwork<a name="network-replicas-binding-details-unbind"></a>
 
-The `UnbindFromNetwork` function is called to stop the component from reacting to data updates from the network\. This can happen, for example, when the master no longer exists, has been deactivated, or has relinquished control to the local source\. 
+The `UnbindFromNetwork` function is called to stop the component from reacting to data updates from the network\. This can happen, for example, when the primary no longer exists, has been deactivated, or has relinquished control to the local source\. 
 
 ## Creating a Chunk<a name="network-replicas-binding-creating-a-chunk"></a>
 
@@ -117,7 +117,7 @@ The examples below illustrate the use of `GetNetworkBinding`, `SetNetworkBinding
 
 ### GetNetworkBinding<a name="network-replicas-binding-netbindable-interface-get"></a>
 
-In the following example, the component creates the new replica chunk and initializes the data to be networked\. This function is called by the master replica to retrieve the binding from the component\.
+In the following example, the component creates the new replica chunk and initializes the data to be networked\. This function is called by the primary replica to retrieve the binding from the component\.
 
 ```
 GridMate::ReplicaChunkPtr ShipComponent::GetNetworkBinding()

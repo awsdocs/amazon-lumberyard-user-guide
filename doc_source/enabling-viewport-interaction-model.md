@@ -1,6 +1,6 @@
 # Enabling Viewport Interaction Model<a name="enabling-viewport-interaction-model"></a>
 
-By default, the Viewport Interaction Model isn't enabled for the editor\. You can enable it from the **Preferences** window\.
+By default, the Viewport Interaction Model isn't enabled for the editor\. You can enable it from the **Global Preferences** window\.
 
 **To enable the Viewport Interaction Model**
 

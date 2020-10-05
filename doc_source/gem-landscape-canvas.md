@@ -1,7 +1,11 @@
 # Landscape Canvas Gem<a name="gem-landscape-canvas"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The Landscape Canvas Gem provides the Landscape Canvas Editor; a node\-based graph tool for authoring dynamic vegetation workflows to drive vegetation areas\. This is a great improvement over the previous component based dynamic vegetation system because you can now manage an edit all of the inputs in one place, and easily visualize the data flow when you build dynamic vegetation\. The Landscape Canvas Editor uses the same UI and UX principles as Script Canvas, making Landscape Canvas intuitive and familiar\. 
 

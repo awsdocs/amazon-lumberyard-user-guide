@@ -1,7 +1,11 @@
 # Building Game Assets for macOS Games<a name="osx-assets-building"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 When you build a macOS game using Lumberyard, you must first build the assets that are included with the application\. All built assets are located in the `cache` folder of your Lumberyard installation\. For example, when you build the Samples Project, the assets are saved to the `lumberyard_version\dev\cache\SamplesProject\osx_gl` directory\. The initial build of the Samples Project assets may take up to an hour to process, but incremental changes should process almost instantly\.
 

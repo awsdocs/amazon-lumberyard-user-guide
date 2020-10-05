@@ -1,58 +1,34 @@
 # Generating and Setting a Twitch Client ID<a name="chatplay-generate-twitch-client-id"></a>
 
-In order for Twitch ChatPlay and Twitch API features to function properly, you must set the following console variables to use your application's client ID:
-+ For Twitch ChatPlay, set `chatPlay_ClientID`
-+ For Twitch API, set `broadcast_ClientID`
+In order to use Twitch ChatPlay and Twitch API features in your Lumberyard project, you need to set the following console variables to the value of your project's assigned App access token\.
++ For access to Twitch ChatPlay, set `chatPlay_ClientID`
++ For access to the Twitch API, set `broadcast_ClientID`
 
-You can use the same value for both console variables\.
+ To register your project as an application using Twitch and generate a Client ID access token, use the [Twitch Developer Console](https://dev.twitch.tv/console/apps)\. For more information, see [Twitch Developer Documentation: Registration](https://dev.twitch.tv/docs/authentication#registration)\. 
 
-If you have already registered your application with Twitch, you can locate your client ID on the [Twitch Dev site](https://dev.twitch.tv/)\. Click **My Applications** and then select **Manage** on the name of your application\.
+**Important**  
+ Twitch requires that you set up your own OAuth endpoint to handle user authentication\. For information on setting up this endpoint, see the [Twitch OAuth documentation](https://dev.twitch.tv/docs/authentication/getting-tokens-oauth)\. 
 
-## Generate a Client ID<a name="generate-twitch-client-id-howto"></a>
+## Get your Twitch Client ID<a name="get-twitch-client-id"></a>
 
-Generate a client ID by following the instructions below\.
+ Get your Twitch client ID from the [Twitch Developer Console](https://dev.twitch.tv/console/apps)\. 
 
-**To generate the client ID**
+1. From the Twitch Developer Console, select **Manage** for the application you're getting the client ID of\.  
+![\[Twitch developer console. On the right side of the row containing the application name is the "Manage" button.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay/twitch-manage-app.png)
 
-1. Go to the [Twitch Dev site](https://dev.twitch.tv/) and log in to your account\.
+1. Copy the value from the **Client ID** field on the application's page\.
 
-1. Under **My Applications**, choose **Register an App**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay/twitch-client-id-dev-site.png)
+## Set the Client ID in your project<a name="set-twitch-client-id-howto"></a>
 
-1. On the **Dashboard**, under **Developer Applications**, choose **Register Your Application**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay/twitch-client-id-register-app-dashboard.png)
+Set the Client ID in your Lumberyard project configuration\.
 
-1. On the **Register Your Application** page, complete the form and choose **Register**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/chatplay/twitch-client-id-register-application-page.png)
+1. Open a console and navigate to `lumberyard_install_dir\dev\project_name`\.
 
-1. Note the generated client ID that you will use to set your console variables\.
+1. Open the `game.cfg` file contained in this directory in a text editor\.
 
-## Set the Client ID<a name="set-twitch-client-id-howto"></a>
-
-Set the client ID by following the instructions below for your version of Lumberyard\.
-
-**To set the client ID \(Lumberyard 1\.6 or later\)**
-
-1. On your computer, navigate to your project's `game.cfg` file \(located in the `\dev\project_name\` directory at the root of your Lumberyard installation\)\.
-
-1. Edit the `game.cfg` file to add the following:
+1. Using the Client ID retrieved from Twitch, add the following lines\.
 
    ```
-   chatPlay_clientID = "client ID generated from Twitch"
-   broadcast_clientID = "client ID generated from Twitch"
+   chatPlay_ClientID = "Twitch Client ID"
+   broadcast_ClientID = "Twitch Client ID"
    ```
-
-**To set the client ID \(Lumberyard 1\.5 or earlier\)**
-
-1. Modify the `HttpRequestManager.cpp` file \(located in the `\dev\Code\CryEngine\CryAction\HttpCaller` directory\) to add the following line in the `HttpRequestManager::HandleRequest` function: `httpRequest->SetHeaderValue("Client-ID","client ID generated from Twitch");`
-
-   It should appear as follows:
-
-   ```
-   auto httpRequest = Aws::Http::CreateHttpRequest(uri, httpRequestParameters.GetMethod(), 
-   Aws::Utils::Stream::DefaultResponseStreamFactoryMethod);
-   httpRequest->SetHeaderValue("Client-ID","client ID generated from Twitch");
-   auto httpResponse = httpClient->MakeRequest(*httpRequest);
-   ```
-
-1. Rebuild the game and engine\.

@@ -1,7 +1,11 @@
 # Converting Entities with the Legacy Converter<a name="component-entity-data-converter"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The Legacy Converter converts your [legacy](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#legacy) entities \(CryEntities\) to the new component entity system\. Legacy features will eventually be removed from Lumberyard Editor\. When you use the Legacy Converter, it tries to convert all legacy entities in your level\. You cannot select which entities to convert or skip\. Once an entity is converted, it cannot be converted back to a legacy entity\. 
 

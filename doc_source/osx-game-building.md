@@ -1,7 +1,11 @@
 # Building macOS Games<a name="osx-game-building"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 Before you can run your game on a macOS computer, you must ensure the shader compiler \(located in the `lumberyard_version\dev\Tools\CrySCompileServer\x64\profile` directory\) is running on your PC\. For more information, see [Building Shaders for macOS Games](osx-shaders-building.md)\.
 

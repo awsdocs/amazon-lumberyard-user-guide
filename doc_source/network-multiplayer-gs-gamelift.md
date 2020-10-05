@@ -31,8 +31,6 @@ Set the following server CVARs as needed:
 
 `gamelift_flexmatch_onplayerremoved_enable`
 
-`gamelift_flexmatch_minimumplayersessioncount`
-
 `gamelift_flexmatch_start_delay`
 
 For more details on these server CVARs provided by the Multiplayer Gem, see [Server CVars](gems-system-gem-multiplayer-cvars.md#gems-system-gem-multiplayer-cvars-server)\.

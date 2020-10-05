@@ -1,7 +1,11 @@
 # Blending Poses with Blend Nodes<a name="animation-editor-blending-poses"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 You can use **Blend** nodes in animation graphs to create an animation that blends two input poses\. 
 
@@ -35,16 +39,14 @@ The **Sync Mode** attribute determines the method of synchronizing motion clips 
 
 The **Event Filter Mode** attribute determines which node's events are emitted\.
 
-![\[Blend node attributes: Event Filter Mode.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/actor-animation/animation-editor-blending-attributes-2.png)
-
 
 ****  
 
 | Attribute | Description | 
 | --- | --- | 
-| Master Node Only |  Emits events from the master node only\. The servant node is synchronized to this node\.  | 
-| Servant Node Only  |  Emits events from the servant node only\. The servant node is synchronized to the master node\.  | 
-| Both Nodes |  Emits events from both master and servant nodes\.  | 
+| Leader Node Only |  Emits events from the leader node only\. The follower node is synchronized to this node\.  | 
+| Follower Node Only  |  Emits events from the follower node only\. The follower node is synchronized to the leader node\.  | 
+| Both Nodes |  Emits events from both leader and follower nodes\.  | 
 | Most Active |  Emits events from the more active node\. Special use case for additive blends\.  | 
 
 ### Extraction Mode<a name="animation-editor-blending-attributes-extractionmode"></a>

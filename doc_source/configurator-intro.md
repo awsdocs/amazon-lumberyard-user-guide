@@ -1,7 +1,11 @@
 # Creating Lumberyard projects<a name="configurator-intro"></a>
 
+
 ****  
-This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\. 
+
+|  | 
+| --- |
+| This feature is in [preview](https://docs.aws.amazon.com/lumberyard/latest/userguide/ly-glos-chap.html#preview) release and is subject to change\.  | 
 
 The Project Configurator is a standalone application that allows you to specify to the Waf build system which game projects and assets \([Gems](gems-system-gems.md)\) to include in a game build\. With it, you can create new projects, save active projects, configure advanced settings, and enable, disable, or create new [Gems](gems-system-gems.md)\. You can also use [Lmbr\.exe](lmbr-exe.md) to perform these functions in a command line environment\.
 

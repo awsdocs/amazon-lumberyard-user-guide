@@ -1,6 +1,6 @@
 # Replica<a name="network-replicas-replica"></a>
 
-Replicas are core components of GridMate's replication system that are created by network\-connected GridMate peers\. When a peer creates a replica, GridMate propagates the replica over the network to synchronize the replica's state across the session\. A locally created and owned replica is called a *master replica*\. The copy of the master replica that connected peers receive is called a *proxy replica*\. The synchronization and instantiation of replicas is handled by [Replica Manager](network-replicas-replica-manager.md)\. 
+Replicas are core components of GridMate's replication system that are created by network\-connected GridMate peers\. When a peer creates a replica, GridMate propagates the replica over the network to synchronize the replica's state across the session\. A locally created and owned replica is called a *primary replica*\. The copy of the primary replica that connected peers receive is called a *proxy replica*\. The synchronization and instantiation of replicas is handled by [Replica Manager](network-replicas-replica-manager.md)\. 
 
 ## Replica Chunks<a name="network-replicas-replica-chunks"></a>
 
@@ -47,7 +47,7 @@ Proxy replicas are automatically instantiated by remote peers' replica managers 
 
 ## Replica Ownership<a name="network-replicas-replica-ownership"></a>
 
-When a peer creates a replica and binds it to the session replica manager, that peer becomes the owner of the replica\. Each replica can be owned by only one peer\. The replica owner is the only peer on the network that has the authority to change the state of the replica\. For example, it can change the chunks' datasets or directly execute its RPCs\. Any state changes performed on a proxy replica are considered invalid and do not propagate throughout the session\. RPCs can be called on a proxy replica, but the calls are forwarded to the owner for confirmation before they can be executed\. Once this confirmation is given, the RPC is sent to all proxies and also executed locally by the peer\. If the master replica denies the execution, no peers receive the RPC call\. 
+When a peer creates a replica and binds it to the session replica manager, that peer becomes the owner of the replica\. Each replica can be owned by only one peer\. The replica owner is the only peer on the network that has the authority to change the state of the replica\. For example, it can change the chunks' datasets or directly execute its RPCs\. Any state changes performed on a proxy replica are considered invalid and do not propagate throughout the session\. RPCs can be called on a proxy replica, but the calls are forwarded to the owner for confirmation before they can be executed\. Once this confirmation is given, the RPC is sent to all proxies and also executed locally by the peer\. If the primary replica denies the execution, no peers receive the RPC call\. 
 
 ### Changing Ownership<a name="network-replicas-replica-ownership-changing"></a>
 
@@ -82,7 +82,7 @@ if (replica->IsProxy())
  
 if (replica->IsMaster())
 {
-    // This is a master replica
+    // This is a primary replica
 }
 ```
 
@@ -114,9 +114,9 @@ public:
                                                               // to the replica manager (both
                                                               // on local and remote peers)
     {
-        // printing out whether it is a proxy or a master replica
+        // printing out whether it is a proxy or a primary replica
         if (IsMaster())
-            printf("I am master!\n");
+            printf("I am primary!\n");
         if (IsProxy())
             printf("I am proxy!\n");
     }
@@ -139,5 +139,5 @@ replicaManager->AddMaster(replica); // Binding replica to the replica manager,
 // Other peers receive the new replica and bind it to their replica managers. When this is done, 
 // OnReplicaActivate is triggered, and the "I am proxy" message is printed out on the remote peers. 
 // Every change of m_data DataSet results in the synchronization of the new value in 
-// the master replica with all of the proxy replicas.
+// the primary replica with all of the proxy replicas.
 ```
