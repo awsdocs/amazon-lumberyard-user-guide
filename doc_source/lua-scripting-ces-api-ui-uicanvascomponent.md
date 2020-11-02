@@ -259,7 +259,7 @@ Sets the element that is to be displayed when the pointer pauses over an interac
 void SetTooltipDisplayElement(AZ::EntityId entityId)
 ```
 
-## UiCanvasInputNotifications<a name="lua-scripting-ces-api-ui-uicanvascomponent-uicanvasinputnotifications"></a>
+## UiCanvasInputNotificationBus<a name="lua-scripting-ces-api-ui-uicanvascomponent-uicanvasinputnotifications"></a>
 
 Services notifications for the `UiCanvasComponent`\.
 
