@@ -84,7 +84,7 @@ Cloud Canvas uses the following naming conventions for automatically imported re
 
 The following sections list the resource attributes and related resources that Cloud Canvas imports for each supported AWS service\.
 
-### Dynamo DB Tables<a name="w25aac29c28c25b7c26c13b5"></a>
+### Dynamo DB Tables<a name="w31aac29c28c25b7c26c13b5"></a>
 
 For DynamoDB tables, Cloud Canvas imports the following resource attributes:
 + `AttributeDefinitions`
@@ -94,7 +94,7 @@ For DynamoDB tables, Cloud Canvas imports the following resource attributes:
 + `ProvisionedThroughput`
 + `StreamSpecification`
 
-### Amazon S3 Buckets<a name="w25aac29c28c25b7c26c13b7"></a>
+### Amazon S3 Buckets<a name="w31aac29c28c25b7c26c13b7"></a>
 
 For Amazon S3 buckets, Cloud Canvas imports the following resource attributes:
 + `CorsConfiguration`
@@ -109,7 +109,7 @@ For Amazon S3 buckets, Cloud Canvas also imports the following related resources
 + Amazon SQS queues
 + Amazon SNS topics
 
-### Lambda Functions<a name="w25aac29c28c25b7c26c13b9"></a>
+### Lambda Functions<a name="w31aac29c28c25b7c26c13b9"></a>
 
 For Lambda functions, Cloud Canvas imports the following resource attributes: 
 + `Code`
@@ -127,7 +127,7 @@ For Lambda functions, Cloud Canvas also imports the following related resources:
 + DynamoDB tables 
 + Event source mappings 
 
-### Amazon SNS Topics<a name="w25aac29c28c25b7c26c13c11"></a>
+### Amazon SNS Topics<a name="w31aac29c28c25b7c26c13c11"></a>
 
 For Amazon SNS topics, Cloud Canvas imports the following resource attributes: 
 + `DisplayName`
@@ -135,7 +135,7 @@ For Amazon SNS topics, Cloud Canvas imports the following resource attributes:
 
 For Amazon SNS topics, Cloud Canvas also imports any Lambda functions that are related resources\. 
 
-### SQS Queues<a name="w25aac29c28c25b7c26c13c13"></a>
+### SQS Queues<a name="w31aac29c28c25b7c26c13c13"></a>
 
 For SQS queues, Cloud Canvas imports the following resource attributes: 
 + `DelaySeconds`

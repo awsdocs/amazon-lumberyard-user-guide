@@ -4,7 +4,7 @@ Cloud Canvas provides the `\dev\lmbr_aws.cmd` command line tool for working with
 
 Notes
 +  Lumberyard 1\.9 renamed some `lmbr_aws` commands\. For a list of the older commands and their newer equivalents, see [Command Reorganization](cloud-canvas-command-line-revision.md)\.
-+ For information on using Dynamic Content Cloud Gem `lmbr_aws` commands to update dynamic content, see [Using lmbr\_aws for Dynamic Content](cloud-canvas-cloud-gem-dc-lmbr-aws.md)\. 
++ For information on using Dynamic Content Cloud Gem `lmbr_aws` commands to update dynamic content, see [Using the Dynamic Content Command Line](cloud-canvas-cloud-gem-dc-lmbr-aws.md)\. 
 + For information on `lmbr_aws` commands for the Cloud Gem Portal and the cloud gem framework, see [Using the Cloud Gem Framework Command Line](cloud-canvas-command-line-cgf.md)\.
 + For information on `lmbr_aws` commands that manage roles and permissions, see [Using the Cloud Canvas Command Line to Manage Roles and Permissions](cloud-canvas-rm-security-lmbr-aws.md)\.
 

@@ -1,7 +1,11 @@
 # Editing Bots<a name="cloud-canvas-cloud-gem-speech-recognition-cgp-editing-bots"></a>
 
+
 ****  
-This feature is in preview release and is subject to change\.
+
+|  | 
+| --- |
+| This feature is in preview release and is subject to change\. | 
 
 You can edit speech\-recognition bots in the Cloud Gem Portal\.
 

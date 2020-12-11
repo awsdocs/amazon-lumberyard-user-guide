@@ -257,7 +257,7 @@ Sets the current emitter shape\.
 void SetVariable(eUiEmitShape emitShape)
 ```
 
-For possible emitter shapes, see ``\.
+For possible emitter shapes, see `GetEmitterShape`\.
 
 ### GetIsEmitOnEdge<a name="lua-scripting-ces-api-ui-uiparticleemittercomponent-getisemitonedge"></a>
 
@@ -349,7 +349,7 @@ Sets how the initial direction of the emitted particles is calculated\.
 void SetVariable(eUiEmitShape emitShape)
 ```
 
-For possible direction types, see ``\.
+For possible direction types, see `GetParticleInitialDirectionType`\.
 
 ### GetEmitAngle<a name="lua-scripting-ces-api-ui-uiparticleemittercomponent-getemitangle"></a>
 
@@ -761,7 +761,7 @@ Sets the coordinate system that is used for the movement of the emitted particle
 void SetParticleMovementCoordinateType(eUiParticleCoordinateType movementCoordinateType)
 ```
 
-For possible values for the coordinate type, see ``\.
+For possible values for the coordinate type, see `GetParticleMovementCoordinateType`\.
 
 ### GetParticleAccelerationMovementSpace<a name="lua-scripting-ces-api-ui-uiparticleemittercomponent-getparticleaccelerationmovementspace"></a>
 
@@ -773,7 +773,7 @@ Returns the coordinate system that is used for the acceleration of particles\.
 eUiParticleCoordinateType GetParticleAccelerationMovementSpace()
 ```
 
-For possible values for the movement space, see ``\.
+For possible values for the movement space, see `GetParticleMovementCoordinateType`\.
 
 ### SetParticleAccelerationMovementSpace<a name="lua-scripting-ces-api-ui-uiparticleemittercomponent-setparticleaccelerationmovementspace"></a>
 
@@ -785,7 +785,7 @@ Sets the coordinate system that is used for the acceleration of particles\.
 void SetParticleAccelerationMovementSpace(eUiParticleCoordinateType accelerationMovementSpace)
 ```
 
-For possible values for the movement space, see ``\.
+For possible values for the movement space, see `GetParticleMovementCoordinateType`\.
 
 ### GetParticleInitialVelocity<a name="lua-scripting-ces-api-ui-uiparticleemittercomponent-getparticleinitialvelocity"></a>
 

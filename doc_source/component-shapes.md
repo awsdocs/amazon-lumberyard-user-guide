@@ -155,7 +155,7 @@ See the following **Sphere Shape** properties\.
 
 ## Request EBus Interface<a name="shape-component-ebuses"></a>
 
-All shape components provide access to two separate request buses\. The first bus is the `` that returns general information about the shape component\. The second bus is the [`ShapeNameComponentRequestsBus`](#component-shape-components-request-bus) that returns property configurations for the specified shape\.
+All shape components provide access to two separate request buses\. The first bus is the `ShapeComponentRequestsBus` that returns general information about the shape component\. The second bus is the [`ShapeNameComponentRequestsBus`](#component-shape-components-request-bus) that returns property configurations for the specified shape\.
 
 Use the following request functions with the event bus interface to communicate with other components in your game\.
 
