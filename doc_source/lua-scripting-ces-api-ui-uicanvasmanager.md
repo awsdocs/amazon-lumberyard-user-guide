@@ -8,12 +8,12 @@ Services messages for the `UiCanvasManager` component\.
 
 ### FindLoadedCanvasByPathName<a name="lua-scripting-ces-api-ui-uicanvasmanager-uicanvasmanagerbus-findloadedcanvasbypathname"></a>
 
-Returns the entity ID of the loaded canvas that has the specified canvas pathname\.
+Returns the entity ID of the loaded canvas that has the specified canvas pathname\. Attempt to load the canvas file if loadIfNoFound set true.
 
 **Syntax**
 
 ```
-AZ::EntityId FindLoadedCanvasByPathName(const AZStd::string& canvasPathname)
+AZ::EntityId FindLoadedCanvasByPathName(const AZStd::string& canvasPathname, bool loadIfNotFound)
 ```
 
 ### LoadCanvas<a name="lua-scripting-ces-api-ui-uicanvasmanager-uicanvasmanagerbus-loadcanvas"></a>
