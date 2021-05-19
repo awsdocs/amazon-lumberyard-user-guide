@@ -4,7 +4,11 @@ The Asset Processor interface provides areas containing detailed information abo
 
 ![\[The main window of the Lumberyard Asset Processor. The window is annotated with markers that identify the visual components and features described below.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset_processor/asset-processor-ui.png)
 
+
+
 ![\[The top of the Lumberyard Asset Processor window after the processing completes. The window displays the total time to scan, analyze, and build. The time is annotated with the identifier "I".\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/asset_processor/asset-processor-timer.png)
+
+
 
 A – Processing status  
 Displays asset processing status, the project name, its root location, and the processor port\.

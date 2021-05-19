@@ -1,0 +1,1 @@
+# Constant Gradient<a name="component-gradients-constant"></a>

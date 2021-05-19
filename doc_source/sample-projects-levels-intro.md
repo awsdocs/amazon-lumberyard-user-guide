@@ -19,15 +19,8 @@ The [In\-App Purchases sample](sample-project-inapp-purchases.md) demonstrates h
 
 **Cloud Gem Samples Project**  
 The Cloud Gem Samples Project has cloud gems that you can use to add cloud\-connected functionality to your game\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/sample-project-cloudgems.png)
-+ [Using Dynamic Content Manager](cloud-canvas-cloud-gem-dc-manager.md) – Upload new or updated game assets to the cloud that can be automatically downloaded to game clients\.
-+  [In\-Game Survey Cloud Gem Portal](cloud-canvas-cloud-gem-in-game-survey.md) – Create surveys for your game, test them, and publish them\. You can view the results of your surveys and manage them in the Cloud Gem Portal\.
-+ [Leaderboard Cloud Gem Portal](cloud-canvas-cloud-gem-leaderboard.md) – Store player high scores and provide leader boards that show player rankings\.
-+ [Message Of The Day Cloud Gem Portal](cloud-canvas-cloud-gem-message-of-the-day.md) – Schedule the delivery of messages like new product announcements or holiday greetings to game clients\.
-+ [Player Account Cloud Gem Portal](cloud-canvas-cloud-gem-player-account.md) – Use a standalone player authentication and management solution for your game\.
-+  [Speech Recognition Cloud Gem](cloud-canvas-cloud-gem-speech-recognition-intro.md) – Add speech recognition and natural language processing to your Lumberyard game\. The Speech Recognition Cloud gem uses [Amazon Lex](https://aws.amazon.com/lex/), which recognizes and understands spoken user input\.
-+ [Text to Speech Cloud Gem \(Using Amazon Polly\)](cloud-canvas-cloud-gem-text-to-speech-intro.md) – Enhance your gameplay and workflows with synthesized speech\. The cloud gem uses [Amazon Polly](https://aws.amazon.com/polly/), a text\-to\-speech service that turns text into lifelike speech\.
++ [Dynamic Content](cloud-canvas-cloud-gem-dc-manager.md) – Upload new or updated game assets to the cloud that can be automatically downloaded to game clients\.
++ [Player Account](cloud-canvas-cloud-gem-player-account.md) – Use a standalone player authentication and management solution for your game\.
 
 For more information, see [Cloud Gems](cloud-canvas-cloud-gems-intro.md)\.
 

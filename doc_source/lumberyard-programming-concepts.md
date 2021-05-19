@@ -43,7 +43,7 @@ For more information, see [Building Lumberyard projects](game-build-intro.md)\.
 
 ## Cloud Canvas<a name="lumberyard-programming-concepts-cloud-canvas"></a>
 
-Lumberyard's [Cloud Canvas](cloud-canvas-intro.md) enables connected game features that use AWS cloud computing\. You can use the [cloud gems](cloud-canvas-cloud-gems-intro.md) that are included with Lumberyard to provide prepackaged cloud\-connected game features\. You can use the [Cloud Gem Framework](cloud-canvas-cloud-gem-framework-intro.md) to [create your own cloud gems](cloud-canvas-cgf-getting-started-create-gem.md)\. Each cloud gem has a web management interface called the [Cloud Gem Portal](cloud-canvas-cloud-gem-portal.md)\. You can use the Cloud Gem Framework to [develop your own Cloud Gem Portal](cloud-canvas-cgf-cgp-dev-gs.md)\.
+Lumberyard's [Cloud Canvas](cloud-canvas-intro.md) enables connected game features that use AWS cloud computing\. You can use the [cloud gems](cloud-canvas-cloud-gems-intro.md) that are included with Lumberyard to provide prepackaged cloud\-connected game features\. You can use the [Cloud Gem Framework](cloud-canvas-cloud-gem-framework-intro.md) to [create your own cloud gems](cloud-canvas-cgf-getting-started-create-gem.md)\.
 
 For more information about programming with Cloud Canvas, see [Getting Started with the Cloud Gem Framework](cloud-canvas-cgf-getting-started.md)\.
 

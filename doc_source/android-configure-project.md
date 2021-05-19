@@ -18,39 +18,43 @@
 
  These are the asset modes that are available modes for asset deployment to devices:
 + `configuration_default` — assets are packed according to the build configuration:
-  + A **debug and profile** configuration uses the loose files mode\.
-  + A **release and performance** configuration uses the project settings mode to determine how to build assets, the APK, and any OBB files\.
-+ `loose_files` — assets *loose*, which means that they are copied individually to storage media\. For more information about loose files, see [Loose files](#android-configure-asset-loading-loose)\.
-+ `apk_files` — assets are *packed*, which means that they are bundled as part of your APK\. For more information about packed files, see [Packed assets](#android-configure-asset-loading-packed)\.
+  + The **debug** and **profile** configurations use `loose_files` mode\.
+  + The **release** and **performance** configurations use the `project_settings` mode to determine how to build assets, the APK, and any OBB files\.
++ `loose_files` and `loose_paks` — assets are *loose*, which means that they are copied to storage media\. For more information about loose files, see [Loose modes](#android-configure-asset-loading-loose)\.
++ `apk_files` and `apk_paks` — assets are *packed*, which means that they are bundled as part of your APK\. For more information about packed files, see [Packed modes](#android-configure-asset-loading-packed)\.
 + `project_settings` — assets are packed according to the configuration\.
 
  To configure which asset mode your deployments use, open `lumberyard_install_dir\dev\_WAF_\user_settings.options` in a text editor and modify the `[Android Options]` section\. 
 
 ```
 [Android Options]
-android_asset_mode = [ configuration_default | loose_files | apk_files | project_settings ]
+android_asset_mode = [ configuration_default | loose_files | loose_paks | apk_files | apk_paks | project_settings ]
 ```
 
-### Loose files<a name="android-configure-asset-loading-loose"></a>
+### Loose modes<a name="android-configure-asset-loading-loose"></a>
 
- In *loose files* mode \(`loose_files`\), none of your assets are bundled as part of a PAK or OBB\. Instead, assets are copied directly to the storage media on the Android device, and loaded by the Lumberyard engine at runtime\. The loose files mode is probably what you want to be using for day\-to\-day development and to rapidly iterate on assets and deploy updates to the device\. 
+ In *loose files* mode \(`loose_files` or `loose_paks`\), none of your assets are included into the APK\. Instead, assets are copied directly to the storage media on the Android device and loaded by the Lumberyard engine at runtime\. When using `loose_paks`, assets are first placed into a `.pak` file and then pushed to the device\. 
 
- To configure your deployments to use loose files mode, open `lumberyard_install_dir\dev\_WAF_\user_settings.options` in a text editor and modify the `[Android Options]` section\. 
+ A loose files mode is probably what you want to be using for day\-to\-day development and to rapidly iterate on assets and deploy updates to the device\. 
+
+ When using loose assets, we recommend the `loose_files` mode to make manual inspection of the device's SD card easier and on\-demand asset deployments faster, at the cost of a small performance hit when making the initial asset load\. To configure your deployments to use loose files mode, open `lumberyard_install_dir\dev\_WAF_\user_settings.options` in a text editor and modify the `[Android Options]` section\. 
 
 ```
 [Android Options]
 android_asset_mode = loose_files
 ```
 
-### Packed assets<a name="android-configure-asset-loading-packed"></a>
+### Packed modes<a name="android-configure-asset-loading-packed"></a>
 
- Unlike many Lumberyard scenarios in which packed assets refer to `.pak` files, the *packed assets* \(`apk_files`\) mode bundles your assets as part of the deployed APK not necessarily inside of a `.pak` file\. This APK is sometimes referred to as a *packed APK*\. Bundling your assets in an APK allows for faster loading and static deployment, making this mode ideal for building APKs to distribute for testing or previews\. 
+ Unlike many Lumberyard scenarios in which packed assets refer to `.pak` files, the *packed assets* \(`apk_files` and `apk_paks`\) modes bundle your assets as part of the deployed APK, with the option of putting them into a `.pak` first\. This APK is sometimes referred to as a *packed APK*, which refers to the fact that assets are packed into the APK and not distributed separately\.
 
- To configure your deployments to use packed assets mode, open `lumberyard_install_dir\dev\_WAF_\user_settings.options` in a text editor and modify the `[Android Options]` section\. 
+Bundling your assets in an APK allows for deployment of a single artifact, making these modes ideal for building APKs to distribute for testing or previews\. 
+
+When using packed assets, we recommend the `apk_paks` mode, which offers some performance improvements\. To configure your deployments to use packed assets mode, open `lumberyard_install_dir\dev\_WAF_\user_settings.options` in a text editor and modify the `[Android Options]` section\. 
 
 ```
 [Android Options]
-android_asset_mode = apk_files
+android_asset_mode = apk_paks
 ```
 
 **Tip**  

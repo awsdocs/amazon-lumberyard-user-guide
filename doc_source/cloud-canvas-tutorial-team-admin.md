@@ -36,9 +36,7 @@ To manage your team members' access to AWS resources, you create IAM users, a gr
 
 1. To find the IAM customer managed policy that Cloud Canvas created for you, click **Filter policies** and then select **Customer managed**\.
 
-1. Select the appropriate policies that you want to apply to the group\. Related policies are those that include the name of your project \(for example, `CloudGemSamples-CloudGemPortalUserAccess`\)\. 
-
-   To decide which policies to include, use the information in the following table\.  
+1. Select the appropriate policies that you want to apply to the group\. To decide which policies to include, use the information in the following table\.  
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/cloud-canvas-tutorial-team-admin.html)
 

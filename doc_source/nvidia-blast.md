@@ -53,4 +53,4 @@ Though not required, we highly recommend that you enable the [Python Asset Build
    lmbr_waf build_win_x64_vs2019_profile -p all --progress
    ```
 
-For more information on gems, see the ADD LINK TO GEMS ROOT PAGE Gems documentation\. 
+For more information on gems, see the [Gems system documentation](gems-system-gems.md)\. 

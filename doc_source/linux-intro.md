@@ -25,3 +25,7 @@ When these tasks are complete, you can deploy assets to either a Linux server or
 To create Lumberyard executables for Linux, you must have the following:
 + A Windows 10 Lumberyard install configured to compile your project and the Lumberyard engine\.
 + A computer running Ubuntu Bionic \(18\.04 LTS\) where you have superuser access, with at least 50Gb of available hard drive space\. This can be a native host, [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about) \(WSL\), or a virtual machine\. For instructions on hosting an Ubuntu instance on Amazon Elastic Compute Cloud, see [Getting started with Amazon EC2 Linux Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html)\. When you create an Amazon EC2 instance, pick **Ubuntu 18\.04 LTS** as the image and **x86\_64** as the architecture to ensure that Lumberyard is supported\. 
+
+**Important**  
+In Lumberyard version 1\.23 and later, if you enable the EMotionFX Gem on Linux, then you must install `libxmu` to run the Linux Dedicated Server\. Use the following command to install `libxmu`:   
+ `apt install libxmu6` 

@@ -11,7 +11,7 @@ You can use levels of detail \([LODs](https://docs.aws.amazon.com/lumberyard/lat
 
 ## Using Actor LODs in Lumberyard<a name="optimize-character-fbx-settings-lod-in-lumberyard"></a>
 
-In Lumberyard, you can use up to six actor LODs\. An LOD of `0` has the highest level of detail, and an LOD of `5` the least\. Each successive LOD typically has its vertices reduced by 50 percent from the previous level and reduces the number of materials used\.
+In Lumberyard, you can use up to five actor LODs in addition to your actor's base mesh\. An LOD of `1` has the highest level of detail, and an LOD of `5` the least\. Each successive LOD typically has its vertices reduced by 50 percent from the previous level and reduces the number of materials used\.
 
 ### Features<a name="optimize-lod-features-for-character-fbx-settings"></a>
 
@@ -30,7 +30,7 @@ Note the following requirements:
 **Skeletons**
 + To skin each LOD mesh to a different skeleton, create a separate skeletal hierarchy\.
 + For each LOD, the skeleton hierarchy must remain the same\. Remove leaf bones first and work up the chain\.
-+ In lower LODs, you cannot remove in\-between bones\. For instance, if you have `Spine1`, `Spine2` and `Spine3` for an `LOD` of `0`, you cannot delete `Spine2` and leave `Spine1` and `Spine3`\.
++ In lower LODs, you cannot remove in\-between bones\. For instance, if you have `Spine1`, `Spine2` and `Spine3` for an `LOD` of `1`, you cannot delete `Spine2` and leave `Spine1` and `Spine3`\.
 
 **Materials or Textures**
 + Each actor requires a separate material group\.

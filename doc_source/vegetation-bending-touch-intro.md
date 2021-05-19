@@ -50,6 +50,8 @@ The name of the root joint can be postfixed with "\_touchbend" \(for example, "b
 
 ## Debugging and Performance Tips<a name="vegetation-bending-touch-debugging-and-perf"></a>
 
+
+
 In the Lumberyard Editor, you can instantiate or paint static touch bendable vegetation using the Rollup Bar \(LEGACY\) UI\. 
 
 ![\[Painting Touch Bendable Vegetation with Lumberyard\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/vegetation/vegetation/vegetation-touch-bending-debugging1.png)

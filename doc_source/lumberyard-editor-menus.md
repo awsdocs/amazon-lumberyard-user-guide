@@ -233,6 +233,8 @@ In the **Prefabs** menu, you can modify CryEntities defined in the prefab librar
 **Note**  
 We recommend that you use slices instead\. For more information, see [Working with Slices](component-slices.md)\.
 
+
+
 ![\[Lumberyard Editor Prefabs submenu of the Game menu.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/lumberyard-menusgame-prefabs.png)
 
 
@@ -364,7 +366,6 @@ In the **AWS** menu, you can sign up for an Amazon Web Services \(AWS\) account,
 | Commerce | Learn how to submit your game to Amazon's Digital Software store using [Merch by Amazon](https://merch.amazon.com/landing) or [Publishing on Amazon](https://developer.amazon.com/appsandservices/solutions/platforms/mac-pc)\. | 
 | GameLift | Access the Amazon GameLift console or learn more about the game server hosting and matchmaking solution built on AWS\. | 
 | Open AWS Console | Open the AWS Management Console and access Amazon Cognito, user management services; Amazon DynamoDB, NoSQL database service; Amazon S3, cloud storage; and AWS Lambda, serverless computing\. | 
-| Open Cloud Gem Portal | Open the [Cloud Gem Portal](cloud-canvas-cloud-gem-portal.md), a gem specifying the configuration to the API Gateway to AWS Lambda\. | 
 
 ## Help<a name="lumberyard-editor-menus-help"></a>
 
@@ -380,7 +381,7 @@ In the **Help** menu, you can search the Lumberyard documentation, open Lumberya
 | Search documentation | Type keywords to search the Lumberyard documentation\. | 
 | Getting Started | Open the [Amazon Lumberyard Getting Started Guide](https://docs.aws.amazon.com/lumberyard/latest/gettingstartedguide/)\. | 
 | Tutorials | Open the Amazon GameDev Tutorials website to view written and video tutorials\. | 
-| Documentation |  Select the following documentation:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/lumberyard-editor-menus.html)  | 
+| Documentation |  Select the following documentation:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/lumberyard-editor-menus.html)   | 
 | GameDev Resources |  Select the following resources:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/lumberyard-editor-menus.html)  | 
 | Give Us Feedback | Send feedback to the Lumberyard email alias\. | 
 | About Lumberyard | View copyright, build, and version information for Lumberyard Editor\. | 

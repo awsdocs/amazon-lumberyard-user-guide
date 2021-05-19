@@ -71,6 +71,8 @@ To complete the procedures in this tutorial, you need the following:
    ```
    xcopy /s Bin64vc142.Release %USERPROFILE%\StarterGameRelease\release
    ```
+
+   If prompted **Does *path* specify a file name or directory name on the target?**, choose **Directory**\.
 **Note**  
  Release builds include some metadata like debug symbols in a `.pdb` file\. When releasing your game, make sure to delete any compiler metadata that's copied over that isn't needed for launching or running your game\. 
 

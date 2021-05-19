@@ -147,7 +147,7 @@
         />
         ```
 
- The job to create the APK expansion files is only run when building for the **release** profile\. You can always run **debug** or **profile** builds without creating new OBBs\. 
+ The job to create the APK expansion files is only run when building a **release** configuration\. You can always run **debug** or **profile** builds without creating new OBBs\. 
 
 ## Release process<a name="android-release-process"></a>
 
@@ -193,7 +193,13 @@
 
    1. Save and close the file\.
 
-1.  Make sure that the Shader Compiler is running\. Either check that it's available at the remote endpoint specified in `lumberyard_install_dir\dev\system_android_es3.cfg` as the value of `r_ShaderCompilerServer`, or start the Shader Compiler locally by launching it from `lumberyard_install_dir\Tools\CrySCompileServer\x64\profile\CrySCompileServer.exe`\. 
+1.  Make sure that the Shader Compiler is running, at the same network address and port used for building shaders during development\. Unlike development builds, **release** uses the `lumberyard_install_dir/dev/shadercachegen.cfg` configuration file to connect to the Shader Compiler during release builds\. 
+
+   1. Open `lumberyard_install_dir/dev/shadercachegen.cfg` in a text editor\.
+
+   1.  Edit the value of `r_ShaderCompilerServer` to set it to the IPv4 address of the shader server used in development\. 
+
+   1.  **When using the shader compiler on localhost \(127\.0\.0\.1\):** Start the Shader Compiler server on your machine by launching it from `lumberyard_install_dir\dev\Tools\CrySCompileServer\x64\profile\CrySCompileServer.exe`\. 
 
 1.  With everything configured, it's time to build your release\. Build with `lmbr_waf` and supply your distribution key information on the command line\. 
 

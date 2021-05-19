@@ -16,6 +16,8 @@ The following shader `.pak` files are required for release builds:
 + `ShaderCache.pak` – Compiled shaders of all possible combinations that Lumberyard uses\.
 + `ShaderCacheStartup.pak` – Compiled shaders that are used during start\.
 
+
+
 ## Generating Shader \.pak Files<a name="generating-shader-pak-files"></a>
 
 To generate shader `.pak` files, use the following tools:
