@@ -64,7 +64,7 @@ In addition to communicating with Amazon Web Services, Cloud Canvas can also hel
 
 You can create cloud resources by using AWS CloudFormation templates\. [AWS CloudFormation](https://aws.amazon.com/cloudformation/) is an Amazon Web Service with which you can define, create, and manage AWS resources predictably and repeatedly by using templates\. The templates are JSON\-formatted text files that you use to specify the collection of resources that you want to create together as a single unit \(a stack\)\.
 
-In a template, each resource gets its own AWS CloudFormation definition in which you specify the parameters that govern the resource\. AWS CloudFormation templates are beyond the scope of this topic, but for now it’s enough to understand that you can define \(for example\) a template with an Amazon DynamoDB table and two AWS Lambda functions\. For an example AWS CloudFormation template that creates an Amazon DynamoDB table, see the [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-services-us-east-1.html#d0e121894)\.
+In a template, each resource gets its own AWS CloudFormation definition in which you specify the parameters that govern the resource\. AWS CloudFormation templates are beyond the scope of this topic, but for now it’s enough to understand that you can define \(for example\) a template with an Amazon DynamoDB table and two AWS Lambda functions\. For an example AWS CloudFormation template that creates an Amazon DynamoDB table, see the [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/sample-templates-services-us-east-1.html#w2ab1c35c52c13c15)\.
 
 ### Deployments<a name="cloud-canvas-core-concepts-resource-mgmt-deployments"></a>
 

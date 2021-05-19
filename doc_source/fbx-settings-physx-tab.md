@@ -19,8 +19,8 @@ There are many options for creating PhysX collider assets\. The *best* options i
 + [Primitive asset properties](#fbx-importer-physx-tab-primitive-properties)
 + [Decomposition properties](#fbx-importer-physx-tab-decomposition-properties)
 + [PhysX modifiers](#fbx-settings-physx-modifiers)
-+ [Comment modifier](#w31aac15b9c11c17c23)
-+ [Origin modifier](#w31aac15b9c11c17c25)
++ [Comment modifier](#w31aac11b9c11c17c23)
++ [Origin modifier](#w31aac11b9c11c17c25)
 
 ## PhysX tab properties<a name="fbx-importer-physx-tab-base-properties"></a>
 
@@ -180,13 +180,13 @@ When enabled, the output convex hull vertices are projected onto the original so
 
 Modifiers can be added to a **PhysX mesh group** by choosing the **Add Modifier** button, and selecting a modifier from the list\. 
 
-## Comment modifier<a name="w31aac15b9c11c17c23"></a>
+## Comment modifier<a name="w31aac11b9c11c17c23"></a>
 
 ![\[The FBX Settings PhysX tab Comment modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-mesh-modifier-comment-1.25.png)
 
 Add a comment to the file\. You can add a comment about changes made to the `.fbx` file for tracking purposes or notes on export options, for example\. Comments don't affect how files are processed and multiple comment modifiers can be added to a mesh group\. 
 
-## Origin modifier<a name="w31aac15b9c11c17c25"></a>
+## Origin modifier<a name="w31aac11b9c11c17c25"></a>
 
 ![\[The FBX Settings Meshes tab Origin modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-mesh-modifier-origin-1.25.png)
 

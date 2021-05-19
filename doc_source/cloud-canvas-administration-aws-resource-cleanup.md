@@ -88,25 +88,30 @@ Before you use the cleanup tool, be aware of the following points:
 
 1. Open a command prompt window\.
 
-1. Navigate to the `lumberyard_version\dev\Tools\lmbr_aws\test` directory\.
+1. Navigate to the `lumberyard_version\dev` directory\.
 
 1. Determine the string prefix \(full or partial\) that you want to specify to delete resources\. For more information, see [Identifying Cloud Canvas Prefixes](#cloud-canvas-administration-aws-resource-cleanup-identifying-cloud-canvas-prefixes)\.
 
 1. Enter the following command:
 
    ```
-   cleanup --prefix prefix_string
+   lmbr_aws --cleanup --prefix prefix_string
    ```
 
    For example, the following command removes AWS resources that begin with the prefix `cloudgemsamples`\.
 
    ```
-   cleanup --prefix cloudgemsamples
+   lmbr_aws --cleanup --prefix cloudgemsamples
    ```
 
    Depending on the number of resources, the command might take some time to complete\.
 
 1. Repeat the command until the cleanup tool no longer finds items to delete\. Multiple runs can be required\. The cleanup tool attempts to delete resources as they become available for deletion\. However, because the cleanup tool attempts to delete resources in type order, some resources are not available for deletion until after the script finishes\.
+
+The `--cleanup` argument will take priority over other `lmbr_aws` arguments\.
+
+**Note**  
+The `lmbr_aws --cleanup` command runs the same script as the `cleanup` command script found in the `lumberyard_version\dev\Tools\lmbr_aws` directory\. Either one can be used with the same list of optional arguments described in the list that follows\.
 
 
 **Optional Arguments**  

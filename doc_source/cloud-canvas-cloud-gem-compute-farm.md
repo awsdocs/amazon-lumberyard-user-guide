@@ -1,5 +1,12 @@
 # Compute Farm Cloud Gem<a name="cloud-canvas-cloud-gem-compute-farm"></a>
 
+
+****  
+
+|  | 
+| --- |
+|  This cloud Gem is deprecated and no longer supported\. Some functionality is broken because of its dependency on the Cloud Gem Portal, which was removed in Lumberyard 1\.28\. Documentation on this Gem from previous versions of Lumberyard can be found in the [Documentation Archive](https://docs.aws.amazon.com/lumberyard/latest/userguide/lumberyard-documentation-archive.html)\.  | 
+
 The Compute Farm cloud gem is a tool for large\-scale divide and conquer tasks that can be processed on a fleet of Amazon EC2 instances\. This cloud gem is particularly suited for heavy\-duty, computationally intensive Windows tasks like nav mesh generation, static lightmap baking, and terrain generation\. In general, the Compute Farm cloud gem is designed for tasks that can be highly parallelized with recursive subdivision\.
 
 The Compute Farm cloud gem has the following three major aspects: 
@@ -8,7 +15,7 @@ The Compute Farm cloud gem has the following three major aspects:
 
 1. **[Amazon Machine Image \(AMI\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)** – An image of the machine to do the task\. The AMI must be prepared with all the necessary software to perform the task as well as a copy of the harness\. The Compute Farm cloud gem includes a script to build the AMI\.
 
-1. **Launch Configuration and Auto Scaling Group** – After the AMI is created, you must create an [Amazon EC2 Launch Configuration](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) and an [Amazon EC2 Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) to control the fleet of Amazon EC2 instances that will run the AMI\. This is done in the Compute Farm Cloud Gem Portal; you set the Auto Scaling Group to the desired number of Amazon EC2 instances\.
+1. **Launch Configuration and Auto Scaling Group** – After the AMI is created, you must create an [Amazon EC2 Launch Configuration](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) and an [Amazon EC2 Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html) to control the fleet of Amazon EC2 instances that will run the AMI\. You set the Auto Scaling Group to the desired number of Amazon EC2 instances\.
 
 ## Workflow Summary<a name="cloud-canvas-cloud-gem-compute-farm-workflow-summary"></a>
 
@@ -18,16 +25,6 @@ The harness must be extended with Python scripts that perform these three tasks 
 + **Divide** a dictionary of words into multiple parts\.
 + **Build** a subset of the dictionary by sorting it\.
 + **Merge** the two sorted subsets back into one sorted subset\.
-
-See the following high\-level workflow for completing a computing task:
-
-1. With the Cloud Gem Portal, upload the data to be processed to an [Amazon S3](https://aws.amazon.com/s3/) bucket\.
-
-1. From the Cloud Gem Portal, start the execution of Amazon SWF\.
-
-1. The Cloud Gem Portal monitors the progress of the work and notifies you when the task is done\.
-
-1. From the Cloud Gem Portal, download the results of the work\.
 
 For a high\-level explanation and demonstration of the Compute Farm cloud gem for large scale terrain generation, see the [2018 GDC classroom session](https://www.youtube.com/watch?v=STZLqIx13Ps) on YouTube\. Developers who are interested in this particular implementation can reach out to us at lumberyard\-feedback@amazon\.com\.
 
@@ -39,8 +36,3 @@ Your use of the Compute Farm cloud gem is subject to the limits on your AWS acco
 + For large number of active instances, throttling limits on Amazon SWF\. For more information, see [Amazon SWF Limits](https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dg-limits.html) in the *Amazon Simple Workflow Service Developer Guide*\.
 
 To request limit increases, see the [AWS Support Center](https://console.aws.amazon.com/support/home#/)\.
-
-**Topics**
-+ [Workflow Summary](#cloud-canvas-cloud-gem-compute-farm-workflow-summary)
-+ [Account Limits](#cloud-canvas-cloud-gem-compute-farm-account-limits)
-+ [Compute Farm Cloud Gem: Walkthrough](compute-farm-cloud-gem-walkthrough.md)

@@ -9,10 +9,7 @@ The Twitch ChatPlay feature within Lumberyard helps you build gameplay that inte
 The Twitch JoinIn feature within Lumberyard helps you build multiplayer games that allow Twitch broadcasters to invite fans to join them side by side in the game\. Once invited, a fan can jump into the broadcaster's game with a single click in the Twitch chat channel, while others continue to watch\.
 
 **Twitch API**  
- Lumberyard interacts with the Twitch system by making calls through to the Twitch API directly\. If you need any specific information about working with Twitch or the requirements of making certain API calls, see the [Twitch API documentation](https://dev.twitch.tv/docs/api/)\. 
-
-**Twitch C\+\+ API**  
-The Twitch C\+\+ API operations allow you to make calls on the TwitchRequestBus and return a unique ReceiptID object\.
+ Twitch API functionality in Lumberyard is based on the publicly available RESTful functions described in the [Twitch API reference](https://dev.twitch.tv/docs/api/reference)\. Each of these functions has a corresponding call in the Lumberyard **TwitchApiRequestBus** that will queue an HTTP request\. You can listen for the response to this request on the **TwitchApiNotifyBus**\.
 
 ## Prerequisites<a name="gems-system-gem-twitch-prerequisites"></a>
 
@@ -22,4 +19,4 @@ To use the Twitch gem and add Twitch support to your Lumberyard project, you mus
 **Topics**
 + [Prerequisites](#gems-system-gem-twitch-prerequisites)
 + [Twitch ChatPlay System](chatplay-intro.md)
-+ [Twitch C\+\+ API Reference for Lumberyard](twitch-api-ebus.md)
++ [Twitch C\+\+ API Reference](twitch-api-ebus.md)

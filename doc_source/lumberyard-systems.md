@@ -1,11 +1,6 @@
 # Lumberyard Systems<a name="lumberyard-systems"></a>
 
 Lumberyard consists of the following major systems that help you develop levels within the editor:
-+ [Employing artificial intelligence](ai-intro.md)
-
-  Artificial Intelligence \(AI\) is a technology or system that endows seemingly intelligent actions and behaviors to an agent or character, called the AI agent\. An AI agent is a game entity that uses information to make decisions in pursuit of one or more goals\.
-
-   
 + [Adding Audio and Sound Effects](audio-intro.md)
 
   The audio translation layer \(ATL\) provides an interface between Lumberyard and third\-party audio middleware so you can change your audio implementation without affecting the game logic\.

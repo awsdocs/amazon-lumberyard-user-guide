@@ -15,7 +15,6 @@ These topics are for game developers who have experience with C\+\+ programming 
 | [Event Bus](ebus-intro.md) \(EBus\) | Learn about EBus, the messaging infrastructure for notifications and messaging\.  | 
 | [AZ Code Generator](az-code-gen-intro.md) | Learn about AZ Code Generator, a utility for generating source code \(or any data or text\) from specially tagged source code\. | 
 | [Input](input-intro.md) | Documentation on incorporating different control devices and configurations for your Lumberyard game\. | 
-| [AI](ai-intro.md) | Learn how to add AI systems to your game that provide different actor and character behaviors\. | 
 | [Memory management](memory-allocators.md) | Learn how Lumberyard allocates and manages memory resources for games, as well as memory debugging and overrun detection\. | 
 | [Profiling, testing, and debugging](testing-debugging-intro.md) | Learn about Lumberyard tools that are used for testing builds, profiling performance, and debugging various issues that may be encountered\. | 
 |  [UI 2\.0](ui20.md) | Learn about extending the Lumberyard editor and tools user interface with UI 2\.0 and Qt\. Note: This documentation was introduced with Lumberyard 1\.25, and will be updated with the full set of guidance for the next release\. | 

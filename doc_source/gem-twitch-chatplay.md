@@ -8,7 +8,7 @@ Twitch ChatPlay includes support for chat commands, polls, and surveys that can 
 
 Use of the Twitch Chat Gem in your project requires the following setup:
 
-1. Add the Twitch Chat API Gem and the Websockets Gem to your project\.
+1. Add the **Twitch Chat API** Gem and the **Websockets** Gem to your project\.
 
    The Twitch Chat API Gem has a dependency on the Websockets Gem\.
 
@@ -20,4 +20,4 @@ Keep this token safe and **do not share** this publicly\! this is essentially yo
 
    For more information about **Twitch IRC** and authentication, see the [Twitch documentation](https://dev.twitch.tv/docs/irc/guide)\.
 
-You are now ready to use the gem\. For details on how to implement Twitch ChatPlay in your game, see [Intro to ChatPlay](chatplay-intro.md)\.
+You are now ready to use the Gem\. For details on how to implement Twitch ChatPlay in your game, see [Intro to ChatPlay](chatplay-intro.md) and [Using the Twitch Chat Gem](chatplay-using-twitch-chat-gem.md)\.

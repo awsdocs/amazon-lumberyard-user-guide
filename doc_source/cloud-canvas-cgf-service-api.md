@@ -19,7 +19,7 @@
 + [Calling a Game API](cloud-canvas-cgf-service-api-calling-apis.md)
 + [Publishing Your API](cloud-canvas-cgf-service-api-publishing-api-gateway.md)
 
-Lumberyard cloud gems provide services like the [Cloud Gem Portal](cloud-canvas-cloud-gem-portal.md) \(CGP\) that configure and manage a game's operation\. The services are implemented by [AWS Lambda](https://aws.amazon.com/lambda/) function resources\. The game and tools access these services through the [Amazon API Gateway](https://aws.amazon.com/api-gateway/)\. The code that you provide runs in a Lambda function\. API Gateway manages access to the service, provides caching for frequently used results, and supports request throttling\.
+Lumberyard cloud gems provide services that configure and manage a game's operation\. The services are implemented by [AWS Lambda](https://aws.amazon.com/lambda/) function resources\. The game and tools access these services through the [Amazon API Gateway](https://aws.amazon.com/api-gateway/)\. The code that you provide runs in a Lambda function\. API Gateway manages access to the service, provides caching for frequently used results, and supports request throttling\.
 
 The following diagram shows how the Cloud Gem Framework service API interacts with the game client, the Cloud Gem Portal, AWS Lambda, and API Gateway\.
 
@@ -292,4 +292,4 @@ The following is an example `swagger.json` file\.
 }
 ```
 
-Cloud Canvas uses these API descriptions to generate Lumberyard engine components that execute service APIs for the game\. The [Cloud Gem Portal](cloud-canvas-cloud-gem-portal.md) web application also uses the API descriptions when it makes service requests\. In addition, the API descriptions are used to configure [API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-api-using-import-export-api.html) to work with your service\.
+Cloud Canvas uses these API descriptions to generate Lumberyard engine components that execute service APIs for the game\. In addition, the API descriptions are used to configure [API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-api-using-import-export-api.html) to work with your service\.

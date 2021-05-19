@@ -1,6 +1,13 @@
 # Game Metrics Cloud Gem<a name="cloud-canvas-metrics-gem"></a>
 
-You can use the Game Metrics cloud gem to collect event data on player behaviors, which you can then analyze or trigger event actions\. This gem uses a service API with the Cloud Gem Framework for event submission, Amazon S3 for data storage, Amazon Athena as the query engine, Amazon QuickSight as the data visualizer, and the Cloud Gem Portal for administration and as a telemetry dashboard\.
+
+****  
+
+|  | 
+| --- |
+|  This cloud Gem is deprecated and no longer supported\. Some functionality is broken because of its dependency on the Cloud Gem Portal, which was removed in Lumberyard 1\.28\. Documentation on this Gem from previous versions of Lumberyard can be found in the [Documentation Archive](https://docs.aws.amazon.com/lumberyard/latest/userguide/lumberyard-documentation-archive.html)\.  | 
+
+You can use the Game Metrics cloud gem to collect event data on player behaviors, which you can then analyze or trigger event actions\. This gem uses a service API with the Cloud Gem Framework for event submission, Amazon S3 for data storage, Amazon Athena as the query engine, and Amazon QuickSight as the data visualizer\.
 
 You can enable this gem to do the following:
 + View realtime data about users playing the game\.
@@ -12,9 +19,9 @@ You can enable this gem to do the following:
 The Game Metrics cloud gem is only supported in regions where FIFO is supported\. For more information, see [Amazon SQS FIFO \(First\-In\-First\-Out\) Queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html.html) in the *Amazon Simple Queue Service Developer Guide*\.
 
 **Example Overview**  
-The following illustrates how AWS services process game events so that you can view them in the Cloud Gem Portal\.  
+The following illustrates how AWS services process game events\.  
 
-![\[Create gameplay events with the Metrics Sample level to send them to the Cloud Gem Portal.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-gem-metrics-work-flow-with-aws-services-example.png)
+![\[Create gameplay events with the Metrics Sample level.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-gem-metrics-work-flow-with-aws-services-example.png)
 
 When events are generated from your game, the following occurs:
 
@@ -51,19 +58,3 @@ The Game Metrics cloud gem includes the following default Athena partitions:
 |  `p_client_build_identifier`  |  Build identifier associated with the event\.  | 
 |  `p_data_sensitivity`  |  Encryption level of the data\.  | 
 |  `p_event_schema_hash`  |  Hash of the event schema\.  | 
-
-## Prerequisites<a name="cloud-canvas-cloud-gem-metrics-prerequisites"></a>
-
-This tutorial assumes the following:
-+ You are using a Lumberyard project that has the **Cloud Gem Game Metrics** enabled\.
-+ You have created a project stack and a deployment stack in the Cloud Canvas Resource Manager\.
-+ You have opened the Cloud Gem Portal\.
-
-If you don't meet the prerequisites, see [Enabling Gems](gems-system-using-project-configurator.md) and [Tutorial: Getting Started with Cloud Canvas](cloud-canvas-tutorial.md)\.
-
-**Topics**
-+ [Prerequisites](#cloud-canvas-cloud-gem-metrics-prerequisites)
-+ [Sending Test Metrics with the Metrics Sample Level](send-test-events-for-the-cloud-canvas-game-metrics-gem.md)
-+ [Sending Test Metrics with the Command Line](command-line-options-for-the-cloud-gem-metrics.md)
-+ [Using the Game Metrics Cloud Gem Portal](using-the-cloud-gem-metrics-portal.md)
-+ [Using Heatmap Analytics](cloud-canvas-cloud-gem-game-metrics-heatmap-analytics-intro.md)

@@ -19,4 +19,3 @@ The **AWS** menu has the following options:
 ![\[Open the AWS Management Console\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-canvas-ui-open-aws-console.png)
 
   These links use your currently active AWS profile to connect to AWS\. You can use **Credentials Manager** to select which profile is active\.
-+  **Open Cloud Gem Portal** – Manage cloud\-connected game features that you implement from a [cloud gem](cloud-canvas-overview-cloud-gems.md)\. For more information, see [Cloud Gem Portal](cloud-canvas-cloud-gem-portal.md)\.

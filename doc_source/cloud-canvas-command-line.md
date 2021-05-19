@@ -53,6 +53,51 @@ Most of the `lmbr_aws` commands accept the following arguments, in addition to t
 
 Following are the `lmbr_aws` commands\.
 
+### `cleanup` Command<a name="cloud-canvas-command-line-cleanup-commands"></a>
+
+The `lmbr_aws --cleanup` command deletes resources that you no longer need from your account in AWS\.
+
+**Warning**  
+Before you use the cleanup tool, be aware of the following points:  
+Do not use the cleanup tool if you have a project stack name that begins with an IAM user name that you do not want to delete\. Doing so can result in the deletion of the IAM user, its roles, and its profiles\.
+When you delete an AWS resource, you permanently delete any objects that are stored in that resource\. For example, if you delete an S3 bucket, all objects inside the bucket are also deleted\.
+
+#### \-\-cleanup<a name="cloud-canvas-command-line-cleanup"></a>
+
+Note that unlike other lmbr\_aws commands, the cleanup command begins like a command argument, with two '\-\-'\. In the following example, replace *\{cleanup\-command\-parameters\}* with any of the valid cleanup arguments shown in the list that follows\.
+
+```
+lmbr_aws --cleanup {cleanup-command-parameters}
+```
+
+In addition to the [Common Arguments](#cloud-canvas-command-line-common-arguments), the `cleanup` command accepts the following arguments:
++ `--aws-access-key {aws-access-key}`
+
+  The AWS access key to use\.
++ `--aws-secret-key {aws-secret-key}`
+
+  The AWS secret key to use\.
++ `--delete-global-resources`
+
+  Optional\. If the `--region` argument is specified, deletes global resources such as IAM roles and Amazon S3 buckets\. Ignored if `--region` is unspecified\.
++ `--confirm-deletion`
+
+  Optional\. Used with the `--delete-global-resources` command to confirm you understand that AWS resources will be deleted\. Can be useful for automation\.
++ `--prefix {prefix [prefix...]}`
+
+  Optional\. Deletes stacks and Amazon S3 buckets in AWS that have the specified prefixes\.
++ `--except {exception [exception...]}`
+
+  Optional\. Do not delete resources that start with the specified exceptions\. Can be useful, for example, when cleaning up old results while a test in progress\.
++ `--profile {profile}`
+
+  Optional\. The AWS profile to use\. Defaults to the default AWS profile\. AWS access and secret key take precedence over profile if set\.
++ `--region {region}`
+
+  Optional\. The AWS region to use\. Defaults to `us-east-1`\.
+
+For more information on the cleanup tool, see [Freeing Up AWS Resources](cloud-canvas-administration-aws-resource-cleanup.md)\.
+
 ### `cloud-gem` Commands<a name="cloud-canvas-command-line-cloud-gem-commands"></a>
 
 The `lmbr_aws cloud-gem` commands create, enable, and disable cloud gems\.
@@ -129,20 +174,6 @@ In addition to the [Common Arguments](#cloud-canvas-command-line-common-argument
 + `--gem {name}` 
 
   Required\. The name of the gem to enable\.
-
-#### cloud\-gem\-tts import\-tts\-zip<a name="cloud-canvas-command-line-cloud-gem-tts"></a>
-
-Import generated voice packages from the Cloud Gem Text\-to\-Speech service into a project\. This command is new in Lumberyard 1\.11\.
-
-In addition to the [Common Arguments](#cloud-canvas-command-line-common-arguments), the `cloud-gem-tts import-tts-zip` command accepts the following arguments:
-+ `--download-path {zip-path}` 
-
-  Required\. The absolute path to a `.zip` file that was downloaded from the Text\-to\-Speech Cloud Gem Portal\.
-+ ` --import-as-wav` 
-
-   Optional\. Converts audio files to `.wav` file format when they are extracted\.
-
-For more information on downloading and importing speech files, see [Text\-to\-Speech Cloud Gem Portal](cloud-canvas-cloud-gem-text-to-speech-cgp.md)\.
 
 ### `deployment` Commands<a name="cloud-canvas-command-line-deployment-commands"></a>
 
@@ -647,7 +678,7 @@ The `lmbr_aws project` commands manage Cloud Canvas projects in Lumberyard\.
 Initialize Cloud Canvas resource management for a Lumberyard project\. This includes creating a set of default [Resource Definitions](cloud-canvas-resource-definitions.md) in the `dev\game\AWS` directory and a AWS CloudFormation stack that contains the resources that the Cloud Canvas resource manager uses to manage your game resources\.
 
 In addition to the [Common Arguments](#cloud-canvas-command-line-common-arguments), the `project create` command accepts the following arguments:
-+ `--stack {stack-name}`
++ `--stack-name {stack-name}`
 
   Optional\. The name used for the project's AWS CloudFormation stack\. The default is the name of the *\{game\}* directory\.
 + `--confirm-aws-usage` or `-C`
@@ -661,6 +692,12 @@ In addition to the [Common Arguments](#cloud-canvas-command-line-common-argument
   Required\. The AWS region in which the project stack will be created\. 
 **Note**  
 The `region` argument can be used only with the `project create` and `resource-importer list-importable-resources` commands\. To manually override the AWS region in other `lmbr_aws` commands, use the `--region-override` argument\.
++ `--admin-roles`
+
+  Optional\. Creates the `ProjectOwner` and `ProjectAdmin` roles\. The default is to create these roles unless `--no-admin-roles` argument is used\. For more information about these roles, see [Cloud Canvas Built\-In Roles and Policies](cloud-canvas-built-in-roles-and-policies.md)\.
++ `--no-admin-roles`
+
+  Optional\. Turns off the creation of the `ProjectOwner` and `ProjectAdmin` roles\. This is recommended unless you have a need for these roles\.
 
 ##### How `project create` Works<a name="cloud-canvas-command-line-project-create-details"></a>
 

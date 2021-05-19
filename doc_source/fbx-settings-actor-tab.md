@@ -11,16 +11,16 @@ Actors are assets with at least one bone and can contain one or more skinned mes
 
 **Contents**
 + [Actors tab properties](#fbx-settings-actors-tab-properties)
-+ [Cloth modifier](#w31aac15b9c11c13c11)
-+ [Comment modifier](#w31aac15b9c11c13c13)
-+ [Coordinate system change modifier](#w31aac15b9c11c13c15)
-+ [Level of Detail modifier](#w31aac15b9c11c13c17)
-+ [Material modifier](#w31aac15b9c11c13c19)
-+ [Mesh modifier](#w31aac15b9c11c13c21)
-+ [Scale actor modifier](#w31aac15b9c11c13c23)
-+ [Skeleton optimization modifier](#w31aac15b9c11c13c25)
-+ [Skin modifier](#w31aac15b9c11c13c27)
-+ [Tangents modifier](#w31aac15b9c11c13c29)
++ [Cloth modifier](#w31aac11b9c11c13c11)
++ [Comment modifier](#w31aac11b9c11c13c13)
++ [Coordinate system change modifier](#w31aac11b9c11c13c15)
++ [Level of Detail modifier](#w31aac11b9c11c13c17)
++ [Material modifier](#w31aac11b9c11c13c19)
++ [Mesh modifier](#w31aac11b9c11c13c21)
++ [Scale actor modifier](#w31aac11b9c11c13c23)
++ [Skeleton optimization modifier](#w31aac11b9c11c13c25)
++ [Skin modifier](#w31aac11b9c11c13c27)
++ [Tangents modifier](#w31aac11b9c11c13c29)
 
 ## Actors tab properties<a name="fbx-settings-actors-tab-properties"></a>
 
@@ -52,7 +52,7 @@ Modifiers add additional specialized options for processing assets\. Choose the 
 + **Tangents**
 Some modifiers are not be available unless the gem that provides the modifier is enabled in your project\. 
 
-## Cloth modifier<a name="w31aac15b9c11c13c11"></a>
+## Cloth modifier<a name="w31aac11b9c11c13c11"></a>
 
 ![\[The FBX Settings Actors tab Cloth modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-mesh-modifier-cloth-1.27.png)
 
@@ -90,40 +90,40 @@ Select the channel in the vertex color stream that contains backstop offset data
 ****Backstop Radius Channel****  
 Select the channel in the vertex color stream that contains backstop radius data\. 
 
-## Comment modifier<a name="w31aac15b9c11c13c13"></a>
+## Comment modifier<a name="w31aac11b9c11c13c13"></a>
 
 ![\[The FBX Settings Actors tab Comment modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-mesh-modifier-comment-1.25.png)
 
 Add a comment to the file\. You can add a comment about changes made to the `.fbx` file for tracking purposes or notes on export options, for example\. Comments don't affect how files are processed and multiple comment modifiers can be added to a mesh group\. 
 
-## Coordinate system change modifier<a name="w31aac15b9c11c13c15"></a>
+## Coordinate system change modifier<a name="w31aac11b9c11c13c15"></a>
 
 ![\[The FBX Settings Actors tab Coordinate system change modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-actor-modifier-coord-sys-change-1.25.png)
 
 Modify the coordinate system of the actor\. Third\-party content creation applications use varying coordinate systems with content applications often rotating the direction of the forward axis\. The **Facing direction** property can be set to rotate the actor 180 degrees around its up axis to account for this difference\. The rotation is applied when the asset is processed and the `.fbx` file remains unchanged\. 
 
-## Level of Detail modifier<a name="w31aac15b9c11c13c17"></a>
+## Level of Detail modifier<a name="w31aac11b9c11c13c17"></a>
 
 ![\[The FBX Settings Actor tab Level of Detail modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-actor-modifier-lod-1.25.png)
 
-The **Level of detail** \(LoD\) modifier is added to the **Actor group** automatically when LoDs are found in the `.fbx` file\. Choose the **Hierarchy** button to verify or modify the meshes and bones assigned to each LoD\. Actors support up to 6 levels of detail including the base level of detail \[`0`\]\. 
+The **Level of detail** \(LoD\) modifier is added to the **Actor group** automatically when LoDs are found in the `.fbx` file\. Choose the **Hierarchy** button to verify or modify the meshes and bones assigned to each LoD\. Actors support up to 5 levels of detail in additon to the base mesh\(es\)\. 
 
 **Note**  
 The **Level of detail** modifier for **Actor groups** cannot be added or removed manually and does not appear in the modifier list\. The **Level of detail** modifier is automatically added and configured when actor LoDs are found in an `.fbx` file\. 
 
  LoDs are optimized assets with progressively lower polygon counts, fewer and smaller textures, and simplified materials\. An Actor LoD can also have a simplified skeleton where some leaf bones have been removed from the skeleton\. The farther an entity is from the camera, the less detail is required from the actor contained in the entity\. As the entity moves farther from the camera, it swaps to a lower actor LoD\. 
 
-You can create up to six LoDs for actors which are numbered \[`0`\] to \[`5`\], with \[`0`\] being the *highest* level of detail\. LoD \[`0`\] contains the highest resolution meshes and textures, the most complex materials, and is displayed when the entity is closest to the camera\. LoDs are not required\. Creating LoDs, however, is recommended because they help get the best performance and visual fidelity across a range of platforms with different hardware capabilities\. 
+In addition to the base actor mesh, You can create up to five LoDs for actors which are numbered \[`1`\] to \[`5`\], with \[`1`\] being the *highest* level of detail\. As the actor moves away from the camera, it will transition from the base mesh to LoD 1, and then progressively through the LoDs the further it moves from the camera\. LoDs are not required\. Creating LoDs, however, is recommended because they help get the best performance and visual fidelity across a range of platforms with different hardware capabilities\. 
 
 **Note**  
-When you author the actor in your 3D application, you must add `_lod0`, `_lod1`, `_lod2`, `_lod3`, `_lod4`, `_lod5` as suffixes to your mesh names to automatically add a **Level of Detail** modifier and assign the meshes to appropriate LoDs\. `_lod1` is mapped to \[`1`\], `_lod2` is mapped to \[`2`\], and so on\. 
+When you author the actor in your 3D application, you must add `_lod1`, `_lod2`, `_lod3`, `_lod4`, `_lod5` as suffixes to your mesh names to automatically add a **Level of Detail** modifier and assign the meshes to appropriate LoDs\. `_lod1` is mapped to **LOD 1**, `_lod2` is mapped to **LOD 2**, and so on\. 
 
 **Important**  
-The meshes for the highest level of detail, \[`0`\], and the corresponding skeleton are assigned in the **Select base meshes** and **Select root bone** properties of the **Actor group** automatically\. Meshes labeled `_lod1` through `_lod5` and their skeleton hierarchies are assigned to corresponding LoDs in the **Level of Detail** modifier\. 
+The meshes for the base mesh, and the corresponding skeleton are assigned in the **Select base meshes** and **Select root bone** properties of the **Actor group** automatically\. Meshes labeled `_lod1` through `_lod5` and their skeleton hierarchies are assigned to corresponding LoDs in the **Level of Detail** modifier\. 
 
 For more information, see [Using Actor LODs to Optimize Game Performance](using-actor-LODs-optimize-game-performance.md)\. 
 
-## Material modifier<a name="w31aac15b9c11c13c19"></a>
+## Material modifier<a name="w31aac11b9c11c13c19"></a>
 
 ![\[The FBX Settings Actors tab Material modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-mesh-modifier-material-1.25.png)
 
@@ -139,7 +139,7 @@ When enabled, updates the texture map file names in the `.mtl` file to match the
 ****Remove unused materials****  
 When enabled, removes materials that are present in the `.mtl` file that are not defined in the `.fbx` file\. 
 
-## Mesh modifier<a name="w31aac15b9c11c13c21"></a>
+## Mesh modifier<a name="w31aac11b9c11c13c21"></a>
 
 ![\[The FBX Settings Actors tab Mesh modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-actor-modifier-mesh-1.25.png)
 
@@ -153,13 +153,13 @@ Vertex color streams contain per vertex color data that can be referenced by mat
 Set the vertex color precision to either 32 bit \(8 bits per channel\) or 128 bit \(32 bits per channel\)\.   
 Vertex color streams contain four channels: red, green, blue, and alpha\. Setting the mode to 32 bit vertex color precision saves significant memory over 128 bit vertex color precision at a loss of dynamic range\. If you are targeting a platform with memory constraints, using 32 bit precision is a very useful optimization\. If you are targeting a platform that supports high dynamic range \(HDR\) display, 128 bit precision offers much greater color fidelity\. 
 
-## Scale actor modifier<a name="w31aac15b9c11c13c23"></a>
+## Scale actor modifier<a name="w31aac11b9c11c13c23"></a>
 
 ![\[The FBX Settings Actors tab Scale actor modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-actor-modifier-scale-actor-1.25.png)
 
 The **Scale factor** modifier sets a uniform scale for the **Actor group**\. This setting is useful if your assets are created in an application that uses a different base standard unit of measurement than Lumberyard\. 
 
-## Skeleton optimization modifier<a name="w31aac15b9c11c13c25"></a>
+## Skeleton optimization modifier<a name="w31aac11b9c11c13c25"></a>
 
 ![\[The FBX Settings Actors tab Skeleton optimization modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-actor-modifier-skeleton-optimization-1.25.png)
 
@@ -174,7 +174,7 @@ When enabled, bones that do not have colliders attached are optimized out of the
 **Critical bones**  
 Choose the **Hierarchy** button to select bones that should not be optimized out of the hierarchy\. Your actor might have bones that have no skin weights such as attachment bones for weapons and accessories, for example, that you do not want optimized out of the hierarchy\. 
 
-## Skin modifier<a name="w31aac15b9c11c13c27"></a>
+## Skin modifier<a name="w31aac11b9c11c13c27"></a>
 
 ![\[The FBX Settings Actors tab Skin modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-actor-modifier-skin-1.25.png)
 
@@ -186,7 +186,7 @@ The maximum number of bones that can influence a vertex\. Values range from a mi
 **Weight threshold**  
 The minimum bone weight per vertex\. Weight values beneath this threshold are ignored during export\. Values range from a minimum of **0** to a maximum of **0\.01**\. 
 
-## Tangents modifier<a name="w31aac15b9c11c13c29"></a>
+## Tangents modifier<a name="w31aac11b9c11c13c29"></a>
 
 ![\[The FBX Settings Actors tab Tangents modifier.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/fbx/ui-fbx-settings-actor-modifier-tangents-1.25.png)
 

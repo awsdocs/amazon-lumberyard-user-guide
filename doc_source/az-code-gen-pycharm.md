@@ -23,7 +23,7 @@ PyCharm is an integrated development environment for Python which includes a gra
 
    1. Choose **File**, **Settings**, **Project:dev**, **Project Interpreter** to open the project interpreter page\. 
 
-   1. Click the gear ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared/cloud-canvas-cloud-gem-text-to-speech-cgp-4.png) icon on the right of the **Project Interpreter** and choose **Add\.\.\.**\.   
+   1. Click the gear ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/shared/gear-icon.png) icon on the right of the **Project Interpreter** and choose **Add\.\.\.**\.   
 ![\[Screenshot displaying the gear icon to select.\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/codegen/az-code-gen-pycharm-1.png)
 
    1. Select the **Existing environment** radio button, and then click the ellipsis \(**\.\.\.**\) icon to the right of it\.  

@@ -25,7 +25,6 @@ The following diagram shows a high\-level view of the Cloud Gem Framework archit
 ![\[Cloud Gem Framework architecture\]](http://docs.aws.amazon.com/lumberyard/latest/userguide/images/cloud_canvas/cloud-canvas-cgf-architecture.png)
 
 The Cloud Gem Framework contains the following major components:
-+ [Cloud Gem Portal](cloud-canvas-cloud-gem-portal.md) – A web application for operating and managing cloud gems\.
 + [Cloud Gem Framework Service API](cloud-canvas-cgf-service-api.md) – An API that provides a secure interface to a cloud gem's functionality\.
 + [AWS API Jobs](cloud-canvas-cgf-aws-api-jobs.md) – Integrates the AWS API with the Lumberyard job execution systems \(not illustrated\)\.
 + [HTTP Request Job](cloud-canvas-cgf-http-requests.md) – A Lumberyard job for executing HTTP requests \(not illustrated\)\.

@@ -7,6 +7,8 @@ The **PhysX Terrain** component exports and saves the terrain as an asset that l
 
 For more information about using PhysX components, see [Simulating physics behavior with the PhysX system](physx-intro.md)\.
 
+
+
 **Topics**
 + [PhysX Terrain Component Properties](#physx-terrain-component-properties)
 + [Creating a PhysX Terrain Collider](#creating-physx-terrain-collider)

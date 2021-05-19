@@ -45,7 +45,6 @@ For tutorials on Cloud Canvas, see [Tutorial: Getting Started with Cloud Canvas]
 ## Tools<a name="cloud-canvas-overview-tools"></a>
 
  You can access Cloud Canvas functionality by using any of the following:
-+  **[Cloud Gem Portal](cloud-canvas-cloud-gem-portal.md)** – A web application that makes backend administration and management accessible to everyone\. 
 +  **Cloud Canvas C\+\+ APIs** – For software development\.
 + **[Using the Cloud Canvas Command Line](cloud-canvas-command-line.md)** – For managing resource groups, mappings, deployments, and projects\. 
 +  **[Cloud Canvas Tools in Lumberyard Editor](cloud-canvas-ui-intro.md)** – For managing AWS resources, deployments, and credentials, and for navigating directly to the AWS consoles supported by Cloud Canvas\. 
