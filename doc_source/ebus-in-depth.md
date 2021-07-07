@@ -17,7 +17,7 @@ You can use EBuses in many different ways\. Following are some examples:
 +  For queued delivery
 +  Automatic marshalling of a function call into a network message or other command buffer
 
-The EBus source code can found in the Lumberyard directory location `<root>\dev\Code\Framework\AZCore\AZCore\EBus\EBus.h`\.
+The EBus source code can be found in the Lumberyard directory location `<root>\dev\Code\Framework\AZCore\AZCore\EBus\EBus.h`\.
 
 ## Bus Configurations<a name="ebus-in-depth-configuration"></a>
 
